@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -773,22 +775,22 @@
 
 <p><a id="refheading87567112820228"></a>
 <a id="integration-jsf-ejb-1"></a></p>
-<h1 id="11-6-jsfejb">11. <span style="color: #365f91">الإصدار 6 - دمج طبقة الويب في بنية JSF/EJB ثلاثية المستويات</span></h1>
+<h1 id="11-6-jsfejb">11. <span style="color: #365f91">الإصدار 6 - دمج طبقة الويب في بنية <bdi dir="ltr" class="odt-ltr-term">JSF/EJB</bdi> ثلاثية المستويات</span></h1>
 <p><a id="refheading87569112820228"></a></p>
 <h2 id="111">11.1. <span style="color: #4f81bd">بنية التطبيق</span></h2>
 <p>كانت بنية تطبيق الويب السابق كما يلي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003DE0000015FF05E684A.png" width="495" height="175" style="display:inline-block; margin:4px;width:13.097cm;height:4.643cm;" class="odt-zoomable" data-zoom-src="images/10000000000003DE0000015FF05E684A.png" /></td></tr></table>
 
-<p>نستبدل الطبقة [التجارية] المحاكاة بالطبقات [التجارية، DAO، JPA] التي تم تنفيذها بواسطة EJBs في القسم<a href="#serveur-ejb-sunas9"><u><span style="color: #0563c1"> 7.1</span></u></a>:</p>
+<p>نستبدل الطبقة [التجارية] المحاكاة بالطبقات [التجارية، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] التي تم تنفيذها بواسطة <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi> في القسم<a href="#serveur-ejb-sunas9"><u><span style="color: #0563c1"> 7.1</span></u></a>:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000045300000161BAD25DD6.png" width="554" height="177" style="display:inline-block; margin:4px;width:14.646cm;height:4.671cm;" class="odt-zoomable" data-zoom-src="images/100000000000045300000161BAD25DD6.png" /></td></tr></table>
 
 <p><a id="refheading87571112820228"></a></p>
-<h2 id="112-netbeans">11.2. <span style="color: #4f81bd">مشروع NetBeans لطبقة الويب</span></h2>
-<p>يتم إنشاء مشروع NetBeans للإصدار 2 من الويب عن طريق نسخ المشروع السابق:</p>
+<h2 id="112-netbeans">11.2. <span style="color: #4f81bd">مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> لطبقة الويب</span></h2>
+<p>يتم إنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> للإصدار 2 من الويب عن طريق نسخ المشروع السابق:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000497000002C7D3111BD5.png" width="588" height="356" style="display:inline-block; margin:4px;width:15.545cm;height:9.407cm;" class="odt-zoomable" data-zoom-src="images/1000000000000497000002C7D3111BD5.png" /></td></tr></table>
 
 <ul>
-  <li>[1]: انسخ المشروع الجديد والصقه في علامة التبويب [Projects]،
+  <li>[1]: انسخ المشروع الجديد والصقه في علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Projects</bdi>]،
   </li>
   <li>[2]: قم بتسميته وتعيين مجلده،
   </li>
@@ -802,15 +804,15 @@
 <ul>
   <li>[4]: قم بتغيير اسم المشروع،
   </li>
-  <li>[5]: قم بتغيير اسمه وكذلك معرف الأداة (artifactID).
+  <li>[5]: قم بتغيير اسمه وكذلك معرف الأداة (<bdi dir="ltr" class="odt-ltr-term">artifactID</bdi>).
   </li>
 </ul>
 
-<p>هناك بعض التغييرات التي يجب إجراؤها لتكييف طبقة الويب هذه مع بيئتها الجديدة: يجب استبدال طبقة [business] المحاكاة بطبقة [business, DAO, JPA] الخاصة بالخادم الذي تم إنشاؤه في القسم<a href="#serveur-ejb-sunas9"><u><span style="color: #0563c1"> 7.1</span></u></a>. للقيام بذلك، نقوم بأمرين:</p>
+<p>هناك بعض التغييرات التي يجب إجراؤها لتكييف طبقة الويب هذه مع بيئتها الجديدة: يجب استبدال طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] المحاكاة بطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>, <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>, <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] الخاصة بالخادم الذي تم إنشاؤه في القسم<a href="#serveur-ejb-sunas9"><u><span style="color: #0563c1"> 7.1</span></u></a>. للقيام بذلك، نقوم بأمرين:</p>
 <ul>
-  <li>نقوم بإزالة حزم [exception، business، jpa] التي كانت موجودة في المشروع السابق.
+  <li>نقوم بإزالة حزم [<bdi dir="ltr" class="odt-ltr-term">exception</bdi>، <bdi dir="ltr" class="odt-ltr-term">business</bdi>، <bdi dir="ltr" class="odt-ltr-term">jpa</bdi>] التي كانت موجودة في المشروع السابق.
   </li>
-  <li>ولتعويض هذا الحذف، نضيف مشروع خادم EJB الذي تم إنشاؤه في القسم<a href="#serveur-ejb-sunas9"><u><span style="color: #0563c1"> 7.1</span></u></a> إلى تبعيات مشروع الويب.
+  <li>ولتعويض هذا الحذف، نضيف مشروع خادم <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> الذي تم إنشاؤه في القسم<a href="#serveur-ejb-sunas9"><u><span style="color: #0563c1"> 7.1</span></u></a> إلى تبعيات مشروع الويب.
   </li>
 </ul>
 
@@ -819,21 +821,21 @@
 <ul>
   <li>في [1]، نضيف تبعية إلى المشروع،
   </li>
-  <li>في [2]، نختار مشروع Maven الخاص بطبقة [الأعمال]. وفي [3]، نحدد نوعه، وفي [4] نحدد نطاقه. يتم تعيين النطاق إلى `<i>provided</i>` للإشارة إلى أنه سيتم توفيره لوحدة الويب من قِبل بيئة التشغيل الخاصة بها. وسنرى بعد قليل أنه سيتم توفيره بواسطة تطبيق مؤسسي،
+  <li>في [2]، نختار مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> الخاص بطبقة [الأعمال]. وفي [3]، نحدد نوعه، وفي [4] نحدد نطاقه. يتم تعيين النطاق إلى `<i><bdi dir="ltr" class="odt-ltr-term">provided</bdi></i>` للإشارة إلى أنه سيتم توفيره لوحدة الويب من قِبل بيئة التشغيل الخاصة بها. وسنرى بعد قليل أنه سيتم توفيره بواسطة تطبيق مؤسسي،
   </li>
   <li>في [5]، تمت إضافة التبعية.
   </li>
 </ul>
 
-<p>يصبح ملف [pom.xml] كما يلي:</p>
+<p>يصبح ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">boolean</span><span style="color:#000000"> </span><span style="color:#0000c0">viewInfosIsRendered</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
-<p>يمكننا الآن إزالة الحزم من طبقة [business] التي لم تعد مطلوبة:</p>
+<p>يمكننا الآن إزالة الحزم من طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] التي لم تعد مطلوبة:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018E000000F41C10AFE4.png" width="279" height="171" style="display:inline-block; margin:4px;width:7.37cm;height:4.517cm;" class="odt-zoomable" data-zoom-src="images/100000000000018E000000F41C10AFE4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>نحتاج أيضًا إلى تعديل الكود في مكون [Form.java]:</p>
+<p>نحتاج أيضًا إلى تعديل الكود في مكون [<bdi dir="ltr" class="odt-ltr-term">Form.java</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependencies</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span></span>
@@ -852,7 +854,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> <span style="color:#000000"> </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">dependencies</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>السطر 7 قام بإنشاء مثيل لطبقة [business] المحاكاة. الآن يجب أن يشير إلى طبقة [business] الفعلية. يصبح الكود السابق كما يلي:</p>
+<p>السطر 7 قام بإنشاء مثيل لطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] المحاكاة. الآن يجب أن يشير إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] الفعلية. يصبح الكود السابق كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Form {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -866,22 +868,22 @@
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 </code></pre></div>
 
-<p>السطر 7: توجه العلامة <strong>@EJB</strong> حاوية السيرفلت — التي ستقوم بتنفيذ طبقة الويب — إلى إدخال EJB الذي ينفذ الواجهة المحلية <em>IMetierLocal</em> في حقل <em>الأعمال</em> في السطر 8.</p>
-<p>لماذا الواجهة المحلية <em>IMetierLocal</em> بدلاً من الواجهة <em>IMetierRemote</em>؟ لأن طبقة الويب وطبقة EJB تعملان في نفس JVM:</p>
+<p>السطر 7: توجه العلامة <strong>@<bdi dir="ltr" class="odt-ltr-term">EJB</bdi></strong> حاوية السيرفلت — التي ستقوم بتنفيذ طبقة الويب — إلى إدخال <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> الذي ينفذ الواجهة المحلية <em><bdi dir="ltr" class="odt-ltr-term">IMetierLocal</bdi></em> في حقل <em>الأعمال</em> في السطر 8.</p>
+<p>لماذا الواجهة المحلية <em><bdi dir="ltr" class="odt-ltr-term">IMetierLocal</bdi></em> بدلاً من الواجهة <em><bdi dir="ltr" class="odt-ltr-term">IMetierRemote</bdi></em>؟ لأن طبقة الويب وطبقة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> تعملان في نفس <bdi dir="ltr" class="odt-ltr-term">JVM:</bdi></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046700000199934CF91D.png" width="564" height="205" style="display:inline-block; margin:4px;width:14.91cm;height:5.412cm;" class="odt-zoomable" data-zoom-src="images/100000000000046700000199934CF91D.png" /></td></tr></table>
 
-<p>يمكن للفئات الموجودة في حاوية السيرفلت الإشارة مباشرةً إلى فئات EJB الموجودة في حاوية EJB.</p>
-<p>هذا كل شيء. طبقة الويب لدينا جاهزة. كان التحويل بسيطًا لأننا حرصنا على محاكاة طبقة [الأعمال] باستخدام فئة تتوافق مع واجهة <em>IMetierLocal</em> التي تنفذها طبقة [الأعمال] الفعلية.</p>
+<p>يمكن للفئات الموجودة في حاوية السيرفلت الإشارة مباشرةً إلى فئات <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> الموجودة في حاوية <bdi dir="ltr" class="odt-ltr-term">EJB.</bdi></p>
+<p>هذا كل شيء. طبقة الويب لدينا جاهزة. كان التحويل بسيطًا لأننا حرصنا على محاكاة طبقة [الأعمال] باستخدام فئة تتوافق مع واجهة <em><bdi dir="ltr" class="odt-ltr-term">IMetierLocal</bdi></em> التي تنفذها طبقة [الأعمال] الفعلية.</p>
 <p><a id="refheading87573112820228"></a></p>
-<h2 id="113-netbeans">11.3. <span style="color: #4f81bd">مشروع NetBeans للتطبيق المؤسسي</span></h2>
-<p>يسمح تطبيق المؤسسة بالنشر المتزامن لطبقة [الويب] وطبقة EJB للتطبيق على خادم التطبيقات، في حاوية السيرفلت وحاوية EJB، على التوالي.</p>
+<h2 id="113-netbeans">11.3. <span style="color: #4f81bd">مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> للتطبيق المؤسسي</span></h2>
+<p>يسمح تطبيق المؤسسة بالنشر المتزامن لطبقة [الويب] وطبقة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> للتطبيق على خادم التطبيقات، في حاوية السيرفلت وحاوية <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>، على التوالي.</p>
 <p>نقوم بما يلي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F6000001564302CEC5.png" width="635" height="171" style="display:inline-block; margin:4px;width:16.801cm;height:4.524cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F6000001564302CEC5.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، نقوم بإنشاء مشروع جديد
   </li>
-  <li>في [2]، نختار فئة [Maven]
+  <li>في [2]، نختار فئة [<bdi dir="ltr" class="odt-ltr-term">Maven</bdi>]
   </li>
   <li>في [3]، نختار نوع [تطبيق المؤسسة]
   </li>
@@ -892,11 +894,11 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002D100000108978FF955.png" width="361" height="132" style="display:inline-block; margin:4px;width:9.539cm;height:3.493cm;" class="odt-zoomable" data-zoom-src="images/10000000000002D100000108978FF955.png" /></td></tr></table>
 
 <ul>
-  <li>في [5]، نختار Java EE 6
+  <li>في [5]، نختار <bdi dir="ltr" class="odt-ltr-term">Java EE</bdi> 6
   </li>
   <li>في [6]، يمكن أن يتضمن مشروع المؤسسة ما يصل إلى نوعين من الوحدات النمطية:
     <ul>
-      <li>وحدة <b>EJB</b>
+      <li>وحدة <b><bdi dir="ltr" class="odt-ltr-term">EJB</bdi></b>
       </li>
       <li>وحدة <b>ويب</b>
       </li>
@@ -906,31 +908,31 @@
 
 <p>عند إنشاء مشروع المؤسسة، يمكنك طلب إنشاء هاتين الوحدتين، اللتين ستكونان فارغتين في البداية. يُستخدم مشروع المؤسسة حصريًا لنشر الوحدات التي يحتوي عليها. عدا ذلك، فهو مجرد هيكل فارغ. هنا، نريد نشر:</p>
 <ul>
-  <li>وحدة ويب موجودة [mv-pam-jsf2-alone]. لذلك، لا داعي لإنشاء وحدة ويب جديدة.
+  <li>وحدة ويب موجودة [<bdi dir="ltr" class="odt-ltr-term">mv-pam-jsf2-alone</bdi>]. لذلك، لا داعي لإنشاء وحدة ويب جديدة.
   </li>
-  <li>وحدة EJB موجودة [mv-pam-ejb-metier-dao-eclipselink]. هنا أيضًا، لا توجد حاجة لإنشاء وحدة جديدة.
+  <li>وحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> موجودة [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ejb-metier-dao-eclipselink</bdi>]. هنا أيضًا، لا توجد حاجة لإنشاء وحدة جديدة.
   </li>
 </ul>
 
-<p>في [6]، نقوم بإنشاء مشروع مؤسسي بدون وحدات. سنقوم بإضافة وحدات <strong>الويب</strong> ووحدات <strong>EJB</strong> الخاصة به لاحقًا.</p>
+<p>في [6]، نقوم بإنشاء مشروع مؤسسي بدون وحدات. سنقوم بإضافة وحدات <strong>الويب</strong> ووحدات <strong><bdi dir="ltr" class="odt-ltr-term">EJB</bdi></strong> الخاصة به لاحقًا.</p>
 <ul>
-  <li>في [7]، تم إنشاء مشروعين Maven. مشروع المؤسسة هو المشروع الذي يحمل اللاحقة <b>.ear</b>. المشروع الآخر هو مشروع Maven أم للمشروع الأول. لن نهتم به.
+  <li>في [7]، تم إنشاء مشروعين <bdi dir="ltr" class="odt-ltr-term">Maven.</bdi> مشروع المؤسسة هو المشروع الذي يحمل اللاحقة <b>.<bdi dir="ltr" class="odt-ltr-term">ear</bdi></b>. المشروع الآخر هو مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> أم للمشروع الأول. لن نهتم به.
   </li>
 </ul>
 
-<p>نضيف وحدة الويب ووحدة EJB إلى مشروع المؤسسة:</p>
+<p>نضيف وحدة الويب ووحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> إلى مشروع المؤسسة:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052B00000170E5139430.png" width="662" height="184" style="display:inline-block; margin:4px;width:17.503cm;height:4.868cm;" class="odt-zoomable" data-zoom-src="images/100000000000052B00000170E5139430.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، أضف تبعية جديدة،
   </li>
-  <li>في [2]، أضف مشروع EJB [mv-pam-ejb-metier-dao-eclipselink]. لاحظ نوع <i>EJB</i> الخاص به،
+  <li>في [2]، أضف مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ejb-metier-dao-eclipselink</bdi>]. لاحظ نوع <i><bdi dir="ltr" class="odt-ltr-term">EJB</bdi></i> الخاص به،
   </li>
-  <li>في [3]، أضف مشروع الويب [mv-pam-jsf2-ejb]. لاحظ أن نوعه هو <i>war</i>.
+  <li>في [3]، أضف مشروع الويب [<bdi dir="ltr" class="odt-ltr-term">mv-pam-jsf2-ejb</bdi>]. لاحظ أن نوعه هو <i><bdi dir="ltr" class="odt-ltr-term">war</bdi></i>.
   </li>
 </ul>
 
-<p>يصبح ملف [pom.xml] كما يلي:</p>
+<p>يصبح ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Form {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -944,13 +946,13 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// form fields</span></span></span>
 </code></pre></div>
 
-<p>قبل نشر تطبيق المؤسسة [mv-pam-webapp-ear]، تأكد من وجود قاعدة بيانات MySQL [dbpam_eclipselink] ومن أنها مملوءة بالبيانات. بمجرد الانتهاء من ذلك، يمكننا نشر تطبيق المؤسسة [mv-pam-webapp-ear]:</p>
+<p>قبل نشر تطبيق المؤسسة [<bdi dir="ltr" class="odt-ltr-term">mv-pam-webapp-ear</bdi>]، تأكد من وجود قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_eclipselink] ومن أنها مملوءة بالبيانات. بمجرد الانتهاء من ذلك، يمكننا نشر تطبيق المؤسسة [<bdi dir="ltr" class="odt-ltr-term">mv-pam-webapp-ear</bdi>]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000323000001764610323D.png" width="402" height="187" style="display:inline-block; margin:4px;width:10.624cm;height:4.948cm;" class="odt-zoomable" data-zoom-src="images/1000000000000323000001764610323D.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، تم نشر تطبيق المؤسسة
   </li>
-  <li>في [2]، تم نشر تطبيق المؤسسة [mv-pam-webapp-ear] بنجاح.
+  <li>في [2]، تم نشر تطبيق المؤسسة [<bdi dir="ltr" class="odt-ltr-term">mv-pam-webapp-ear</bdi>] بنجاح.
   </li>
 </ul>
 
@@ -958,9 +960,9 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003AC000001AA2F665EA3.png" width="470" height="213" style="display:inline-block; margin:4px;width:12.435cm;height:5.636cm;" class="odt-zoomable" data-zoom-src="images/10000000000003AC000001AA2F665EA3.png" /></td></tr></table>
 
 <ul>
-  <li><span style="color: #000000">في [1]، عنوان URL المطلوب</span>
+  <li><span style="color: #000000">في [1]، عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوب</span>
   </li>
-  <li><span style="color: #000000">في [2]، تم ملء قائمة الموظفين بالمدخلات من جدول [Employees] في قاعدة بيانات </span><i><span style="color: #000000">dbpam</span></i><span style="color: #000000">.</span>
+  <li><span style="color: #000000">في [2]، تم ملء قائمة الموظفين بالمدخلات من جدول [<bdi dir="ltr" class="odt-ltr-term">Employees</bdi>] في قاعدة بيانات </span><i><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">dbpam</bdi></span></i><span style="color: #000000">.</span>
   </li>
 </ul>
 

@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -983,33 +985,33 @@
 
 
 <p><a id="refheading87439112820228"></a></p>
-<h1 id="6-2-openejb-jpa">6. <span style="color: #365f91">الإصدار 2: بنية OpenEJB / JPA</span></h1>
+<h1 id="6-2-openejb-jpa">6. <span style="color: #365f91">الإصدار 2: بنية <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi> / <bdi dir="ltr" class="odt-ltr-term">JPA</bdi></span></h1>
 <p><a id="refheading87441112820228"></a></p>
 <h2 id="61">6.1. <span style="color: #4f81bd">مقدمة إلى مبادئ النقل</span></h2>
-<p>نقدم هنا المبادئ التي ستحكم عملية نقل تطبيق JPA / Spring / Hibernate إلى تطبيق JPA / OpenEJB / EclipseLink. سننتظر حتى القسم<a href="#portage-pratique-spring-openejb"><u><span style="color: #0563c1"> 6.2</span></u></a> لإنشاء مشاريع Maven.</p>
+<p>نقدم هنا المبادئ التي ستحكم عملية نقل تطبيق <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> / <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> / <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> إلى تطبيق <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> / <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi> / <bdi dir="ltr" class="odt-ltr-term">EclipseLink.</bdi> سننتظر حتى القسم<a href="#portage-pratique-spring-openejb"><u><span style="color: #0563c1"> 6.2</span></u></a> لإنشاء مشاريع <bdi dir="ltr" class="odt-ltr-term">Maven.</bdi></p>
 <p><a id="refheading87443112820228"></a></p>
 <h3 id="611">6.1.1. <span style="color: #4f81bd">الهندستان</span></h3>
-<p><strong>التنفيذ الحالي باستخدام Spring / Hibernate</strong></p>
+<p><strong>التنفيذ الحالي باستخدام <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> / <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi></strong></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000537000000FB5F1487EE.png" width="668" height="126" style="display:inline-block; margin:4px;width:17.662cm;height:3.321cm;" class="odt-zoomable" data-zoom-src="images/1000000000000537000000FB5F1487EE.png" /></td></tr></table>
 
-<p><strong>التنفيذ المقرر بناؤه باستخدام OpenEJB / EclipseLink</strong></p>
+<p><strong>التنفيذ المقرر بناؤه باستخدام <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi> / <bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi></strong></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000524000001106DAFAAF9.png" width="658" height="136" style="display:inline-block; margin:4px;width:17.41cm;height:3.598cm;" class="odt-zoomable" data-zoom-src="images/1000000000000524000001106DAFAAF9.png" /></td></tr></table>
 
 <p><a id="refheading87445112820228"></a></p>
 <h3 id="612">6.1.2. <span style="color: #4f81bd">مكتبات المشروع</span></h3>
 <ul>
-  <li>لم تعد طبقات [DAO] و[business] تُنشأ بواسطة <b>Spring</b>. بل يتم إنشاؤها بواسطة حاوية <b>OpenEJB</b>.
+  <li>لم تعد طبقات [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">business</bdi>] تُنشأ بواسطة <b><bdi dir="ltr" class="odt-ltr-term">Spring</bdi></b>. بل يتم إنشاؤها بواسطة حاوية <b><bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi></b>.
   </li>
-  <li>تم استبدال مكتبات حاوية Spring وتكوينها بمكتبات حاوية OpenEJB وتكوينها.
+  <li>تم استبدال مكتبات حاوية <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> وتكوينها بمكتبات حاوية <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi> وتكوينها.
   </li>
-  <li>تم استبدال مكتبات طبقة<b> JPA / Hibernate </b>بمكتبات طبقة<b> JPA / EclipseLink</b>
+  <li>تم استبدال مكتبات طبقة<b> <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> / <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> </b>بمكتبات طبقة<b> <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> / <bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi></b>
   </li>
 </ul>
 
 <p><a id="refheading87447112820228"></a></p>
-<h3 id="613-jpa-eclipselink-openejb">6.1.3. <span style="color: #4f81bd">تكوين طبقة JPA / EclipseLink / OpenEJB</span></h3>
+<h3 id="613-jpa-eclipselink-openejb">6.1.3. <span style="color: #4f81bd">تكوين طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> / <bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi> / <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi></span></h3>
 <ul>
-  <li>يصبح ملف [META-INF/persistence.xml] الذي يهيئ طبقة JPA كما يلي:
+  <li>يصبح ملف [<bdi dir="ltr" class="odt-ltr-term">META-INF/persistence.xml</bdi>] الذي يهيئ طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> كما يلي:
   </li>
 </ul>
 
@@ -1044,19 +1046,19 @@
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="nt">&lt;/persistence&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطر 3: المعاملات في حاوية EJB هي من نوع <b>JTA </b>(واجهة برمجة تطبيقات المعاملات في Java). كانت من نوع <b>RESOURCE_LOCAL </b>مع Spring.
+  <li>السطر 3: المعاملات في حاوية <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> هي من نوع <b><bdi dir="ltr" class="odt-ltr-term">JTA</bdi> </b>(واجهة برمجة تطبيقات المعاملات في <bdi dir="ltr" class="odt-ltr-term">Java</bdi>). كانت من نوع <b><bdi dir="ltr" class="odt-ltr-term">RESOURCE_LOCAL</bdi> </b>مع <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi>
   </li>
-  <li>السطر 9: تطبيق JPA المستخدم هو <b>EclipseLink</b>
+  <li>السطر 9: تطبيق <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> المستخدم هو <b><bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi></b>
   </li>
-  <li>الأسطر 5-7: الكيانات التي تديرها طبقة JPA
+  <li>الأسطر 5-7: الكيانات التي تديرها طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>
   </li>
-  <li>الأسطر 11–13: خصائص مزود <b>EclipseLink</b>
+  <li>الأسطر 11–13: خصائص مزود <b><bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi></b>
   </li>
   <li>السطر 12: سيتم إنشاء الجداول عند كل عملية تنفيذ
   </li>
 </ul>
 
-<p>سيتم تحديد خصائص JDBC لمصدر بيانات JTA المستخدم من قبل حاوية OpenEJB بواسطة ملف التكوين التالي [conf/openejb.conf]:</p>
+<p>سيتم تحديد خصائص <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi> لمصدر بيانات <bdi dir="ltr" class="odt-ltr-term">JTA</bdi> المستخدم من قبل حاوية <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi> بواسطة ملف التكوين التالي [<bdi dir="ltr" class="odt-ltr-term">conf/openejb.conf</bdi>]:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -1074,19 +1076,19 @@
 <a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="nt">&lt;/openejb&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطر 3: نستخدم معرف &quot;<b>قاعدة بيانات JDBC الافتراضية</b>&quot; عند العمل مع حاوية OpenEJB مدمجة داخل التطبيق نفسه.
+  <li>السطر 3: نستخدم معرف &quot;<b>قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi> الافتراضية</b>&quot; عند العمل مع حاوية <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi> مدمجة داخل التطبيق نفسه.
   </li>
-  <li>السطر 5: نستخدم قاعدة بيانات MySQL [dbpam_eclipselink]
+  <li>السطر 5: نستخدم قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbpam_eclipselink</bdi>]
   </li>
 </ul>
 <p><a id="refheading87449112820228"></a></p>
-<h3 id="614-dao-ejbs">6.1.4. <span style="color: #4f81bd">تنفيذ طبقة [DAO] باستخدام EJBs</span></h3>
+<h3 id="614-dao-ejbs">6.1.4. <span style="color: #4f81bd">تنفيذ طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] باستخدام <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi></span></h3>
 <ul>
-  <li>تصبح الفئات التي تنفذ طبقة [DAO] <b>كائنات EJB</b>. لنأخذ مثال فئة [CotisationDao]:
+  <li>تصبح الفئات التي تنفذ طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] <b>كائنات <bdi dir="ltr" class="odt-ltr-term">EJB</bdi></b>. لنأخذ مثال فئة [<bdi dir="ltr" class="odt-ltr-term">CotisationDao</bdi>]:
   </li>
 </ul>
 
-<p>كانت واجهة [ICotisationDao] في إصدار Spring كما يلي:</p>
+<p>كانت واجهة [<bdi dir="ltr" class="odt-ltr-term">ICotisationDao</bdi>] في إصدار <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> كما يلي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1123,7 +1125,7 @@
 <a id="__codelineno-2-17" name="__codelineno-2-17"></a>
 <a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>سيقوم EJB بتنفيذ هذه الواجهة نفسها في شكلين مختلفين: واجهة <strong>محلية</strong> وواجهة <strong>بعيدة</strong>. يمكن استخدام الواجهة <strong>المحلية</strong> من قبل عميل يعمل في نفس JVM، بينما يمكن استخدام الواجهة <strong>البعيدة</strong> من قبل عميل يعمل في JVM مختلفة.</p>
+<p>سيقوم <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> بتنفيذ هذه الواجهة نفسها في شكلين مختلفين: واجهة <strong>محلية</strong> وواجهة <strong>بعيدة</strong>. يمكن استخدام الواجهة <strong>المحلية</strong> من قبل عميل يعمل في نفس <bdi dir="ltr" class="odt-ltr-term">JVM</bdi>، بينما يمكن استخدام الواجهة <strong>البعيدة</strong> من قبل عميل يعمل في <bdi dir="ltr" class="odt-ltr-term">JVM</bdi> مختلفة.</p>
 <p>الواجهة <strong>المحلية</strong>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
@@ -1140,9 +1142,9 @@
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطر 6: ترث واجهة [ICotisationDaoLocal] من واجهة [ICotisationDao] لتتبنى جميع أساليبها. ولا تضيف أي أساليب جديدة.
+  <li>السطر 6: ترث واجهة [<bdi dir="ltr" class="odt-ltr-term">ICotisationDaoLocal</bdi>] من واجهة [<bdi dir="ltr" class="odt-ltr-term">ICotisationDao</bdi>] لتتبنى جميع أساليبها. ولا تضيف أي أساليب جديدة.
   </li>
-  <li>السطر 5: تجعل العلامة التوضيحية <b>@Local </b>منها واجهة محلية لـ EJB التي ستقوم بتنفيذها.
+  <li>السطر 5: تجعل العلامة التوضيحية <b>@<bdi dir="ltr" class="odt-ltr-term">Local</bdi> </b>منها واجهة محلية لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> التي ستقوم بتنفيذها.
   </li>
 </ul>
 
@@ -1162,13 +1164,13 @@
 <a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطر 6: ترث واجهة [ICotisationDaoRemote] من واجهة [ICotisationDao] لتتبنى جميع أساليبها. ولا تضيف أي أساليب جديدة.
+  <li>السطر 6: ترث واجهة [<bdi dir="ltr" class="odt-ltr-term">ICotisationDaoRemote</bdi>] من واجهة [<bdi dir="ltr" class="odt-ltr-term">ICotisationDao</bdi>] لتتبنى جميع أساليبها. ولا تضيف أي أساليب جديدة.
   </li>
-  <li>السطر 5: تجعل العلامة التوضيحية <b>@Remote </b>منها واجهة بعيدة لـ EJB التي ستقوم بتنفيذها.
+  <li>السطر 5: تجعل العلامة التوضيحية <b>@<bdi dir="ltr" class="odt-ltr-term">Remote</bdi> </b>منها واجهة بعيدة لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> التي ستقوم بتنفيذها.
   </li>
 </ul>
 
-<p>يتم تنفيذ طبقة [DAO] بواسطة EJB الذي ينفذ كلا الواجهتين (وهذا ليس إلزاميًا):</p>
+<p>يتم تنفيذ طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] بواسطة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> الذي ينفذ كلا الواجهتين (وهذا ليس إلزاميًا):</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
@@ -1182,26 +1184,26 @@
 <a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">EntityManager</span><span class="w"> </span><span class="n">em</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطر 1: التعليق التوضيحي @Stateless، الذي يجعل الفئة EJB
+  <li>السطر 1: التعليق التوضيحي @<bdi dir="ltr" class="odt-ltr-term">Stateless</bdi>، الذي يجعل الفئة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>
   </li>
-  <li>السطر 2: تعليق <b>@TransactionAttribute</b>، الذي يضمن أن كل طريقة في الفئة ستنفذ ضمن معاملة.
+  <li>السطر 2: تعليق <b>@<bdi dir="ltr" class="odt-ltr-term">TransactionAttribute</bdi></b>، الذي يضمن أن كل طريقة في الفئة ستنفذ ضمن معاملة.
   </li>
-  <li>السطر 5: تعليق @<b>PersistenceContext</b>، الذي يقوم بحقن EntityManager الخاص بطبقة JPA في فئة [CotisationDao]. وهو مطابق لما كان لدينا في إصدار Spring.
+  <li>السطر 5: تعليق @<b><bdi dir="ltr" class="odt-ltr-term">PersistenceContext</bdi></b>، الذي يقوم بحقن <bdi dir="ltr" class="odt-ltr-term">EntityManager</bdi> الخاص بطبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> في فئة [<bdi dir="ltr" class="odt-ltr-term">CotisationDao</bdi>]. وهو مطابق لما كان لدينا في إصدار <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi>
   </li>
 </ul>
 
-<p>عند استخدام الواجهة <strong>المحلية</strong> لطبقة [DAO]، يعمل عميل هذه الواجهة في نفس JVM.</p>
+<p>عند استخدام الواجهة <strong>المحلية</strong> لطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]، يعمل عميل هذه الواجهة في نفس <bdi dir="ltr" class="odt-ltr-term">JVM.</bdi></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000453000000EC9E69FC87.png" width="554" height="118" style="display:inline-block; margin:4px;width:14.646cm;height:3.122cm;" class="odt-zoomable" data-zoom-src="images/1000000000000453000000EC9E69FC87.png" /></td></tr></table>
 
-<p>فيما سبق، تتبادل طبقتا [business] و[DAO] الكائنات عن طريق <strong>الإشارة</strong>. عندما تقوم إحدى الطبقات بتغيير الكائن المشترك، ترى الطبقة الأخرى هذا التغيير.</p>
-<p>عند استخدام الواجهة <strong>البعيدة</strong> لطبقة [DAO]، عادةً ما يعمل عميل هذه الواجهة في JVM أخرى.</p>
+<p>فيما سبق، تتبادل طبقتا [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] الكائنات عن طريق <strong>الإشارة</strong>. عندما تقوم إحدى الطبقات بتغيير الكائن المشترك، ترى الطبقة الأخرى هذا التغيير.</p>
+<p>عند استخدام الواجهة <strong>البعيدة</strong> لطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]، عادةً ما يعمل عميل هذه الواجهة في <bdi dir="ltr" class="odt-ltr-term">JVM</bdi> أخرى.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000442000000EFBD634E5D.png" width="545" height="120" style="display:inline-block; margin:4px;width:14.42cm;height:3.163cm;" class="odt-zoomable" data-zoom-src="images/1000000000000442000000EFBD634E5D.png" /></td></tr></table>
 
-<p>في الرسم البياني أعلاه، تتبادل طبقتا [business] و[DAO] الكائنات حسب <strong>القيمة</strong> (تسلسل الكائن المتبادل). وعندما تقوم إحدى الطبقات بتغيير كائن مشترك، لا ترى الطبقة الأخرى هذا التغيير إلا إذا تم إرجاع الكائن المعدل إليها.</p>
+<p>في الرسم البياني أعلاه، تتبادل طبقتا [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] الكائنات حسب <strong>القيمة</strong> (تسلسل الكائن المتبادل). وعندما تقوم إحدى الطبقات بتغيير كائن مشترك، لا ترى الطبقة الأخرى هذا التغيير إلا إذا تم إرجاع الكائن المعدل إليها.</p>
 <p><a id="refheading87451112820228"></a></p>
-<h3 id="615-ejb">6.1.5. <span style="color: #4f81bd">تنفيذ طبقة [الأعمال] باستخدام EJB</span></h3>
+<h3 id="615-ejb">6.1.5. <span style="color: #4f81bd">تنفيذ طبقة [الأعمال] باستخدام <bdi dir="ltr" class="odt-ltr-term">EJB</bdi></span></h3>
 <ul>
-  <li>تصبح الفئة التي تنفذ طبقة [business] أيضًا <b>EJB </b>تنفذ واجهة <b>محلية وبعيدة</b>. كانت واجهة [IMetier] الأولية كما يلي:
+  <li>تصبح الفئة التي تنفذ طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] أيضًا <b><bdi dir="ltr" class="odt-ltr-term">EJB</bdi> </b>تنفذ واجهة <b>محلية وبعيدة</b>. كانت واجهة [<bdi dir="ltr" class="odt-ltr-term">IMetier</bdi>] الأولية كما يلي:
   </li>
 </ul>
 
@@ -1256,7 +1258,7 @@
 <a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">IMetierRemote</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">IMetier</span><span class="p">{</span>
 <a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>تقوم EJB في طبقة [الأعمال] بتنفيذ هاتين الواجهتين:</p>
+<p>تقوم <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> في طبقة [الأعمال] بتنفيذ هاتين الواجهتين:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
@@ -1280,27 +1282,27 @@
 <a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">IIndemniteDaoLocal</span><span class="w"> </span><span class="n">indemniteDao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطران 1-2: تعريف EJB حيث يتم تشغيل كل طريقة ضمن معاملة.
+  <li>السطران 1-2: تعريف <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> حيث يتم تشغيل كل طريقة ضمن معاملة.
   </li>
-  <li>السطر 7: إشارة إلى الواجهة <b>المحلية</b> لـ EJB [CotisationDao].
+  <li>السطر 7: إشارة إلى الواجهة <b>المحلية</b> لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">CotisationDao</bdi>].
   </li>
-  <li>السطر 6: تعليمة @EJB توجه حاوية EJB إلى إدخال إشارة إلى الواجهة المحلية لـ EJB [CotisationDao].
+  <li>السطر 6: تعليمة @<bdi dir="ltr" class="odt-ltr-term">EJB</bdi> توجه حاوية <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> إلى إدخال إشارة إلى الواجهة المحلية لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">CotisationDao</bdi>].
   </li>
-  <li>الأسطر 8–11: نقوم بنفس الشيء بالنسبة للواجهات المحلية لـ EJBs [EmployeeDao] و [CompensationDao].
+  <li>الأسطر 8–11: نقوم بنفس الشيء بالنسبة للواجهات المحلية لـ <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi> [<bdi dir="ltr" class="odt-ltr-term">EmployeeDao</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">CompensationDao</bdi>].
   </li>
 </ul>
 
-<p>في النهاية، عند إنشاء مثيل لـ EJB [Metier]، سيتم تهيئة الحقول في الأسطر 7 و9 و11 بإشارات إلى الواجهات <strong>المحلية</strong> لـ EJBs الثلاثة في طبقة [DAO]. لذلك نفترض هنا أن طبقتي [business] و[DAO] ستعملان في نفس JVM.</p>
+<p>في النهاية، عند إنشاء مثيل لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>]، سيتم تهيئة الحقول في الأسطر 7 و9 و11 بإشارات إلى الواجهات <strong>المحلية</strong> لـ <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi> الثلاثة في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. لذلك نفترض هنا أن طبقتي [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] ستعملان في نفس <bdi dir="ltr" class="odt-ltr-term">JVM.</bdi></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046A000000F91384B2B9.png" width="565" height="124" style="display:inline-block; margin:4px;width:14.949cm;height:3.293cm;" class="odt-zoomable" data-zoom-src="images/100000000000046A000000F91384B2B9.png" /></td></tr></table>
 
 <p><a id="refheading87453112820228"></a></p>
-<h3 id="616-ejb">6.1.6. <span style="color: #4f81bd">عملاء EJB</span></h3>
+<h3 id="616-ejb">6.1.6. <span style="color: #4f81bd">عملاء <bdi dir="ltr" class="odt-ltr-term">EJB</bdi></span></h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000044F000000F15557BB0C.png" width="552" height="120" style="display:inline-block; margin:4px;width:14.593cm;height:3.187cm;" class="odt-zoomable" data-zoom-src="images/100000000000044F000000F15557BB0C.png" /></td></tr></table>
 
-<p>في الرسم البياني أعلاه، للتواصل مع طبقة [الأعمال]، يجب أن تحصل طبقة [واجهة المستخدم] على مرجع إلى الواجهة <strong>البعيدة</strong> لـ EJB في طبقة [الأعمال].</p>
+<p>في الرسم البياني أعلاه، للتواصل مع طبقة [الأعمال]، يجب أن تحصل طبقة [واجهة المستخدم] على مرجع إلى الواجهة <strong>البعيدة</strong> لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> في طبقة [الأعمال].</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000045C000000ED543E92E6.png" width="558" height="118" style="display:inline-block; margin:4px;width:14.764cm;height:3.134cm;" class="odt-zoomable" data-zoom-src="images/100000000000045C000000ED543E92E6.png" /></td></tr></table>
 
-<p>في الرسم البياني أعلاه، للتواصل مع طبقة [الأعمال]، يجب أن تحصل طبقة [واجهة المستخدم] على مرجع للواجهة <strong>المحلية</strong> لـ EJB في طبقة [الأعمال]. تختلف طريقة الحصول على هذه المراجع من حاوية إلى أخرى. بالنسبة لحاوية OpenEJB، يمكنك المتابعة على النحو التالي:</p>
+<p>في الرسم البياني أعلاه، للتواصل مع طبقة [الأعمال]، يجب أن تحصل طبقة [واجهة المستخدم] على مرجع للواجهة <strong>المحلية</strong> لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> في طبقة [الأعمال]. تختلف طريقة الحصول على هذه المراجع من حاوية إلى أخرى. بالنسبة لحاوية <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi>، يمكنك المتابعة على النحو التالي:</p>
 <p>الإشارة إلى الواجهة المحلية:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
 <span class="normal"><a href="#__codelineno-10-2">2</a></span>
@@ -1321,27 +1323,27 @@
 <a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="n">indemniteDao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">IIndemniteDaoLocal</span><span class="p">)</span><span class="w"> </span><span class="n">initialContext</span><span class="p">.</span><span class="na">lookup</span><span class="p">(</span><span class="s">&quot;IndemniteDaoLocal&quot;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>الأسطر 2–5: يتم تهيئة حاوية OpenEJB.
+  <li>الأسطر 2–5: يتم تهيئة حاوية <bdi dir="ltr" class="odt-ltr-term">OpenEJB.</bdi>
   </li>
-  <li>السطر 5: لدينا سياق JNDI (واجهة تسمية ودليل Java) الذي يسمح لنا بالحصول على مراجع إلى EJBs. يتم تحديد كل EJB بواسطة اسم JNDI:
+  <li>السطر 5: لدينا سياق <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> (واجهة تسمية ودليل <bdi dir="ltr" class="odt-ltr-term">Java</bdi>) الذي يسمح لنا بالحصول على مراجع إلى <bdi dir="ltr" class="odt-ltr-term">EJBs.</bdi> يتم تحديد كل <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> بواسطة اسم <bdi dir="ltr" class="odt-ltr-term">JNDI:</bdi>
   </li>
   <li>(تابع)
     <ul>
-      <li>بالنسبة للواجهة المحلية، أضف &quot;<b>Local&quot; </b>إلى اسم EJB (الأسطر 7-9)
+      <li>بالنسبة للواجهة المحلية، أضف &quot;<b><bdi dir="ltr" class="odt-ltr-term">Local</bdi>&quot; </b>إلى اسم <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> (الأسطر 7-9)
       </li>
-      <li>بالنسبة للواجهة البعيدة، نضيف &quot;<b>Remote&quot; </b>إلى اسم EJB
+      <li>بالنسبة للواجهة البعيدة، نضيف &quot;<b><bdi dir="ltr" class="odt-ltr-term">Remote</bdi>&quot; </b>إلى اسم <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>
       </li>
     </ul>
   </li>
 </ul>
 
-<p>مع Java EE 5، تختلف هذه القواعد اعتمادًا على حاوية EJB. وهذا يمثل تحديًا. قدمت Java EE 6 ترميز JNDI قابل للنقل عبر جميع خوادم التطبيقات.</p>
-<p>يسترد الكود السابق الإشارات إلى الواجهات المحلية لـ EJBs عبر أسماء JNDI الخاصة بها. وقد ذكرنا سابقًا أنه يمكن الحصول عليها أيضًا عبر العلامة @EJB. لذا قد نرغب في كتابة:</p>
+<p>مع <bdi dir="ltr" class="odt-ltr-term">Java EE</bdi> 5، تختلف هذه القواعد اعتمادًا على حاوية <bdi dir="ltr" class="odt-ltr-term">EJB.</bdi> وهذا يمثل تحديًا. قدمت <bdi dir="ltr" class="odt-ltr-term">Java EE</bdi> 6 ترميز <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> قابل للنقل عبر جميع خوادم التطبيقات.</p>
+<p>يسترد الكود السابق الإشارات إلى الواجهات المحلية لـ <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi> عبر أسماء <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> الخاصة بها. وقد ذكرنا سابقًا أنه يمكن الحصول عليها أيضًا عبر العلامة @<bdi dir="ltr" class="odt-ltr-term">EJB.</bdi> لذا قد نرغب في كتابة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nd">@EJB</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kd">private</span><span class="w"> </span><span class="n">IemployeDaoLocal</span><span class="w"> </span><span class="n">employeDaoLocal</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
-<p>لا يتم تفعيل تعليق @EJB إلا إذا كان ينتمي إلى فئة يتم تحميلها بواسطة حاوية EJB. وهذا هو الحال بالنسبة لفئة [Metier]، على سبيل المثال. لكن الكود أعلاه ينتمي إلى فئة وحدة التحكم التي لن يتم تحميلها بواسطة حاوية EJB. ولذلك، نحن مضطرون لاستخدام أسماء JNDI الخاصة بـ EJBs.</p>
-<p>فيما يلي الكود للحصول على مرجع للواجهة البعيدة لـ EJB [Metier]:</p>
+<p>لا يتم تفعيل تعليق @<bdi dir="ltr" class="odt-ltr-term">EJB</bdi> إلا إذا كان ينتمي إلى فئة يتم تحميلها بواسطة حاوية <bdi dir="ltr" class="odt-ltr-term">EJB.</bdi> وهذا هو الحال بالنسبة لفئة [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>]، على سبيل المثال. لكن الكود أعلاه ينتمي إلى فئة وحدة التحكم التي لن يتم تحميلها بواسطة حاوية <bdi dir="ltr" class="odt-ltr-term">EJB.</bdi> ولذلك، نحن مضطرون لاستخدام أسماء <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> الخاصة بـ <bdi dir="ltr" class="odt-ltr-term">EJBs.</bdi></p>
+<p>فيما يلي الكود للحصول على مرجع للواجهة البعيدة لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>]:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
 <span class="normal"><a href="#__codelineno-12-2">2</a></span>
 <span class="normal"><a href="#__codelineno-12-3">3</a></span>
@@ -1361,32 +1363,32 @@
 <p><a id="refheading87455112820228"></a>
 <a id="portage-pratique-spring-openejb"></a></p>
 <h2 id="62">6.2. <span style="color: #4f81bd">تمرين عملي</span></h2>
-<p>نقترح ترحيل تطبيق NetBeans <strong>Spring/Hibernate</strong> إلى بنية <strong>OpenEJB/EclipseLink</strong>.</p>
-<p><strong>التنفيذ الحالي باستخدام Spring / Hibernate</strong></p>
+<p>نقترح ترحيل تطبيق <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> <strong><bdi dir="ltr" class="odt-ltr-term">Spring/Hibernate</bdi></strong> إلى بنية <strong><bdi dir="ltr" class="odt-ltr-term">OpenEJB/EclipseLink</bdi></strong>.</p>
+<p><strong>التنفيذ الحالي باستخدام <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> / <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi></strong></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051C00000107079C43C3.png" width="654" height="131" style="display:inline-block; margin:4px;width:17.304cm;height:3.478cm;" class="odt-zoomable" data-zoom-src="images/100000000000051C00000107079C43C3.png" /></td></tr></table>
 
-<p><strong>التنفيذ المقرر بناؤه باستخدام OpenEJB / EclipseLink</strong></p>
+<p><strong>التنفيذ المقرر بناؤه باستخدام <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi> / <bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi></strong></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052400000113C554DFCB.png" width="658" height="137" style="display:inline-block; margin:4px;width:17.41cm;height:3.637cm;" class="odt-zoomable" data-zoom-src="images/100000000000052400000113C554DFCB.png" /></td></tr></table>
 
 <p><a id="refheading87457112820228"></a>
 <a id="connexion-nb-dbpam-eclipselink"></a></p>
-<h3 id="621-dbpam_eclipselink">6.2.1. <span style="color: #4f81bd">إعداد قاعدة البيانات [ dbpam_eclipselink]</span></h3>
-<p>إذا لم تكن موجودة، فقم بإنشاء قاعدة بيانات MySQL [dbpam_eclipselink]. وإذا كانت موجودة، فاحذف جميع جداولها. قم بإنشاء اتصال NetBeans بهذه القاعدة كما هو موضح في القسم<a href="#connexion-nb-dbpam-eclipselink"><u><span style="color: #0563c1"> 6.2.1</span></u></a>.</p>
+<h3 id="621-dbpam_eclipselink">6.2.1. <span style="color: #4f81bd">إعداد قاعدة البيانات [ <bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_eclipselink]</span></h3>
+<p>إذا لم تكن موجودة، فقم بإنشاء قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_eclipselink]. وإذا كانت موجودة، فاحذف جميع جداولها. قم بإنشاء اتصال <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> بهذه القاعدة كما هو موضح في القسم<a href="#connexion-nb-dbpam-eclipselink"><u><span style="color: #0563c1"> 6.2.1</span></u></a>.</p>
 <p><a id="refheading87459112820228"></a></p>
-<h3 id="622-netbeans">6.2.2. <span style="color: #4f81bd">التكوين الأولي لمشروع NetBeans</span></h3>
+<h3 id="622-netbeans">6.2.2. <span style="color: #4f81bd">التكوين الأولي لمشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi></span></h3>
 <ul>
-  <li>قم بتحميل مشروع Maven [mv-pam-spring-hibernate]
+  <li>قم بتحميل مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> [<bdi dir="ltr" class="odt-ltr-term">mv-pam-spring-hibernate</bdi>]
   </li>
-  <li>أنشئ مشروع Java جديد في Maven [mv-pam-openejb-eclipselink] [1]
+  <li>أنشئ مشروع <bdi dir="ltr" class="odt-ltr-term">Java</bdi> جديد في <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> [<bdi dir="ltr" class="odt-ltr-term">mv-pam-openejb-eclipselink</bdi>] [1]
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003D50000011A8DC2E285.png" width="491" height="141" style="display:inline-block; margin:4px;width:12.979cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000003D50000011A8DC2E285.png" /></td></tr></table>
 
 <ul>
-  <li>في علامة التبويب [Files] [2]، قم بإنشاء مجلد [conf] [3] تحت جذر المشروع
+  <li>في علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Files</bdi>] [2]، قم بإنشاء مجلد [<bdi dir="ltr" class="odt-ltr-term">conf</bdi>] [3] تحت جذر المشروع
   </li>
-  <li>ضع ملف [openejb.conf] التالي [4] في هذا المجلد:
+  <li>ضع ملف [<bdi dir="ltr" class="odt-ltr-term">openejb.conf</bdi>] التالي [4] في هذا المجلد:
   </li>
 </ul>
 
@@ -1409,9 +1411,9 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002E400000173A7004D2A.png" width="370" height="185" style="display:inline-block; margin:4px;width:9.79cm;height:4.907cm;" class="odt-zoomable" data-zoom-src="images/10000000000002E400000173A7004D2A.png" /></td></tr></table>
 
 <ul>
-  <li>أنشئ المجلد [src/main/resources/META-INF] [5]
+  <li>أنشئ المجلد [<bdi dir="ltr" class="odt-ltr-term">src/main/resources/META-INF</bdi>] [5]
   </li>
-  <li>ضع ملف [persistence.xml] التالي [6] فيه:
+  <li>ضع ملف [<bdi dir="ltr" class="odt-ltr-term">persistence.xml</bdi>] التالي [6] فيه:
   </li>
 </ul>
 
@@ -1435,11 +1437,11 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 12: نطلب سجلات تفصيلية من EclipseLink،
+  <li>السطر 12: نطلب سجلات تفصيلية من <bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi>،
   </li>
-  <li>السطر 13: سيتم إنشاء الجداول عند إنشاء مثيل لطبقة JPA،
+  <li>السطر 13: سيتم إنشاء الجداول عند إنشاء مثيل لطبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>،
   </li>
-  <li>أضف مكتبات <i>OpenEJB </i>و <i>EclipseLink</i>، بالإضافة إلى برنامج تشغيل MySQL JDBC، إلى ملف [pom.xml] الخاص بالمشروع:
+  <li>أضف مكتبات <i><bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi></i>، بالإضافة إلى برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">MySQL JDBC</bdi>، إلى ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] الخاص بالمشروع:
   </li>
 </ul>
 
@@ -1508,29 +1510,29 @@
 </code></pre></div>
 
 <ul>
-  <li>الأسطر 18–22: تبعية OpenEJB،
+  <li>الأسطر 18–22: تبعية <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi>،
   </li>
-  <li>الأسطر 30–39: تبعيات EclipseLink،
+  <li>الأسطر 30–39: تبعيات <bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi>،
   </li>
-  <li>الأسطر 41-44: تبعية برنامج تشغيل MySQL JDBC
+  <li>الأسطر 41-44: تبعية برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">MySQL JDBC</bdi>
   </li>
 </ul>
 
 <p><a id="refheading87461112820228"></a></p>
-<h3 id="623-dao">6.2.3. <span style="color: #4f81bd">نقل طبقة [DAO]</span></h3>
-<p>سنقوم بنقل طبقة [DAO] عن طريق نسخ الحزم من مشروع [mv-pam-spring-hibernate] إلى مشروع [mv-pam-openejb-eclipselink].</p>
+<h3 id="623-dao">6.2.3. <span style="color: #4f81bd">نقل طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</span></h3>
+<p>سنقوم بنقل طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] عن طريق نسخ الحزم من مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-spring-hibernate</bdi>] إلى مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-openejb-eclipselink</bdi>].</p>
 <ul>
-  <li>انسخ حزم [dao، exception، jpa]
+  <li>انسخ حزم [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>، <bdi dir="ltr" class="odt-ltr-term">exception</bdi>، <bdi dir="ltr" class="odt-ltr-term">jpa</bdi>]
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D6000000ECF1E2ADB0.png" width="150" height="165" style="display:inline-block; margin:4px;width:3.96cm;height:4.367cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D6000000ECF1E2ADB0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>ترجع الأخطاء المذكورة أعلاه إلى أن طبقة [DAO] المنسوخة تستخدم Spring وأن مكتبات Spring لم تعد جزءًا من المشروع.</p>
+<p>ترجع الأخطاء المذكورة أعلاه إلى أن طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] المنسوخة تستخدم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> وأن مكتبات <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> لم تعد جزءًا من المشروع.</p>
 <p><a id="refheading87463112820228"></a></p>
-<h4 id="6231-ejb-cotisationdao">6.2.3.1. <span style="color: #4f81bd">EJB [CotisationDao]</span></h4>
-<p>نقوم بإنشاء الواجهات <strong>المحلية والبعيدة</strong> لـ EJB [CotisationDao] المستقبلي:</p>
-<p>الواجهة المحلية <em>ICotisationDaoLocal</em>:</p>
+<h4 id="6231-ejb-cotisationdao">6.2.3.1. <span style="color: #4f81bd"><bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">CotisationDao</bdi>]</span></h4>
+<p>نقوم بإنشاء الواجهات <strong>المحلية والبعيدة</strong> لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">CotisationDao</bdi>] المستقبلي:</p>
+<p>الواجهة المحلية <em><bdi dir="ltr" class="odt-ltr-term">ICotisationDaoLocal</bdi></em>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
 <span class="normal"><a href="#__codelineno-14-2">2</a></span>
 <span class="normal"><a href="#__codelineno-14-3">3</a></span>
@@ -1545,8 +1547,8 @@
 <a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">ICotisationDaoLocal</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ICotisationDao</span><span class="p">{</span>
 <a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>لضمان <em>استيراد</em> الحزم بشكل صحيح، انقر بزر الماوس الأيمن على الكود واختر [Fix Imports]. </p>
-<p>الواجهة البعيدة <em>ICotisationDaoRemote</em>:</p>
+<p>لضمان <em>استيراد</em> الحزم بشكل صحيح، انقر بزر الماوس الأيمن على الكود واختر [<bdi dir="ltr" class="odt-ltr-term">Fix Imports</bdi>]. </p>
+<p>الواجهة البعيدة <em><bdi dir="ltr" class="odt-ltr-term">ICotisationDaoRemote</bdi></em>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
 <span class="normal"><a href="#__codelineno-15-2">2</a></span>
 <span class="normal"><a href="#__codelineno-15-3">3</a></span>
@@ -1561,7 +1563,7 @@
 <a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">ICotisationDaoRemote</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ICotisationDao</span><span class="p">{</span>
 <a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>ثم نقوم بتعديل فئة [CotisationDao] لتحويلها إلى EJB:</p>
+<p>ثم نقوم بتعديل فئة [<bdi dir="ltr" class="odt-ltr-term">CotisationDao</bdi>] لتحويلها إلى <bdi dir="ltr" class="odt-ltr-term">EJB:</bdi></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
@@ -1584,28 +1586,28 @@
 <a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">EntityManager</span><span class="w"> </span><span class="n">em</span><span class="p">;</span>
 <a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="p">...</span><span class="w">  </span>
 </code></pre></div></td></tr></table></div>
-<p>يختفي <em>الاستيراد</em> الذي قامت به هذه الفئة على إطار عمل Spring. قم بإجراء [تنظيف وبناء] على المشروع:</p>
+<p>يختفي <em>الاستيراد</em> الذي قامت به هذه الفئة على إطار عمل <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> قم بإجراء [تنظيف وبناء] على المشروع:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000413000001DA331271EE.png" width="522" height="237" style="display:inline-block; margin:4px;width:13.799cm;height:6.271cm;" class="odt-zoomable" data-zoom-src="images/1000000000000413000001DA331271EE.png" /></td></tr></table>
 
-<p>في [1]، لم تعد هناك أية أخطاء في فئة [CotisationDao].</p>
+<p>في [1]، لم تعد هناك أية أخطاء في فئة [<bdi dir="ltr" class="odt-ltr-term">CotisationDao</bdi>].</p>
 <p><a id="refheading87465112820228"></a></p>
-<h4 id="6232-ejbs-employedao-indemnitedao">6.2.3.2. <span style="color: #4f81bd">EJBs [EmployeDao] و [IndemniteDao]</span></h4>
-<p>نكرر نفس العملية بالنسبة للعناصر الأخرى في طبقة [DAO]:</p>
+<h4 id="6232-ejbs-employedao-indemnitedao">6.2.3.2. <span style="color: #4f81bd"><bdi dir="ltr" class="odt-ltr-term">EJBs</bdi> [<bdi dir="ltr" class="odt-ltr-term">EmployeDao</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">IndemniteDao</bdi>]</span></h4>
+<p>نكرر نفس العملية بالنسبة للعناصر الأخرى في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]:</p>
 <ul>
-  <li>الواجهات <i>IEmployeDaoLocal </i>و <i>IEmployeDaoRemote </i>المشتقة من <i>IEmployeDao</i>
+  <li>الواجهات <i><bdi dir="ltr" class="odt-ltr-term">IEmployeDaoLocal</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">IEmployeDaoRemote</bdi> </i>المشتقة من <i><bdi dir="ltr" class="odt-ltr-term">IEmployeDao</bdi></i>
   </li>
-  <li>EJB `<i>EmployeDao` </i>الذي ينفذ هاتين الواجهتين
+  <li><bdi dir="ltr" class="odt-ltr-term">EJB</bdi> `<i><bdi dir="ltr" class="odt-ltr-term">EmployeDao</bdi>` </i>الذي ينفذ هاتين الواجهتين
   </li>
-  <li>الواجهات <i>IIndemniteDaoLocal </i>و <i>IIndemniteDaoRemote </i>المشتقتان من <i>IIndemniteDao</i>
+  <li>الواجهات <i><bdi dir="ltr" class="odt-ltr-term">IIndemniteDaoLocal</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">IIndemniteDaoRemote</bdi> </i>المشتقتان من <i><bdi dir="ltr" class="odt-ltr-term">IIndemniteDao</bdi></i>
   </li>
-  <li>EJB <i>IndemniteDao </i>الذي ينفذ هاتين الواجهتين
+  <li><bdi dir="ltr" class="odt-ltr-term">EJB</bdi> <i><bdi dir="ltr" class="odt-ltr-term">IndemniteDao</bdi> </i>الذي ينفذ هاتين الواجهتين
   </li>
 </ul>
 
 <p>بمجرد الانتهاء من ذلك، لن تكون هناك أخطاء أخرى في المشروع [2].</p>
 <p><a id="refheading87467112820228"></a></p>
-<h4 id="6233-pamexception">6.2.3.3. <span style="color: #4f81bd">فئة [PamException]</span></h4>
-<p>تظل فئة [PamException] كما كانت من قبل، مع تغيير بسيط واحد:</p>
+<h4 id="6233-pamexception">6.2.3.3. <span style="color: #4f81bd">فئة [<bdi dir="ltr" class="odt-ltr-term">PamException</bdi>]</span></h4>
+<p>تظل فئة [<bdi dir="ltr" class="odt-ltr-term">PamException</bdi>] كما كانت من قبل، مع تغيير بسيط واحد:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
@@ -1627,31 +1629,31 @@
 <a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="p">...</span>
 </code></pre></div></td></tr></table></div>
 <p>تمت إضافة السطر 5. للحصول على <em>الاستيرادات الصحيحة،</em> انقر فوق [إصلاح الاستيرادات].</p>
-<p>لفهم التعليق التوضيحي في السطر 5، تذكر أن كل طريقة في EJBs في طبقة [DAO] لدينا:</p>
+<p>لفهم التعليق التوضيحي في السطر 5، تذكر أن كل طريقة في <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi> في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] لدينا:</p>
 <ul>
-  <li>تعمل ضمن معاملة يبدأها وينهيها حاوية EJB
+  <li>تعمل ضمن معاملة يبدأها وينهيها حاوية <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>
   </li>
-  <li>تقوم بإلقاء استثناء [PamException] بمجرد حدوث خطأ ما
+  <li>تقوم بإلقاء استثناء [<bdi dir="ltr" class="odt-ltr-term">PamException</bdi>] بمجرد حدوث خطأ ما
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000470000000B72EA1F2C0.png" width="568" height="92" style="display:inline-block; margin:4px;width:15.028cm;height:2.422cm;" class="odt-zoomable" data-zoom-src="images/1000000000000470000000B72EA1F2C0.png" /></td></tr></table>
 
-<p>عندما تستدعي طبقة [الأعمال] طريقة M من طبقة [DAO]، يتم اعتراض هذا الاستدعاء بواسطة حاوية EJB. وكأن هناك فئة وسيطة بين طبقة [الأعمال] وطبقة [DAO] — تسمى هنا [EJB Proxy] — تعترض جميع الاستدعاءات الموجهة إلى طبقة [DAO]. عندما يتم اعتراض الاستدعاء إلى الطريقة M في طبقة [DAO]، يبدأ EJB Proxy معاملة ثم يسلم التحكم إلى الطريقة M في طبقة [DAO]، والتي يتم تنفيذها بعد ذلك ضمن تلك المعاملة. قد تكتمل الطريقة M مع أو بدون استثناء.</p>
+<p>عندما تستدعي طبقة [الأعمال] طريقة <bdi dir="ltr" class="odt-ltr-term">M</bdi> من طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]، يتم اعتراض هذا الاستدعاء بواسطة حاوية <bdi dir="ltr" class="odt-ltr-term">EJB.</bdi> وكأن هناك فئة وسيطة بين طبقة [الأعمال] وطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] — تسمى هنا [<bdi dir="ltr" class="odt-ltr-term">EJB Proxy</bdi>] — تعترض جميع الاستدعاءات الموجهة إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. عندما يتم اعتراض الاستدعاء إلى الطريقة <bdi dir="ltr" class="odt-ltr-term">M</bdi> في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]، يبدأ <bdi dir="ltr" class="odt-ltr-term">EJB Proxy</bdi> معاملة ثم يسلم التحكم إلى الطريقة <bdi dir="ltr" class="odt-ltr-term">M</bdi> في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]، والتي يتم تنفيذها بعد ذلك ضمن تلك المعاملة. قد تكتمل الطريقة <bdi dir="ltr" class="odt-ltr-term">M</bdi> مع أو بدون استثناء.</p>
 <ul>
-  <li>إذا اكتملت الطريقة M بدون استثناء، يعود التحكم إلى وكيل EJB، الذي ينهي المعاملة عن طريق تثبيتها. ثم يعود التحكم إلى الطريقة المستدعية في طبقة [الأعمال]
+  <li>إذا اكتملت الطريقة <bdi dir="ltr" class="odt-ltr-term">M</bdi> بدون استثناء، يعود التحكم إلى وكيل <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>، الذي ينهي المعاملة عن طريق تثبيتها. ثم يعود التحكم إلى الطريقة المستدعية في طبقة [الأعمال]
   </li>
-  <li>إذا انتهت الطريقة M بحدوث استثناء، يعود التنفيذ إلى وكيل EJB، الذي ينهي المعاملة عن طريق <i>التراجع</i> عنها. بالإضافة إلى ذلك، يقوم بتغليف هذا الاستثناء في <b>EJBException</b>. ثم يعود التنفيذ إلى الطريقة المستدعية في طبقة [الأعمال]، والتي تتلقى بالتالي استثناء <b>EJBException</b>. يمنع التعليق التوضيحي في السطر 5 أعلاه هذا التغليف. وبالتالي، ستتلقى طبقة [الأعمال] استثناء <b>PamException</b>. علاوة على ذلك، توجه السمة <b>rollback=true </b>وكيل EJB إلى أنه عند تلقيه استثناء <i>PamException</i>، يجب عليه التراجع عن المعاملة.
+  <li>إذا انتهت الطريقة <bdi dir="ltr" class="odt-ltr-term">M</bdi> بحدوث استثناء، يعود التنفيذ إلى وكيل <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>، الذي ينهي المعاملة عن طريق <i>التراجع</i> عنها. بالإضافة إلى ذلك، يقوم بتغليف هذا الاستثناء في <b><bdi dir="ltr" class="odt-ltr-term">EJBException</bdi></b>. ثم يعود التنفيذ إلى الطريقة المستدعية في طبقة [الأعمال]، والتي تتلقى بالتالي استثناء <b><bdi dir="ltr" class="odt-ltr-term">EJBException</bdi></b>. يمنع التعليق التوضيحي في السطر 5 أعلاه هذا التغليف. وبالتالي، ستتلقى طبقة [الأعمال] استثناء <b><bdi dir="ltr" class="odt-ltr-term">PamException</bdi></b>. علاوة على ذلك، توجه السمة <b><bdi dir="ltr" class="odt-ltr-term">rollback</bdi>=<bdi dir="ltr" class="odt-ltr-term">true</bdi> </b>وكيل <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> إلى أنه عند تلقيه استثناء <i><bdi dir="ltr" class="odt-ltr-term">PamException</bdi></i>، يجب عليه التراجع عن المعاملة.
   </li>
 </ul>
 
 <p><a id="refheading87469112820228"></a></p>
-<h4 id="6234-dao">6.2.3.4. <span style="color: #4f81bd">اختبار طبقة [DAO]</span></h4>
-<p>يمكن اختبار طبقة [DAO] التي تم تنفيذها بواسطة EJBs. نبدأ بنسخ حزمة [dao] من [Test Packages] في مشروع [mv-pam-springhibernate] إلى المشروع قيد التطوير حاليًا [1]:</p>
+<h4 id="6234-dao">6.2.3.4. <span style="color: #4f81bd">اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</span></h4>
+<p>يمكن اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] التي تم تنفيذها بواسطة <bdi dir="ltr" class="odt-ltr-term">EJBs.</bdi> نبدأ بنسخ حزمة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] من [<bdi dir="ltr" class="odt-ltr-term">Test Packages</bdi>] في مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-springhibernate</bdi>] إلى المشروع قيد التطوير حاليًا [1]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DE00000123A32AAFA8.png" width="623" height="146" style="display:inline-block; margin:4px;width:16.484cm;height:3.851cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DE00000123A32AAFA8.png" /></td></tr></table>
 
-<p>نحتفظ فقط باختبار [JUnitInitDB]، الذي يقوم بتهيئة قاعدة البيانات ببعض البيانات [2]. ونقوم بإعادة تسمية فئة [JUnitInitDbLocal] [3]. وستستخدم فئة [JUnitInitDBLocal] الواجهة <strong>المحلية</strong> لـ EJBs في طبقة [DAO]. </p>
-<p>أولاً، نقوم بتعديل فئة [JUnitInitDBLocal] على النحو التالي:</p>
+<p>نحتفظ فقط باختبار [<bdi dir="ltr" class="odt-ltr-term">JUnitInitDB</bdi>]، الذي يقوم بتهيئة قاعدة البيانات ببعض البيانات [2]. ونقوم بإعادة تسمية فئة [<bdi dir="ltr" class="odt-ltr-term">JUnitInitDbLocal</bdi>] [3]. وستستخدم فئة [<bdi dir="ltr" class="odt-ltr-term">JUnitInitDBLocal</bdi>] الواجهة <strong>المحلية</strong> لـ <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi> في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. </p>
+<p>أولاً، نقوم بتعديل فئة [<bdi dir="ltr" class="odt-ltr-term">JUnitInitDBLocal</bdi>] على النحو التالي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
@@ -1689,31 +1691,31 @@
 <a id="__codelineno-18-18" name="__codelineno-18-18"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>الأسطر 3-5: إشارات إلى الواجهات المحلية لـ EJBs في طبقة [DAO]
+  <li>الأسطر 3-5: إشارات إلى الواجهات المحلية لـ <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi> في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]
   </li>
-  <li>السطر 7:  @BeforeClass يعلق على الطريقة التي يتم تنفيذها عند بدء اختبار JUnit
+  <li>السطر 7:  @<bdi dir="ltr" class="odt-ltr-term">BeforeClass</bdi> يعلق على الطريقة التي يتم تنفيذها عند بدء اختبار <bdi dir="ltr" class="odt-ltr-term">JUnit</bdi>
   </li>
-  <li>الأسطر 10-13: تهيئة حاوية OpenEJB. هذه التهيئة خاصة وتختلف باختلاف كل حاوية EJB.
+  <li>الأسطر 10-13: تهيئة حاوية <bdi dir="ltr" class="odt-ltr-term">OpenEJB.</bdi> هذه التهيئة خاصة وتختلف باختلاف كل حاوية <bdi dir="ltr" class="odt-ltr-term">EJB.</bdi>
   </li>
-  <li>السطر 13: لدينا سياق JNDI (واجهة التسمية والدليل في Java) الذي يسمح بالوصول إلى EJBs عبر الأسماء. مع OpenEJB، يتم تعيين الواجهة المحلية لـ <b>EJB </b>بواسطة <b>ELocal </b>والواجهة البعيدة بواسطة <b>ERemote</b>.
+  <li>السطر 13: لدينا سياق <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> (واجهة التسمية والدليل في <bdi dir="ltr" class="odt-ltr-term">Java</bdi>) الذي يسمح بالوصول إلى <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi> عبر الأسماء. مع <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi>، يتم تعيين الواجهة المحلية لـ <b><bdi dir="ltr" class="odt-ltr-term">EJB</bdi> </b>بواسطة <b><bdi dir="ltr" class="odt-ltr-term">ELocal</bdi> </b>والواجهة البعيدة بواسطة <b><bdi dir="ltr" class="odt-ltr-term">ERemote</bdi></b>.
   </li>
-  <li>الأسطر 15-17: نطلب مرجعًا إلى الواجهات المحلية لـ EJBs [EmployeDao، CotisationDao، IndemniteDao] من سياق JNDI. 
+  <li>الأسطر 15-17: نطلب مرجعًا إلى الواجهات المحلية لـ <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi> [<bdi dir="ltr" class="odt-ltr-term">EmployeDao</bdi>، <bdi dir="ltr" class="odt-ltr-term">CotisationDao</bdi>، <bdi dir="ltr" class="odt-ltr-term">IndemniteDao</bdi>] من سياق <bdi dir="ltr" class="odt-ltr-term">JNDI.</bdi> 
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000017300000148C6D36956.png" width="186" height="164" style="display:inline-block; margin:4px;width:4.909cm;height:4.339cm;" class="odt-zoomable" data-zoom-src="images/100000000000017300000148C6D36956.png" /></td></tr></table>
 
-<p>قم بإنشاء المشروع، وابدأ تشغيل خادم MySQL إذا لزم الأمر، وقم بتشغيل اختبار <em>JUnitInitDBLocal</em>. لاحظ أن ملف [persistence.xml] قد تم تكوينه لإعادة إنشاء الجداول في كل مرة يتم فيها تشغيل الاختبار. قبل تشغيل الاختبار، من الأفضل حذف أي جداول موجودة في قاعدة بيانات MySQL [dbpam_eclipselink].</p>
+<p>قم بإنشاء المشروع، وابدأ تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> إذا لزم الأمر، وقم بتشغيل اختبار <em><bdi dir="ltr" class="odt-ltr-term">JUnitInitDBLocal</bdi></em>. لاحظ أن ملف [<bdi dir="ltr" class="odt-ltr-term">persistence.xml</bdi>] قد تم تكوينه لإعادة إنشاء الجداول في كل مرة يتم فيها تشغيل الاختبار. قبل تشغيل الاختبار، من الأفضل حذف أي جداول موجودة في قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_eclipselink].</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052700000200AD27A588.png" width="660" height="256" style="display:inline-block; margin:4px;width:17.45cm;height:6.773cm;" class="odt-zoomable" data-zoom-src="images/100000000000052700000200AD27A588.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، في علامة التبويب [Services]، احذف الجداول من اتصال NetBeans الذي تم إنشاؤه في القسم<a href="#connexion-nb-dbpam-eclipselink"><u><span style="color: #0563c1"> 6.2.1</span></u></a>.
+  <li>في [1]، في علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Services</bdi>]، احذف الجداول من اتصال <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> الذي تم إنشاؤه في القسم<a href="#connexion-nb-dbpam-eclipselink"><u><span style="color: #0563c1"> 6.2.1</span></u></a>.
   </li>
-  <li>في [2]، لم تعد قاعدة البيانات [dbpam_eclipselink] تحتوي على أي جداول
+  <li>في [2]، لم تعد قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">dbpam_eclipselink</bdi>] تحتوي على أي جداول
   </li>
   <li>في [3]، تم إنشاء المشروع
   </li>
-  <li>في [4]، يتم تنفيذ اختبار <i>JUnitInitDBLocal</i>
+  <li>في [4]، يتم تنفيذ اختبار <i><bdi dir="ltr" class="odt-ltr-term">JUnitInitDBLocal</bdi></i>
   </li>
 </ul>
 
@@ -1722,41 +1724,41 @@
 <ul>
   <li>في [5]، نجح الاختبار
   </li>
-  <li>في [6]، قم بتحديث اتصال NetBeans
+  <li>في [6]، قم بتحديث اتصال <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi>
   </li>
-  <li>في [7]، نرى الجداول الأربعة التي أنشأتها طبقة JPA. كان الغرض من الاختبار هو ملؤها. نعرض محتويات أحدها
+  <li>في [7]، نرى الجداول الأربعة التي أنشأتها طبقة <bdi dir="ltr" class="odt-ltr-term">JPA.</bdi> كان الغرض من الاختبار هو ملؤها. نعرض محتويات أحدها
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003D9000000CE96037FAD.png" width="493" height="103" style="display:inline-block; margin:4px;width:13.032cm;height:2.725cm;" class="odt-zoomable" data-zoom-src="images/10000000000003D9000000CE96037FAD.png" /></td></tr></table>
 
 <ul>
-  <li>في [8]، محتويات جدول [EMPLOYEES]
+  <li>في [8]، محتويات جدول [<bdi dir="ltr" class="odt-ltr-term">EMPLOYEES</bdi>]
   </li>
 </ul>
 
-<p>عرضت حاوية OpenEJB السجلات في وحدة التحكم:</p>
+<p>عرضت حاوية <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi> السجلات في وحدة التحكم:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>...
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطران 2-3: اسمي JNDI لـ EJB [CotisationDaoLocal]،
+  <li>السطران 2-3: اسمي <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">CotisationDaoLocal</bdi>]،
   </li>
-  <li>السطران 4-5: اسمي JNDI لـ EJB [CotisationDaoRemote]،
+  <li>السطران 4-5: اسمي <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">CotisationDaoRemote</bdi>]،
   </li>
-  <li>السطران 7-8: اسمي JNDI لـ EJB [EmployeDaoLocal]،
+  <li>السطران 7-8: اسمي <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">EmployeDaoLocal</bdi>]،
   </li>
-  <li>السطران 9-10: اسمي JNDI لـ EJB [EmployeDaoRemote]،
+  <li>السطران 9-10: اسمي <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">EmployeDaoRemote</bdi>]،
   </li>
-  <li>السطران 12-13: اسمي JNDI لـ EJB [IndemniteDaoLocal]،
+  <li>السطران 12-13: اسمي <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">IndemniteDaoLocal</bdi>]،
   </li>
-  <li>السطران 14–15: اسمي JNDI لـ EJB [EmployeeDaoRemote].
+  <li>السطران 14–15: اسمي <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">EmployeeDaoRemote</bdi>].
   </li>
 </ul>
 
-<p>نجري الاختبار نفسه مرة أخرى، هذه المرة باستخدام الواجهة البعيدة لـ EJBs.</p>
+<p>نجري الاختبار نفسه مرة أخرى، هذه المرة باستخدام الواجهة البعيدة لـ <bdi dir="ltr" class="odt-ltr-term">EJBs.</bdi></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001C7000001326C4BFCD3.png" width="228" height="153" style="display:inline-block; margin:4px;width:6.02cm;height:4.048cm;" class="odt-zoomable" data-zoom-src="images/10000000000001C7000001326C4BFCD3.png" /></td></tr></table>
 
-<p>في [1]، تم نسخ فئة [JUnitInitDBLocal] (عن طريق النسخ واللصق) إلى [JUnitInitDBRemote]. وفي هذه الفئة، نقوم باستبدال الواجهات المحلية بالواجهات البعيدة:</p>
+<p>في [1]، تم نسخ فئة [<bdi dir="ltr" class="odt-ltr-term">JUnitInitDBLocal</bdi>] (عن طريق النسخ واللصق) إلى [<bdi dir="ltr" class="odt-ltr-term">JUnitInitDBRemote</bdi>]. وفي هذه الفئة، نقوم باستبدال الواجهات المحلية بالواجهات البعيدة:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
@@ -1813,19 +1815,19 @@
 <a id="__codelineno-20-27" name="__codelineno-20-27"></a><span class="nx">Infos</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Started</span><span class="w"> </span><span class="nx">Ejb</span><span class="p">(</span><span class="nx">deployment</span><span class="o">-</span><span class="nx">id</span><span class="o">=</span><span class="nx">CotisationDao</span><span class="p">,</span><span class="w"> </span><span class="nx">ejb</span><span class="o">-</span><span class="nx">name</span><span class="o">=</span><span class="nx">CotisationDao</span><span class="p">,</span><span class="w"> </span><span class="nx">container</span><span class="o">=</span><span class="nx">Default</span><span class="w"> </span><span class="nx">Stateless</span><span class="w"> </span><span class="nx">Container</span><span class="p">)</span>
 <a id="__codelineno-20-28" name="__codelineno-20-28"></a><span class="nx">Infos</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Deployed</span><span class="w"> </span><span class="nx">Application</span><span class="p">(</span><span class="nx">path</span><span class="o">=</span><span class="nx">D</span><span class="o">:</span><span class="err">\</span><span class="nx">data</span><span class="err">\</span><span class="nx">istia</span><span class="o">-</span><span class="mf">1112</span><span class="err">\</span><span class="nx">netbeans</span><span class="err">\</span><span class="nx">glassfish</span><span class="err">\</span><span class="nx">mv</span><span class="o">-</span><span class="nx">pam</span><span class="err">\</span><span class="nx">tmp</span><span class="err">\</span><span class="nx">mv</span><span class="o">-</span><span class="nx">pam</span><span class="o">-</span><span class="nx">openejb</span><span class="o">-</span><span class="nx">eclipselink</span><span class="err">\</span><span class="nx">classpath</span><span class="p">.</span><span class="nx">ear</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>بمجرد الانتهاء من ذلك، يمكن تشغيل فئة الاختبار الجديدة. قبل القيام بذلك، باستخدام اتصال NetBeans [dbpam_eclipselink]، احذف الجداول من قاعدة البيانات [dbpam_eclipselink].</p>
+<p>بمجرد الانتهاء من ذلك، يمكن تشغيل فئة الاختبار الجديدة. قبل القيام بذلك، باستخدام اتصال <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_eclipselink]، احذف الجداول من قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_eclipselink].</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F700000068026708D8.png" width="173" height="73" style="display:inline-block; margin:4px;width:4.57cm;height:1.924cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F700000068026708D8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>باستخدام اتصال NetBeans [dbpam_eclipselink]، تحقق من أن قاعدة البيانات قد تم ملؤها.</p>
+<p>باستخدام اتصال <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_eclipselink]، تحقق من أن قاعدة البيانات قد تم ملؤها.</p>
 <p><a id="refheading87471112820228"></a></p>
 <h3 id="624">6.2.4. <span style="color: #4f81bd">نقل طبقة [الأعمال]</span></h3>
-<p>سنقوم بنقل طبقة [business] عن طريق نسخ الحزم من مشروع [mv-pam-spring-hibernate] إلى مشروع [mv-pam-openejb-eclipselink].</p>
+<p>سنقوم بنقل طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] عن طريق نسخ الحزم من مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-spring-hibernate</bdi>] إلى مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-openejb-eclipselink</bdi>].</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B8000001735AD80178.png" width="604" height="185" style="display:inline-block; margin:4px;width:15.981cm;height:4.907cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B8000001735AD80178.png" /></td></tr></table>
 
-<p>ترجع الأخطاء المذكورة أعلاه [1] إلى أن طبقة [business] المنسوخة تستخدم Spring وأن مكتبات Spring لم تعد جزءًا من المشروع.</p>
+<p>ترجع الأخطاء المذكورة أعلاه [1] إلى أن طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] المنسوخة تستخدم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> وأن مكتبات <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> لم تعد جزءًا من المشروع.</p>
 <p><a id="refheading87473112820228"></a></p>
-<h4 id="6241-ejb">6.2.4.1. <span style="color: #4f81bd">EJB [الأعمال]</span></h4>
-<p>نتبع نفس الإجراء الموصوف لـ EJB [CotisationDao]. أولاً، في [2]، نقوم بإنشاء الواجهات <strong>المحلية والبعيدة</strong> لـ EJB [Metier] المستقبلي. وكلاهما مشتق من الواجهة الأولية [IMetier].</p>
+<h4 id="6241-ejb">6.2.4.1. <span style="color: #4f81bd"><bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [الأعمال]</span></h4>
+<p>نتبع نفس الإجراء الموصوف لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">CotisationDao</bdi>]. أولاً، في [2]، نقوم بإنشاء الواجهات <strong>المحلية والبعيدة</strong> لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] المستقبلي. وكلاهما مشتق من الواجهة الأولية [<bdi dir="ltr" class="odt-ltr-term">IMetier</bdi>].</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
@@ -1878,7 +1880,7 @@
 <a id="__codelineno-22-7" name="__codelineno-22-7"></a>
 <a id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>بمجرد الانتهاء من ذلك، نقوم في [3] بتعديل فئة [Business] بحيث تصبح EJB:</p>
+<p>بمجرد الانتهاء من ذلك، نقوم في [3] بتعديل فئة [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>] بحيث تصبح <bdi dir="ltr" class="odt-ltr-term">EJB:</bdi></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
 <span class="normal"><a href="#__codelineno-23-2">2</a></span>
 <span class="normal"><a href="#__codelineno-23-3">3</a></span>
@@ -1896,23 +1898,23 @@
 <a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطر 1: تعليق @Stateless يجعل الفئة EJB
+  <li>السطر 1: تعليق @<bdi dir="ltr" class="odt-ltr-term">Stateless</bdi> يجعل الفئة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>
   </li>
   <li>السطر 2: سيتم تنفيذ كل طريقة من طرق الفئة ضمن معاملة
   </li>
-  <li>السطر 3: تنفذ EJB [Metier] كلاً من الواجهتين <b>المحلية والبعيدة </b>اللتين حددناهما للتو
+  <li>السطر 3: تنفذ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] كلاً من الواجهتين <b>المحلية والبعيدة </b>اللتين حددناهما للتو
   </li>
-  <li>السطر 7: سيستخدم EJB [Metier] EJB [CotisationDao] عبر واجهته المحلية. وهذا يعني أن طبقتي [business] و[DAO] يجب أن تعملان في نفس JVM.
+  <li>السطر 7: سيستخدم <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">CotisationDao</bdi>] عبر واجهته المحلية. وهذا يعني أن طبقتي [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] يجب أن تعملان في نفس <bdi dir="ltr" class="odt-ltr-term">JVM.</bdi>
   </li>
-  <li>السطر 6: يضمن التعليق التوضيحي @EJB أن يقوم حاوية EJB بحقن المرجع إلى الواجهة المحلية لـ EJB [CotisationDao] نفسه. النهج الآخر الذي صادفناه هو استخدام سياق JNDI.
+  <li>السطر 6: يضمن التعليق التوضيحي @<bdi dir="ltr" class="odt-ltr-term">EJB</bdi> أن يقوم حاوية <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> بحقن المرجع إلى الواجهة المحلية لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">CotisationDao</bdi>] نفسه. النهج الآخر الذي صادفناه هو استخدام سياق <bdi dir="ltr" class="odt-ltr-term">JNDI.</bdi>
   </li>
-  <li>الأسطر 8-11: تُستخدم الآلية نفسها مع EJBs الآخرين في طبقة [DAO].
+  <li>الأسطر 8-11: تُستخدم الآلية نفسها مع <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi> الآخرين في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>].
   </li>
 </ul>
 
 <p><a id="refheading87475112820228"></a></p>
-<h4 id="6242-business">6.2.4.2. <span style="color: #4f81bd">اختبار طبقة [business]</span></h4>
-<p>يمكن اختبار طبقة [business] الخاصة بنا، والتي تم تنفيذها بواسطة EJB. نبدأ بنسخ حزمة [business] من [Test Packages] في مشروع [mv-pam-spring-hibernate] إلى المشروع قيد الإنشاء حاليًا [1]:</p>
+<h4 id="6242-business">6.2.4.2. <span style="color: #4f81bd">اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</span></h4>
+<p>يمكن اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] الخاصة بنا، والتي تم تنفيذها بواسطة <bdi dir="ltr" class="odt-ltr-term">EJB.</bdi> نبدأ بنسخ حزمة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] من [<bdi dir="ltr" class="odt-ltr-term">Test Packages</bdi>] في مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-spring-hibernate</bdi>] إلى المشروع قيد الإنشاء حاليًا [1]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E700000177971F3B97.png" width="628" height="188" style="display:inline-block; margin:4px;width:16.603cm;height:4.962cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E700000177971F3B97.png" /></td></tr></table>
 
 <ul>
@@ -1920,11 +1922,11 @@
   </li>
   <li>في [2]، نحذف الاختبار الأول
   </li>
-  <li>في [3]، يتم تغيير اسم الاختبار المتبقي إلى [JUnitMetierLocal]
+  <li>في [3]، يتم تغيير اسم الاختبار المتبقي إلى [<bdi dir="ltr" class="odt-ltr-term">JUnitMetierLocal</bdi>]
   </li>
 </ul>
 
-<p>تصبح فئة [JUnitMetierLocal] كما يلي:</p>
+<p>تصبح فئة [<bdi dir="ltr" class="odt-ltr-term">JUnitMetierLocal</bdi>] كما يلي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
@@ -1960,18 +1962,18 @@
 <a id="__codelineno-24-17" name="__codelineno-24-17"></a><span class="p">...</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطر 4: إشارة إلى الواجهة المحلية لـ EJB [Metier]
+  <li>السطر 4: إشارة إلى الواجهة المحلية لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>]
   </li>
-  <li>الأسطر 8-12: تكوين حاوية OpenEJB مطابق لتلك المستخدمة في اختبار طبقة [DAO]
+  <li>الأسطر 8-12: تكوين حاوية <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi> مطابق لتلك المستخدمة في اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]
   </li>
-  <li>الأسطر 15-19: نطلب إشارات من سياق JNDI في السطر 12 إلى EJBs الثلاثة في طبقة [DAO] وإلى EJB في طبقة [business]. سيتم استخدام EJBs في طبقة [DAO] لتهيئة قاعدة البيانات، وسيتم استخدام EJB في طبقة [business] لإجراء اختبارات حساب الرواتب.
+  <li>الأسطر 15-19: نطلب إشارات من سياق <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> في السطر 12 إلى <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi> الثلاثة في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] وإلى <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> في طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. سيتم استخدام <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi> في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] لتهيئة قاعدة البيانات، وسيتم استخدام <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> في طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] لإجراء اختبارات حساب الرواتب.
   </li>
 </ul>
 
-<p>يؤدي تشغيل اختبار [JUnitMetierLocal] إلى النتيجة التالية [1]:</p>
+<p>يؤدي تشغيل اختبار [<bdi dir="ltr" class="odt-ltr-term">JUnitMetierLocal</bdi>] إلى النتيجة التالية [1]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000344000000EE7ECFD50B.png" width="418" height="119" style="display:inline-block; margin:4px;width:11.06cm;height:3.149cm;" class="odt-zoomable" data-zoom-src="images/1000000000000344000000EE7ECFD50B.png" /></td></tr></table>
 
-<p>في [2]، نقوم بنسخ [JUnitMetierLocal] كـ [JUnitMetierRemote] لاختبار الواجهة البعيدة لـ EJB [Metier] هذه المرة. تم تعديل كود [JUnitMetierRemote] لاستخدام هذه الواجهة البعيدة. أما الباقي فلم يتغير.</p>
+<p>في [2]، نقوم بنسخ [<bdi dir="ltr" class="odt-ltr-term">JUnitMetierLocal</bdi>] كـ [<bdi dir="ltr" class="odt-ltr-term">JUnitMetierRemote</bdi>] لاختبار الواجهة البعيدة لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] هذه المرة. تم تعديل كود [<bdi dir="ltr" class="odt-ltr-term">JUnitMetierRemote</bdi>] لاستخدام هذه الواجهة البعيدة. أما الباقي فلم يتغير.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
@@ -2019,24 +2021,24 @@
 <a id="__codelineno-25-23" name="__codelineno-25-23"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطران 4 و 19: نستخدم الواجهة البعيدة لـ EJB [Business].
+  <li>السطران 4 و 19: نستخدم الواجهة البعيدة لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>].
   </li>
-  <li>السطور 15–17: نستخدم الواجهات البعيدة لطبقة [DAO]
+  <li>السطور 15–17: نستخدم الواجهات البعيدة لطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]
   </li>
-  <li>السطران 34 و35: نظرًا لأن الكائنات المتبادلة بين العميل والخادم تُمرر بالقيمة في الواجهات البعيدة، يجب علينا استرداد النتيجة التي تُرجعها الطريقة<i> create(Indemnite i)</i>. لم يكن هذا ضروريًا في الواجهات المحلية، حيث تُمرر الكائنات بالمرجع.
+  <li>السطران 34 و35: نظرًا لأن الكائنات المتبادلة بين العميل والخادم تُمرر بالقيمة في الواجهات البعيدة، يجب علينا استرداد النتيجة التي تُرجعها الطريقة<i> <bdi dir="ltr" class="odt-ltr-term">create</bdi>(<bdi dir="ltr" class="odt-ltr-term">Indemnite i</bdi>)</i>. لم يكن هذا ضروريًا في الواجهات المحلية، حيث تُمرر الكائنات بالمرجع.
   </li>
 </ul>
 
-<p>بمجرد الانتهاء من ذلك، يمكن بناء المشروع وتنفيذ اختبار [JUnitMetierRemote]:</p>
+<p>بمجرد الانتهاء من ذلك، يمكن بناء المشروع وتنفيذ اختبار [<bdi dir="ltr" class="odt-ltr-term">JUnitMetierRemote</bdi>]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FF0000006F7FAD6E41.png" width="178" height="78" style="display:inline-block; margin:4px;width:4.72cm;height:2.055cm;" class="odt-zoomable" data-zoom-src="images/10000000000000FF0000006F7FAD6E41.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading87477112820228"></a></p>
 <h3 id="625">6.2.5. <span style="color: #4f81bd">نقل طبقة [وحدة التحكم]</span></h3>
-<p>سنقوم بنقل طبقة [console] عن طريق نسخ الحزم من مشروع [mv-pam-spring-hibernate] إلى مشروع [mv-pam-openejb-eclipselink].</p>
+<p>سنقوم بنقل طبقة [<bdi dir="ltr" class="odt-ltr-term">console</bdi>] عن طريق نسخ الحزم من مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-spring-hibernate</bdi>] إلى مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-openejb-eclipselink</bdi>].</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004FD0000012BEF4C0773.png" width="639" height="150" style="display:inline-block; margin:4px;width:16.895cm;height:3.956cm;" class="odt-zoomable" data-zoom-src="images/10000000000004FD0000012BEF4C0773.png" /></td></tr></table>
 
-<p>تنبع الأخطاء المذكورة أعلاه [1] من حقيقة أن طبقة [business] المنسوخة تستخدم Spring، وأن مكتبات Spring لم تعد جزءًا من المشروع. في [2]، تم تغيير اسم الفئة [Main] إلى [MainLocal]. وستستخدم الواجهة المحلية لـ EJB [Business].</p>
-<p>يتغير كود فئة [MainLocal] على النحو التالي:</p>
+<p>تنبع الأخطاء المذكورة أعلاه [1] من حقيقة أن طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] المنسوخة تستخدم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>، وأن مكتبات <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> لم تعد جزءًا من المشروع. في [2]، تم تغيير اسم الفئة [<bdi dir="ltr" class="odt-ltr-term">Main</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">MainLocal</bdi>]. وستستخدم الواجهة المحلية لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>].</p>
+<p>يتغير كود فئة [<bdi dir="ltr" class="odt-ltr-term">MainLocal</bdi>] على النحو التالي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-26-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-26-3"> 3</a></span>
@@ -2117,11 +2119,11 @@
 <a id="__codelineno-26-39" name="__codelineno-26-39"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-26-40" name="__codelineno-26-40"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>توجد التغييرات في الأسطر 13–25. هكذا نحصل على مرجع إلى طبقة [business]، التي قد تغيرت (الأسطر 17–22). لن نشرح الكود الجديد، حيث تم تناوله بالفعل في الأمثلة السابقة. بمجرد إجراء هذه التغييرات، لن يكون هناك أي أخطاء في المشروع (انظر [3]).</p>
+<p>توجد التغييرات في الأسطر 13–25. هكذا نحصل على مرجع إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]، التي قد تغيرت (الأسطر 17–22). لن نشرح الكود الجديد، حيث تم تناوله بالفعل في الأمثلة السابقة. بمجرد إجراء هذه التغييرات، لن يكون هناك أي أخطاء في المشروع (انظر [3]).</p>
 <p>نقوم بتكوين المشروع للتشغيل باستخدام المعلمات [1]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002D400000134CAC18D59.png" width="362" height="154" style="display:inline-block; margin:4px;width:9.578cm;height:4.075cm;" class="odt-zoomable" data-zoom-src="images/10000000000002D400000134CAC18D59.png" /></td></tr></table>
 
-<p>لكي يعمل تطبيق وحدة التحكم بشكل طبيعي، يجب أن تكون هناك بيانات في قاعدة البيانات. للقيام بذلك، يجب تعديل ملف [META-INF/persistence.xml]:</p>
+<p>لكي يعمل تطبيق وحدة التحكم بشكل طبيعي، يجب أن تكون هناك بيانات في قاعدة البيانات. للقيام بذلك، يجب تعديل ملف [<bdi dir="ltr" class="odt-ltr-term">META-INF/persistence.xml</bdi>]:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-27-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-27-3"> 3</a></span>
@@ -2214,10 +2216,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;/persistence&gt;</span></span>
 </code></pre></div>
 
-<p>هنا، استخدمنا الواجهة المحلية لطبقة [business]. نستخدم الآن واجهتها البعيدة في فئة وحدة تحكم ثانية:</p>
+<p>هنا، استخدمنا الواجهة المحلية لطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. نستخدم الآن واجهتها البعيدة في فئة وحدة تحكم ثانية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002D400000134CAC18D59.png" width="362" height="154" style="display:inline-block; margin:4px;width:9.578cm;height:4.075cm;" class="odt-zoomable" data-zoom-src="images/10000000000002D400000134CAC18D59.png" /></td></tr></table>
 
-<p>في [1]، تم نسخ فئة [MainLocal] إلى [MainRemote]. تم تعديل الكود في [MainRemote] لاستخدام الواجهة البعيدة لطبقة [business]:</p>
+<p>في [1]، تم نسخ فئة [<bdi dir="ltr" class="odt-ltr-term">MainLocal</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">MainRemote</bdi>]. تم تعديل الكود في [<bdi dir="ltr" class="odt-ltr-term">MainRemote</bdi>] لاستخدام الواجهة البعيدة لطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-28-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-28-3"> 3</a></span>
@@ -2294,14 +2296,14 @@
 <a id="__codelineno-28-37" name="__codelineno-28-37"></a>
 <a id="__codelineno-28-38" name="__codelineno-28-38"></a>BUILD SUCCESSFUL (total time: 4 seconds)
 </code></pre></div></td></tr></table></div>
-<p>تم إجراء تغييرات على السطرين 2 و 8. تم تكوين المشروع [2] لتشغيل فئة [MainRemote]. يؤدي تشغيله إلى نفس النتائج السابقة.</p>
+<p>تم إجراء تغييرات على السطرين 2 و 8. تم تكوين المشروع [2] لتشغيل فئة [<bdi dir="ltr" class="odt-ltr-term">MainRemote</bdi>]. يؤدي تشغيله إلى نفس النتائج السابقة.</p>
 <p><a id="refheading87479112820228"></a></p>
 <h2 id="63">6.3. <span style="color: #4f81bd">الخلاصة</span></h2>
-<p>لقد أوضحنا كيفية ترحيل بنية Spring/Hibernate إلى بنية OpenEJB/EclipseLink.</p>
-<p><strong>بنية Spring/Hibernate</strong></p>
+<p>لقد أوضحنا كيفية ترحيل بنية <bdi dir="ltr" class="odt-ltr-term">Spring/Hibernate</bdi> إلى بنية <bdi dir="ltr" class="odt-ltr-term">OpenEJB/EclipseLink.</bdi></p>
+<p><strong>بنية <bdi dir="ltr" class="odt-ltr-term">Spring/Hibernate</bdi></strong></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005120000010B8C422775.png" width="649" height="133" style="display:inline-block; margin:4px;width:17.171cm;height:3.531cm;" class="odt-zoomable" data-zoom-src="images/10000000000005120000010B8C422775.png" /></td></tr></table>
 
-<p><strong>بنية OpenEJB/EclipseLink</strong></p>
+<p><strong>بنية <bdi dir="ltr" class="odt-ltr-term">OpenEJB/EclipseLink</bdi></strong></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000055600000111E5403DD8.png" width="680" height="136" style="display:inline-block; margin:4px;width:17.999cm;height:3.597cm;" class="odt-zoomable" data-zoom-src="images/100000000000055600000111E5403DD8.png" /></td></tr></table>
 
 <p>سارت عملية النقل بسلاسة لأن التطبيق الأصلي كان مبنيًا على طبقات. ومن المهم فهم هذه النقطة.</p>

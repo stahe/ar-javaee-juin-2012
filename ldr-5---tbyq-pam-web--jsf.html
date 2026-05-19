@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -894,49 +896,49 @@
 
 
 <p><a id="refheading87541112820228"></a></p>
-<h1 id="10-5-pam-web-jsf">10. <span style="color: #365f91">الإصدار 5 - تطبيق PAM Web / JSF</span></h1>
+<h1 id="10-5-pam-web-jsf">10. <span style="color: #365f91">الإصدار 5 - تطبيق <bdi dir="ltr" class="odt-ltr-term">PAM Web</bdi> / <bdi dir="ltr" class="odt-ltr-term">JSF</bdi></span></h1>
 <p><a id="refheading87543112820228"></a></p>
 <h2 id="101">10.1. <span style="color: #4f81bd">بنية التطبيق</span></h2>
-<p>ستكون بنية تطبيق الويب PAM على النحو التالي:</p>
+<p>ستكون بنية تطبيق الويب <bdi dir="ltr" class="odt-ltr-term">PAM</bdi> على النحو التالي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000544000001171F339ED5.png" width="674" height="140" style="display:inline-block; margin:4px;width:17.833cm;height:3.692cm;" class="odt-zoomable" data-zoom-src="images/1000000000000544000001171F339ED5.png" /></td></tr></table>
 
-<p>في هذا الإصدار، سيستضيف خادم GlassFish جميع طبقات التطبيق:</p>
+<p>في هذا الإصدار، سيستضيف خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish</bdi> جميع طبقات التطبيق:</p>
 <ul>
   <li>يتم استضافة الطبقة [الويب] بواسطة حاوية السيرفلت الخاصة بالخادم (1 أدناه)
   </li>
-  <li>يتم استضافة الطبقات الأخرى [منطق الأعمال، DAO، JPA] بواسطة حاوية EJB3 الخاصة بالخادم (2 أدناه)
+  <li>يتم استضافة الطبقات الأخرى [منطق الأعمال، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] بواسطة حاوية <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi> الخاصة بالخادم (2 أدناه)
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004CE000000B0EAA6A0E4.png" width="615" height="88" style="display:inline-block; margin:4px;width:16.272cm;height:2.328cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CE000000B0EAA6A0E4.png" /></td></tr></table>
 
-<p>تم بالفعل تنفيذ مكونات [منطق الأعمال، DAO] للتطبيق الذي يعمل في حاوية EJB3 في تطبيق العميل/الخادم الذي تمت مناقشته في القسم<a href="#serveur-ejb-sunas9"><u><span style="color: #0563c1"> 7.1</span></u></a>، والذي كان له البنية التالية:</p>
+<p>تم بالفعل تنفيذ مكونات [منطق الأعمال، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] للتطبيق الذي يعمل في حاوية <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi> في تطبيق العميل/الخادم الذي تمت مناقشته في القسم<a href="#serveur-ejb-sunas9"><u><span style="color: #0563c1"> 7.1</span></u></a>، والذي كان له البنية التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050F0000012365A8B684.png" width="648" height="146" style="display:inline-block; margin:4px;width:17.133cm;height:3.851cm;" class="odt-zoomable" data-zoom-src="images/100000000000050F0000012365A8B684.png" /></td></tr></table>
 
-<p>كانت طبقات [منطق الأعمال، DAO] تعمل في حاوية EJB3 بخادم GlassFish، بينما كانت طبقة [واجهة المستخدم] تعمل في تطبيق وحدة التحكم أو تطبيق Swing على جهاز آخر:</p>
+<p>كانت طبقات [منطق الأعمال، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] تعمل في حاوية <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi> بخادم <bdi dir="ltr" class="odt-ltr-term">GlassFish</bdi>، بينما كانت طبقة [واجهة المستخدم] تعمل في تطبيق وحدة التحكم أو تطبيق <bdi dir="ltr" class="odt-ltr-term">Swing</bdi> على جهاز آخر:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E1000000BCC0FA4112.png" width="625" height="94" style="display:inline-block; margin:4px;width:16.524cm;height:2.487cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E1000000BCC0FA4112.png" /></td></tr></table>
 
 <p>في بنية التطبيق الجديد:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DD000000AE898F8953.png" width="623" height="87" style="display:inline-block; margin:4px;width:16.471cm;height:2.302cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DD000000AE898F8953.png" /></td></tr></table>
 
-<p>لا يلزم كتابة سوى طبقة [web / jsf]. أما الطبقات الأخرى [business، DAO، JPA] فهي موجودة بالفعل.</p>
-<p>في الوثيقة [<a href="http://tahe.developpez.com/java/primefaces"><u><span style="color: #0563c1">ref3</span></u></a>]، يظهر أن تطبيق الويب الذي يتم فيه تنفيذ طبقة الويب باستخدام Java Server Faces له بنية مشابهة لما يلي:</p>
+<p>لا يلزم كتابة سوى طبقة [<bdi dir="ltr" class="odt-ltr-term">web</bdi> / <bdi dir="ltr" class="odt-ltr-term">jsf</bdi>]. أما الطبقات الأخرى [<bdi dir="ltr" class="odt-ltr-term">business</bdi>، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] فهي موجودة بالفعل.</p>
+<p>في الوثيقة [<a href="http://tahe.developpez.com/java/primefaces"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">ref3</bdi></span></u></a>]، يظهر أن تطبيق الويب الذي يتم فيه تنفيذ طبقة الويب باستخدام <bdi dir="ltr" class="odt-ltr-term">Java Server Faces</bdi> له بنية مشابهة لما يلي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046300000167CE12FF28.png" width="562" height="179" style="display:inline-block; margin:4px;width:14.857cm;height:4.748cm;" class="odt-zoomable" data-zoom-src="images/100000000000046300000167CE12FF28.png" /></td></tr></table>
 
-<p>تطبق هذه البنية <em>نمط تصميم</em> <strong>MVC</strong> (النموذج، العرض، وحدة التحكم). تتم معالجة طلب العميل على النحو التالي:</p>
-<p>إذا تم إرسال الطلب باستخدام <strong>GET</strong>، يتم تنفيذ الخطوتين التاليتين:</p>
+<p>تطبق هذه البنية <em>نمط تصميم</em> <strong><bdi dir="ltr" class="odt-ltr-term">MVC</bdi></strong> (النموذج، العرض، وحدة التحكم). تتم معالجة طلب العميل على النحو التالي:</p>
+<p>إذا تم إرسال الطلب باستخدام <strong><bdi dir="ltr" class="odt-ltr-term">GET</bdi></strong>، يتم تنفيذ الخطوتين التاليتين:</p>
 <ol>
-  <li><b>الطلب </b>- يرسل متصفح العميل طلبًا إلى وحدة التحكم [<b>Faces Servlet</b>]. تتولى وحدة التحكم معالجة جميع طلبات العميل. وهي نقطة دخول التطبيق. وهي تمثل حرف <b>C </b>في نمط MVC.
+  <li><b>الطلب </b>- يرسل متصفح العميل طلبًا إلى وحدة التحكم [<b><bdi dir="ltr" class="odt-ltr-term">Faces Servlet</bdi></b>]. تتولى وحدة التحكم معالجة جميع طلبات العميل. وهي نقطة دخول التطبيق. وهي تمثل حرف <b><bdi dir="ltr" class="odt-ltr-term">C</bdi> </b>في نمط <bdi dir="ltr" class="odt-ltr-term">MVC.</bdi>
   </li>
-  <li><b>الاستجابة </b>- يوجه وحدة التحكم <b>C </b>الصفحة JSF المحددة لعرضها. هذه هي العرض، وهي <b>الحرف V </b>في MVC. تستخدم صفحة JSF نموذج <b>M </b>لتهيئة الأجزاء الديناميكية من الاستجابة التي يجب إرسالها إلى العميل. هذا النموذج هو فئة Java يمكنها استدعاء الطبقة [الأعمال] [4a] لتزويد العرض <b>V </b>بالبيانات التي يحتاجها.
+  <li><b>الاستجابة </b>- يوجه وحدة التحكم <b><bdi dir="ltr" class="odt-ltr-term">C</bdi> </b>الصفحة <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> المحددة لعرضها. هذه هي العرض، وهي <b>الحرف <bdi dir="ltr" class="odt-ltr-term">V</bdi> </b>في <bdi dir="ltr" class="odt-ltr-term">MVC.</bdi> تستخدم صفحة <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> نموذج <b><bdi dir="ltr" class="odt-ltr-term">M</bdi> </b>لتهيئة الأجزاء الديناميكية من الاستجابة التي يجب إرسالها إلى العميل. هذا النموذج هو فئة <bdi dir="ltr" class="odt-ltr-term">Java</bdi> يمكنها استدعاء الطبقة [الأعمال] [4a] لتزويد العرض <b><bdi dir="ltr" class="odt-ltr-term">V</bdi> </b>بالبيانات التي يحتاجها.
   </li>
 </ol>
 
-<p>إذا تم إرسال الطلب عبر <strong>POST</strong>، تحدث خطوتان إضافيتان بين الطلب والاستجابة:</p>
+<p>إذا تم إرسال الطلب عبر <strong><bdi dir="ltr" class="odt-ltr-term">POST</bdi></strong>، تحدث خطوتان إضافيتان بين الطلب والاستجابة:</p>
 <ol>
-  <li><b>الطلب </b>- يقوم عميل المتصفح بتقديم طلب إلى وحدة التحكم [<b>Faces Servlet</b>].
+  <li><b>الطلب </b>- يقوم عميل المتصفح بتقديم طلب إلى وحدة التحكم [<b><bdi dir="ltr" class="odt-ltr-term">Faces Servlet</bdi></b>].
   </li>
-  <li><b>المعالجة </b>- تقوم وحدة التحكم <b>C </b>بمعالجة هذا الطلب. في الواقع، يرافق طلب POST بيانات يجب معالجتها. للقيام بذلك، تتلقى وحدة التحكم المساعدة من معالجات الأحداث الخاصة بالتطبيق [2a]. قد تتطلب معالجات الأحداث هذه طبقة الأعمال [2b]. قد تحتاج معالجة الأحداث إلى تحديث نماذج M معينة [2c]. بمجرد معالجة طلب العميل، قد يؤدي ذلك إلى استجابات متنوعة. ومن الأمثلة الكلاسيكية على ذلك:
+  <li><b>المعالجة </b>- تقوم وحدة التحكم <b><bdi dir="ltr" class="odt-ltr-term">C</bdi> </b>بمعالجة هذا الطلب. في الواقع، يرافق طلب <bdi dir="ltr" class="odt-ltr-term">POST</bdi> بيانات يجب معالجتها. للقيام بذلك، تتلقى وحدة التحكم المساعدة من معالجات الأحداث الخاصة بالتطبيق [2a]. قد تتطلب معالجات الأحداث هذه طبقة الأعمال [2b]. قد تحتاج معالجة الأحداث إلى تحديث نماذج <bdi dir="ltr" class="odt-ltr-term">M</bdi> معينة [2c]. بمجرد معالجة طلب العميل، قد يؤدي ذلك إلى استجابات متنوعة. ومن الأمثلة الكلاسيكية على ذلك:
     <ul>
       <li>صفحة خطأ إذا تعذر معالجة الطلب بشكل صحيح
       </li>
@@ -946,23 +948,23 @@
   </li>
 </ol>
 
-<p>تُرجع معالجة الأحداث نتيجة من نوع سلسلة تسمى <strong>مفتاح التنقل</strong> إلى وحدة التحكم [Faces Servlet].</p>
+<p>تُرجع معالجة الأحداث نتيجة من نوع سلسلة تسمى <strong>مفتاح التنقل</strong> إلى وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">Faces Servlet</bdi>].</p>
 <ol>
-  <li><b>التنقل </b>- تختار وحدة التحكم صفحة JSF (= العرض) المراد إرسالها إلى العميل. ويستند هذا الاختيار إلى مفتاح التنقل الذي يرجعه معالج الأحداث.
+  <li><b>التنقل </b>- تختار وحدة التحكم صفحة <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> (= العرض) المراد إرسالها إلى العميل. ويستند هذا الاختيار إلى مفتاح التنقل الذي يرجعه معالج الأحداث.
   </li>
-  <li><b>الاستجابة </b>- ترسل صفحة JSF المحددة الاستجابة إلى العميل. وتستخدم نموذج <b>M</b> الخاص بها لتهيئة أجزائها الديناميكية. ويمكن لهذا النموذج أيضًا استدعاء الطبقة [الأعمال] [4a] لتزويد صفحة JSF بالبيانات التي تحتاجها.
+  <li><b>الاستجابة </b>- ترسل صفحة <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> المحددة الاستجابة إلى العميل. وتستخدم نموذج <b><bdi dir="ltr" class="odt-ltr-term">M</bdi></b> الخاص بها لتهيئة أجزائها الديناميكية. ويمكن لهذا النموذج أيضًا استدعاء الطبقة [الأعمال] [4a] لتزويد صفحة <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> بالبيانات التي تحتاجها.
   </li>
 </ol>
 
-<p>في مشروع JSF:</p>
+<p>في مشروع <bdi dir="ltr" class="odt-ltr-term">JSF:</bdi></p>
 <ul>
-  <li>وحدة التحكم <b>C </b>هي السيرفلت [javax.faces.webapp.FacesServlet]. توجد هذه في مكتبة [jsf-api.jar].
+  <li>وحدة التحكم <b><bdi dir="ltr" class="odt-ltr-term">C</bdi> </b>هي السيرفلت [<bdi dir="ltr" class="odt-ltr-term">javax.faces.webapp.FacesServlet</bdi>]. توجد هذه في مكتبة [<bdi dir="ltr" class="odt-ltr-term">jsf-api.jar</bdi>].
   </li>
-  <li>يتم تنفيذ طرق العرض <b>V </b>بواسطة صفحات JSF.
+  <li>يتم تنفيذ طرق العرض <b><bdi dir="ltr" class="odt-ltr-term">V</bdi> </b>بواسطة صفحات <bdi dir="ltr" class="odt-ltr-term">JSF.</bdi>
   </li>
-  <li>يتم تنفيذ نماذج <b>M ومعالجات الأحداث </b>بواسطة فئات Java التي غالبًا ما تسمى &quot;backing beans&quot;.
+  <li>يتم تنفيذ نماذج <b><bdi dir="ltr" class="odt-ltr-term">M</bdi> ومعالجات الأحداث </b>بواسطة فئات <bdi dir="ltr" class="odt-ltr-term">Java</bdi> التي غالبًا ما تسمى &quot;<bdi dir="ltr" class="odt-ltr-term">backing beans</bdi>&quot;.
   </li>
-  <li>في إصدارات JSF 1.x، يتم تعريف تعريفات bean <b>وقواعد التنقل </b>من صفحة إلى أخرى في ملف [faces-config.xml]. ويحتوي هذا الملف على قائمة العروض وقواعد الانتقال من واحدة إلى أخرى. بدءًا من الإصدار 2 من JSF، يمكن إنشاء تعريفات bean باستخدام التعليقات التوضيحية، ويمكن ترميز انتقالات الصفحات بشكل ثابت مباشرةً في كود bean.
+  <li>في إصدارات <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> 1.<bdi dir="ltr" class="odt-ltr-term">x</bdi>، يتم تعريف تعريفات <bdi dir="ltr" class="odt-ltr-term">bean</bdi> <b>وقواعد التنقل </b>من صفحة إلى أخرى في ملف [<bdi dir="ltr" class="odt-ltr-term">faces-config.xml</bdi>]. ويحتوي هذا الملف على قائمة العروض وقواعد الانتقال من واحدة إلى أخرى. بدءًا من الإصدار 2 من <bdi dir="ltr" class="odt-ltr-term">JSF</bdi>، يمكن إنشاء تعريفات <bdi dir="ltr" class="odt-ltr-term">bean</bdi> باستخدام التعليقات التوضيحية، ويمكن ترميز انتقالات الصفحات بشكل ثابت مباشرةً في كود <bdi dir="ltr" class="odt-ltr-term">bean.</bdi>
   </li>
 </ul>
 
@@ -982,21 +984,21 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000446000000F985EF9422.png" width="547" height="124" style="display:inline-block; margin:4px;width:14.473cm;height:3.293cm;" class="odt-zoomable" data-zoom-src="images/1000000000000446000000F985EF9422.png" /></td></tr></table>
 
 <p><a id="refheading87547112820228"></a></p>
-<h2 id="103-netbeans">10.3. <span style="color: #4f81bd">مشروع NetBeans</span></h2>
+<h2 id="103-netbeans">10.3. <span style="color: #4f81bd">مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi></span></h2>
 <p>سنقوم بإنشاء نسخة أولية من التطبيق حيث سيتم محاكاة طبقة [الأعمال]. وستكون لدينا البنية التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003DD00000163BE3540CD.png" width="495" height="178" style="display:inline-block; margin:4px;width:13.085cm;height:4.697cm;" class="odt-zoomable" data-zoom-src="images/10000000000003DD00000163BE3540CD.png" /></td></tr></table>
 
 <p>عندما تطلب معالجات الأحداث أو النماذج بيانات من طبقة [الأعمال] [2b، 4a]، ستزودها ببيانات وهمية. الهدف هو الحصول على طبقة ويب تستجيب بشكل صحيح لطلبات المستخدم. وبمجرد تحقيق ذلك، لن يتبقى سوى تثبيت طبقة الخادم التي تم تطويرها في القسم<a href="#serveur-ejb-sunas9"><u><span style="color: #0563c1"> 7.1</span></u></a>:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047500000166CB22B6C6.png" width="571" height="179" style="display:inline-block; margin:4px;width:15.095cm;height:4.736cm;" class="odt-zoomable" data-zoom-src="images/100000000000047500000166CB22B6C6.png" /></td></tr></table>
 
-<p>وستكون هذه هي النسخة 2 من الإصدار الويب لتطبيق PAM الخاص بنا.</p>
-<p>مشروع NetBeans الخاص بالإصدار 1 هو مشروع Maven التالي:</p>
+<p>وستكون هذه هي النسخة 2 من الإصدار الويب لتطبيق <bdi dir="ltr" class="odt-ltr-term">PAM</bdi> الخاص بنا.</p>
+<p>مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> الخاص بالإصدار 1 هو مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> التالي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004EA00000268048BD977.png" width="629" height="308" style="display:inline-block; margin:4px;width:16.642cm;height:8.149cm;" class="odt-zoomable" data-zoom-src="images/10000000000004EA00000268048BD977.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، ملفات التكوين
   </li>
-  <li>في [2]، صفحات XHTML وورقة الأنماط
+  <li>في [2]، صفحات <bdi dir="ltr" class="odt-ltr-term">XHTML</bdi> وورقة الأنماط
   </li>
   <li>في [3]، فئات طبقة [الويب]
   </li>
@@ -1011,7 +1013,7 @@
 <p>سنستعرض بعض هذه العناصر.</p>
 <p><a id="refheading87549112820228"></a></p>
 <h3 id="1031">10.3.1. <span style="color: #4f81bd">ملفات التكوين</span></h3>
-<p>ملف [web.xml] هو الملف الذي يتم إنشاؤه افتراضيًا بواسطة NetBeans، إلى جانب تكوين صفحة الاستثناء:</p>
+<p>ملف [<bdi dir="ltr" class="odt-ltr-term">web.xml</bdi>] هو الملف الذي يتم إنشاؤه افتراضيًا بواسطة <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi>، إلى جانب تكوين صفحة الاستثناء:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;beans</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xmlns</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.springframework.org/schema/beans</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xmlns:xsi</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.w3.org/2001/XMLSchema-instance</span><span style="color:#800080">&quot;</span></span></span>
@@ -1045,13 +1047,13 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 30: [index.html] هي الصفحة الرئيسية للتطبيق
+  <li>السطر 30: [<bdi dir="ltr" class="odt-ltr-term">index.html</bdi>] هي الصفحة الرئيسية للتطبيق
   </li>
   <li>الأسطر 32–39: تكوين صفحة الاستثناء
   </li>
 </ul>
 
-<p>صفحة [exception.html] مأخوذة من [<strong>ref3</strong>]. وفيما يلي شفرتها:</p>
+<p>صفحة [<bdi dir="ltr" class="odt-ltr-term">exception.html</bdi>] مأخوذة من [<strong><bdi dir="ltr" class="odt-ltr-term">ref3</bdi></strong>]. وفيما يلي شفرتها:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1135,7 +1137,7 @@
 <p>أي استثناء لا يتم معالجته صراحةً بواسطة كود تطبيق الويب سيؤدي إلى عرض صفحة مشابهة للصفحة التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000557000000CB293CCEBE.png" width="752" height="112" style="display:inline-block; margin:4px;width:19.89cm;height:2.955cm;" class="odt-zoomable" data-zoom-src="images/1000000000000557000000CB293CCEBE.png" /></td></tr></table>
 
-<p>سيكون ملف [faces-config.xml] كما يلي:</p>
+<p>سيكون ملف [<bdi dir="ltr" class="odt-ltr-term">faces-config.xml</bdi>] كما يلي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -1194,15 +1196,15 @@
 </code></pre></div></td></tr></table></div>
 <p>يرجى ملاحظة النقاط التالية:</p>
 <ul>
-  <li>الأسطر 9–14: سيتم استخدام ملف [messages.properties] لتدويل الصفحة. وسيكون متاحًا في صفحات XHTML عبر مفتاح <b>msg</b>.
+  <li>الأسطر 9–14: سيتم استخدام ملف [<bdi dir="ltr" class="odt-ltr-term">messages.properties</bdi>] لتدويل الصفحة. وسيكون متاحًا في صفحات <bdi dir="ltr" class="odt-ltr-term">XHTML</bdi> عبر مفتاح <b><bdi dir="ltr" class="odt-ltr-term">msg</bdi></b>.
   </li>
-  <li>السطر 15: يحدد ملف [messages.properties] كمصدر ذي أولوية لرسائل الخطأ التي تعرضها علامتا &lt;h:messages&gt; و&lt;h:message&gt;. وهذا يسمح لك بتجاوز بعض رسائل الخطأ الافتراضية في JSF. لا يتم استخدام هذه الميزة هنا.
+  <li>السطر 15: يحدد ملف [<bdi dir="ltr" class="odt-ltr-term">messages.properties</bdi>] كمصدر ذي أولوية لرسائل الخطأ التي تعرضها علامتا &lt;<bdi dir="ltr" class="odt-ltr-term">h:messages</bdi>&gt; و&lt;<bdi dir="ltr" class="odt-ltr-term">h:message</bdi>&gt;. وهذا يسمح لك بتجاوز بعض رسائل الخطأ الافتراضية في <bdi dir="ltr" class="odt-ltr-term">JSF.</bdi> لا يتم استخدام هذه الميزة هنا.
   </li>
 </ul>
 
 <p><a id="refheading87551112820228"></a></p>
 <h3 id="1032">10.3.2. <span style="color: #4f81bd">ورقة الأنماط</span></h3>
-<p>ملف [styles.css] كما يلي:</p>
+<p>ملف [<bdi dir="ltr" class="odt-ltr-term">styles.css</bdi>] كما يلي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1237,7 +1239,7 @@
 <a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">  </span><span class="nt">&lt;/application&gt;</span>
 <a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="nt">&lt;/faces-config&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p>فيما يلي بعض الأمثلة على كود JSF الذي يستخدم هذه الأنماط:</p>
+<p>فيما يلي بعض الأمثلة على كود <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> الذي يستخدم هذه الأنماط:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h:outputText </span><span style="color:#000000">value=</span><span style="color:#008080">&quot;#{msg[&#x27;form.infos.employee&#x27;]}&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000"> styleClass=</span><span style="color:#2a00ff">&quot;titleInfo&quot;</span><span style="color:#008080">/&gt;</span></span></span>
@@ -1251,7 +1253,7 @@
 
 <p><a id="refheading87553112820228"></a></p>
 <h3 id="1033">10.3.3. <span style="color: #4f81bd">ملف الرسائل</span></h3>
-<p>ملف الرسائل [messages_fr.properties] هو كما يلي:</p>
+<p>ملف الرسائل [<bdi dir="ltr" class="odt-ltr-term">messages</bdi>_fr.<bdi dir="ltr" class="odt-ltr-term">properties</bdi>] هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#3f7f7f">.libelle</span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">   </span><span style="color:#7f007f">background-color</span><span style="color:#000000">: </span><span style="color:#2a00e1">#ccffff</span><span style="color:#000000">;</span></span></span>
@@ -1276,10 +1278,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>تُستخدم جميع هذه الرسائل في صفحة [index.xhtml]، باستثناء تلك الموجودة في الأسطر 11–15، والتي تُستخدم في صفحة [exception.xhtml].</p>
+<p>تُستخدم جميع هذه الرسائل في صفحة [<bdi dir="ltr" class="odt-ltr-term">index.xhtml</bdi>]، باستثناء تلك الموجودة في الأسطر 11–15، والتي تُستخدم في صفحة [<bdi dir="ltr" class="odt-ltr-term">exception.xhtml</bdi>].</p>
 <p><a id="refheading217526813040411"></a></p>
 <h3 id="1034">10.3.4. <span style="color: #4f81bd">نطاق الفاصوليا</span></h3>
-<p>سيكون لحبة [web.forms.Form] نطاق <strong>طلب</strong>:</p>
+<p>سيكون لحبة [<bdi dir="ltr" class="odt-ltr-term">web.forms.Form</bdi>] نطاق <strong>طلب</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">form.titre=</span><span style="color:#2a00ff">Feuille</span><span style="color:#000000"> </span><span style="color:#2a00ff">de</span><span style="color:#000000"> </span><span style="color:#2a00ff">salaire</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">form.comboEmployes.libell\u00e9=</span><span style="color:#2a00ff">Employ\u00e9</span></span></span>
@@ -1321,7 +1323,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">form.salaire.net=</span><span style="color:#2a00ff">Salaire</span><span style="color:#000000"> </span><span style="color:#2a00ff">net</span></span></span>
 </code></pre></div>
 
-<p>سيكون نطاق bean [web.utils.ChangeLocale] هو نطاق <strong>التطبيق</strong>:</p>
+<p>سيكون نطاق <bdi dir="ltr" class="odt-ltr-term">bean</bdi> [<bdi dir="ltr" class="odt-ltr-term">web.utils.ChangeLocale</bdi>] هو نطاق <strong>التطبيق</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.io.Serializable;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> javax.faces.bean.ManagedBean;</span></span></span>
@@ -1334,7 +1336,7 @@
 
 <p><a id="refheading87555112820228"></a></p>
 <h3 id="1035">10.3.5. <span style="color: #4f81bd">الطبقة [التجارية]</span></h3>
-<p>تنفذ طبقة [الأعمال] واجهة <em>IMetierLocal</em> التالية:</p>
+<p>تنفذ طبقة [الأعمال] واجهة <em><bdi dir="ltr" class="odt-ltr-term">IMetierLocal</bdi></em> التالية:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> web.utils;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1374,7 +1376,7 @@
 </code></pre></div>
 
 <p>هذه الواجهة هي التي تُستخدم في جانب الخادم من تطبيق العميل/الخادم الموصوف في القسم<a href="#serveur-ejb-sunas9"><u><span style="color: #0563c1"> 7.1</span></u></a>.</p>
-<p>تقوم فئة <em>Business</em> التي سنستخدمها لاختبار طبقة [الويب] بتنفيذ هذه الواجهة على النحو التالي:</p>
+<p>تقوم فئة <em><bdi dir="ltr" class="odt-ltr-term">Business</bdi></em> التي سنستخدمها لاختبار طبقة [الويب] بتنفيذ هذه الواجهة على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> metier;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1391,25 +1393,25 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>نترك للقارئ مهمة فك رموز هذا الكود. لاحظ الطريقة المستخدمة: لتجنب الحاجة إلى تنفيذ الجزء EJB من التطبيق، نقوم بمحاكاة طبقة [الأعمال]. بمجرد التحقق من صحة طبقة [الويب]، يمكننا عندئذ استبدالها بطبقة [الأعمال] الفعلية.</p>
+<p>نترك للقارئ مهمة فك رموز هذا الكود. لاحظ الطريقة المستخدمة: لتجنب الحاجة إلى تنفيذ الجزء <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> من التطبيق، نقوم بمحاكاة طبقة [الأعمال]. بمجرد التحقق من صحة طبقة [الويب]، يمكننا عندئذ استبدالها بطبقة [الأعمال] الفعلية.</p>
 <p><a id="refheading87557112820228"></a></p>
-<h2 id="104-indexxhtml-formjava">10.4. <span style="color: #4f81bd">نموذج [index.xhtml] وقالبه [Form.java]</span></h2>
-<p>سنقوم الآن بإنشاء صفحة XHTML للنموذج ونموذجه.</p>
-<p><strong>قراءة موصى بها</strong> في [<a href="http://tahe.developpez.com/java/primefaces"><u><span style="color: #0563c1">ref3</span></u></a>]: </p>
+<h2 id="104-indexxhtml-formjava">10.4. <span style="color: #4f81bd">نموذج [<bdi dir="ltr" class="odt-ltr-term">index.xhtml</bdi>] وقالبه [<bdi dir="ltr" class="odt-ltr-term">Form.java</bdi>]</span></h2>
+<p>سنقوم الآن بإنشاء صفحة <bdi dir="ltr" class="odt-ltr-term">XHTML</bdi> للنموذج ونموذجه.</p>
+<p><strong>قراءة موصى بها</strong> في [<a href="http://tahe.developpez.com/java/primefaces"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">ref3</bdi></span></u></a>]: </p>
 <ul>
-  <li>المثال رقم 3 (mv-jsf2-03) للاطلاع على قائمة العلامات التي يمكن استخدامها في النموذج
+  <li>المثال رقم 3 (<bdi dir="ltr" class="odt-ltr-term">mv-jsf2-03</bdi>) للاطلاع على قائمة العلامات التي يمكن استخدامها في النموذج
   </li>
-  <li>المثال رقم 4 (mv-jsf2-04) للاطلاع على القوائم المنسدلة التي يتم ملؤها بواسطة النموذج
+  <li>المثال رقم 4 (<bdi dir="ltr" class="odt-ltr-term">mv-jsf2-04</bdi>) للاطلاع على القوائم المنسدلة التي يتم ملؤها بواسطة النموذج
   </li>
-  <li>المثال رقم 6 (mv-jsf2-06) للتحقق من صحة الإدخال
+  <li>المثال رقم 6 (<bdi dir="ltr" class="odt-ltr-term">mv-jsf2-06</bdi>) للتحقق من صحة الإدخال
   </li>
-  <li>المثال رقم 7 (mv-jsf2-07) لمعالجة زر [Clear]
+  <li>المثال رقم 7 (<bdi dir="ltr" class="odt-ltr-term">mv-jsf2-07</bdi>) لمعالجة زر [<bdi dir="ltr" class="odt-ltr-term">Clear</bdi>]
   </li>
 </ul>
 <p><a id="refheading87559112820228"></a></p>
 <h3 id="1041-1">10.4.1. <span style="color: #4f81bd">الخطوة 1</span></h3>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p><strong>السؤال</strong>: قم بإنشاء النموذج [index.xhtml] ونموذج [Form.java] اللازمين لعرض الصفحة التالية:</p>
+<p><strong>السؤال</strong>: قم بإنشاء النموذج [<bdi dir="ltr" class="odt-ltr-term">index.xhtml</bdi>] ونموذج [<bdi dir="ltr" class="odt-ltr-term">Form.java</bdi>] اللازمين لعرض الصفحة التالية:</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000036F0000016EAB481B12.png" width="440" height="183" style="display:inline-block; margin:4px;width:11.629cm;height:4.842cm;" class="odt-zoomable" data-zoom-src="images/100000000000036F0000016EAB481B12.png" /></td></tr></table>
 
@@ -1417,27 +1419,27 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>رقم
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>id</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>نوع JSF</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>نموذج</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">id</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>نوع <bdi dir="ltr" class="odt-ltr-term">JSF</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>نموذج</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>1
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">comboEmployees</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;h:selectOneMenu&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة comboEmployeesValue</div><div style="margin:0 0 0.5em 0">List&lt;Employee&gt; getEmployees()</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تحتوي على قائمة الموظفين بالصيغة</div><div style="margin:0 0 0.5em 0"> &quot;الاسم الأول الاسم الأخير&quot;.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">comboEmployees</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;<bdi dir="ltr" class="odt-ltr-term">h:selectOneMenu</bdi>&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة <bdi dir="ltr" class="odt-ltr-term">comboEmployeesValue</bdi></div><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">List</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">Employee</bdi>&gt; <bdi dir="ltr" class="odt-ltr-term">getEmployees</bdi>()</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تحتوي على قائمة الموظفين بالصيغة</div><div style="margin:0 0 0.5em 0"> &quot;الاسم الأول الاسم الأخير&quot;.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ساعات_العمل</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;h:inputText&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة ساعات_العمل</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عدد ساعات العمل - رقم حقيقي</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ساعات_العمل</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;<bdi dir="ltr" class="odt-ltr-term">h:inputText</bdi>&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة ساعات_العمل</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عدد ساعات العمل - رقم حقيقي</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>3
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">daysWorked</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;h:inputText&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة أيام_العمل</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عدد أيام العمل - عدد صحيح</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">daysWorked</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;<bdi dir="ltr" class="odt-ltr-term">h:inputText</bdi>&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة أيام_العمل</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عدد أيام العمل - عدد صحيح</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>4
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">btnSalary</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;h:commandButton&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يبدأ حساب الراتب</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">btnSalary</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;<bdi dir="ltr" class="odt-ltr-term">h:commandButton</bdi>&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يبدأ حساب الراتب</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>5
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">btnReset</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;h:commandButton&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يعيد النموذج إلى حالته الأولية</div></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">btnReset</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;<bdi dir="ltr" class="odt-ltr-term">h:commandButton</bdi>&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يعيد النموذج إلى حالته الأولية</div></td></tr></table>
 
 <ul>
-  <li>ستُرجع طريقة <i>getEmployees </i>قائمة بالموظفين المسترجعة من طبقة [business]. ستكون السمة <b>itemValue</b> للكائنات المعروضة في مربع القائمة المنسدلة مضبوطة على رقم الضمان الاجتماعي للموظف، وستكون السمة <b>itemLabel </b>مضبوطة على سلسلة تتكون من الاسم الأول واسم العائلة للموظف.
+  <li>ستُرجع طريقة <i><bdi dir="ltr" class="odt-ltr-term">getEmployees</bdi> </i>قائمة بالموظفين المسترجعة من طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. ستكون السمة <b><bdi dir="ltr" class="odt-ltr-term">itemValue</bdi></b> للكائنات المعروضة في مربع القائمة المنسدلة مضبوطة على رقم الضمان الاجتماعي للموظف، وستكون السمة <b><bdi dir="ltr" class="odt-ltr-term">itemLabel</bdi> </b>مضبوطة على سلسلة تتكون من الاسم الأول واسم العائلة للموظف.
   </li>
-  <li>لن يتم ربط الزرين [Salary] و [Clear] بمعالجات الأحداث في الوقت الحالي.
+  <li>لن يتم ربط الزرين [<bdi dir="ltr" class="odt-ltr-term">Salary</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">Clear</bdi>] بمعالجات الأحداث في الوقت الحالي.
   </li>
   <li>سيتم التحقق من صحة الإدخال.
   </li>
@@ -1445,15 +1447,15 @@
 
 <p><img src="images/1000000000000284000000AF4366AC4B.png" width="451" height="123" style="width:11.929cm;height:3.242cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000284000000AF4366AC4B.png" /></p>
 <p>اختبر هذه النسخة. وتحقق بشكل خاص من أن أخطاء الإدخال يتم الإبلاغ عنها بشكل صحيح.</p>
-<p><strong>ملاحظة</strong>: من المهم <strong>ألا تحتوي</strong> سمات <strong>المعرف (ID)</strong> لمكونات الصفحة <strong>على أحرف مشطوبة</strong>. في Glassfish 3.1.2، يؤدي ذلك إلى تعطل التطبيق.</p>
+<p><strong>ملاحظة</strong>: من المهم <strong>ألا تحتوي</strong> سمات <strong>المعرف (<bdi dir="ltr" class="odt-ltr-term">ID</bdi>)</strong> لمكونات الصفحة <strong>على أحرف مشطوبة</strong>. في <bdi dir="ltr" class="odt-ltr-term">Glassfish 3.1.2</bdi>، يؤدي ذلك إلى تعطل التطبيق.</p>
 <p><a id="refheading87561112820228"></a></p>
 <h3 id="1042-2">10.4.2. <span style="color: #4f81bd">الخطوة 2</span></h3>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p><strong>السؤال</strong>: أكمل نموذج [index.xhtml] وقالب [Form.java] الخاص به لعرض الصفحة التالية بمجرد النقر على زر [Salary]:</p>
+<p><strong>السؤال</strong>: أكمل نموذج [<bdi dir="ltr" class="odt-ltr-term">index.xhtml</bdi>] وقالب [<bdi dir="ltr" class="odt-ltr-term">Form.java</bdi>] الخاص به لعرض الصفحة التالية بمجرد النقر على زر [<bdi dir="ltr" class="odt-ltr-term">Salary</bdi>]:</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000387000001AB7EEDEDA2.png" width="452" height="214" style="display:inline-block; margin:4px;width:11.947cm;height:5.65cm;" class="odt-zoomable" data-zoom-src="images/1000000000000387000001AB7EEDEDA2.png" /></td></tr></table>
 
-<p>سيتم ربط زر [الراتب] بمعالج الأحداث <em>calculateSalary</em> الخاص بالنموذج. ستستخدم هذه الطريقة طريقة <em>calculatePaystub</em> من طبقة [الأعمال]. سيتم إنشاء كشف الراتب هذا للموظف المحدد في [1].</p>
+<p>سيتم ربط زر [الراتب] بمعالج الأحداث <em><bdi dir="ltr" class="odt-ltr-term">calculateSalary</bdi></em> الخاص بالنموذج. ستستخدم هذه الطريقة طريقة <em><bdi dir="ltr" class="odt-ltr-term">calculatePaystub</bdi></em> من طبقة [الأعمال]. سيتم إنشاء كشف الراتب هذا للموظف المحدد في [1].</p>
 <p>في النموذج، سيتم تمثيل كشف الراتب بالحقل الخاص التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> metier;</span></span></span>
@@ -1493,23 +1495,23 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>التي تحتوي على طرق <em>get</em> و <em>set</em>.</p>
-<p>لاسترداد المعلومات الموجودة في هذا الكائن، يمكنك كتابة تعبيرات مثل التالية في صفحة JSF:</p>
+<p>التي تحتوي على طرق <em><bdi dir="ltr" class="odt-ltr-term">get</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">set</bdi></em>.</p>
+<p>لاسترداد المعلومات الموجودة في هذا الكائن، يمكنك كتابة تعبيرات مثل التالية في صفحة <bdi dir="ltr" class="odt-ltr-term">JSF:</bdi></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> FeuilleSalaire feuilleSalaire;</span></span></span>
 </code></pre></div>
 
-<p>سيتم تقييم التعبير الموجود في سمة <strong>value</strong> على النحو التالي:</p>
-<p><em>[form].getPayrollSheet().getEmployee().getName()</em> حيث يمثل [form] مثيلًا لفئة [Form.java]. يمكن للقارئ التحقق من أن طرق <em>get</em> المستخدمة هنا موجودة بالفعل في فئات [Form] و[PayrollSheet] و[Employee] على التوالي. إذا لم يكن الأمر كذلك، فسيتم إلقاء استثناء عند تقييم التعبير.</p>
+<p>سيتم تقييم التعبير الموجود في سمة <strong><bdi dir="ltr" class="odt-ltr-term">value</bdi></strong> على النحو التالي:</p>
+<p><em>[<bdi dir="ltr" class="odt-ltr-term">form</bdi>].<bdi dir="ltr" class="odt-ltr-term">getPayrollSheet</bdi>().<bdi dir="ltr" class="odt-ltr-term">getEmployee</bdi>().<bdi dir="ltr" class="odt-ltr-term">getName</bdi>()</em> حيث يمثل [<bdi dir="ltr" class="odt-ltr-term">form</bdi>] مثيلًا لفئة [<bdi dir="ltr" class="odt-ltr-term">Form.java</bdi>]. يمكن للقارئ التحقق من أن طرق <em><bdi dir="ltr" class="odt-ltr-term">get</bdi></em> المستخدمة هنا موجودة بالفعل في فئات [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">PayrollSheet</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">Employee</bdi>] على التوالي. إذا لم يكن الأمر كذلك، فسيتم إلقاء استثناء عند تقييم التعبير.</p>
 <p>اختبر هذه النسخة الجديدة.</p>
 <p><a id="refheading87563112820228"></a></p>
 <h3 id="1043-3">10.4.3. <span style="color: #4f81bd">الخطوة 3</span></h3>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p><strong>السؤال</strong>: أكمل النموذج [index.xhtml] وقالبه [Form.java] للحصول على المعلومات الإضافية التالية:</p>
+<p><strong>السؤال</strong>: أكمل النموذج [<bdi dir="ltr" class="odt-ltr-term">index.xhtml</bdi>] وقالبه [<bdi dir="ltr" class="odt-ltr-term">Form.java</bdi>] للحصول على المعلومات الإضافية التالية:</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002D80000020845D4ACF3.png" width="364" height="260" style="display:inline-block; margin:4px;width:9.631cm;height:6.879cm;" class="odt-zoomable" data-zoom-src="images/10000000000002D80000020845D4ACF3.png" /></td></tr></table>
 
-<p>سنتبع نفس النهج الذي اتبعناه من قبل. هناك مشكلة في رمز عملة اليورو الموجود في [1]، على سبيل المثال. في تطبيق دولي، يُفضل استخدام تنسيق العرض ورمز العملة الخاص <em>باللغة المحلية</em> المحددة (en، de، fr، ...). ويمكن تحقيق ذلك على النحو التالي:</p>
+<p>سنتبع نفس النهج الذي اتبعناه من قبل. هناك مشكلة في رمز عملة اليورو الموجود في [1]، على سبيل المثال. في تطبيق دولي، يُفضل استخدام تنسيق العرض ورمز العملة الخاص <em>باللغة المحلية</em> المحددة (<bdi dir="ltr" class="odt-ltr-term">en</bdi>، <bdi dir="ltr" class="odt-ltr-term">de</bdi>، <bdi dir="ltr" class="odt-ltr-term">fr</bdi>، ...). ويمكن تحقيق ذلك على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h:outputText </span><span style="color:#7f007f">value</span><span style="color:#000000">=</span>&quot;#{form.feuilleSalaire.employe.nom}&quot;<span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
@@ -1521,37 +1523,37 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">h:outputFormat</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>ولكن مع الإعدادات المحلية <em>en_GB</em> (الإنجليزية البريطانية)، سيظل المبلغ معروضًا باليورو بينما يجب أن يكون بالجنيه الإسترليني (£). تسمح علامة &lt;<strong>h:outputFormat</strong>&gt; بعرض المعلومات بناءً على الإعدادات <em>المحلية</em> لصفحة JSF المعروضة:</p>
+<p>ولكن مع الإعدادات المحلية <em><bdi dir="ltr" class="odt-ltr-term">en</bdi>_GB</em> (الإنجليزية البريطانية)، سيظل المبلغ معروضًا باليورو بينما يجب أن يكون بالجنيه الإسترليني (£). تسمح علامة &lt;<strong><bdi dir="ltr" class="odt-ltr-term">h:outputFormat</bdi></strong>&gt; بعرض المعلومات بناءً على الإعدادات <em>المحلية</em> لصفحة <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> المعروضة:</p>
 <ul>
   <li>السطر 1: يعرض المعلمة {0}، وهي رقم يمثل مبلغًا نقديًا
   </li>
-  <li>السطر 2: تعين علامة &lt;<b>f:param</b>&gt; قيمة للمعلمة {0}. وستعين علامة &lt;f:param&gt; ثانية قيمة للمعلمة المسماة {1}، وهكذا دواليك.
+  <li>السطر 2: تعين علامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">f:param</bdi></b>&gt; قيمة للمعلمة {0}. وستعين علامة &lt;<bdi dir="ltr" class="odt-ltr-term">f:param</bdi>&gt; ثانية قيمة للمعلمة المسماة {1}، وهكذا دواليك.
   </li>
 </ul>
 
 <p><a id="refheading87565112820228"></a></p>
 <h3 id="1044-4">10.4.4. <span style="color: #4f81bd">الخطوة 4</span></h3>
-<p><strong>قراءة موصى بها</strong>: المثال رقم 7 (mv-jsf2-07) في [<a href="http://tahe.developpez.com/java/primefaces"><u><span style="color: #0563c1">ref3</span></u></a>].</p>
+<p><strong>قراءة موصى بها</strong>: المثال رقم 7 (<bdi dir="ltr" class="odt-ltr-term">mv-jsf2-07</bdi>) في [<a href="http://tahe.developpez.com/java/primefaces"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">ref3</bdi></span></u></a>].</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p><strong>السؤال</strong>: أكمل النموذج [index.xhtml] وقالبه [Form.java] للتعامل مع زر [Reset].</p>
+<p><strong>السؤال</strong>: أكمل النموذج [<bdi dir="ltr" class="odt-ltr-term">index.xhtml</bdi>] وقالبه [<bdi dir="ltr" class="odt-ltr-term">Form.java</bdi>] للتعامل مع زر [<bdi dir="ltr" class="odt-ltr-term">Reset</bdi>].</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-<p>يعيد زر [Reset] النموذج إلى الحالة التي كان عليها عند طلبه لأول مرة عبر طلب GET. هناك عدة تحديات هنا. تم شرح بعضها في [<strong>ref3</strong>].</p>
-<p>النموذج الذي يعيده زر [Raz] ليس النموذج بأكمله، بل الجزء الذي <em>تم إدخاله</em> منه فقط:</p>
+<p>يعيد زر [<bdi dir="ltr" class="odt-ltr-term">Reset</bdi>] النموذج إلى الحالة التي كان عليها عند طلبه لأول مرة عبر طلب <bdi dir="ltr" class="odt-ltr-term">GET.</bdi> هناك عدة تحديات هنا. تم شرح بعضها في [<strong><bdi dir="ltr" class="odt-ltr-term">ref3</bdi></strong>].</p>
+<p>النموذج الذي يعيده زر [<bdi dir="ltr" class="odt-ltr-term">Raz</bdi>] ليس النموذج بأكمله، بل الجزء الذي <em>تم إدخاله</em> منه فقط:</p>
 <p><img src="images/100000000000027D0000010C4BD4E908.png" width="446" height="188" style="width:11.8cm;height:4.965cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000027D0000010C4BD4E908.png" /></p>
-<p>يمكن تحقيق هذه النتيجة باستخدام علامة &lt;<strong>f:subview</strong>&gt; كما يلي:</p>
+<p>يمكن تحقيق هذه النتيجة باستخدام علامة &lt;<strong><bdi dir="ltr" class="odt-ltr-term">f:subview</bdi></strong>&gt; كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h:outputText </span><span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;#{form.feuilleSalaire.employe.indemnite.entretienJour} є&quot;</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>تحيط علامة &lt;<strong>f:subview</strong>&gt; بالجزء الكامل من النموذج الذي يمكن عرضه أو إخفاؤه. يمكن عرض أي مكون أو إخفاؤه باستخدام السمة <strong>rendered</strong>. إذا <em>كانت القيمة rendered=&quot;true&quot;</em>، يتم عرض المكون؛ وإذا <em>كانت القيمة rendered=&quot;false&quot;</em>، لا يتم عرضه. إذا كانت السمة <em>rendered</em> تأخذ قيمتها من النموذج، فيمكن التحكم في عرض المكون برمجياً.</p>
-<p>في المثال أعلاه، سنقوم بالتحكم في عرض طريقة العرض <em>viewInfos</em> باستخدام الحقل التالي:</p>
+<p>تحيط علامة &lt;<strong><bdi dir="ltr" class="odt-ltr-term">f:subview</bdi></strong>&gt; بالجزء الكامل من النموذج الذي يمكن عرضه أو إخفاؤه. يمكن عرض أي مكون أو إخفاؤه باستخدام السمة <strong><bdi dir="ltr" class="odt-ltr-term">rendered</bdi></strong>. إذا <em>كانت القيمة <bdi dir="ltr" class="odt-ltr-term">rendered</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">true</bdi>&quot;</em>، يتم عرض المكون؛ وإذا <em>كانت القيمة <bdi dir="ltr" class="odt-ltr-term">rendered</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">false</bdi>&quot;</em>، لا يتم عرضه. إذا كانت السمة <em><bdi dir="ltr" class="odt-ltr-term">rendered</bdi></em> تأخذ قيمتها من النموذج، فيمكن التحكم في عرض المكون برمجياً.</p>
+<p>في المثال أعلاه، سنقوم بالتحكم في عرض طريقة العرض <em><bdi dir="ltr" class="odt-ltr-term">viewInfos</bdi></em> باستخدام الحقل التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">f:subview </span><span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;viewInfos&quot; </span><span style="color:#7f007f">rendered</span><span style="color:#000000">=</span>&quot;#{form.viewInfosIsRendered}&quot;<span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">... la partie du formulaire qu&#x27;on veut pouvoir ne pas afficher</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">f:subview</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>مع طرق <em>get</em> و <em>set</em> الخاصة بها. ستقوم الطرق التي تتعامل مع النقرات على زري [Salary] و [Clear] بتحديث هذه القيمة المنطقية اعتمادًا على ما إذا كان يجب عرض طريقة العرض <em>viewInfos</em> أم لا.</p>
+<p>مع طرق <em><bdi dir="ltr" class="odt-ltr-term">get</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">set</bdi></em> الخاصة بها. ستقوم الطرق التي تتعامل مع النقرات على زري [<bdi dir="ltr" class="odt-ltr-term">Salary</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">Clear</bdi>] بتحديث هذه القيمة المنطقية اعتمادًا على ما إذا كان يجب عرض طريقة العرض <em><bdi dir="ltr" class="odt-ltr-term">viewInfos</bdi></em> أم لا.</p>
 
 
 

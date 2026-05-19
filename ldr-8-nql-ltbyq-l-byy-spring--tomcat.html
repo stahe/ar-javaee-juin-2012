@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -702,41 +704,41 @@
 
 
 <p><a id="refheading344871813040411"></a></p>
-<h1 id="13-8-spring-tomcat">13. <span style="color: #365f91">الإصدار 8: نقل التطبيق إلى بيئة Spring / Tomcat</span></h1>
+<h1 id="13-8-spring-tomcat">13. <span style="color: #365f91">الإصدار 8: نقل التطبيق إلى بيئة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> / <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi></span></h1>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p><strong>السؤال</strong><span style="color: #000000">: باتباع المثال &quot;تطبيق نموذجي – 02: rdvmedecins-jsf2-spring&quot; من [</span><a href="http://tahe.developpez.com/java/primefaces"><u><span style="color: #0563c1">المرجع 3</span></u></a><span style="color: #000000">]، قم بنقل التطبيق السابق إلى بيئة Spring/Tomcat/Hibernate.</span></p>
+<p><strong>السؤال</strong><span style="color: #000000">: باتباع المثال &quot;تطبيق نموذجي – 02: <bdi dir="ltr" class="odt-ltr-term">rdvmedecins-jsf2-spring</bdi>&quot; من [</span><a href="http://tahe.developpez.com/java/primefaces"><u><span style="color: #0563c1">المرجع 3</span></u></a><span style="color: #000000">]، قم بنقل التطبيق السابق إلى بيئة <bdi dir="ltr" class="odt-ltr-term">Spring/Tomcat/Hibernate.</bdi></span></p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F000000045E51CB947.png" width="168" height="48" style="display:inline-block; margin:4px;width:4.45cm;height:1.279cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F000000045E51CB947.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p><span style="color: #000000">التطبيق الجديد على الويب هو [mv-pam-jsf2-spring-multipages]. لم تتغير واجهة الويب:</span></p>
+<p><span style="color: #000000">التطبيق الجديد على الويب هو [<bdi dir="ltr" class="odt-ltr-term">mv-pam-jsf2-spring-multipages</bdi>]. لم تتغير واجهة الويب:</span></p>
 <p><img src="images/10000000000002200000011E684A0FF3.png" width="381" height="200" style="width:10.081cm;height:5.3cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002200000011E684A0FF3.png" /></p>
 <p><span style="color: #000000">إليك إحدى الطرق الممكنة:</span></p>
 <ul>
-  <li><span style="color: #000000">قم بإنشاء مشروع Maven من نوع [تطبيق Java] باسم [mv-pam-spring-metier]،</span>
+  <li><span style="color: #000000">قم بإنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> من نوع [تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi>] باسم [<bdi dir="ltr" class="odt-ltr-term">mv-pam-spring-metier</bdi>]،</span>
   </li>
   <li><span style="color: #000000">أضف التبعيات الضرورية،</span>
   </li>
-  <li><span style="color: #000000">انسخ العناصر من مشروع EJB السابق إلى مشروع Spring الجديد،</span>
+  <li><span style="color: #000000">انسخ العناصر من مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> السابق إلى مشروع <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> الجديد،</span>
   </li>
-  <li><span style="color: #000000">قم بإصلاح أي أخطاء تظهر في مشروع Spring،</span>
+  <li><span style="color: #000000">قم بإصلاح أي أخطاء تظهر في مشروع <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>،</span>
   </li>
-  <li><span style="color: #000000">إنشاء ملف [persistence.xml] الذي يقوم بتكوين طبقة JPA،</span>
+  <li><span style="color: #000000">إنشاء ملف [<bdi dir="ltr" class="odt-ltr-term">persistence.xml</bdi>] الذي يقوم بتكوين طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>،</span>
   </li>
-  <li><span style="color: #000000">إنشاء ملف تكوين Spring. في هذه المرحلة، يجب أن يكون مشروع [mv-pam-spring-metier] صحيحًا. تخيل اختبار JUnit يثبت ذلك،</span>
+  <li><span style="color: #000000">إنشاء ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> في هذه المرحلة، يجب أن يكون مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-spring-metier</bdi>] صحيحًا. تخيل اختبار <bdi dir="ltr" class="odt-ltr-term">JUnit</bdi> يثبت ذلك،</span>
   </li>
-  <li><span style="color: #000000">إنشاء مشروع Maven من نوع [Web Application]،</span>
+  <li><span style="color: #000000">إنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> من نوع [<bdi dir="ltr" class="odt-ltr-term">Web Application</bdi>]،</span>
   </li>
-  <li><span style="color: #000000">أضف التبعيات الضرورية (JSF وطبقة [business])،</span>
+  <li><span style="color: #000000">أضف التبعيات الضرورية (<bdi dir="ltr" class="odt-ltr-term">JSF</bdi> وطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>])،</span>
   </li>
-  <li><span style="color: #000000">انسخ العناصر من مشروع JSF/EJB الخاص بالإصدار السابق إلى مشروع JSF/Spring الجديد،</span>
+  <li><span style="color: #000000">انسخ العناصر من مشروع <bdi dir="ltr" class="odt-ltr-term">JSF/EJB</bdi> الخاص بالإصدار السابق إلى مشروع <bdi dir="ltr" class="odt-ltr-term">JSF/Spring</bdi> الجديد،</span>
   </li>
   <li><span style="color: #000000">أصلح أي أخطاء تظهر،</span>
   </li>
-  <li><span style="color: #000000">انسخ ملف تكوين Spring من مشروع [mv-pam-spring-metier] إلى مشروع الويب،</span>
+  <li><span style="color: #000000">انسخ ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> من مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-spring-metier</bdi>] إلى مشروع الويب،</span>
   </li>
-  <li><span style="color: #000000">أضف الكود إلى حبة [ApplicationData] لإنشاء مثيلات لحبات Spring،</span>
+  <li><span style="color: #000000">أضف الكود إلى حبة [<bdi dir="ltr" class="odt-ltr-term">ApplicationData</bdi>] لإنشاء مثيلات لحبات <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>،</span>
   </li>
-  <li><span style="color: #000000">أكمل ملف التكوين [faces-config.xml]،</span>
+  <li><span style="color: #000000">أكمل ملف التكوين [<bdi dir="ltr" class="odt-ltr-term">faces-config.xml</bdi>]،</span>
   </li>
   <li><span style="color: #000000">اختبار تطبيق الويب.</span>
   </li>

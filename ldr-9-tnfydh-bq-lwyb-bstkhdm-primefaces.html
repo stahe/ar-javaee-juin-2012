@@ -55,6 +55,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -700,12 +702,12 @@
 
 
 <p><a id="refheading344873813040411"></a></p>
-<h1 id="14-9-primefaces">14. <span style="color: #365f91">الإصدار 9: تنفيذ طبقة الويب باستخدام PrimeFaces</span></h1>
-<p><strong>المتطلبات الأساسية</strong><span style="color: #000000">: اقرأ &quot;مقدمة إلى PrimeFaces&quot; في [</span><a href="http://tahe.developpez.com/java/primefaces"><u><span style="color: #0563c1">ref3</span></u></a><span style="color: #000000">].</span></p>
+<h1 id="14-9-primefaces">14. <span style="color: #365f91">الإصدار 9: تنفيذ طبقة الويب باستخدام <bdi dir="ltr" class="odt-ltr-term">PrimeFaces</bdi></span></h1>
+<p><strong>المتطلبات الأساسية</strong><span style="color: #000000">: اقرأ &quot;مقدمة إلى <bdi dir="ltr" class="odt-ltr-term">PrimeFaces</bdi>&quot; في [</span><a href="http://tahe.developpez.com/java/primefaces"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">ref3</bdi></span></u></a><span style="color: #000000">].</span></p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p><strong>السؤال 1</strong><span style="color: #000000">: أنشئ مشروع Maven جديد من نوع [تطبيق ويب] حيث يتم إنشاء صفحات XHTML من المثال السابق باستخدام مكونات Primefaces. لا تقم بإجراء أي تغييرات على الفاصوليا.</span></p>
+<p><strong>السؤال 1</strong><span style="color: #000000">: أنشئ مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> جديد من نوع [تطبيق ويب] حيث يتم إنشاء صفحات <bdi dir="ltr" class="odt-ltr-term">XHTML</bdi> من المثال السابق باستخدام مكونات <bdi dir="ltr" class="odt-ltr-term">Primefaces.</bdi> لا تقم بإجراء أي تغييرات على الفاصوليا.</span></p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-<p><span style="color: #000000">تستخدم الصفحة الرئيسية مكونات &lt;</span><strong>p:panel</strong><span style="color: #000000">&gt; و&lt;</span><strong>p:inputText</strong><span style="color: #000000">&gt; و&lt;</span><strong>p:selectOneMenu</strong><span style="color: #000000">&gt; و&lt;</span><strong>p:message</strong><span style="color: #000000">&gt;:</span></p>
+<p><span style="color: #000000">تستخدم الصفحة الرئيسية مكونات &lt;</span><strong><bdi dir="ltr" class="odt-ltr-term">p:panel</bdi></strong><span style="color: #000000">&gt; و&lt;</span><strong><bdi dir="ltr" class="odt-ltr-term">p:inputText</bdi></strong><span style="color: #000000">&gt; و&lt;</span><strong><bdi dir="ltr" class="odt-ltr-term">p:selectOneMenu</bdi></strong><span style="color: #000000">&gt; و&lt;</span><strong><bdi dir="ltr" class="odt-ltr-term">p:message</bdi></strong><span style="color: #000000">&gt;:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002C6000001547378E354.png" width="497" height="238" style="display:inline-block; margin:4px;width:13.15cm;height:6.297cm;" class="odt-zoomable" data-zoom-src="images/10000000000002C6000001547378E354.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">إدخال غير صحيح:</span></p>
@@ -714,15 +716,15 @@
 <p><span style="color: #000000">محاكاة:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002C700000304482D9BB3.png" width="497" height="540" style="display:inline-block; margin:4px;width:13.15cm;height:14.279cm;" class="odt-zoomable" data-zoom-src="images/10000000000002C700000304482D9BB3.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p><span style="color: #000000">تستخدم قائمة عمليات المحاكاة مكونات &lt;</span><strong>p:dataTable</strong><span style="color: #000000">&gt; و&lt;</span><strong>p:commandLink</strong><span style="color: #000000">&gt;:</span></p>
+<p><span style="color: #000000">تستخدم قائمة عمليات المحاكاة مكونات &lt;</span><strong><bdi dir="ltr" class="odt-ltr-term">p:dataTable</bdi></strong><span style="color: #000000">&gt; و&lt;</span><strong><bdi dir="ltr" class="odt-ltr-term">p:commandLink</bdi></strong><span style="color: #000000">&gt;:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000059C0000012C9EF5714F.png" width="794" height="166" style="display:inline-block; margin:4px;width:21.001cm;height:4.387cm;" class="odt-zoomable" data-zoom-src="images/100000000000059C0000012C9EF5714F.png" /></td></tr></table>
 
-<p><span style="color: #000000">ستقوم طرق AJAX بتحديث المنطقة </span><strong>التي تحمل المعرف id=&#x27;formulaire&#x27;،</strong> <span style="color: #000000">والتي تشمل الصفحة بأكملها (انظر السطر 11 أدناه):</span></p>
+<p><span style="color: #000000">ستقوم طرق <bdi dir="ltr" class="odt-ltr-term">AJAX</bdi> بتحديث المنطقة </span><strong>التي تحمل المعرف <bdi dir="ltr" class="odt-ltr-term">id</bdi>=&#x27;<bdi dir="ltr" class="odt-ltr-term">formulaire</bdi>&#x27;،</strong> <span style="color: #000000">والتي تشمل الصفحة بأكملها (انظر السطر 11 أدناه):</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h:commandLink</span> <span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;cmdTerminerSession&quot;</span> <span style="color:#7f007f">immediate</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;#{msg[&#x27;form.menu.terminerSession&#x27;]}&quot;</span> <span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;#{form.terminerSession}&quot;</span> <span style="color:#7f007f">rendered</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;#{sessionData.menuTerminerSessionIsRendered}&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">بمجرد أن يبدأ تطبيقك في العمل، استبدل الصفحة [entete.xhtml] بالصفحة التالية:</span></p>
+<p><span style="color: #000000">بمجرد أن يبدأ تطبيقك في العمل، استبدل الصفحة [<bdi dir="ltr" class="odt-ltr-term">entete.xhtml</bdi>] بالصفحة التالية:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span>=<span style="font-style:italic;color:#2a00ff">&#x27;1.0&#x27;</span> <span style="color:#7f007f">encoding</span>=<span style="font-style:italic;color:#2a00ff">&#x27;UTF-8&#x27;</span> <span style="color:#008080">?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">html</span> <span style="color:#808080">PUBLIC</span> <span style="color:#008080">&quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;</span> <span style="color:#3f7f5f">&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -749,7 +751,7 @@
 </code></pre></div>
 
 <ul>
-  <li><span style="color: #000000">السطر 15: شريط قوائم PrimeFaces،</span>
+  <li><span style="color: #000000">السطر 15: شريط قوائم <bdi dir="ltr" class="odt-ltr-term">PrimeFaces</bdi>،</span>
   </li>
   <li><span style="color: #000000">السطر 16: خيار قائمة في هذا الشريط،</span>
   </li>

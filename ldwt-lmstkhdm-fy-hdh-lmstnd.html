@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -814,20 +816,20 @@
 <h1 id="3">3. <span style="color: #365f91">الأدوات المستخدمة في هذا المستند</span></h1>
 <p>تم اختبار الأمثلة الواردة في هذا المستند باستخدام الأدوات التالية:</p>
 <ul>
-  <li>إصدارات NetBeans من 6.8 إلى 7.1.2. يرد وصف تثبيت NetBeans في [<b>المرجع 3</b>] في القسم 1.3.1.
+  <li>إصدارات <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> من 6.8 إلى 7.1.2. يرد وصف تثبيت <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> في [<b>المرجع 3</b>] في القسم 1.3.1.
   </li>
-  <li>WampServer الإصدار 2.2. يرد وصف تثبيت WampServer في [<b>المرجع 3</b>] في القسم 1.3.3؛
+  <li><bdi dir="ltr" class="odt-ltr-term">WampServer</bdi> الإصدار 2.2. يرد وصف تثبيت <bdi dir="ltr" class="odt-ltr-term">WampServer</bdi> في [<b>المرجع 3</b>] في القسم 1.3.3؛
   </li>
-  <li>Maven مدمج في NetBeans. سنقوم الآن بوصف هذه الأداة.
+  <li><bdi dir="ltr" class="odt-ltr-term">Maven</bdi> مدمج في <bdi dir="ltr" class="odt-ltr-term">NetBeans.</bdi> سنقوم الآن بوصف هذه الأداة.
   </li>
 </ul>
 
 <p><a id="refheading2816871991350288"></a></p>
-<h2 id="31-maven">3.1. <span style="color: #4f81bd">Maven</span></h2>
+<h2 id="31-maven">3.1. <span style="color: #4f81bd"><bdi dir="ltr" class="odt-ltr-term">Maven</bdi></span></h2>
 <p><a id="refheading2816891991350288"></a></p>
 <h3 id="311">3.1.1. <span style="color: #4f81bd">مقدمة</span></h3>
-<p>Maven متاح على الرابط [http://maven.apache.org/index.html ]. وفقًا لمطوريه:</p>
-<p><em>الهدف الأساسي لـ Maven هو تمكين المطور من فهم الحالة الكاملة لعملية التطوير في أقصر وقت ممكن. لتحقيق هذا الهدف، هناك عدة مجالات رئيسية يعالجها Maven:</em></p>
+<p><bdi dir="ltr" class="odt-ltr-term">Maven</bdi> متاح على الرابط [<bdi dir="ltr" class="odt-ltr-term">http://maven.apache.org/index.html</bdi> ]. وفقًا لمطوريه:</p>
+<p><em>الهدف الأساسي لـ <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> هو تمكين المطور من فهم الحالة الكاملة لعملية التطوير في أقصر وقت ممكن. لتحقيق هذا الهدف، هناك عدة مجالات رئيسية يعالجها <bdi dir="ltr" class="odt-ltr-term">Maven:</bdi></em></p>
 <ul>
   <li>تسهيل عملية البناء
   </li>
@@ -841,16 +843,16 @@
   </li>
 </ul>
 
-<p>تم دمج Maven في NetBeans، وسنستخدمه لواحدة فقط من ميزاته: إدارة مكتبات المشروع. تتكون هذه المكتبات من جميع ملفات <em>JAR</em> التي يجب أن تكون موجودة في <em>مسار فئات</em> المشروع. وقد يكون عددها كبيرًا. على سبيل المثال، ستستخدم مشاريعنا المستقبلية Hibernate ORM (Object-Relational Mapper). يتكون هذا ORM من عشرات ملفات <em>JAR</em>. وتتمثل ميزة Maven في أنها تحررنا من الحاجة إلى معرفتها جميعًا. نحتاج ببساطة إلى تحديد في مشروعنا أننا بحاجة إلى Hibernate من خلال توفير جميع المعلومات اللازمة لتحديد موقع ملف JAR الرئيسي لهذا ORM. ثم يقوم Maven أيضًا بتنزيل جميع المكتبات المطلوبة من قبل Hibernate. وتسمى هذه التبعيات Hibernate. قد تعتمد المكتبة المطلوبة من قبل Hibernate نفسها على أرشيفات أخرى. وسيتم تنزيل هذه أيضًا. يتم وضع جميع هذه المكتبات في مجلد يسمى مستودع Maven المحلي.</p>
-<p>يمكن مشاركة مشروع Maven بسهولة. إذا قمت بنقله من جهاز كمبيوتر إلى آخر ولم تكن تبعيات المشروع موجودة في المستودع المحلي للجهاز الجديد، فسيتم تنزيلها.</p>
-<p>يمكن استخدام Maven بمفرده أو دمجه في بيئة تطوير متكاملة (IDE) مثل NetBeans أو Eclipse.</p>
-<p><a id="refheading99631454977699"></a>لنقم بإنشاء مشروع Maven في NetBeans:</p>
+<p>تم دمج <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> في <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi>، وسنستخدمه لواحدة فقط من ميزاته: إدارة مكتبات المشروع. تتكون هذه المكتبات من جميع ملفات <em><bdi dir="ltr" class="odt-ltr-term">JAR</bdi></em> التي يجب أن تكون موجودة في <em>مسار فئات</em> المشروع. وقد يكون عددها كبيرًا. على سبيل المثال، ستستخدم مشاريعنا المستقبلية <bdi dir="ltr" class="odt-ltr-term">Hibernate ORM</bdi> (<bdi dir="ltr" class="odt-ltr-term">Object-Relational Mapper</bdi>). يتكون هذا <bdi dir="ltr" class="odt-ltr-term">ORM</bdi> من عشرات ملفات <em><bdi dir="ltr" class="odt-ltr-term">JAR</bdi></em>. وتتمثل ميزة <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> في أنها تحررنا من الحاجة إلى معرفتها جميعًا. نحتاج ببساطة إلى تحديد في مشروعنا أننا بحاجة إلى <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> من خلال توفير جميع المعلومات اللازمة لتحديد موقع ملف <bdi dir="ltr" class="odt-ltr-term">JAR</bdi> الرئيسي لهذا <bdi dir="ltr" class="odt-ltr-term">ORM.</bdi> ثم يقوم <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> أيضًا بتنزيل جميع المكتبات المطلوبة من قبل <bdi dir="ltr" class="odt-ltr-term">Hibernate.</bdi> وتسمى هذه التبعيات <bdi dir="ltr" class="odt-ltr-term">Hibernate.</bdi> قد تعتمد المكتبة المطلوبة من قبل <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> نفسها على أرشيفات أخرى. وسيتم تنزيل هذه أيضًا. يتم وضع جميع هذه المكتبات في مجلد يسمى مستودع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> المحلي.</p>
+<p>يمكن مشاركة مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> بسهولة. إذا قمت بنقله من جهاز كمبيوتر إلى آخر ولم تكن تبعيات المشروع موجودة في المستودع المحلي للجهاز الجديد، فسيتم تنزيلها.</p>
+<p>يمكن استخدام <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> بمفرده أو دمجه في بيئة تطوير متكاملة (<bdi dir="ltr" class="odt-ltr-term">IDE</bdi>) مثل <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> أو <bdi dir="ltr" class="odt-ltr-term">Eclipse.</bdi></p>
+<p><a id="refheading99631454977699"></a>لنقم بإنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> في <bdi dir="ltr" class="odt-ltr-term">NetBeans:</bdi></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006BA000001C16218D84F.png" width="680" height="177" style="display:inline-block; margin:4px;width:17.999cm;height:4.694cm;" class="odt-zoomable" data-zoom-src="images/10000000000006BA000001C16218D84F.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، أنشئ مشروعًا جديدًا،
   </li>
-  <li>في [2]، حدد فئة [Maven] ونوع المشروع [Java Application]،
+  <li>في [2]، حدد فئة [<bdi dir="ltr" class="odt-ltr-term">Maven</bdi>] ونوع المشروع [<bdi dir="ltr" class="odt-ltr-term">Java Application</bdi>]،
   </li>
 </ul>
 
@@ -871,17 +873,17 @@
 <ul>
   <li>في [1]: الفروع المختلفة للمشروع:
     <ul>
-      <li>[حزم المصدر]: فئات Java الخاصة بالمشروع؛
+      <li>[حزم المصدر]: فئات <bdi dir="ltr" class="odt-ltr-term">Java</bdi> الخاصة بالمشروع؛
       </li>
       <li>[حزم الاختبار]: فئات الاختبار الخاصة بالمشروع؛
       </li>
-      <li>[التبعيات]: أرشيفات .jar التي يتطلبها المشروع وتديرها Maven؛
+      <li>[التبعيات]: أرشيفات .<bdi dir="ltr" class="odt-ltr-term">jar</bdi> التي يتطلبها المشروع وتديرها <bdi dir="ltr" class="odt-ltr-term">Maven</bdi>؛
       </li>
-      <li>[التبعيات الاختبارية]: ملفات .jar المطلوبة لاختبارات المشروع والتي يديرها Maven؛
+      <li>[التبعيات الاختبارية]: ملفات .<bdi dir="ltr" class="odt-ltr-term">jar</bdi> المطلوبة لاختبارات المشروع والتي يديرها <bdi dir="ltr" class="odt-ltr-term">Maven</bdi>؛
       </li>
-      <li>[تبعيات Java]: ملفات .jar التي يتطلبها المشروع ولا يديرها Maven؛
+      <li>[تبعيات <bdi dir="ltr" class="odt-ltr-term">Java</bdi>]: ملفات .<bdi dir="ltr" class="odt-ltr-term">jar</bdi> التي يتطلبها المشروع ولا يديرها <bdi dir="ltr" class="odt-ltr-term">Maven</bdi>؛
       </li>
-      <li>[ملفات المشروع]: ملفات تكوين Maven و NetBeans،
+      <li>[ملفات المشروع]: ملفات تكوين <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> و <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi>،
       </li>
     </ul>
   </li>
@@ -894,7 +896,7 @@
   </li>
 </ul>
 
-<p>يحتوي هذا الفرع على شفرة المصدر لفئات Java الخاصة بالمشروع. قام NetBeans بإنشاء فئة افتراضية:</p>
+<p>يحتوي هذا الفرع على شفرة المصدر لفئات <bdi dir="ltr" class="odt-ltr-term">Java</bdi> الخاصة بالمشروع. قام <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> بإنشاء فئة افتراضية:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.mvexemple;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -912,13 +914,13 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000023B000001DA33128D4F.png" width="286" height="237" style="display:inline-block; margin:4px;width:7.555cm;height:6.272cm;" class="odt-zoomable" data-zoom-src="images/100000000000023B000001DA33128D4F.png" /></td></tr></table>
 
 <ul>
-  <li>في [4]، فرع [Test Packages]، الذي يحتوي على شفرة المصدر لفئات الاختبار الخاصة بالمشروع،
+  <li>في [4]، فرع [<bdi dir="ltr" class="odt-ltr-term">Test Packages</bdi>]، الذي يحتوي على شفرة المصدر لفئات الاختبار الخاصة بالمشروع،
   </li>
-  <li>في [5]، مكتبة JUnit 3.8 المطلوبة لتشغيل الاختبارات،
+  <li>في [5]، مكتبة <bdi dir="ltr" class="odt-ltr-term">JUnit 3.8</bdi> المطلوبة لتشغيل الاختبارات،
   </li>
 </ul>
 
-<p>قام NetBeans بإنشاء فئة افتراضية:</p>
+<p>قام <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> بإنشاء فئة افتراضية:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.mvexemple;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -956,7 +958,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>هذا اختبار JUnit 3.8. سنستخدم اختبارات JUnit 4.x لاحقًا.</p>
+<p>هذا اختبار <bdi dir="ltr" class="odt-ltr-term">JUnit 3.8</bdi>. سنستخدم اختبارات <bdi dir="ltr" class="odt-ltr-term">JUnit</bdi> 4.<bdi dir="ltr" class="odt-ltr-term">x</bdi> لاحقًا.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BB00000187E9483491.png" width="222" height="196" style="display:inline-block; margin:4px;width:5.861cm;height:5.173cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BB00000187E9483491.png" /></td></tr></table>
 
 <ul>
@@ -964,22 +966,22 @@
   </li>
 </ul>
 
-<p>يعرض هذا القسم جميع المكتبات التي يتطلبها المشروع وتديرها Maven. يتم تنزيل جميع المكتبات المدرجة هنا تلقائيًا بواسطة Maven. لهذا السبب يتطلب مشروع Maven اتصالاً بالإنترنت. سيتم تخزين المكتبات التي تم تنزيلها محليًا. إذا احتاج مشروع آخر إلى مكتبة موجودة بالفعل محليًا، فلن يتم تنزيلها. سنرى أن قائمة المكتبات هذه، بالإضافة إلى المستودعات التي يمكن العثور عليها فيها، محددة في ملف تكوين مشروع Maven.</p>
+<p>يعرض هذا القسم جميع المكتبات التي يتطلبها المشروع وتديرها <bdi dir="ltr" class="odt-ltr-term">Maven.</bdi> يتم تنزيل جميع المكتبات المدرجة هنا تلقائيًا بواسطة <bdi dir="ltr" class="odt-ltr-term">Maven.</bdi> لهذا السبب يتطلب مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> اتصالاً بالإنترنت. سيتم تخزين المكتبات التي تم تنزيلها محليًا. إذا احتاج مشروع آخر إلى مكتبة موجودة بالفعل محليًا، فلن يتم تنزيلها. سنرى أن قائمة المكتبات هذه، بالإضافة إلى المستودعات التي يمكن العثور عليها فيها، محددة في ملف تكوين مشروع <bdi dir="ltr" class="odt-ltr-term">Maven.</bdi></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D9000001875A238B9C.png" width="237" height="196" style="display:inline-block; margin:4px;width:6.258cm;height:5.173cm;" class="odt-zoomable" data-zoom-src="images/10000000000001D9000001875A238B9C.png" /></td></tr></table>
 
 <ul>
-  <li>في [7]، المكتبات التي يتطلبها المشروع ولكن لا يديرها Maven،
+  <li>في [7]، المكتبات التي يتطلبها المشروع ولكن لا يديرها <bdi dir="ltr" class="odt-ltr-term">Maven</bdi>،
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000022100000199FA529CF0.png" width="273" height="205" style="display:inline-block; margin:4px;width:7.211cm;height:5.412cm;" class="odt-zoomable" data-zoom-src="images/100000000000022100000199FA529CF0.png" /></td></tr></table>
 
 <ul>
-  <li>في [7]، ملف التكوين [pom.xml] لمشروع Maven. ويُشار إلى POM باختصار لـ Project Object Model. وسنحتاج إلى تعديل هذا الملف مباشرةً.
+  <li>في [7]، ملف التكوين [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] لمشروع <bdi dir="ltr" class="odt-ltr-term">Maven.</bdi> ويُشار إلى <bdi dir="ltr" class="odt-ltr-term">POM</bdi> باختصار لـ <bdi dir="ltr" class="odt-ltr-term">Project Object Model.</bdi> وسنحتاج إلى تعديل هذا الملف مباشرةً.
   </li>
 </ul>
 
-<p>فيما يلي ملف [pom.xml] الذي تم إنشاؤه:</p>
+<p>فيما يلي ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] الذي تم إنشاؤه:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">project</span> <span style="color:#7f007f">xmlns</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span style="color:#7f007f">xmlns:xsi</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#7f007f">xsi:schemaLocation</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1009,32 +1011,32 @@
 </code></pre></div>
 
 <ul>
-  <li>تحدد الأسطر من 5 إلى 8 عنصر Java الذي سيتم إنشاؤه بواسطة مشروع Maven. تأتي هذه المعلومات من المعالج المستخدم عند إنشاء المشروع:
+  <li>تحدد الأسطر من 5 إلى 8 عنصر <bdi dir="ltr" class="odt-ltr-term">Java</bdi> الذي سيتم إنشاؤه بواسطة مشروع <bdi dir="ltr" class="odt-ltr-term">Maven.</bdi> تأتي هذه المعلومات من المعالج المستخدم عند إنشاء المشروع:
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000035800000224D7ECA1C9.png" width="428" height="274" style="display:inline-block; margin:4px;width:11.324cm;height:7.25cm;" class="odt-zoomable" data-zoom-src="images/100000000000035800000224D7ECA1C9.png" /></td></tr></table>
 
-<p>يتم تعريف عنصر Maven من خلال أربع خصائص:</p>
+<p>يتم تعريف عنصر <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> من خلال أربع خصائص:</p>
 <ul>
-  <li>[<b>groupId</b>]: معلومات تشبه اسم الحزمة. على سبيل المثال، مكتبات إطار عمل Spring لها <i>groupId=org.</i>springframework، بينما مكتبات إطار عمل JSF لها <i>groupId=javax.faces،</i>
+  <li>[<b><bdi dir="ltr" class="odt-ltr-term">groupId</bdi></b>]: معلومات تشبه اسم الحزمة. على سبيل المثال، مكتبات إطار عمل <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> لها <i><bdi dir="ltr" class="odt-ltr-term">groupId</bdi>=<bdi dir="ltr" class="odt-ltr-term">org.</bdi></i><bdi dir="ltr" class="odt-ltr-term">springframework</bdi>، بينما مكتبات إطار عمل <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> لها <i><bdi dir="ltr" class="odt-ltr-term">groupId</bdi>=<bdi dir="ltr" class="odt-ltr-term">javax.faces</bdi>،</i>
   </li>
-  <li>[<b>artifactId</b>]: اسم عنصر Maven. في مجموعة [org.springframework]، نجد معرفات العناصر التالية: spring-context، spring-<i>core</i>، spring-<i>beans</i>، ... وفي مجموعة [javax.faces]، نجد معرف العنصر <i>jsf-api،</i>
+  <li>[<b><bdi dir="ltr" class="odt-ltr-term">artifactId</bdi></b>]: اسم عنصر <bdi dir="ltr" class="odt-ltr-term">Maven.</bdi> في مجموعة [<bdi dir="ltr" class="odt-ltr-term">org.springframework</bdi>]، نجد معرفات العناصر التالية: <bdi dir="ltr" class="odt-ltr-term">spring-context</bdi>، <bdi dir="ltr" class="odt-ltr-term">spring-</bdi><i><bdi dir="ltr" class="odt-ltr-term">core</bdi></i>، <bdi dir="ltr" class="odt-ltr-term">spring-</bdi><i><bdi dir="ltr" class="odt-ltr-term">beans</bdi></i>، ... وفي مجموعة [<bdi dir="ltr" class="odt-ltr-term">javax.faces</bdi>]، نجد معرف العنصر <i><bdi dir="ltr" class="odt-ltr-term">jsf-api</bdi>،</i>
   </li>
-  <li>[<b>version</b>]: رقم إصدار عنصر Maven. وبالتالي، فإن العنصر <i>org.springframework.spring-core </i>له الإصدارات التالية: 2.5.4، 2.5.5، 2.5.6، 2.5.6.SECO1، ...
+  <li>[<b><bdi dir="ltr" class="odt-ltr-term">version</bdi></b>]: رقم إصدار عنصر <bdi dir="ltr" class="odt-ltr-term">Maven.</bdi> وبالتالي، فإن العنصر <i><bdi dir="ltr" class="odt-ltr-term">org.springframework.spring-core</bdi> </i>له الإصدارات التالية: 2.5.4، 2.5.5، 2.5.6، 2.5.6.<bdi dir="ltr" class="odt-ltr-term">SECO1</bdi>، ...
   </li>
-  <li>[<b>packaging</b>]: تنسيق الأرتيفاكت، وغالبًا ما يكون <i>war </i>أو <i>jar</i>.
+  <li>[<b><bdi dir="ltr" class="odt-ltr-term">packaging</bdi></b>]: تنسيق الأرتيفاكت، وغالبًا ما يكون <i><bdi dir="ltr" class="odt-ltr-term">war</bdi> </i>أو <i><bdi dir="ltr" class="odt-ltr-term">jar</bdi></i>.
   </li>
 </ul>
 
-<p>سيقوم مشروع Maven الخاص بنا بإنشاء ملف [jar] (السطر 8) في المجموعة [istia.st] (السطر 5)، باسم [mv-example] (السطر 6) وبإصدار [1.0-SNAPSHOT] (السطر 7). يجب أن تحدد هذه المعلومات الأربع بشكل فريد عنصر Maven.</p>
-<p>تسرد الأسطر 17–24 تبعيات مشروع Maven، أي قائمة المكتبات التي يتطلبها المشروع. يتم تعريف كل مكتبة من خلال المعلومات الأربع (groupId، artifactId، version، packaging). عندما تكون معلومات <em>التعبئة والتغليف</em> مفقودة، كما هو الحال هنا، يتم استخدام <em>تعبئة</em> <strong>jar</strong>. يتم إضافة معلومة أخرى: <strong>scope</strong>، والتي تحدد المراحل التي تحتاج فيها المكتبة في دورة حياة المشروع. القيمة الافتراضية هي <strong><code>compile</code></strong>، والتي تشير إلى أن المكتبة مطلوبة للتجميع والتنفيذ. القيمة <strong><code>test</code></strong> تعني أن المكتبة مطلوبة أثناء اختبار المشروع. هذا هو الحال هنا مع مكتبة JUnit 3.8.1. إذا لم تكن هذه المكتبة موجودة في المستودع المحلي على الجهاز، يتم تنزيلها.</p>
+<p>سيقوم مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> الخاص بنا بإنشاء ملف [<bdi dir="ltr" class="odt-ltr-term">jar</bdi>] (السطر 8) في المجموعة [<bdi dir="ltr" class="odt-ltr-term">istia.st</bdi>] (السطر 5)، باسم [<bdi dir="ltr" class="odt-ltr-term">mv-example</bdi>] (السطر 6) وبإصدار [1.0-<bdi dir="ltr" class="odt-ltr-term">SNAPSHOT</bdi>] (السطر 7). يجب أن تحدد هذه المعلومات الأربع بشكل فريد عنصر <bdi dir="ltr" class="odt-ltr-term">Maven.</bdi></p>
+<p>تسرد الأسطر 17–24 تبعيات مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi>، أي قائمة المكتبات التي يتطلبها المشروع. يتم تعريف كل مكتبة من خلال المعلومات الأربع (<bdi dir="ltr" class="odt-ltr-term">groupId</bdi>، <bdi dir="ltr" class="odt-ltr-term">artifactId</bdi>، <bdi dir="ltr" class="odt-ltr-term">version</bdi>، <bdi dir="ltr" class="odt-ltr-term">packaging</bdi>). عندما تكون معلومات <em>التعبئة والتغليف</em> مفقودة، كما هو الحال هنا، يتم استخدام <em>تعبئة</em> <strong><bdi dir="ltr" class="odt-ltr-term">jar</bdi></strong>. يتم إضافة معلومة أخرى: <strong><bdi dir="ltr" class="odt-ltr-term">scope</bdi></strong>، والتي تحدد المراحل التي تحتاج فيها المكتبة في دورة حياة المشروع. القيمة الافتراضية هي <strong><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;compile&lt;/bdi&gt;</code></strong>، والتي تشير إلى أن المكتبة مطلوبة للتجميع والتنفيذ. القيمة <strong><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;test&lt;/bdi&gt;</code></strong> تعني أن المكتبة مطلوبة أثناء اختبار المشروع. هذا هو الحال هنا مع مكتبة <bdi dir="ltr" class="odt-ltr-term">JUnit 3.8.1</bdi>. إذا لم تكن هذه المكتبة موجودة في المستودع المحلي على الجهاز، يتم تنزيلها.</p>
 <p><a id="refheading1433261675182081"></a></p>
 <h3 id="312">3.1.2. <span style="color: #4f81bd">تشغيل المشروع</span></h3>
 <p>نقوم بتشغيل المشروع:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006250000026DEC9E345D.png" width="680" height="269" style="display:inline-block; margin:4px;width:17.999cm;height:7.107cm;" class="odt-zoomable" data-zoom-src="images/10000000000006250000026DEC9E345D.png" /></td></tr></table>
 
-<p>في [1]، يتم إنشاء مشروع Maven ثم تنفيذه [1]. فيما يلي السجلات الموجودة في وحدة التحكم NetBeans:</p>
+<p>في [1]، يتم إنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> ثم تنفيذه [1]. فيما يلي السجلات الموجودة في وحدة التحكم <bdi dir="ltr" class="odt-ltr-term">NetBeans:</bdi></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1093,33 +1095,33 @@
 <a id="__codelineno-0-28" name="__codelineno-0-28"></a>Finished at: Thu Jun 21 10:10:40 CEST 2012
 <a id="__codelineno-0-29" name="__codelineno-0-29"></a>Final Memory: 13M/122M
 </code></pre></div></td></tr></table></div>
-<p>والنتيجة هي السطر 23. يمكننا أن نرى أنه حتى في هذه الحالة البسيطة، قام Maven بتنزيل بعض التبعيات (السطران 17 و20).</p>
+<p>والنتيجة هي السطر 23. يمكننا أن نرى أنه حتى في هذه الحالة البسيطة، قام <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> بتنزيل بعض التبعيات (السطران 17 و20).</p>
 <p><a id="refheading1433281675182081"></a></p>
-<h3 id="313-maven">3.1.3. <span style="color: #4f81bd">نظام الملفات لمشروع Maven</span></h3>
+<h3 id="313-maven">3.1.3. <span style="color: #4f81bd">نظام الملفات لمشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi></span></h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000754000002E748365BA1.png" width="680" height="269" style="display:inline-block; margin:4px;width:17.999cm;height:7.13cm;" class="odt-zoomable" data-zoom-src="images/1000000000000754000002E748365BA1.png" /></td></tr></table>
 
 <ul>
-  <li>[1]: يوجد نظام ملفات المشروع في علامة التبويب [Files]،
+  <li>[1]: يوجد نظام ملفات المشروع في علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Files</bdi>]،
   </li>
-  <li>[2]: توجد مصادر Java في المجلد [src/main/java]،
+  <li>[2]: توجد مصادر <bdi dir="ltr" class="odt-ltr-term">Java</bdi> في المجلد [<bdi dir="ltr" class="odt-ltr-term">src/main/java</bdi>]،
   </li>
-  <li>[3]: توجد مصادر اختبار Java في المجلد [src/test/java]،
+  <li>[3]: توجد مصادر اختبار <bdi dir="ltr" class="odt-ltr-term">Java</bdi> في المجلد [<bdi dir="ltr" class="odt-ltr-term">src/test/java</bdi>]،
   </li>
-  <li>[4]: تم إنشاء المجلد [target] بواسطة عملية بناء المشروع،
+  <li>[4]: تم إنشاء المجلد [<bdi dir="ltr" class="odt-ltr-term">target</bdi>] بواسطة عملية بناء المشروع،
   </li>
-  <li>[5]: هنا، أنشأ بناء المشروع أرشيفًا [mv-example-1.0-SNAPSHOT.jar].
+  <li>[5]: هنا، أنشأ بناء المشروع أرشيفًا [<bdi dir="ltr" class="odt-ltr-term">mv-example-1.0-SNAPSHOT.jar</bdi>].
   </li>
 </ul>
 
 <p><a id="refheading1433341675182081"></a></p>
-<h3 id="314-maven">3.1.4. <span style="color: #4f81bd">مستودع Maven المحلي</span></h3>
-<p>ذكرنا أن Maven يقوم بتنزيل التبعيات المطلوبة للمشروع وتخزينها محليًا. يمكنك استكشاف هذا المستودع المحلي:</p>
+<h3 id="314-maven">3.1.4. <span style="color: #4f81bd">مستودع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> المحلي</span></h3>
+<p>ذكرنا أن <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> يقوم بتنزيل التبعيات المطلوبة للمشروع وتخزينها محليًا. يمكنك استكشاف هذا المستودع المحلي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007A70000043F4F3E10B8.png" width="680" height="377" style="display:inline-block; margin:4px;width:17.999cm;height:9.987cm;" class="odt-zoomable" data-zoom-src="images/10000000000007A70000043F4F3E10B8.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، حدد الخيار [Window / Other / Maven Repository Browser]،
+  <li>في [1]، حدد الخيار [<bdi dir="ltr" class="odt-ltr-term">Window</bdi> / <bdi dir="ltr" class="odt-ltr-term">Other</bdi> / <bdi dir="ltr" class="odt-ltr-term">Maven Repository Browser</bdi>]،
   </li>
-  <li>في [2]، تفتح علامة تبويب [Maven Repositories]،
+  <li>في [2]، تفتح علامة تبويب [<bdi dir="ltr" class="odt-ltr-term">Maven Repositories</bdi>]،
   </li>
   <li>في [3]، تحتوي على فرعين، أحدهما للمستودع المحلي والآخر للمستودع المركزي. هذا الأخير ضخم. لعرض محتوياته، يجب تحديث فهرسه [4]. يستغرق هذا التحديث عدة عشرات من الدقائق.
   </li>
@@ -1130,17 +1132,17 @@
 <ul>
   <li>في [5]، المكتبات الموجودة في المستودع المحلي،
   </li>
-  <li>في [6]، ستجد فرعًا [istia.st] يتوافق مع [groupId] لمشروعنا،
+  <li>في [6]، ستجد فرعًا [<bdi dir="ltr" class="odt-ltr-term">istia.st</bdi>] يتوافق مع [<bdi dir="ltr" class="odt-ltr-term">groupId</bdi>] لمشروعنا،
   </li>
   <li>في [7]، يمكنك الوصول إلى خصائص المستودع المحلي،
   </li>
-  <li>في [8]، ترى المسار إلى المستودع المحلي. من المفيد معرفة ذلك لأنه في بعض الأحيان (نادرًا) لا يستخدم Maven أحدث إصدار من المشروع. تقوم بإجراء تغييرات وتلاحظ أنها لا يتم تطبيقها. يمكنك بعد ذلك حذف الفرع يدويًا في المستودع المحلي المطابق لـ [groupId] الخاص بك. هذا يجبر Maven على إعادة إنشاء الفرع من أحدث إصدار من المشروع.
+  <li>في [8]، ترى المسار إلى المستودع المحلي. من المفيد معرفة ذلك لأنه في بعض الأحيان (نادرًا) لا يستخدم <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> أحدث إصدار من المشروع. تقوم بإجراء تغييرات وتلاحظ أنها لا يتم تطبيقها. يمكنك بعد ذلك حذف الفرع يدويًا في المستودع المحلي المطابق لـ [<bdi dir="ltr" class="odt-ltr-term">groupId</bdi>] الخاص بك. هذا يجبر <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> على إعادة إنشاء الفرع من أحدث إصدار من المشروع.
   </li>
 </ul>
 
 <p><a id="refheading1433361675182081"></a></p>
-<h3 id="315-maven">3.1.5. <span style="color: #4f81bd">البحث عن أداة باستخدام Maven</span></h3>
-<p>الآن دعونا نتعلم كيفية البحث عن أداة باستخدام Maven. لنبدأ بقائمة التبعيات الحالية في ملف [pom.xml]:</p>
+<h3 id="315-maven">3.1.5. <span style="color: #4f81bd">البحث عن أداة باستخدام <bdi dir="ltr" class="odt-ltr-term">Maven</bdi></span></h3>
+<p>الآن دعونا نتعلم كيفية البحث عن أداة باستخدام <bdi dir="ltr" class="odt-ltr-term">Maven.</bdi> لنبدأ بقائمة التبعيات الحالية في ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">project</span> <span style="color:#7f007f">xmlns</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span style="color:#7f007f">xmlns:xsi</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#7f007f">xsi:schemaLocation</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1172,7 +1174,7 @@
 <p>تحدد الأسطر 17–23 التبعيات التي سنقوم بتعديلها لاستخدام أحدث إصدارات المكتبات.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002860000020878CB0B77.png" width="323" height="260" style="display:inline-block; margin:4px;width:8.546cm;height:6.879cm;" class="odt-zoomable" data-zoom-src="images/10000000000002860000020878CB0B77.png" /></td></tr></table>
 
-<p>أولاً، نزيل التبعيات الحالية [1]. ثم يتم تعديل ملف [pom.xml]:</p>
+<p>أولاً، نزيل التبعيات الحالية [1]. ثم يتم تعديل ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">project</span> <span style="color:#7f007f">xmlns</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span style="color:#7f007f">xmlns:xsi</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#7f007f">xsi:schemaLocation</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1194,17 +1196,17 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">project</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>السطر 17: لم تعد التبعية التي تمت إزالتها تظهر في [pom.xml]. والآن، دعونا نبحث عنها في مستودعات Maven.</p>
+<p>السطر 17: لم تعد التبعية التي تمت إزالتها تظهر في [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>]. والآن، دعونا نبحث عنها في مستودعات <bdi dir="ltr" class="odt-ltr-term">Maven.</bdi></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000082E000001D4BB7B95DB.png" width="680" height="152" style="display:inline-block; margin:4px;width:17.999cm;height:4.023cm;" class="odt-zoomable" data-zoom-src="images/100000000000082E000001D4BB7B95DB.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، نضيف تبعية إلى المشروع؛
   </li>
-  <li>في [2]، يجب تحديد معلومات حول الأداة التي نبحث عنها (groupId، artifactId، version، packaging (Type)، و scope). نبدأ بتحديد [groupId] [3]،
+  <li>في [2]، يجب تحديد معلومات حول الأداة التي نبحث عنها (<bdi dir="ltr" class="odt-ltr-term">groupId</bdi>، <bdi dir="ltr" class="odt-ltr-term">artifactId</bdi>، <bdi dir="ltr" class="odt-ltr-term">version</bdi>، <bdi dir="ltr" class="odt-ltr-term">packaging</bdi> (<bdi dir="ltr" class="odt-ltr-term">Type</bdi>)، و <bdi dir="ltr" class="odt-ltr-term">scope</bdi>). نبدأ بتحديد [<bdi dir="ltr" class="odt-ltr-term">groupId</bdi>] [3]،
   </li>
-  <li>في [4]، نضغط على [مسافة] لعرض قائمة العناصر المحتملة. هنا، [junit] و [jnit-dep]. نختار [junit]،
+  <li>في [4]، نضغط على [مسافة] لعرض قائمة العناصر المحتملة. هنا، [<bdi dir="ltr" class="odt-ltr-term">junit</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">jnit-dep</bdi>]. نختار [<bdi dir="ltr" class="odt-ltr-term">junit</bdi>]،
   </li>
-  <li>في [5]، باتباع نفس الإجراء، نختار أحدث إصدار. نوع التعبئة هو <i>jar،</i>
+  <li>في [5]، باتباع نفس الإجراء، نختار أحدث إصدار. نوع التعبئة هو <i><bdi dir="ltr" class="odt-ltr-term">jar</bdi>،</i>
   </li>
   <li>في [6]، نختار نطاق <b>الاختبار </b>للإشارة إلى أن التبعية مطلوبة للاختبار فقط.
   </li>
@@ -1212,7 +1214,7 @@
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000206000001D16C4BB7E2.png" width="259" height="233" style="display:inline-block; margin:4px;width:6.853cm;height:6.152cm;" class="odt-zoomable" data-zoom-src="images/1000000000000206000001D16C4BB7E2.png" /></td></tr></table>
 
-<p>في [6]، تظهر التبعيات المضافة في المشروع. يعكس ملف [pom.xml] هذه التغييرات:</p>
+<p>في [6]، تظهر التبعيات المضافة في المشروع. يعكس ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] هذه التغييرات:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">project</span> <span style="color:#7f007f">xmlns</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span style="color:#7f007f">xmlns:xsi</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#7f007f">xsi:schemaLocation</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1242,19 +1244,19 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">project</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>لاحظ أن ملف [pom.xml] لا يذكر التبعية [hamcrest-core-1.1] الموضحة في [6]. وذلك لأنها تبعية لـ JUnit 4.10 وليست للمشروع نفسه. ويُشار إلى ذلك برمز مختلف في فرع [Dependencies]. وقد تم تنزيلها تلقائيًا.</p>
-<p>الآن لنفترض أننا لا نعرف [groupId] للمنتج الذي نريده. على سبيل المثال، نريد استخدام Hibernate كـ ORM (Object Relational Mapper)، وهذا كل ما نعرفه. يمكننا عندئذ الانتقال إلى الموقع [<a href="http://mvnrepository.com/"><u><span style="color: #0563c1">http://mvnrepository.com/</span></u></a>]:</p>
+<p>لاحظ أن ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] لا يذكر التبعية [<bdi dir="ltr" class="odt-ltr-term">hamcrest-core-1.1</bdi>] الموضحة في [6]. وذلك لأنها تبعية لـ <bdi dir="ltr" class="odt-ltr-term">JUnit 4.10</bdi> وليست للمشروع نفسه. ويُشار إلى ذلك برمز مختلف في فرع [<bdi dir="ltr" class="odt-ltr-term">Dependencies</bdi>]. وقد تم تنزيلها تلقائيًا.</p>
+<p>الآن لنفترض أننا لا نعرف [<bdi dir="ltr" class="odt-ltr-term">groupId</bdi>] للمنتج الذي نريده. على سبيل المثال، نريد استخدام <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> كـ <bdi dir="ltr" class="odt-ltr-term">ORM</bdi> (<bdi dir="ltr" class="odt-ltr-term">Object Relational Mapper</bdi>)، وهذا كل ما نعرفه. يمكننا عندئذ الانتقال إلى الموقع [<a href="http://mvnrepository.com/"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">http://mvnrepository.com/</bdi></span></u></a>]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000066C000001727F763B53.png" width="680" height="153" style="display:inline-block; margin:4px;width:17.999cm;height:4.052cm;" class="odt-zoomable" data-zoom-src="images/100000000000066C000001727F763B53.png" /></td></tr></table>
 
-<p>في [1]، يمكنك إدخال كلمات رئيسية. اكتب <em>hibernate</em> وقم بتشغيل البحث.</p>
+<p>في [1]، يمكنك إدخال كلمات رئيسية. اكتب <em><bdi dir="ltr" class="odt-ltr-term">hibernate</bdi></em> وقم بتشغيل البحث.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000848000004EAACD32F77.png" width="680" height="404" style="display:inline-block; margin:4px;width:17.999cm;height:10.68cm;" class="odt-zoomable" data-zoom-src="images/1000000000000848000004EAACD32F77.png" /></td></tr></table>
 
 <ul>
-  <li>في [2]، حدد [groupId] <i>org.hibernate </i>و[artifactId] <i>hibernate-core</i>،
+  <li>في [2]، حدد [<bdi dir="ltr" class="odt-ltr-term">groupId</bdi>] <i><bdi dir="ltr" class="odt-ltr-term">org.hibernate</bdi> </i>و[<bdi dir="ltr" class="odt-ltr-term">artifactId</bdi>] <i><bdi dir="ltr" class="odt-ltr-term">hibernate-core</bdi></i>،
   </li>
-  <li>في [3]، حدد الإصدار<i> 4.1.2-Final</i>،
+  <li>في [3]، حدد الإصدار<i> 4.1.2-<bdi dir="ltr" class="odt-ltr-term">Final</bdi></i>،
   </li>
-  <li>في [4]، نحصل على كود Maven لنلصقه في ملف [pom.xml]. لنفعل ذلك.
+  <li>في [4]، نحصل على كود <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> لنلصقه في ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>]. لنفعل ذلك.
   </li>
 </ul>
 
@@ -1292,16 +1294,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">project</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>نحفظ ملف [pom.xml]. ثم يقوم Maven بتنزيل التبعيات الجديدة. يتطور المشروع على النحو التالي:</p>
+<p>نحفظ ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>]. ثم يقوم <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> بتنزيل التبعيات الجديدة. يتطور المشروع على النحو التالي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002ED0000029F4FD0C729.png" width="375" height="336" style="display:inline-block; margin:4px;width:9.91cm;height:8.878cm;" class="odt-zoomable" data-zoom-src="images/10000000000002ED0000029F4FD0C729.png" /></td></tr></table>
 
 <ul>
-  <li>في [5]، التبعية [hibernate-core-4.1.2-Final]. في المستودع الذي تم العثور عليه فيه، يتم وصف هذا [artifactId] أيضًا بواسطة ملف [pom.xml]. تمت قراءة هذا الملف، واكتشف Maven أن [artifactId] يحتوي على تبعية. يقوم بتنزيلها أيضًا. وسيقوم بذلك لكل [artifactId] تم تنزيله. في النهاية، نجد في [6] تبعيات لم نطلبها مباشرة. يتم الإشارة إليها برمز مختلف عن رمز [artifactId] الرئيسي.
+  <li>في [5]، التبعية [<bdi dir="ltr" class="odt-ltr-term">hibernate-core-4.1.2-Final</bdi>]. في المستودع الذي تم العثور عليه فيه، يتم وصف هذا [<bdi dir="ltr" class="odt-ltr-term">artifactId</bdi>] أيضًا بواسطة ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>]. تمت قراءة هذا الملف، واكتشف <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> أن [<bdi dir="ltr" class="odt-ltr-term">artifactId</bdi>] يحتوي على تبعية. يقوم بتنزيلها أيضًا. وسيقوم بذلك لكل [<bdi dir="ltr" class="odt-ltr-term">artifactId</bdi>] تم تنزيله. في النهاية، نجد في [6] تبعيات لم نطلبها مباشرة. يتم الإشارة إليها برمز مختلف عن رمز [<bdi dir="ltr" class="odt-ltr-term">artifactId</bdi>] الرئيسي.
   </li>
 </ul>
 
-<p>في هذا المستند، نستخدم Maven بشكل أساسي لهذه الميزة. هذا يوفر علينا الحاجة إلى معرفة جميع التبعيات الخاصة بالمكتبة التي نريد استخدامها. نترك Maven يديرها. علاوة على ذلك، من خلال مشاركة ملف [pom.xml] بين المطورين، نضمن أن كل مطور يستخدم بالفعل نفس المكتبات.</p>
-<p>في الأمثلة التالية، سنقدم ببساطة ملف [pom.xml] المستخدم. لا يحتاج القارئ سوى استخدامه لتكرار الشروط الموضحة في الوثيقة. علاوة على ذلك، تدعم بيئات تطوير Java الرئيسية (Eclipse، NetBeans، IntelliJ، JDeveloper) مشاريع Maven. وبالتالي، يمكن للقارئ استخدام بيئة التطوير المفضلة لديه لاختبار الأمثلة.</p>
+<p>في هذا المستند، نستخدم <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> بشكل أساسي لهذه الميزة. هذا يوفر علينا الحاجة إلى معرفة جميع التبعيات الخاصة بالمكتبة التي نريد استخدامها. نترك <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> يديرها. علاوة على ذلك، من خلال مشاركة ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] بين المطورين، نضمن أن كل مطور يستخدم بالفعل نفس المكتبات.</p>
+<p>في الأمثلة التالية، سنقدم ببساطة ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] المستخدم. لا يحتاج القارئ سوى استخدامه لتكرار الشروط الموضحة في الوثيقة. علاوة على ذلك، تدعم بيئات تطوير <bdi dir="ltr" class="odt-ltr-term">Java</bdi> الرئيسية (<bdi dir="ltr" class="odt-ltr-term">Eclipse</bdi>، <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi>، <bdi dir="ltr" class="odt-ltr-term">IntelliJ</bdi>، <bdi dir="ltr" class="odt-ltr-term">JDeveloper</bdi>) مشاريع <bdi dir="ltr" class="odt-ltr-term">Maven.</bdi> وبالتالي، يمكن للقارئ استخدام بيئة التطوير المفضلة لديه لاختبار الأمثلة.</p>
 
 
 

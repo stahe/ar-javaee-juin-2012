@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -913,33 +915,33 @@
 
 <p><a id="refheading87517112820228"></a></p>
 <h1 id="8-4">8. <span style="color: #365f91">الإصدار 4 – العميل/الخادم في بنية خدمة الويب</span></h1>
-<p>في هذا الإصدار الجديد، سيعمل تطبيق [Pam] في وضع العميل/الخادم ضمن بنية خدمات الويب. دعونا نلقي نظرة مجددة على بنية التطبيق السابق:</p>
+<p>في هذا الإصدار الجديد، سيعمل تطبيق [<bdi dir="ltr" class="odt-ltr-term">Pam</bdi>] في وضع العميل/الخادم ضمن بنية خدمات الويب. دعونا نلقي نظرة مجددة على بنية التطبيق السابق:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053C0000011A932F7170.png" width="670" height="141" style="display:inline-block; margin:4px;width:17.727cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/100000000000053C0000011A932F7170.png" /></td></tr></table>
 
-<p><span style="color: #000000">في الأعلى، مكنت طبقة الاتصال [C، RMI، S] من الاتصال الشفاف بين العميل [ui] والطبقة البعيدة [business]. سنستخدم بنية مماثلة، حيث سيتم استبدال طبقة الاتصال [C، RMI، S] بطبقة [C، HTTP / SOAP، S]:</span></p>
+<p><span style="color: #000000">في الأعلى، مكنت طبقة الاتصال [<bdi dir="ltr" class="odt-ltr-term">C</bdi>، <bdi dir="ltr" class="odt-ltr-term">RMI</bdi>، <bdi dir="ltr" class="odt-ltr-term">S</bdi>] من الاتصال الشفاف بين العميل [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] والطبقة البعيدة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. سنستخدم بنية مماثلة، حيث سيتم استبدال طبقة الاتصال [<bdi dir="ltr" class="odt-ltr-term">C</bdi>، <bdi dir="ltr" class="odt-ltr-term">RMI</bdi>، <bdi dir="ltr" class="odt-ltr-term">S</bdi>] بطبقة [<bdi dir="ltr" class="odt-ltr-term">C</bdi>، <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> / <bdi dir="ltr" class="odt-ltr-term">SOAP</bdi>، <bdi dir="ltr" class="odt-ltr-term">S</bdi>]:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F30000011394858AF0.png" width="634" height="137" style="display:inline-block; margin:4px;width:16.762cm;height:3.637cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F30000011394858AF0.png" /></td></tr></table>
 
-<p><span style="color: #000000">يتميز بروتوكول HTTP/SOAP على بروتوكول RMI/EJB السابق بكونه متعدد المنصات. وبالتالي، يمكن كتابة خدمة الويب بلغة Java ونشرها على خادم Glassfish، في حين يمكن أن يكون العميل عميلاً .NET أو PHP.</span></p>
+<p><span style="color: #000000">يتميز بروتوكول <bdi dir="ltr" class="odt-ltr-term">HTTP/SOAP</bdi> على بروتوكول <bdi dir="ltr" class="odt-ltr-term">RMI/EJB</bdi> السابق بكونه متعدد المنصات. وبالتالي، يمكن كتابة خدمة الويب بلغة <bdi dir="ltr" class="odt-ltr-term">Java</bdi> ونشرها على خادم <bdi dir="ltr" class="odt-ltr-term">Glassfish</bdi>، في حين يمكن أن يكون العميل عميلاً .<bdi dir="ltr" class="odt-ltr-term">NET</bdi> أو <bdi dir="ltr" class="odt-ltr-term">PHP.</bdi></span></p>
 <p><span style="color: #000000">سنطور هذه البنية في ثلاثة أوضاع مختلفة:</span></p>
 <ol>
-  <li><span style="color: #000000">سيتم توفير خدمة الويب بواسطة EJB [Business]</span>
+  <li><span style="color: #000000">سيتم توفير خدمة الويب بواسطة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>]</span>
   </li>
-  <li><span style="color: #000000">سيتم توفير خدمة الويب بواسطة تطبيق ويب يستخدم [Business] EJB</span>
+  <li><span style="color: #000000">سيتم توفير خدمة الويب بواسطة تطبيق ويب يستخدم [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>] <bdi dir="ltr" class="odt-ltr-term">EJB</bdi></span>
   </li>
-  <li><span style="color: #000000">سيتم توفير خدمة الويب بواسطة تطبيق ويب يستخدم Spring</span>
+  <li><span style="color: #000000">سيتم توفير خدمة الويب بواسطة تطبيق ويب يستخدم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi></span>
   </li>
 </ol>
 
-<p>يمكن تنفيذ خدمة الويب بطرق مختلفة داخل خادم Java EE:</p>
+<p>يمكن تنفيذ خدمة الويب بطرق مختلفة داخل خادم <bdi dir="ltr" class="odt-ltr-term">Java EE:</bdi></p>
 <ul>
-  <li>عن طريق فئة مزودة <b>بعلامة @WebService </b>تعمل في حاوية ويب
+  <li>عن طريق فئة مزودة <b>بعلامة @<bdi dir="ltr" class="odt-ltr-term">WebService</bdi> </b>تعمل في حاوية ويب
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004CC000000B3A8B20B4F.png" width="614" height="89" style="display:inline-block; margin:4px;width:16.245cm;height:2.367cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CC000000B3A8B20B4F.png" /></td></tr></table>
 
 <ul>
-  <li>بواسطة EJB مرفقة <b>بعلامة @WebService </b>تعمل في حاوية EJB
+  <li>بواسطة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> مرفقة <b>بعلامة @<bdi dir="ltr" class="odt-ltr-term">WebService</bdi> </b>تعمل في حاوية <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>
   </li>
 </ul>
 
@@ -948,18 +950,18 @@
 <p><span style="color: #000000">سنبدأ بالبنية الأخيرة.</span></p>
 <p><a id="refheading87519112820228"></a>
 <a id="serviceweb-ejb"></a></p>
-<h2 id="81-ejb">8.1. <span style="color: #4f81bd">خدمة ويب يتم تنفيذها بواسطة EJB</span></h2>
+<h2 id="81-ejb">8.1. <span style="color: #4f81bd">خدمة ويب يتم تنفيذها بواسطة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi></span></h2>
 <p><a id="refheading87521112820228"></a></p>
 <h3 id="811">8.1.1. <span style="color: #4f81bd">جانب الخادم</span></h3>
 <p><a id="refheading87523112820228"></a></p>
-<h4 id="8111-netbeans">8.1.1.1. <span style="color: #4f81bd">مشروع NetBeans</span></h4>
-<p>لنبدأ بإنشاء مشروع Maven جديد يمثل نسخة من مشروع EJB [mv-pam-ejb-metier-dao-jpa-eclipselink]:</p>
+<h4 id="8111-netbeans">8.1.1.1. <span style="color: #4f81bd">مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi></span></h4>
+<p>لنبدأ بإنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> جديد يمثل نسخة من مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ejb-metier-dao-jpa-eclipselink</bdi>]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FA0000009790D04311.png" width="175" height="106" style="display:inline-block; margin:4px;width:4.63cm;height:2.798cm;" class="odt-zoomable" data-zoom-src="images/10000000000000FA0000009790D04311.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>في البنية التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004FE00000113EDA3AEBA.png" width="639" height="137" style="display:inline-block; margin:4px;width:16.907cm;height:3.637cm;" class="odt-zoomable" data-zoom-src="images/10000000000004FE00000113EDA3AEBA.png" /></td></tr></table>
 
-<p>ستكون طبقة [business] هي خدمة الويب التي تتصل بها طبقة [ui]. لا تحتاج هذه الفئة إلى تنفيذ واجهة. إن التعليقات التوضيحية هي التي تحول POJO (كائن جافا قديم عادي) إلى خدمة ويب. يتم تحويل فئة [Business]، التي تنفذ طبقة [business] أعلاه، على النحو التالي:</p>
+<p>ستكون طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] هي خدمة الويب التي تتصل بها طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]. لا تحتاج هذه الفئة إلى تنفيذ واجهة. إن التعليقات التوضيحية هي التي تحول <bdi dir="ltr" class="odt-ltr-term">POJO</bdi> (كائن جافا قديم عادي) إلى خدمة ويب. يتم تحويل فئة [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>]، التي تنفذ طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] أعلاه، على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">org.swinglabs</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span></span></span>
@@ -969,35 +971,35 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 4: تعمل علامة <b>@WebService </b>على تحويل فئة [Business] إلى خدمة ويب. تعرض خدمة الويب طرقًا لعملائها. يجب أن تكون هذه الطرق مزودة بعلامة <b>@WebMethod</b>.
+  <li>السطر 4: تعمل علامة <b>@<bdi dir="ltr" class="odt-ltr-term">WebService</bdi> </b>على تحويل فئة [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>] إلى خدمة ويب. تعرض خدمة الويب طرقًا لعملائها. يجب أن تكون هذه الطرق مزودة بعلامة <b>@<bdi dir="ltr" class="odt-ltr-term">WebMethod</bdi></b>.
   </li>
-  <li>السطران 19 و 25: تصبح الطريقتان الخاصتان بفئة [Metier] طرقًا لخدمة الويب.
+  <li>السطران 19 و 25: تصبح الطريقتان الخاصتان بفئة [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] طرقًا لخدمة الويب.
   </li>
   <li>السطر 29: من المهم إزالة طرق الحصول والتعيين؛ وإلا فستُعرض في خدمة الويب، مما يتسبب في أخطاء أمنية.
   </li>
 </ul>
 
-<p>يكتشف NetBeans إضافة هذه التعليقات التوضيحية، ثم يغير طبيعة المشروع:</p>
+<p>يكتشف <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> إضافة هذه التعليقات التوضيحية، ثم يغير طبيعة المشروع:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051C0000015A7A298DB9.png" width="654" height="173" style="display:inline-block; margin:4px;width:17.304cm;height:4.577cm;" class="odt-zoomable" data-zoom-src="images/100000000000051C0000015A7A298DB9.png" /></td></tr></table>
 
-<p>في [1]، ظهرت شجرة [خدمات الويب] في المشروع. وهي تحتوي على خدمة الويب <strong>Metier</strong> وطريقتيها. يمكن نشر تطبيق الخادم [2]. يجب أن يكون خادم MySQL قيد التشغيل، ويجب أن تكون قاعدة البيانات [dbpam_eclipselink] موجودة ومملوءة. قد يكون من الضروري مسبقًا إزالة [3] EJBs من مشروع EJB للعميل/الخادم الذي تمت دراسته سابقًا لتجنب تعارض الأسماء. في الواقع، يتضمن مشروعنا الجديد نفس EJBs الموجودة في المشروع السابق.</p>
+<p>في [1]، ظهرت شجرة [خدمات الويب] في المشروع. وهي تحتوي على خدمة الويب <strong><bdi dir="ltr" class="odt-ltr-term">Metier</bdi></strong> وطريقتيها. يمكن نشر تطبيق الخادم [2]. يجب أن يكون خادم <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> قيد التشغيل، ويجب أن تكون قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_eclipselink] موجودة ومملوءة. قد يكون من الضروري مسبقًا إزالة [3] <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi> من مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> للعميل/الخادم الذي تمت دراسته سابقًا لتجنب تعارض الأسماء. في الواقع، يتضمن مشروعنا الجديد نفس <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi> الموجودة في المشروع السابق.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002780000008C275F58B9.png" width="316" height="70" style="display:inline-block; margin:4px;width:8.361cm;height:1.852cm;" class="odt-zoomable" data-zoom-src="images/10000000000002780000008C275F58B9.png" /></td></tr></table>
 
-<p>في [1]، نرى تطبيق <em>الخادم</em> الخاص بنا قد تم نشره على خادم GlassFish. بمجرد نشر خدمة الويب، يمكن اختبارها:</p>
+<p>في [1]، نرى تطبيق <em>الخادم</em> الخاص بنا قد تم نشره على خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish.</bdi> بمجرد نشر خدمة الويب، يمكن اختبارها:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052000000245F53A84B7.png" width="656" height="290" style="display:inline-block; margin:4px;width:17.357cm;height:7.685cm;" class="odt-zoomable" data-zoom-src="images/100000000000052000000245F53A84B7.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، في المشروع الحالي، نختبر خدمة الويب [Metier]
+  <li>في [1]، في المشروع الحالي، نختبر خدمة الويب [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>]
   </li>
-  <li>يمكن الوصول إلى خدمة الويب عبر عناوين URL مختلفة. يتيح لك عنوان URL [2] اختبار خدمة الويب
+  <li>يمكن الوصول إلى خدمة الويب عبر عناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> مختلفة. يتيح لك عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [2] اختبار خدمة الويب
   </li>
-  <li>في [3]، رابط إلى ملف XML الذي يحدد خدمة الويب. يحتاج عملاء خدمة الويب إلى معرفة عنوان URL لهذا الملف. يتم إنشاء طبقة العميل (الستوب) لخدمة الويب من هذا الملف.
+  <li>في [3]، رابط إلى ملف <bdi dir="ltr" class="odt-ltr-term">XML</bdi> الذي يحدد خدمة الويب. يحتاج عملاء خدمة الويب إلى معرفة عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لهذا الملف. يتم إنشاء طبقة العميل (الستوب) لخدمة الويب من هذا الملف.
   </li>
   <li>في [4،5]، نموذج لاختبار الطرق التي تعرضها خدمة الويب. يتم عرض هذه الطرق مع معلماتها، والتي يمكن للمستخدم تحديدها.
   </li>
 </ul>
 
-<p>على سبيل المثال، دعونا نختبر الطريقة [findAllEmployees]، التي لا تتطلب أي معلمات:</p>
+<p>على سبيل المثال، دعونا نختبر الطريقة [<bdi dir="ltr" class="odt-ltr-term">findAllEmployees</bdi>]، التي لا تتطلب أي معلمات:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000017500000050E1C8E03D.png" width="261" height="56" style="display:inline-block; margin:4px;width:6.909cm;height:1.482cm;" class="odt-zoomable" data-zoom-src="images/100000000000017500000050E1C8E03D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>في الأعلى، نقوم باختبار الطريقة. ثم نتلقى الرد أدناه (عرض جزئي). يمكننا بالفعل رؤية الموظفين الاثنين مع مزاياهما. ندعو القارئ إلى اختبار الطريقة [4] بنفس الطريقة عن طريق تمرير المعلمات الثلاثة التي تتوقعها.</p>
@@ -1008,11 +1010,11 @@
 
 <p><a id="refheading87527112820228"></a>
 <a id="client-console-wsejb"></a></p>
-<h4 id="8121-netbeans-console">8.1.2.1. <span style="color: #4f81bd">مشروع NetBeans الخاص بالعميل -console</span></h4>
-<p>سنقوم الآن بإنشاء مشروع Java من النوع [تطبيق Java] للجانب <em>الخاص بالعميل</em> من التطبيق. <strong>حتى يونيو 2012، لم يكن من الممكن إنشاء مشروع Maven لهذا العميل</strong>. تحدث خطأ، يبدو أنه معروف عبر الإنترنت ولكنه لا يزال دون حل.</p>
+<h4 id="8121-netbeans-console">8.1.2.1. <span style="color: #4f81bd">مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> الخاص بالعميل -<bdi dir="ltr" class="odt-ltr-term">console</bdi></span></h4>
+<p>سنقوم الآن بإنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">Java</bdi> من النوع [تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi>] للجانب <em>الخاص بالعميل</em> من التطبيق. <strong>حتى يونيو 2012، لم يكن من الممكن إنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> لهذا العميل</strong>. تحدث خطأ، يبدو أنه معروف عبر الإنترنت ولكنه لا يزال دون حل.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015700000054C31B9CEB.png" width="240" height="59" style="display:inline-block; margin:4px;width:6.35cm;height:1.556cm;" class="odt-zoomable" data-zoom-src="images/100000000000015700000054C31B9CEB.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B600000053B4DBCF2D.png" width="127" height="58" style="display:inline-block; margin:4px;width:3.371cm;height:1.536cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B600000053B4DBCF2D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>بمجرد إنشاء المشروع، نحدد أنه سيكون عميلاً لخدمة الويب التي قمنا بنشرها للتو على خادم GlassFish:</p>
+<p>بمجرد إنشاء المشروع، نحدد أنه سيكون عميلاً لخدمة الويب التي قمنا بنشرها للتو على خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish:</bdi></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050C0000016DB8F8994A.png" width="646" height="183" style="display:inline-block; margin:4px;width:17.092cm;height:4.83cm;" class="odt-zoomable" data-zoom-src="images/100000000000050C0000016DB8F8994A.png" /></td></tr></table>
 
 <ul>
@@ -1025,9 +1027,9 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BE000000E7345262D9.png" width="607" height="116" style="display:inline-block; margin:4px;width:16.06cm;height:3.057cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BE000000E7345262D9.png" /></td></tr></table>
 
 <ul>
-  <li>في [4]، نختار مشروع NetBeans الخاص بخدمة الويب
+  <li>في [4]، نختار مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> الخاص بخدمة الويب
   </li>
-  <li>في النافذة [5]، يتم سرد جميع المشاريع التي تحتوي على فرع [Web Services]؛ وهنا، يظهر فقط مشروع [mv-pam-ws-metier-dao-eclipselink].
+  <li>في النافذة [5]، يتم سرد جميع المشاريع التي تحتوي على فرع [<bdi dir="ltr" class="odt-ltr-term">Web Services</bdi>]؛ وهنا، يظهر فقط مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ws-metier-dao-eclipselink</bdi>].
   </li>
   <li>يمكن لمشروع واحد نشر خدمات ويب متعددة. في [6]، نحدد خدمة الويب التي نريد الاتصال بها.
   </li>
@@ -1036,28 +1038,28 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000048A00000226EFB439F8.png" width="581" height="275" style="display:inline-block; margin:4px;width:15.372cm;height:7.276cm;" class="odt-zoomable" data-zoom-src="images/100000000000048A00000226EFB439F8.png" /></td></tr></table>
 
 <ul>
-  <li>في [7]، يتم عرض عنوان URL الذي يحدد خدمة الويب. يتم استخدام عنوان URL هذا بواسطة أدوات البرمجيات التي تقوم بإنشاء طبقة العميل التي ستتفاعل مع خدمة الويب.
+  <li>في [7]، يتم عرض عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الذي يحدد خدمة الويب. يتم استخدام عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> هذا بواسطة أدوات البرمجيات التي تقوم بإنشاء طبقة العميل التي ستتفاعل مع خدمة الويب.
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004FF0000011C93164D93.png" width="640" height="142" style="display:inline-block; margin:4px;width:16.921cm;height:3.757cm;" class="odt-zoomable" data-zoom-src="images/10000000000004FF0000011C93164D93.png" /></td></tr></table>
 
 <ul>
-  <li>تتكون طبقة العميل [C] [1] التي سيتم إنشاؤها من مجموعة من فئات Java التي سيتم وضعها في نفس الحزمة. يتم تعيين اسم هذه الحزمة في [8].
+  <li>تتكون طبقة العميل [<bdi dir="ltr" class="odt-ltr-term">C</bdi>] [1] التي سيتم إنشاؤها من مجموعة من فئات <bdi dir="ltr" class="odt-ltr-term">Java</bdi> التي سيتم وضعها في نفس الحزمة. يتم تعيين اسم هذه الحزمة في [8].
   </li>
-  <li>بمجرد إكمال معالج إنشاء عميل خدمة الويب بالنقر فوق الزر [Finish]، يتم إنشاء الطبقة [C] الموضحة أعلاه.
+  <li>بمجرد إكمال معالج إنشاء عميل خدمة الويب بالنقر فوق الزر [<bdi dir="ltr" class="odt-ltr-term">Finish</bdi>]، يتم إنشاء الطبقة [<bdi dir="ltr" class="odt-ltr-term">C</bdi>] الموضحة أعلاه.
   </li>
 </ul>
 
 <p>وينعكس ذلك في عدد من التغييرات في المشروع:</p>
 <ul>
-  <li>في [10] أعلاه، تظهر شجرة [Generated Sources]، تحتوي على فئات الطبقة [C] التي تسمح للعميل [3] بالتواصل مع خدمة الويب. تسمح هذه الطبقة للعميل [3] بالتواصل مع طبقة [business] [4] كما لو كانت محلية وليست بعيدة.
+  <li>في [10] أعلاه، تظهر شجرة [<bdi dir="ltr" class="odt-ltr-term">Generated Sources</bdi>]، تحتوي على فئات الطبقة [<bdi dir="ltr" class="odt-ltr-term">C</bdi>] التي تسمح للعميل [3] بالتواصل مع خدمة الويب. تسمح هذه الطبقة للعميل [3] بالتواصل مع طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] [4] كما لو كانت محلية وليست بعيدة.
   </li>
-  <li>في [11]، تظهر شجرة [Web Service References]، تسرد خدمات الويب التي تم إنشاء طبقة عميل لها.
+  <li>في [11]، تظهر شجرة [<bdi dir="ltr" class="odt-ltr-term">Web Service References</bdi>]، تسرد خدمات الويب التي تم إنشاء طبقة عميل لها.
   </li>
 </ul>
 
-<p>لاحظ أنه في الطبقة [C] التي تم إنشاؤها [10]، نجد فئات تم نشرها على جانب الخادم: Indemnite، <strong>Cotisation</strong>، <strong>Employe</strong>، <strong>FeuilleSalaire</strong>، ElementsSalaire، <strong>Metier</strong>. <strong>Metier</strong> هي خدمة الويب، أما الفئات الأخرى فهي فئات مطلوبة من قبل هذه الخدمة. قد يشعر المرء بالفضول لفحص كودها. سنرى أن تعريف الفئات — التي تمثل، عند إنشائها، كائنات يتم التعامل معها بواسطة الخدمة — يتكون من تعريف حقول الفئة ووحدات الوصول إليها، بالإضافة إلى إضافة تعليقات توضيحية تتيح تسلسل الفئة إلى دفق XML. أصبحت فئة <strong>Metier واجهة</strong> تحتوي على الطريقتين اللتين تمت تعليقهما بـ <em>@WebMethod</em>. تؤدي كل منهما إلى ظهور فئتين، على سبيل المثال [CalculatePayroll.java] و [CalculatePayrollResponse.java]، حيث تغلف إحداهما استدعاء الطريقة والأخرى نتيجتها. أخيرًا، فئة <strong>MetierService</strong> هي الفئة التي تسمح للعميل بالحصول على مرجع لخدمة الويب <strong>Metier</strong> البعيدة:</p>
+<p>لاحظ أنه في الطبقة [<bdi dir="ltr" class="odt-ltr-term">C</bdi>] التي تم إنشاؤها [10]، نجد فئات تم نشرها على جانب الخادم: <bdi dir="ltr" class="odt-ltr-term">Indemnite</bdi>، <strong><bdi dir="ltr" class="odt-ltr-term">Cotisation</bdi></strong>، <strong><bdi dir="ltr" class="odt-ltr-term">Employe</bdi></strong>، <strong><bdi dir="ltr" class="odt-ltr-term">FeuilleSalaire</bdi></strong>، <bdi dir="ltr" class="odt-ltr-term">ElementsSalaire</bdi>، <strong><bdi dir="ltr" class="odt-ltr-term">Metier</bdi></strong>. <strong><bdi dir="ltr" class="odt-ltr-term">Metier</bdi></strong> هي خدمة الويب، أما الفئات الأخرى فهي فئات مطلوبة من قبل هذه الخدمة. قد يشعر المرء بالفضول لفحص كودها. سنرى أن تعريف الفئات — التي تمثل، عند إنشائها، كائنات يتم التعامل معها بواسطة الخدمة — يتكون من تعريف حقول الفئة ووحدات الوصول إليها، بالإضافة إلى إضافة تعليقات توضيحية تتيح تسلسل الفئة إلى دفق <bdi dir="ltr" class="odt-ltr-term">XML.</bdi> أصبحت فئة <strong><bdi dir="ltr" class="odt-ltr-term">Metier</bdi> واجهة</strong> تحتوي على الطريقتين اللتين تمت تعليقهما بـ <em>@<bdi dir="ltr" class="odt-ltr-term">WebMethod</bdi></em>. تؤدي كل منهما إلى ظهور فئتين، على سبيل المثال [<bdi dir="ltr" class="odt-ltr-term">CalculatePayroll.java</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">CalculatePayrollResponse.java</bdi>]، حيث تغلف إحداهما استدعاء الطريقة والأخرى نتيجتها. أخيرًا، فئة <strong><bdi dir="ltr" class="odt-ltr-term">MetierService</bdi></strong> هي الفئة التي تسمح للعميل بالحصول على مرجع لخدمة الويب <strong><bdi dir="ltr" class="odt-ltr-term">Metier</bdi></strong> البعيدة:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> metier;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1091,40 +1093,40 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> }</span></span>
 </code></pre></div>
 
-<p>تسترد طريقة <strong>getMetierPort</strong> في السطر 2 مرجعًا إلى خدمة الويب <strong>Metier</strong> البعيدة.</p>
+<p>تسترد طريقة <strong><bdi dir="ltr" class="odt-ltr-term">getMetierPort</bdi></strong> في السطر 2 مرجعًا إلى خدمة الويب <strong><bdi dir="ltr" class="odt-ltr-term">Metier</bdi></strong> البعيدة.</p>
 <p><a id="refheading87529112820228"></a></p>
-<h4 id="8122-metier">8.1.2.2. <span style="color: #4f81bd">عميل وحدة التحكم لخدمة الويب Metier</span></h4>
-<p>كل ما تبقى هو كتابة عميل خدمة الويب <strong>Metier</strong>. ننسخ فئة [MainRemote] من مشروع [mv-pam-client-metier-dao-jpa-eclipselink] —الذي كان عميلاً لخادم EJB—إلى المشروع الجديد.</p>
+<h4 id="8122-metier">8.1.2.2. <span style="color: #4f81bd">عميل وحدة التحكم لخدمة الويب <bdi dir="ltr" class="odt-ltr-term">Metier</bdi></span></h4>
+<p>كل ما تبقى هو كتابة عميل خدمة الويب <strong><bdi dir="ltr" class="odt-ltr-term">Metier</bdi></strong>. ننسخ فئة [<bdi dir="ltr" class="odt-ltr-term">MainRemote</bdi>] من مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-client-metier-dao-jpa-eclipselink</bdi>] —الذي كان عميلاً لخادم <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>—إلى المشروع الجديد.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049C000002145C989357.png" width="590" height="266" style="display:inline-block; margin:4px;width:15.61cm;height:7.038cm;" class="odt-zoomable" data-zoom-src="images/100000000000049C000002145C989357.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، فئة عميل خدمة الويب. تحتوي فئة [MainRemote] على أخطاء. لإصلاحها، سنبدأ بإزالة جميع عبارات [import] الموجودة في الفئة وإعادة إنشائها باستخدام خيار [Fix Imports]. وذلك لأن بعض الفئات التي تستخدمها فئة [MainRemote] أصبحت الآن جزءًا من حزمة [client] التي تم إنشاؤها.
+  <li>في [1]، فئة عميل خدمة الويب. تحتوي فئة [<bdi dir="ltr" class="odt-ltr-term">MainRemote</bdi>] على أخطاء. لإصلاحها، سنبدأ بإزالة جميع عبارات [<bdi dir="ltr" class="odt-ltr-term">import</bdi>] الموجودة في الفئة وإعادة إنشائها باستخدام خيار [<bdi dir="ltr" class="odt-ltr-term">Fix Imports</bdi>]. وذلك لأن بعض الفئات التي تستخدمها فئة [<bdi dir="ltr" class="odt-ltr-term">MainRemote</bdi>] أصبحت الآن جزءًا من حزمة [<bdi dir="ltr" class="odt-ltr-term">client</bdi>] التي تم إنشاؤها.
   </li>
-  <li>في [3]، مقتطف الشفرة حيث يتم إنشاء مثيل لطبقة [business] [3]. يتم إنشاء المثيل باستخدام شفرة JNDI للحصول على مرجع إلى EJB بعيد.
+  <li>في [3]، مقتطف الشفرة حيث يتم إنشاء مثيل لطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] [3]. يتم إنشاء المثيل باستخدام شفرة <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> للحصول على مرجع إلى <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> بعيد.
   </li>
 </ul>
 
 <p>نقوم بتحديث الكود على النحو التالي:</p>
 <ul>
-  <li>تمت إزالة كود JNDI
+  <li>تمت إزالة كود <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi>
   </li>
-  <li>نظرًا لعدم وجود فئة [PamException] على جانب العميل، نقوم بإزالة كتلة <i>catch</i> المرتبطة بها للاحتفاظ فقط <i>بكتلة catch </i>الخاصة بالفئة الأصلية [Exception].
+  <li>نظرًا لعدم وجود فئة [<bdi dir="ltr" class="odt-ltr-term">PamException</bdi>] على جانب العميل، نقوم بإزالة كتلة <i><bdi dir="ltr" class="odt-ltr-term">catch</bdi></i> المرتبطة بها للاحتفاظ فقط <i>بكتلة <bdi dir="ltr" class="odt-ltr-term">catch</bdi> </i>الخاصة بالفئة الأصلية [<bdi dir="ltr" class="odt-ltr-term">Exception</bdi>].
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004CE00000153F55481E4.png" width="615" height="170" style="display:inline-block; margin:4px;width:16.272cm;height:4.486cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CE00000153F55481E4.png" /></td></tr></table>
 
 <ul>
-  <li>في [4]، ما زلنا بحاجة إلى الحصول على مرجع لخدمة الويب البعيدة [Metier] من أجل استدعاء أسلوبها [calculatePayroll].
+  <li>في [4]، ما زلنا بحاجة إلى الحصول على مرجع لخدمة الويب البعيدة [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] من أجل استدعاء أسلوبها [<bdi dir="ltr" class="odt-ltr-term">calculatePayroll</bdi>].
   </li>
-  <li>في [5]، نستخدم الماوس لسحب الأسلوب [calculerFeuilleSalaire] من خدمة الويب [Metier] وإفلاته في [4]. يتم إنشاء الكود [6]. يمكن للمطور بعد ذلك تكييف هذا الكود العام.
+  <li>في [5]، نستخدم الماوس لسحب الأسلوب [<bdi dir="ltr" class="odt-ltr-term">calculerFeuilleSalaire</bdi>] من خدمة الويب [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] وإفلاته في [4]. يتم إنشاء الكود [6]. يمكن للمطور بعد ذلك تكييف هذا الكود العام.
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F8000000B1907F3DB4.png" width="636" height="89" style="display:inline-block; margin:4px;width:16.828cm;height:2.342cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F8000000B1907F3DB4.png" /></td></tr></table>
 
 <ul>
-  <li>في السطر 112، نرى أن [calculatePayroll] هي طريقة من فئة [client.Metier] (السطر 111). والآن بعد أن عرفنا كيفية الحصول على طبقة [metier]، يمكن إعادة كتابة الكود السابق على النحو التالي:
+  <li>في السطر 112، نرى أن [<bdi dir="ltr" class="odt-ltr-term">calculatePayroll</bdi>] هي طريقة من فئة [<bdi dir="ltr" class="odt-ltr-term">client.Metier</bdi>] (السطر 111). والآن بعد أن عرفنا كيفية الحصول على طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]، يمكن إعادة كتابة الكود السابق على النحو التالي:
   </li>
 </ul>
 
@@ -1136,12 +1138,12 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kd">super</span><span class="p">.</span><span class="na">getPort</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">QName</span><span class="p">(</span><span class="s">&quot;http://metier/&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MetierPort&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">Metier</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>يسترد السطر 7 مرجعًا إلى خدمة الويب <strong>Metier</strong>. وبمجرد الانتهاء من ذلك، يظل كود الفئة دون تغيير، باستثناء أنه في السطر 10، لا يتم التعامل مع النوع [Exception]، بل النوع الأكثر عمومية Throwable، وهو الفئة الأم لفئة <em>Exception</em>. في حالة حدوث استثناء، نعرض جميع أسبابه المتداخلة حتى السبب الجذري.</p>
+<p>يسترد السطر 7 مرجعًا إلى خدمة الويب <strong><bdi dir="ltr" class="odt-ltr-term">Metier</bdi></strong>. وبمجرد الانتهاء من ذلك، يظل كود الفئة دون تغيير، باستثناء أنه في السطر 10، لا يتم التعامل مع النوع [<bdi dir="ltr" class="odt-ltr-term">Exception</bdi>]، بل النوع الأكثر عمومية <bdi dir="ltr" class="odt-ltr-term">Throwable</bdi>، وهو الفئة الأم لفئة <em><bdi dir="ltr" class="odt-ltr-term">Exception</bdi></em>. في حالة حدوث استثناء، نعرض جميع أسبابه المتداخلة حتى السبب الجذري.</p>
 <p>نحن جاهزون للاختبار:</p>
 <ul>
-  <li>تأكد من تشغيل نظام إدارة قواعد البيانات MySQL5، ومن إنشاء قاعدة بيانات <i>dbpam_eclipselink </i>وتهيئتها
+  <li>تأكد من تشغيل نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">MySQL5</bdi>، ومن إنشاء قاعدة بيانات <i><bdi dir="ltr" class="odt-ltr-term">dbpam_eclipselink</bdi> </i>وتهيئتها
   </li>
-  <li>تأكد من نشر خدمة الويب على خادم GlassFish
+  <li>تأكد من نشر خدمة الويب على خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish</bdi>
   </li>
   <li>قم بإنشاء العميل (تنظيف وإنشاء)
   </li>
@@ -1224,11 +1226,11 @@
 <a id="__codelineno-2-10" name="__codelineno-2-10"></a>Adresse : 5 rue des oiseaux
 <a id="__codelineno-2-11" name="__codelineno-2-11"></a>...
 </code></pre></div></td></tr></table></div>
-<p>لاحظ أنه في حين أن خدمة الويب [Metier] ترسل استثناءً من نوع [PamException]، فإن الاستثناء الذي يتلقاه العميل يكون من نوع [SOAPFaultException]. وحتى في سلسلة الاستثناءات، لا يظهر نوع [PamException].</p>
+<p>لاحظ أنه في حين أن خدمة الويب [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] ترسل استثناءً من نوع [<bdi dir="ltr" class="odt-ltr-term">PamException</bdi>]، فإن الاستثناء الذي يتلقاه العميل يكون من نوع [<bdi dir="ltr" class="odt-ltr-term">SOAPFaultException</bdi>]. وحتى في سلسلة الاستثناءات، لا يظهر نوع [<bdi dir="ltr" class="odt-ltr-term">PamException</bdi>].</p>
 <p><a id="refheading87531112820228"></a></p>
-<h3 id="813-swing-metier">8.1.3. <span style="color: #4f81bd">عميل Swing لخدمة الويب Metier</span></h3>
+<h3 id="813-swing-metier">8.1.3. <span style="color: #4f81bd">عميل <bdi dir="ltr" class="odt-ltr-term">Swing</bdi> لخدمة الويب <bdi dir="ltr" class="odt-ltr-term">Metier</bdi></span></h3>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p><strong>المهمة</strong>: قم بنقل عميل Swing من مشروع [mv-pam-client-ejb-metier-dao-jpa-eclipselink] إلى المشروع الجديد بحيث يصبح هو أيضًا عميلاً لخدمة الويب التي تم نشرها على خادم GlassFish.</p>
+<p><strong>المهمة</strong>: قم بنقل عميل <bdi dir="ltr" class="odt-ltr-term">Swing</bdi> من مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-client-ejb-metier-dao-jpa-eclipselink</bdi>] إلى المشروع الجديد بحيث يصبح هو أيضًا عميلاً لخدمة الويب التي تم نشرها على خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish.</bdi></p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 
 <p><a id="refheading87533112820228"></a>
@@ -1237,7 +1239,7 @@
 <p>نحن نعمل الآن ضمن إطار العمل المعماري التالي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C9000000BC79878111.png" width="613" height="94" style="display:inline-block; margin:4px;width:16.207cm;height:2.487cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C9000000BC79878111.png" /></td></tr></table>
 
-<p>يتم توفير خدمة الويب بواسطة تطبيق ويب يعمل داخل حاوية الويب الخاصة بخادم GlassFish. ستعتمد خدمة الويب هذه على EJB [Metier]، الذي يتم نشره في حاوية EJB3.</p>
+<p>يتم توفير خدمة الويب بواسطة تطبيق ويب يعمل داخل حاوية الويب الخاصة بخادم <bdi dir="ltr" class="odt-ltr-term">GlassFish.</bdi> ستعتمد خدمة الويب هذه على <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>]، الذي يتم نشره في حاوية <bdi dir="ltr" class="odt-ltr-term">EJB3.</bdi></p>
 <p><a id="refheading87535112820228"></a></p>
 <h3 id="821">8.2.1. <span style="color: #4f81bd">جانب الخادم</span></h3>
 <p>نقوم بإنشاء تطبيق ويب:</p>
@@ -1248,31 +1250,31 @@
   </li>
   <li>في [2]، هذا المشروع من نوع [تطبيق ويب]
   </li>
-  <li>في [3]، نسميه [mv-pam-ws-ejb-metier-dao-eclipselink]
+  <li>في [3]، نسميه [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ws-ejb-metier-dao-eclipselink</bdi>]
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B2000000DACA25A4CE.png" width="601" height="109" style="display:inline-block; margin:4px;width:15.901cm;height:2.884cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B2000000DACA25A4CE.png" /></td></tr></table>
 
 <ul>
-  <li>في [4]، نختار Java EE 6
+  <li>في [4]، نختار <bdi dir="ltr" class="odt-ltr-term">Java EE</bdi> 6
   </li>
   <li>في [6]، يتم إنشاء المشروع
   </li>
 </ul>
 
-<p>في الرسم التوضيحي أدناه، سيتم تشغيل تطبيق الويب الذي تم إنشاؤه في حاوية الويب. وسيستخدم EJB [Metier]، الذي سيتم نشره في حاوية EJB الخاصة بالخادم.</p>
+<p>في الرسم التوضيحي أدناه، سيتم تشغيل تطبيق الويب الذي تم إنشاؤه في حاوية الويب. وسيستخدم <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>]، الذي سيتم نشره في حاوية <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> الخاصة بالخادم.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DB000000B28C048F11.png" width="622" height="89" style="display:inline-block; margin:4px;width:16.445cm;height:2.355cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DB000000B28C048F11.png" /></td></tr></table>
 
-<p>لضمان أن التطبيق الويب الذي تم إنشاؤه لديه حق الوصول إلى الفئات المرتبطة بـ EJB [Metier]، نضيف التبعية لخادم EJB [mv-pam-ejb-metier-dao-eclipselink] —التي تناولناها سابقًا—إلى مكتبات التطبيق الويب [mv-pam-ws-ejb-metier-dao-eclipselink].</p>
+<p>لضمان أن التطبيق الويب الذي تم إنشاؤه لديه حق الوصول إلى الفئات المرتبطة بـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>]، نضيف التبعية لخادم <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ejb-metier-dao-eclipselink</bdi>] —التي تناولناها سابقًا—إلى مكتبات التطبيق الويب [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ws-ejb-metier-dao-eclipselink</bdi>].</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B700000174D78DC043.png" width="604" height="186" style="display:inline-block; margin:4px;width:15.968cm;height:4.921cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B700000174D78DC043.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، نضيف مشروعًا إلى تبعيات مشروع الويب؛
   </li>
-  <li>في [2]، نختار المشروع [mv-pam-ejb-metier-dao-eclipselink]،
+  <li>في [2]، نختار المشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ejb-metier-dao-eclipselink</bdi>]،
   </li>
-  <li>في [3]، نوع التبعية هو <i>ejb</i>،
+  <li>في [3]، نوع التبعية هو <i><bdi dir="ltr" class="odt-ltr-term">ejb</bdi></i>،
   </li>
   <li>في [4]، يتم <i>توفير</i> نطاق التبعية، مما يعني أنه سيتم توفيرها بواسطة بيئة وقت التشغيل،
   </li>
@@ -1282,18 +1284,18 @@
 
 <p>لإنشاء نفس خدمة الويب كما في السابق، نحتاج إلى:</p>
 <ul>
-  <li>إنشاء فئة مزودة بعلامة <i>@WebService</i>
+  <li>إنشاء فئة مزودة بعلامة <i>@<bdi dir="ltr" class="odt-ltr-term">WebService</bdi></i>
   </li>
-  <li>مع طريقتين، <i>calculerFeuilleSalaire </i>و <i>findAllEmployes، </i>مع تعليق <i>@WebMethod</i>
+  <li>مع طريقتين، <i><bdi dir="ltr" class="odt-ltr-term">calculerFeuilleSalaire</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">findAllEmployes</bdi>، </i>مع تعليق <i>@<bdi dir="ltr" class="odt-ltr-term">WebMethod</bdi></i>
   </li>
 </ul>
 
-<p>نقوم بإنشاء فئة [PamWsEjbMetier] في حزمة [pam.ws]:</p>
+<p>نقوم بإنشاء فئة [<bdi dir="ltr" class="odt-ltr-term">PamWsEjbMetier</bdi>] في حزمة [<bdi dir="ltr" class="odt-ltr-term">pam.ws</bdi>]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018D000000CBB80D1730.png" width="199" height="102" style="display:inline-block; margin:4px;width:5.253cm;height:2.686cm;" class="odt-zoomable" data-zoom-src="images/100000000000018D000000CBB80D1730.png" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010E000000838DA66CAD.png" width="189" height="92" style="display:inline-block; margin:4px;width:5.001cm;height:2.425cm;" class="odt-zoomable" data-zoom-src="images/100000000000010E000000838DA66CAD.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>فيما يلي فئة [PamWsEjbMetier]:</p>
+<p>فيما يلي فئة [<bdi dir="ltr" class="odt-ltr-term">PamWsEjbMetier</bdi>]:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -1303,34 +1305,34 @@
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a>Java Result: 1
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>الأسطر 7–10: تستورد الفئة فئات من وحدة EJB [pam-serveurws-metier-dao-jpa-eclipselink]، التي تمت إضافة مشروع Maven الخاص بها إلى تبعيات المشروع.
+  <li>الأسطر 7–10: تستورد الفئة فئات من وحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">pam-serveurws-metier-dao-jpa-eclipselink</bdi>]، التي تمت إضافة مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> الخاص بها إلى تبعيات المشروع.
   </li>
   <li>السطر 12: الفئة هي خدمة ويب
   </li>
-  <li>السطر 13: تنفذ واجهة <i>IMetier </i>المحددة في وحدة EJB
+  <li>السطر 13: تنفذ واجهة <i><bdi dir="ltr" class="odt-ltr-term">IMetier</bdi> </i>المحددة في وحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>
   </li>
-  <li>السطران 18-19: يتم عرض الأسلوب `<i>calculerFeuilleSalaire` </i>كأسلوب خدمة ويب
+  <li>السطران 18-19: يتم عرض الأسلوب `<i><bdi dir="ltr" class="odt-ltr-term">calculerFeuilleSalaire</bdi>` </i>كأسلوب خدمة ويب
   </li>
-  <li>السطران 23-24: يتم عرض طريقة `<i>findAllEmployees` </i>كطريقة لخدمة ويب
+  <li>السطران 23-24: يتم عرض طريقة `<i><bdi dir="ltr" class="odt-ltr-term">findAllEmployees</bdi>` </i>كطريقة لخدمة ويب
   </li>
-  <li>السطران 15-16: يتم إدخال الواجهة المحلية لـ EJB [Metier] في الحقل الموجود في السطر 16. نستخدم الواجهة المحلية لأن تطبيق الويب ووحدة EJB يعملان في نفس JVM.
+  <li>السطران 15-16: يتم إدخال الواجهة المحلية لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] في الحقل الموجود في السطر 16. نستخدم الواجهة المحلية لأن تطبيق الويب ووحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> يعملان في نفس <bdi dir="ltr" class="odt-ltr-term">JVM.</bdi>
   </li>
-  <li>السطران 20 و25: تقوم طريقتا `<i>calculerFeuilleSalaire` </i>و<i>`findAllEmployes` </i>بتفويض معالجتهما إلى الطرق التي تحمل الاسم نفسه في EJB [Metier]. وبالتالي، فإن الفئة لا تخدم سوى عرض طرق EJB [Metier] للعملاء البعيدين كطرق خدمة ويب.
+  <li>السطران 20 و25: تقوم طريقتا `<i><bdi dir="ltr" class="odt-ltr-term">calculerFeuilleSalaire</bdi>` </i>و<i>`<bdi dir="ltr" class="odt-ltr-term">findAllEmployes</bdi>` </i>بتفويض معالجتهما إلى الطرق التي تحمل الاسم نفسه في <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>]. وبالتالي، فإن الفئة لا تخدم سوى عرض طرق <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] للعملاء البعيدين كطرق خدمة ويب.
   </li>
 </ul>
 
-<p>في NetBeans، يُعرف تطبيق الويب بأنه يعرض خدمة ويب:</p>
+<p>في <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi>، يُعرف تطبيق الويب بأنه يعرض خدمة ويب:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000528000000CFD9D948D5.png" width="660" height="104" style="display:inline-block; margin:4px;width:17.463cm;height:2.739cm;" class="odt-zoomable" data-zoom-src="images/1000000000000528000000CFD9D948D5.png" /></td></tr></table>
 
-<p>لنشر خدمة الويب على خادم GlassFish، يجب نشر كليهما:</p>
+<p>لنشر خدمة الويب على خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish</bdi>، يجب نشر كليهما:</p>
 <ul>
   <li>وحدة الويب في حاوية الويب الخاصة بالخادم
   </li>
-  <li>وحدة EJB في حاوية EJB الخاصة بالخادم
+  <li>وحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> في حاوية <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> الخاصة بالخادم
   </li>
 </ul>
 
-<p>للقيام بذلك، نحتاج إلى إنشاء [تطبيق مؤسسي] يقوم بنشر كلا الوحدتين في نفس الوقت. وللقيام بذلك، يجب تحميل كلا المشروعين في NetBeans [2].</p>
+<p>للقيام بذلك، نحتاج إلى إنشاء [تطبيق مؤسسي] يقوم بنشر كلا الوحدتين في نفس الوقت. وللقيام بذلك، يجب تحميل كلا المشروعين في <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> [2].</p>
 <p>بمجرد الانتهاء من ذلك، نقوم بإنشاء مشروع جديد [3].</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000492000000D5B56F9F84.png" width="585" height="107" style="display:inline-block; margin:4px;width:15.478cm;height:2.819cm;" class="odt-zoomable" data-zoom-src="images/1000000000000492000000D5B56F9F84.png" /></td></tr></table>
 
@@ -1344,9 +1346,9 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E0000000FB447DF287.png" width="624" height="126" style="display:inline-block; margin:4px;width:16.51cm;height:3.321cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E0000000FB447DF287.png" /></td></tr></table>
 
 <ul>
-  <li>في [6]، نقوم بتكوين المشروع. سيكون إصدار Java EE هو Java EE 6. يمكن إنشاء مشروع مؤسسي باستخدام وحدتين: وحدة EJB ووحدة ويب. هنا، سيقوم المشروع المؤسسي بتغليف وحدة الويب ووحدة EJB اللتين تم إنشاؤهما وتحميلهما بالفعل في NetBeans. لذلك، لا نطلب إنشاء وحدات جديدة.
+  <li>في [6]، نقوم بتكوين المشروع. سيكون إصدار <bdi dir="ltr" class="odt-ltr-term">Java EE</bdi> هو <bdi dir="ltr" class="odt-ltr-term">Java EE</bdi> 6. يمكن إنشاء مشروع مؤسسي باستخدام وحدتين: وحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> ووحدة ويب. هنا، سيقوم المشروع المؤسسي بتغليف وحدة الويب ووحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> اللتين تم إنشاؤهما وتحميلهما بالفعل في <bdi dir="ltr" class="odt-ltr-term">NetBeans.</bdi> لذلك، لا نطلب إنشاء وحدات جديدة.
   </li>
-  <li>في [7]، يتم إنشاء مشروع المؤسسة [mv-pam-webapp-ear]. تم إنشاء مشروع Maven آخر في نفس الوقت [mv-pam-webapp]. لن نهتم به.
+  <li>في [7]، يتم إنشاء مشروع المؤسسة [<bdi dir="ltr" class="odt-ltr-term">mv-pam-webapp-ear</bdi>]. تم إنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> آخر في نفس الوقت [<bdi dir="ltr" class="odt-ltr-term">mv-pam-webapp</bdi>]. لن نهتم به.
   </li>
   <li>في [8]، نضيف التبعيات إلى مشروع المؤسسة
   </li>
@@ -1355,9 +1357,9 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004070000017EC5C22964.png" width="516" height="191" style="display:inline-block; margin:4px;width:13.64cm;height:5.054cm;" class="odt-zoomable" data-zoom-src="images/10000000000004070000017EC5C22964.png" /></td></tr></table>
 
 <ul>
-  <li>في [9]، نضيف مشروع الويب من نوع WAR،
+  <li>في [9]، نضيف مشروع الويب من نوع <bdi dir="ltr" class="odt-ltr-term">WAR</bdi>،
   </li>
-  <li>في [10]، نضيف مشروع EJB من النوع ejb،
+  <li>في [10]، نضيف مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> من النوع <bdi dir="ltr" class="odt-ltr-term">ejb</bdi>،
   </li>
 </ul>
 
@@ -1368,15 +1370,15 @@
   </li>
 </ul>
 
-<p>نقوم بإنشاء مشروع المؤسسة باستخدام <em>Clean و Build</em>. نحن على وشك الانتهاء من النشر على خادم GlassFish. قبل القيام بذلك، قد يكون من الضروري إيقاف تشغيل أي تطبيقات تعمل بالفعل على الخادم لتجنب تعارضات محتملة في أسماء EJB [11]:</p>
+<p>نقوم بإنشاء مشروع المؤسسة باستخدام <em><bdi dir="ltr" class="odt-ltr-term">Clean</bdi> و <bdi dir="ltr" class="odt-ltr-term">Build</bdi></em>. نحن على وشك الانتهاء من النشر على خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish.</bdi> قبل القيام بذلك، قد يكون من الضروري إيقاف تشغيل أي تطبيقات تعمل بالفعل على الخادم لتجنب تعارضات محتملة في أسماء <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [11]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051800000156BF35BFB2.png" width="652" height="171" style="display:inline-block; margin:4px;width:17.251cm;height:4.524cm;" class="odt-zoomable" data-zoom-src="images/100000000000051800000156BF35BFB2.png" /></td></tr></table>
 
-<p>يجب أن يكون خادم MySQL قيد التشغيل، ويجب أن تكون قاعدة البيانات [dbpam_eclipselink] متاحة ومملوءة. بمجرد الانتهاء من ذلك، يمكن نشر التطبيق المؤسسي [12]. في [13]، يمكننا أن نرى أنه تم نشره بنجاح على خادم GlassFish.</p>
+<p>يجب أن يكون خادم <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> قيد التشغيل، ويجب أن تكون قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_eclipselink] متاحة ومملوءة. بمجرد الانتهاء من ذلك، يمكن نشر التطبيق المؤسسي [12]. في [13]، يمكننا أن نرى أنه تم نشره بنجاح على خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish.</bdi></p>
 <p>يمكننا اختبار خدمة الويب التي تم نشرها للتو:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050D000001F4986C6214.png" width="647" height="250" style="display:inline-block; margin:4px;width:17.106cm;height:6.615cm;" class="odt-zoomable" data-zoom-src="images/100000000000050D000001F4986C6214.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، نطلب اختبار خدمة الويب [PamWsEjbMetier]
+  <li>في [1]، نطلب اختبار خدمة الويب [<bdi dir="ltr" class="odt-ltr-term">PamWsEjbMetier</bdi>]
   </li>
   <li>في [2]، صفحة الاختبار. نترك للقارئ إجراء الاختبارات.
   </li>
@@ -1389,22 +1391,22 @@
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 
 <p><a id="refheading87539112820228"></a></p>
-<h2 id="83-spring-tomcat">8.3. <span style="color: #4f81bd">خدمة ويب تم تنفيذها باستخدام Spring و Tomcat</span></h2>
+<h2 id="83-spring-tomcat">8.3. <span style="color: #4f81bd">خدمة ويب تم تنفيذها باستخدام <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> و <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi></span></h2>
 <p>نحن نعمل الآن ضمن إطار العمل المعماري التالي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000414000000BE6BCDD591.png" width="522" height="95" style="display:inline-block; margin:4px;width:13.811cm;height:2.514cm;" class="odt-zoomable" data-zoom-src="images/1000000000000414000000BE6BCDD591.png" /></td></tr></table>
 
-<p>يتم توفير خدمة الويب بواسطة تطبيق ويب يعمل داخل حاوية الويب الخاصة بخادم Tomcat. وستكون بنية التطبيق على النحو التالي:</p>
+<p>يتم توفير خدمة الويب بواسطة تطبيق ويب يعمل داخل حاوية الويب الخاصة بخادم <bdi dir="ltr" class="odt-ltr-term">Tomcat.</bdi> وستكون بنية التطبيق على النحو التالي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047D00000109F0CE9BF7.png" width="575" height="133" style="display:inline-block; margin:4px;width:15.201cm;height:3.507cm;" class="odt-zoomable" data-zoom-src="images/100000000000047D00000109F0CE9BF7.png" /></td></tr></table>
 
-<p>سنبني على مشروع [mv-pam-spring-hibernate] الذي تم إنشاؤه في القسم<a href="#pam-console-spring-hibernate"><u><span style="color: #0563c1"> 5.11</span></u></a>:</p>
+<p>سنبني على مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-spring-hibernate</bdi>] الذي تم إنشاؤه في القسم<a href="#pam-console-spring-hibernate"><u><span style="color: #0563c1"> 5.11</span></u></a>:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000AA000000FF7275C3CC.png" width="119" height="179" style="display:inline-block; margin:4px;width:3.15cm;height:4.725cm;" class="odt-zoomable" data-zoom-src="images/10000000000000AA000000FF7275C3CC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading875351128202281"></a></p>
 <h3 id="831">8.3.1. <span style="color: #4f81bd">جانب الخادم</span></h3>
-<p>نقوم بإنشاء تطبيق Maven من نوع الويب باسم [mv-pam-ws-spring-tomcat] [1]:</p>
+<p>نقوم بإنشاء تطبيق <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> من نوع الويب باسم [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ws-spring-tomcat</bdi>] [1]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002FA0000015F33EBFA27.png" width="381" height="176" style="display:inline-block; margin:4px;width:10.081cm;height:4.644cm;" class="odt-zoomable" data-zoom-src="images/10000000000002FA0000015F33EBFA27.png" /></td></tr></table>
 
-<p>نقوم بتعديل ملف [pom.xml] لتضمين التبعيات التالية [2]:</p>
+<p>نقوم بتعديل ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] لتضمين التبعيات التالية [2]:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -1462,17 +1464,17 @@
 <a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>الأسطر 3–7: التبعية لمشروع [spring-pam-jpa-hibernate]،
+  <li>الأسطر 3–7: التبعية لمشروع [<bdi dir="ltr" class="odt-ltr-term">spring-pam-jpa-hibernate</bdi>]،
   </li>
-  <li>الأسطر 8–17: التبعيات على إطار عمل Apache CXF [http://cxf.apache.org/]. يسهل هذا الإطار إنشاء خدمات الويب.
+  <li>الأسطر 8–17: التبعيات على إطار عمل <bdi dir="ltr" class="odt-ltr-term">Apache CXF</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://cxf.apache.org/</bdi>]. يسهل هذا الإطار إنشاء خدمات الويب.
   </li>
 </ul>
 
-<p>يقدم ملف [pom.xml] هذا العديد من التبعيات [2].</p>
+<p>يقدم ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] هذا العديد من التبعيات [2].</p>
 <p>لنعد إلى بنية التطبيق:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B000000108B7CFCD39.png" width="600" height="132" style="display:inline-block; margin:4px;width:15.875cm;height:3.493cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B000000108B7CFCD39.png" /></td></tr></table>
 
-<p>يتم التعامل مع المكالمات الموجهة إلى خدمة الويب التي سنقوم ببنائها بواسطة سيرفلت من إطار عمل CXF. وينعكس ذلك في ملف [WEB-INF/web.xml] على النحو التالي:</p>
+<p>يتم التعامل مع المكالمات الموجهة إلى خدمة الويب التي سنقوم ببنائها بواسطة سيرفلت من إطار عمل <bdi dir="ltr" class="odt-ltr-term">CXF.</bdi> وينعكس ذلك في ملف [<bdi dir="ltr" class="odt-ltr-term">WEB-INF/web.xml</bdi>] على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependencies</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span></span>
@@ -1495,23 +1497,23 @@
 </code></pre></div>
 
 <ul>
-  <li>يعتمد إطار عمل CXF على Spring. الأسطر 4–6: يتم إعلان مستمع. سيتم تحميل الفئة المقابلة في نفس وقت تحميل تطبيق الويب. وسيستخدم ملف تكوين Spring [WEB-INF/applicationContext.xml]:
+  <li>يعتمد إطار عمل <bdi dir="ltr" class="odt-ltr-term">CXF</bdi> على <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> الأسطر 4–6: يتم إعلان مستمع. سيتم تحميل الفئة المقابلة في نفس وقت تحميل تطبيق الويب. وسيستخدم ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> [<bdi dir="ltr" class="odt-ltr-term">WEB-INF/applicationContext.xml</bdi>]:
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000146000000DE42FA5EF3.png" width="163" height="111" style="display:inline-block; margin:4px;width:4.313cm;height:2.937cm;" class="odt-zoomable" data-zoom-src="images/1000000000000146000000DE42FA5EF3.png" /></td></tr></table>
 
 <ul>
-  <li>الأسطر 8–12: خدمة CXF التي ستتعامل مع المكالمات الموجهة إلى خدمة الويب التي سنقوم بإنشائها،
+  <li>الأسطر 8–12: خدمة <bdi dir="ltr" class="odt-ltr-term">CXF</bdi> التي ستتعامل مع المكالمات الموجهة إلى خدمة الويب التي سنقوم بإنشائها،
   </li>
-  <li>الأسطر 13–16: ستكون عناوين URL التي تتعامل معها خدمة CXF على شكل /ws/*. أما العناوين الأخرى فلن تتعامل معها خدمة CXF.
+  <li>الأسطر 13–16: ستكون عناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> التي تتعامل معها خدمة <bdi dir="ltr" class="odt-ltr-term">CXF</bdi> على شكل /<bdi dir="ltr" class="odt-ltr-term">ws/</bdi>*. أما العناوين الأخرى فلن تتعامل معها خدمة <bdi dir="ltr" class="odt-ltr-term">CXF.</bdi>
   </li>
 </ul>
 
 <p>لتعريف خدمة الويب، نقوم بتعريف واجهة وتطبيقها:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000134000000DE737F936F.png" width="154" height="111" style="display:inline-block; margin:4px;width:4.075cm;height:2.937cm;" class="odt-zoomable" data-zoom-src="images/1000000000000134000000DE737F936F.png" /></td></tr></table>
 
-<p>ستكون الواجهة [IWsMetier] على النحو التالي:</p>
+<p>ستكون الواجهة [<bdi dir="ltr" class="odt-ltr-term">IWsMetier</bdi>] على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#008080">?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">web-app</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;2.5&quot;</span> <span style="color:#7f007f">xmlns</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://java.sun.com/xml/ns/javaee&quot;</span> <span style="color:#7f007f">xmlns:xsi</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span style="color:#7f007f">xsi:schemaLocation</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1541,9 +1543,9 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 7: واجهة [IWsMetier] مشتقة من واجهة [IMetier] في طبقة [business] لمشروع [mv-pam-spring-hibernate]،
+  <li>السطر 7: واجهة [<bdi dir="ltr" class="odt-ltr-term">IWsMetier</bdi>] مشتقة من واجهة [<bdi dir="ltr" class="odt-ltr-term">IMetier</bdi>] في طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] لمشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-spring-hibernate</bdi>]،
   </li>
-  <li>السطر 6: واجهة [IWsMetier] هي واجهة خدمة ويب.
+  <li>السطر 6: واجهة [<bdi dir="ltr" class="odt-ltr-term">IWsMetier</bdi>] هي واجهة خدمة ويب.
   </li>
 </ul>
 
@@ -1561,19 +1563,19 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 11: تنفذ فئة [PamWsMetier] الواجهة المحددة سابقًا،
+  <li>السطر 11: تنفذ فئة [<bdi dir="ltr" class="odt-ltr-term">PamWsMetier</bdi>] الواجهة المحددة سابقًا،
   </li>
   <li>السطر 10: يُعرّف الفئة كخدمة ويب،
   </li>
-  <li>السطر 14: سيتم إدخال طبقة [business] بواسطة Spring،
+  <li>السطر 14: سيتم إدخال طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>،
   </li>
-  <li>السطران 21 و26: تعمل علامة @WebMethod على تحويل الأسلوب إلى أسلوب معروض بواسطة خدمة الويب،
+  <li>السطران 21 و26: تعمل علامة @<bdi dir="ltr" class="odt-ltr-term">WebMethod</bdi> على تحويل الأسلوب إلى أسلوب معروض بواسطة خدمة الويب،
   </li>
-  <li>السطران 23 و28: يتم تنفيذ الطرق باستخدام طبقة [business].
+  <li>السطران 23 و28: يتم تنفيذ الطرق باستخدام طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>].
   </li>
 </ul>
 
-<p>لا يزال يتعين علينا تعريف محتويات ملف تكوين Spring [applicationContext.xml]:</p>
+<p>لا يزال يتعين علينا تعريف محتويات ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> [<bdi dir="ltr" class="odt-ltr-term">applicationContext.xml</bdi>]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000148000000DC6030EEF4.png" width="164" height="110" style="display:inline-block; margin:4px;width:4.339cm;height:2.91cm;" class="odt-zoomable" data-zoom-src="images/1000000000000148000000DC6030EEF4.png" /></td></tr></table>
 
 <p>محتواه كما يلي:</p>
@@ -1618,39 +1620,39 @@
 </code></pre></div>
 
 <ul>
-  <li>الأسطر 13–15: يتم استيراد ملفات تكوين Apache CXF. يتم البحث عن هذه الملفات في <i>مسار فئات</i> المشروع (سمة classpath)،
+  <li>الأسطر 13–15: يتم استيراد ملفات تكوين <bdi dir="ltr" class="odt-ltr-term">Apache CXF.</bdi> يتم البحث عن هذه الملفات في <i>مسار فئات</i> المشروع (سمة <bdi dir="ltr" class="odt-ltr-term">classpath</bdi>)،
   </li>
-  <li>الأسطر 4 و9 و10: يتم إعلان مساحات الأسماء الخاصة بـ Apache CXF،
+  <li>الأسطر 4 و9 و10: يتم إعلان مساحات الأسماء الخاصة بـ <bdi dir="ltr" class="odt-ltr-term">Apache CXF</bdi>،
   </li>
-  <li>السطر 18: يتم استيراد ملف تكوين Spring لمشروع [mv-pam-spring-hibernate]،
+  <li>السطر 18: يتم استيراد ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> لمشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-spring-hibernate</bdi>]،
   </li>
-  <li>الأسطر 21–23: تعريف حبة خدمة الويب مع تبعيتها لطبقة [business] (السطر 22)،
+  <li>الأسطر 21–23: تعريف حبة خدمة الويب مع تبعيتها لطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] (السطر 22)،
   </li>
   <li>الأسطر 24-27: تعريف خدمة الويب نفسها،
     <ul>
-      <li>السطر 25: حبة Spring التي تنفذ خدمة الويب هي تلك المحددة في السطر 21؛
+      <li>السطر 25: حبة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> التي تنفذ خدمة الويب هي تلك المحددة في السطر 21؛
       </li>
-      <li>السطر 26: يحدد عنوان URL الذي ستتوفر فيه خدمة الويب، وهو هنا /business. وبالاقتران مع التنسيق المطلوب لعناوين URL التي يعالجها Apache CXF (انظر ملف web.xml)، يصبح عنوان URL هذا /ws/business.
+      <li>السطر 26: يحدد عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الذي ستتوفر فيه خدمة الويب، وهو هنا /<bdi dir="ltr" class="odt-ltr-term">business.</bdi> وبالاقتران مع التنسيق المطلوب لعناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> التي يعالجها <bdi dir="ltr" class="odt-ltr-term">Apache CXF</bdi> (انظر ملف <bdi dir="ltr" class="odt-ltr-term">web.xml</bdi>)، يصبح عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> هذا /<bdi dir="ltr" class="odt-ltr-term">ws/business.</bdi>
       </li>
     </ul>
   </li>
 </ul>
 
-<p>مشروعنا جاهز للتشغيل. نقوم بتشغيله (Run) ونطلب عنوان URL [http://localhost:8080/mv-pam-ws-spring-tomcat/ws] في متصفح:</p>
+<p>مشروعنا جاهز للتشغيل. نقوم بتشغيله (<bdi dir="ltr" class="odt-ltr-term">Run</bdi>) ونطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/mv-pam-ws-spring-tomcat/ws</bdi>] في متصفح:</p>
 <p><img src="images/100000000000032F000000F061A608F9.png" width="570" height="168" style="width:15.09cm;height:4.443cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000032F000000F061A608F9.png" /></p>
-<p>تسرد الصفحة جميع خدمات الويب التي تم نشرها. هنا، لا يوجد سوى خدمة واحدة. نتبع رابط WSDL:</p>
+<p>تسرد الصفحة جميع خدمات الويب التي تم نشرها. هنا، لا يوجد سوى خدمة واحدة. نتبع رابط <bdi dir="ltr" class="odt-ltr-term">WSDL:</bdi></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046900000328392B7390.png" width="565" height="404" style="display:inline-block; margin:4px;width:14.937cm;height:10.689cm;" class="odt-zoomable" data-zoom-src="images/100000000000046900000328392B7390.png" /></td></tr></table>
 
-<p>النص المعروض [1] مأخوذ من ملف XML يحدد وظائف خدمة الويب، وكيفية استدعائها، والاستجابات التي ترسلها. لاحظ عنوان URL [2] لملف WSDL هذا. يجب على جميع عملاء خدمة الويب معرفته.</p>
+<p>النص المعروض [1] مأخوذ من ملف <bdi dir="ltr" class="odt-ltr-term">XML</bdi> يحدد وظائف خدمة الويب، وكيفية استدعائها، والاستجابات التي ترسلها. لاحظ عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [2] لملف <bdi dir="ltr" class="odt-ltr-term">WSDL</bdi> هذا. يجب على جميع عملاء خدمة الويب معرفته.</p>
 <p><a id="refheading875371128202281"></a></p>
 <h3 id="832">8.3.2. <span style="color: #4f81bd">جانب العميل</span></h3>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>المهمة</strong>: باتباع الإجراء الموضح في القسم<a href="#client-console-wsejb"><u><span style="color: #0563c1"> 8.1.2.1</span></u></a>، قم بإنشاء عميل وحدة التحكم لخدمة الويب السابقة.</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-<p><strong>ملاحظة</strong>: لتحديد عنوان URL لملف WSDL الخاص بخدمة الويب، اتبع الخطوات التالية:</p>
+<p><strong>ملاحظة</strong>: لتحديد عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لملف <bdi dir="ltr" class="odt-ltr-term">WSDL</bdi> الخاص بخدمة الويب، اتبع الخطوات التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003E00000014409F91F1E.png" width="496" height="162" style="display:inline-block; margin:4px;width:13.123cm;height:4.286cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E00000014409F91F1E.png" /></td></tr></table>
 
-<p>أدخل عنوان URL المذكور سابقًا في [2] في [3].</p>
+<p>أدخل عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المذكور سابقًا في [2] في [3].</p>
 
 
 
