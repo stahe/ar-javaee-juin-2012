@@ -1,0 +1,815 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/ar-javaee-juin-2012/mqdm.html">
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="lbny-lbqy-ltbyq-jf.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>1. مقدمة - مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish" class="md-header__button md-logo" aria-label="مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1. مقدمة
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الداكن"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الداكن" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الفاتح"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الفاتح" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/ar-javaee-juin-2012" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish" class="md-nav__button md-logo" aria-label="مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/ar-javaee-juin-2012" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مرحبًا بكم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="mqdm.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. مقدمة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lbny-lbqy-ltbyq-jf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. البنية الطبقية لتطبيق جافا
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldwt-lmstkhdm-fy-hdh-lmstnd.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. الأدوات المستخدمة في هذا المستند
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="-s-jpa-nr-m.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.  s JPA: نظرة عامة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-1-bny-spring--jpa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. الإصدار 1: بنية Spring / JPA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-2-bny-openejb--jpa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. الإصدار 2: بنية OpenEJB / JPA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-3-nql-tbyq-pam-l-khdm-tbyqt-glassfish.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. الإصدار 3: نقل تطبيق PAM إلى خادم تطبيقات GlassFish
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-4---lmyllkhdm-fy-bny-khdm-lwyb.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. الإصدار 4 – العميل/الخادم في بنية خدمة الويب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mqdm-l-java-server-faces.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. مقدمة إلى Java Server Faces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-5---tbyq-pam-web--jsf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. الإصدار 5 - تطبيق PAM Web / JSF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-6---dmj-bq-lwyb-fy-bny-jsfejb-thlthy-lmstwyt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. الإصدار 6 - دمج طبقة الويب في بنية JSF/EJB ثلاثية المستويات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-7---tbyq-wyb-pam-mtdd-lrwmtdd-lft.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. الإصدار 7 - تطبيق ويب PAM متعدد العروض/متعدد الصفحات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-8-nql-ltbyq-l-byy-spring--tomcat.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. الإصدار 8: نقل التطبيق إلى بيئة Spring / Tomcat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-9-tnfydh-bq-lwyb-bstkhdm-primefaces.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. الإصدار 9: تنفيذ طبقة الويب باستخدام PrimeFaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="1">1. <span style="color: #365f91">مقدمة</span></h1>
+<p>ملف PDF لهذا المستند متاح |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQBsVu2Z71GQQ6sFkSeqEe98AYaKGkaUeAwhJVqyumap__I?e=woACHw">هنا</a>|.</p>
+<p>الأمثلة الواردة في الوثيقة متاحة |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQCZ95LuIXSNRYCSJdUFCeF9AdLszsH4OfSPdDqWA9LmYt0?e=GhDfje">هنا</a>|.</p>
+<p>يستند هذا المستند إلى مستند سابق تمت كتابته في عام 2010 بعنوان &quot;مقدمة إلى Java EE باستخدام NetBeans 6.8 وخادم GlassFish v3&quot;. تتضمن هذه النسخة بشكل أساسي التغييرات التالية:</p>
+<ul>
+<li>يتم تناول قسم JSF (Java Server Faces) في وثيقة منفصلة بعنوان: &quot;مقدمة إلى Java Server Faces و PrimeFaces و PrimeFaces Mobile&quot;، وهي متاحة على [<a href="https://stahe.github.io/ar-jsf2-pf-pfm-juin-2012/"><u><span style="color: #0563c1">https://stahe.github.io/ar-jsf2-pf-pfm-juin-2012/</span></u></a>]. وتستخدم الوثيقة ميزات من الإصدار 2 من JSF،</li>
+<li>المشاريع هي مشاريع Maven.</li>
+</ul>
+<p><strong>Java EE</strong> هي اختصار لـ <strong>Java Enterprise Edition</strong>. كان <strong>J2EE</strong> (<strong>Java 2 Enterprise Edition</strong>) هو المصطلح السابق. يشير J2EE إلى تقنيات Java المستخدمة لإنشاء تطبيقات المؤسسات باستخدام JDK 1.4 أو إصدارات أقدم. نظرًا لأن JDK 1.5 أدخل العديد من الميزات الجديدة إلى لغة Java، فقد أدخلت Sun تقنيات جديدة تستند إلى هذه اللغة المحسّنة لمعالجة أوجه القصور في تلك التقنيات نفسها داخل J2EE. ثم استُخدم مصطلح Java EE 5 للإشارة إلى مجموعة التقنيات التي تعمل معًا لإنشاء تطبيق مؤسسي باستخدام منصة Java. في وقت تحديث هذا المستند، كان أحدث إصدار من Java EE هو Java EE 6.</p>
+<p>كتب <strong>أنطونيو غونكالفيز</strong>:</p>
+<ul>
+<li>Java EE 5، نشرته Eyrolles</li>
+<li>Beginning Java EE 6 Platform with Glassfish 3، نشرته Apress</li>
+</ul>
+<p>هي كتب ممتازة لاكتشاف تقنيات Java EE 5 و Java EE 6. يتم استعراض جميع تقنيات Java EE المهمة في سياق دراسات حالات واقعية. يمتلك المؤلف موقعًا إلكترونيًا [<a href="http://www.antoniogoncalves.org/"><u><span style="color: #0563c1">http://www.antoniogoncalves.org</span></u></a>] وندعو القراء لزيارته.</p>
+<p>يستكشف هذا المستند بعض التقنيات في Java EE 5. نقوم بإنشاء تطبيق أساسي ثلاثي المستويات [العرض، منطق الأعمال، الوصول إلى البيانات] متوفر في عدة إصدارات:</p>
+<p>تطبيق ويب يستخدم التقنيات التالية:</p>
+<ul>
+<li><strong>Java Server Faces</strong>: لطبقة الويب</li>
+<li><strong>EJB3</strong> أو <strong>Spring</strong>: لطبقة الأعمال</li>
+<li><strong>EJB3</strong> أو <strong>Spring، JPA/Hibernate، JPA/EclipseLink</strong>: لإنشاء طبقات مختلفة للوصول إلى البيانات</li>
+</ul>
+<p>تطبيق عميل/خادم يستخدم التقنيات التالية:</p>
+<ul>
+<li><strong>Swing</strong>: لطبقة واجهة المستخدم الرسومية للعميل مع دعم <strong>Spring</strong></li>
+<li><strong>EJB3</strong> أو <strong>خدمة الويب</strong>: لطبقة الخادم</li>
+</ul>
+<p>لا تتناول هذه المقالة بعض تقنيات Java EE، مثل <strong>MDBs</strong> (Message Driven Beans) أو <strong>EJB3 ذات الحالة</strong>. لمعرفة المزيد عنها، يرجى الرجوع إلى كتب أنطونيو غونكالفيز.</p>
+<p>هناك تقنيات مفتوحة المصدر أخرى متاحة لإنشاء تطبيقات ثلاثية الطبقات. ومن التوليفات الشائعة جدًا <strong>Spring</strong> (http://www.springframework.org/) / <strong>Hibernate</strong> (http://www.hibernate.org/). ولتمكين القارئ من مقارنة تقنيات <strong>EJB3</strong> و Spring، تتوفر للتطبيق السابق إصدارات يستبدل فيها <strong>Spring EJB3</strong>.</p>
+<p>هذا المستند هو دليل تعليمي (TD) يُستخدم في السنة الخامسة بكلية الهندسة ISTIA بجامعة أنجيه [http://www.istia.univ-angers.fr]. يصف هذا الدليل التعليمي التطبيق المراد إنشاؤه، وتقنيات Java المراد استخدامها، وأين يمكن العثور على المعلومات. غالبًا ما تكون الحلول المقترحة منظمة للغاية. تطرح المهمة أسئلة دون تقديم الإجابات. ويترك الأمر للطالب لإيجادها.</p>
+<p>تتطلب عملية تعلم Java EE الموضحة هنا استثمارًا زمنيًا يقدر بـ 50 إلى 100 ساعة. يحتوي المستند على كمية كبيرة من التعليمات البرمجية، مما يجعل من الممكن نسخها ولصقها. بالإضافة إلى ذلك، يتم وصف جميع مشاريع NetBeans بالتفصيل. بشكل عام، يوفر المستند أطر عمل للحلول، ويُطلب من الطلاب ملء بعض التفاصيل. يمكن أن يكون المستند مفيدًا حتى لمن لا يستطيع أو لا يرغب في استثمار هذا القدر من الوقت. يمكن للمرء التركيز فقط على البنى الموصوفة وتخطي قسم الكود الذي يمثل موضوع الأسئلة.</p>
+<p>لتطوير التطبيق وتشغيله، نستخدم بيئة تطوير NetBeans. NetBeans هو تطبيق يستهلك موارد كثيرة إلى حد ما: احرص على توفر 1 غيغابايت من ذاكرة الوصول العشوائي (RAM) للعمل بشكل مريح. يمكن تنزيله من الرابط <a href="http://www.netbeans.org/%5D">[<u><span style="color: #0563c1">http://www.netbeans.org/]</span></u></a>.</p>
+<p>تشير هذه الوثيقة إلى الدورات التالية:</p>
+<ol>
+<li><strong>استمرارية Java 5 في الممارسة العملية</strong>: [<a href="https://stahe.github.io/en-jpa-juin-2007/"><u><span style="color: #0563c1">https://stahe.github.io/en-jpa-juin-2007/</span></u></a>] - يوفر الأدوات اللازمة لبناء طبقة الوصول إلى البيانات باستخدام <strong>JPA</strong> (واجهة برمجة تطبيقات استمرارية Java)</li>
+</ol>
+<ol start="2">
+  <li><b>مقدمة إلى لغة Java </b>[<a href="https://stahe.github.io/ar-java-sept-1998/"><u><span style="color: #0563c1">https://stahe.github.io/ar-java-sept-1998/</span></u></a>] - للمبتدئين
+  </li>
+  <li><b>مقدمة إلى Java Server Faces و PrimeFaces و PrimeFaces Mobile من خلال أمثلة </b>[<a href="https://stahe.github.io/en-jsf2-pf-pfm-juin-2012/"><u><span style="color: #0563c1">https://stahe.github.io/en-jsf2-pf-pfm-juin-2012/</span></u></a>]
+  </li>
+</ol>
+
+<p>يُشار إلى مواد الدورة التدريبية هذه لاحقًا بـ [<strong>ref1</strong>] و [<strong>ref2</strong>] و [<strong>ref3</strong>].</p>
+<p>سيرج تاهي، يونيو 2012.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        هذا البرنامج التعليمي الذي كتبه <strong>Serge Tahé</strong> متاح للجمهور وفقًا لشروط
+<em>Creative Commons Attribution – Non-Commercial –
+ShareAlike 3.0 Unported</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
