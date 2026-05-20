@@ -918,7 +918,7 @@
 <p>في هذا الإصدار الجديد، سيعمل تطبيق [<bdi dir="ltr" class="odt-ltr-term">Pam</bdi>] في وضع العميل/الخادم ضمن بنية خدمات الويب. دعونا نلقي نظرة مجددة على بنية التطبيق السابق:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053C0000011A932F7170.png" width="670" height="141" style="display:inline-block; margin:4px;width:17.727cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/100000000000053C0000011A932F7170.png" /></td></tr></table>
 
-<p><span style="color: #000000">في الأعلى، مكنت طبقة الاتصال [<bdi dir="ltr" class="odt-ltr-term">C</bdi>، <bdi dir="ltr" class="odt-ltr-term">RMI</bdi>، <bdi dir="ltr" class="odt-ltr-term">S</bdi>] من الاتصال الشفاف بين العميل [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] والطبقة البعيدة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. سنستخدم بنية مماثلة، حيث سيتم استبدال طبقة الاتصال [<bdi dir="ltr" class="odt-ltr-term">C</bdi>، <bdi dir="ltr" class="odt-ltr-term">RMI</bdi>، <bdi dir="ltr" class="odt-ltr-term">S</bdi>] بطبقة [<bdi dir="ltr" class="odt-ltr-term">C</bdi>، <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> / <bdi dir="ltr" class="odt-ltr-term">SOAP</bdi>، <bdi dir="ltr" class="odt-ltr-term">S</bdi>]:</span></p>
+<p><span style="color: #000000">في الأعلى، مكنت طبقة الاتصال [<bdi dir="ltr" class="odt-ltr-term">C</bdi>، <bdi dir="ltr" class="odt-ltr-term">RMI</bdi>، <bdi dir="ltr" class="odt-ltr-term">S</bdi>] من الاتصال الشفاف بين العميل [ui] والطبقة البعيدة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. سنستخدم بنية مماثلة، حيث سيتم استبدال طبقة الاتصال [<bdi dir="ltr" class="odt-ltr-term">C</bdi>، <bdi dir="ltr" class="odt-ltr-term">RMI</bdi>، <bdi dir="ltr" class="odt-ltr-term">S</bdi>] بطبقة [<bdi dir="ltr" class="odt-ltr-term">C</bdi>، <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> / <bdi dir="ltr" class="odt-ltr-term">SOAP</bdi>، <bdi dir="ltr" class="odt-ltr-term">S</bdi>]:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F30000011394858AF0.png" width="634" height="137" style="display:inline-block; margin:4px;width:16.762cm;height:3.637cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F30000011394858AF0.png" /></td></tr></table>
 
 <p><span style="color: #000000">يتميز بروتوكول <bdi dir="ltr" class="odt-ltr-term">HTTP/SOAP</bdi> على بروتوكول <bdi dir="ltr" class="odt-ltr-term">RMI/EJB</bdi> السابق بكونه متعدد المنصات. وبالتالي، يمكن كتابة خدمة الويب بلغة <bdi dir="ltr" class="odt-ltr-term">Java</bdi> ونشرها على خادم <bdi dir="ltr" class="odt-ltr-term">Glassfish</bdi>، في حين يمكن أن يكون العميل عميلاً .<bdi dir="ltr" class="odt-ltr-term">NET</bdi> أو <bdi dir="ltr" class="odt-ltr-term">PHP.</bdi></span></p>
@@ -961,7 +961,7 @@
 <p>في البنية التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004FE00000113EDA3AEBA.png" width="639" height="137" style="display:inline-block; margin:4px;width:16.907cm;height:3.637cm;" class="odt-zoomable" data-zoom-src="images/10000000000004FE00000113EDA3AEBA.png" /></td></tr></table>
 
-<p>ستكون طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] هي خدمة الويب التي تتصل بها طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]. لا تحتاج هذه الفئة إلى تنفيذ واجهة. إن التعليقات التوضيحية هي التي تحول <bdi dir="ltr" class="odt-ltr-term">POJO</bdi> (كائن جافا قديم عادي) إلى خدمة ويب. يتم تحويل فئة [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>]، التي تنفذ طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] أعلاه، على النحو التالي:</p>
+<p>ستكون طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] هي خدمة الويب التي تتصل بها طبقة [ui]. لا تحتاج هذه الفئة إلى تنفيذ واجهة. إن التعليقات التوضيحية هي التي تحول <bdi dir="ltr" class="odt-ltr-term">POJO</bdi> (كائن جافا قديم عادي) إلى خدمة ويب. يتم تحويل فئة [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>]، التي تنفذ طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] أعلاه، على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">org.swinglabs</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span></span></span>
@@ -1274,7 +1274,7 @@
   </li>
   <li>في [2]، نختار المشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ejb-metier-dao-eclipselink</bdi>]،
   </li>
-  <li>في [3]، نوع التبعية هو <i><bdi dir="ltr" class="odt-ltr-term">ejb</bdi></i>،
+  <li>في [3]، نوع التبعية هو <i>ejb</i>،
   </li>
   <li>في [4]، يتم <i>توفير</i> نطاق التبعية، مما يعني أنه سيتم توفيرها بواسطة بيئة وقت التشغيل،
   </li>
@@ -1359,7 +1359,7 @@
 <ul>
   <li>في [9]، نضيف مشروع الويب من نوع <bdi dir="ltr" class="odt-ltr-term">WAR</bdi>،
   </li>
-  <li>في [10]، نضيف مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> من النوع <bdi dir="ltr" class="odt-ltr-term">ejb</bdi>،
+  <li>في [10]، نضيف مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> من النوع ejb،
   </li>
 </ul>
 

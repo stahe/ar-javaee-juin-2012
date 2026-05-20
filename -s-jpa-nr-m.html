@@ -1235,7 +1235,7 @@
   </li>
   <li>السطر 5: تحدد تعليمة <b>@<bdi dir="ltr" class="odt-ltr-term">Table</bdi> </b>جدول قاعدة البيانات الذي تمثله الفئة. حجتها الرئيسية هي <b><bdi dir="ltr" class="odt-ltr-term">name</bdi>، </b>والتي تحدد اسم الجدول. بدون هذه الحجة، سيتم تسمية الجدول على اسم الفئة، في هذه الحالة [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]. في مثالنا، تعليمة <b>@<bdi dir="ltr" class="odt-ltr-term">Table</bdi> </b>غير ضرورية بالتالي.
   </li>
-  <li>السطر 8: تُستخدم علامة <b>@<bdi dir="ltr" class="odt-ltr-term">Id</bdi> </b>لتعيين الحقل في الفئة الذي يتوافق مع المفتاح الأساسي للجدول. هذه العلامة إلزامية. هنا، تشير إلى أن حقل <i><bdi dir="ltr" class="odt-ltr-term">id</bdi> </i>في السطر 11 يتوافق مع المفتاح الأساسي للجدول.
+  <li>السطر 8: تُستخدم علامة <b>@<bdi dir="ltr" class="odt-ltr-term">Id</bdi> </b>لتعيين الحقل في الفئة الذي يتوافق مع المفتاح الأساسي للجدول. هذه العلامة إلزامية. هنا، تشير إلى أن حقل <i>id </i>في السطر 11 يتوافق مع المفتاح الأساسي للجدول.
   </li>
   <li>السطر 9: تُستخدم علامة <b>@<bdi dir="ltr" class="odt-ltr-term">Column</bdi> </b>لربط حقل الفئة بعمود الجدول الذي يمثله الحقل. تحدد السمة <b><bdi dir="ltr" class="odt-ltr-term">name</bdi> </b>اسم العمود في الجدول. إذا تم حذف هذه السمة، يُعطى العمود نفس اسم الحقل. في مثالنا، كانت الحجة <b><bdi dir="ltr" class="odt-ltr-term">name</bdi> </b>اختيارية بالتالي. تحدد الحجة <b><bdi dir="ltr" class="odt-ltr-term">nullable</bdi>=<bdi dir="ltr" class="odt-ltr-term">false</bdi> </b>أن العمود المرتبط بالحقل لا يمكن أن يكون له قيمة <bdi dir="ltr" class="odt-ltr-term">NULL</bdi> وأن الحقل يجب أن يكون له قيمة بالتالي.
   </li>
@@ -1254,7 +1254,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يستخدم كائنًا يسمى <bdi dir="ltr" class="odt-ltr-term">SEQUENCE</bdi>، والذي يعمل بدوره كمولد للقيم</div></td></tr></table>
 
-<p>يجب أن تولد طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> عبارات <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> مختلفة اعتمادًا على نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) لإنشاء مولد القيم. يتم تكوينها لتحديد نوع نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) الذي يجب أن تتعامل معه. ونتيجة لذلك، يمكنها تحديد الإستراتيجية القياسية لتوليد قيم المفتاح الأساسي لنظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) هذا. توجه الحجة <strong><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;strategy&lt;/bdi&gt; =** ***&lt;bdi dir="ltr" class="odt-ltr-term"&gt;GenerationType&lt;/bdi&gt;*****.*****&lt;bdi dir="ltr" class="odt-ltr-term"&gt;AUTO&lt;/bdi&gt;</code></strong>* طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> لاستخدام هذه الإستراتيجية القياسية. وقد نجحت هذه التقنية في جميع الأمثلة الواردة في هذا المستند بالنسبة لنظم إدارة قواعد البيانات السبعة المستخدمة.</p>
+<p>يجب أن تولد طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> عبارات <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> مختلفة اعتمادًا على نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) لإنشاء مولد القيم. يتم تكوينها لتحديد نوع نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) الذي يجب أن تتعامل معه. ونتيجة لذلك، يمكنها تحديد الإستراتيجية القياسية لتوليد قيم المفتاح الأساسي لنظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) هذا. توجه الحجة <strong><code>strategy =** ***GenerationType*****.*****AUTO</code></strong>* طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> لاستخدام هذه الإستراتيجية القياسية. وقد نجحت هذه التقنية في جميع الأمثلة الواردة في هذا المستند بالنسبة لنظم إدارة قواعد البيانات السبعة المستخدمة.</p>
 <ul>
   <li>السطر 14: تحدد العلامة التوضيحية <b>@<bdi dir="ltr" class="odt-ltr-term">Version</bdi> </b>الحقل المستخدم لإدارة الوصول المتزامن إلى نفس الصف في الجدول.
   </li>
@@ -1283,19 +1283,19 @@
 <ul>
   <li>السطر 6: تنفذ الفئة واجهة <i><bdi dir="ltr" class="odt-ltr-term">Serializable</bdi></i>. يتضمن <i>تسلسل </i>كائن ما تحويله إلى تسلسل من البتات. <i>وإلغاء </i>التسلسل هو العملية العكسية. ويُستخدم التسلسل/إلغاء التسلسل بشكل خاص في تطبيقات العميل/الخادم حيث يتم تبادل الكائنات عبر الشبكة. لا تدرك تطبيقات العميل أو الخادم هذه العملية، التي يتم تنفيذها بشكل شفاف بواسطة <bdi dir="ltr" class="odt-ltr-term">JVMs.</bdi> ولكن لكي يكون ذلك ممكنًا، يجب &quot;تمييز&quot; فئات الكائنات المتبادلة بكلمة <i><bdi dir="ltr" class="odt-ltr-term">Serializable</bdi></i>.
   </li>
-  <li>السطر 37: منشئ للفئة. لاحظ أن حقلي <b><bdi dir="ltr" class="odt-ltr-term">id</bdi> </b>و <b><bdi dir="ltr" class="odt-ltr-term">version</bdi> </b>غير مدرجين ضمن المعلمات. ويرجع ذلك إلى أن هذين الحقلين تديرهما طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> وليس التطبيق.
+  <li>السطر 37: منشئ للفئة. لاحظ أن حقلي <b>id </b>و <b><bdi dir="ltr" class="odt-ltr-term">version</bdi> </b>غير مدرجين ضمن المعلمات. ويرجع ذلك إلى أن هذين الحقلين تديرهما طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> وليس التطبيق.
   </li>
-  <li>السطر 51 وما بعده: طرق <b><bdi dir="ltr" class="odt-ltr-term">get</bdi> </b>و <b><bdi dir="ltr" class="odt-ltr-term">set</bdi> </b>لكل حقل من حقول الفئة. لاحظ أنه يمكن وضع تعليقات <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> على طرق <b><bdi dir="ltr" class="odt-ltr-term">get</bdi></b> الخاصة بالحقول بدلاً من الحقول نفسها. يشير موضع التعليقات إلى الوضع الذي يجب أن تستخدمه <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> للوصول إلى الحقول:
+  <li>السطر 51 وما بعده: طرق <b>get </b>و <b>set </b>لكل حقل من حقول الفئة. لاحظ أنه يمكن وضع تعليقات <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> على طرق <b>get</b> الخاصة بالحقول بدلاً من الحقول نفسها. يشير موضع التعليقات إلى الوضع الذي يجب أن تستخدمه <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> للوصول إلى الحقول:
     <ul>
       <li>إذا تم وضع التعليقات التوضيحية على مستوى الحقل، فستصل <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> إلى الحقول مباشرةً لقراءتها أو كتابتها
       </li>
-      <li>إذا تم وضع التعليقات التوضيحية على مستوى <b><bdi dir="ltr" class="odt-ltr-term">get</bdi></b>، فستصل <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> إلى الحقول عبر طرق <bdi dir="ltr" class="odt-ltr-term">get/set</bdi> لقراءتها أو كتابتها
+      <li>إذا تم وضع التعليقات التوضيحية على مستوى <b>get</b>، فستصل <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> إلى الحقول عبر طرق <bdi dir="ltr" class="odt-ltr-term">get/set</bdi> لقراءتها أو كتابتها
       </li>
     </ul>
   </li>
 </ul>
 
-<p>يحدد موضع تعليق <strong>@<bdi dir="ltr" class="odt-ltr-term">Id</bdi></strong> موضع تعليقات <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> في الفئة. عند وضعه على مستوى الحقل، يشير إلى الوصول المباشر إلى الحقول؛ وعند وضعه على مستوى <bdi dir="ltr" class="odt-ltr-term">get</bdi>، يشير إلى الوصول إلى الحقول عبر طرق <em><bdi dir="ltr" class="odt-ltr-term">get</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">set</bdi></em>. يجب بعد ذلك وضع التعليقات الأخرى بنفس طريقة وضع تعليق <strong>@<bdi dir="ltr" class="odt-ltr-term">Id</bdi></strong>.</p>
+<p>يحدد موضع تعليق <strong>@<bdi dir="ltr" class="odt-ltr-term">Id</bdi></strong> موضع تعليقات <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> في الفئة. عند وضعه على مستوى الحقل، يشير إلى الوصول المباشر إلى الحقول؛ وعند وضعه على مستوى get، يشير إلى الوصول إلى الحقول عبر طرق <em>get</em> و <em>set</em>. يجب بعد ذلك وضع التعليقات الأخرى بنفس طريقة وضع تعليق <strong>@<bdi dir="ltr" class="odt-ltr-term">Id</bdi></strong>.</p>
 <p><a id="refheading2817031991350288"></a></p>
 <h3 id="422-jpa">4.2.2. <span style="color: #4f81bd">تكوين طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi></span></h3>
 <p>يمكن إجراء اختبارات طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> باستخدام البنية التالية:</p>
@@ -1369,7 +1369,7 @@
 <ul>
   <li>السطر 2: العلامة الجذرية لملف <bdi dir="ltr" class="odt-ltr-term">XML</bdi> هي &lt;<bdi dir="ltr" class="odt-ltr-term">persistence</bdi>&gt;.
   </li>
-  <li>السطر 3: تُستخدم &lt;<bdi dir="ltr" class="odt-ltr-term">persistence-unit</bdi>&gt; لتعريف وحدة الاستمرارية. يمكن أن يكون هناك عدة وحدات استمرارية. لكل منها اسم (سمة <b><bdi dir="ltr" class="odt-ltr-term">name</bdi></b>) ونوع معاملة (سمة <b><bdi dir="ltr" class="odt-ltr-term">transaction-type</bdi></b>). سيصل التطبيق إلى وحدة الاستمرارية عبر اسمها، <b>وهو <bdi dir="ltr" class="odt-ltr-term">jpa</bdi></b> في هذه الحالة. يشير نوع المعاملة <bdi dir="ltr" class="odt-ltr-term">RESOURCE_LOCAL</bdi> إلى أن التطبيق يدير المعاملات مع نظام إدارة قواعد البيانات نفسه. وهذا هو الحال هنا. عندما يعمل التطبيق في حاوية <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi>، يمكنه استخدام خدمة المعاملات الخاصة بالحاوية. في هذه الحالة، سنقوم بتعيين <b><bdi dir="ltr" class="odt-ltr-term">transaction-type</bdi>=<bdi dir="ltr" class="odt-ltr-term">JTA</bdi> </b>(<bdi dir="ltr" class="odt-ltr-term">Java Transaction API</bdi>). <bdi dir="ltr" class="odt-ltr-term">JTA</bdi> هي القيمة الافتراضية عند حذف سمة <b><bdi dir="ltr" class="odt-ltr-term">transaction-type</bdi></b>.
+  <li>السطر 3: تُستخدم &lt;<bdi dir="ltr" class="odt-ltr-term">persistence-unit</bdi>&gt; لتعريف وحدة الاستمرارية. يمكن أن يكون هناك عدة وحدات استمرارية. لكل منها اسم (سمة <b><bdi dir="ltr" class="odt-ltr-term">name</bdi></b>) ونوع معاملة (سمة <b><bdi dir="ltr" class="odt-ltr-term">transaction-type</bdi></b>). سيصل التطبيق إلى وحدة الاستمرارية عبر اسمها، <b>وهو jpa</b> في هذه الحالة. يشير نوع المعاملة <bdi dir="ltr" class="odt-ltr-term">RESOURCE_LOCAL</bdi> إلى أن التطبيق يدير المعاملات مع نظام إدارة قواعد البيانات نفسه. وهذا هو الحال هنا. عندما يعمل التطبيق في حاوية <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi>، يمكنه استخدام خدمة المعاملات الخاصة بالحاوية. في هذه الحالة، سنقوم بتعيين <b><bdi dir="ltr" class="odt-ltr-term">transaction-type</bdi>=<bdi dir="ltr" class="odt-ltr-term">JTA</bdi> </b>(<bdi dir="ltr" class="odt-ltr-term">Java Transaction API</bdi>). <bdi dir="ltr" class="odt-ltr-term">JTA</bdi> هي القيمة الافتراضية عند حذف سمة <b><bdi dir="ltr" class="odt-ltr-term">transaction-type</bdi></b>.
   </li>
   <li>السطر 5: تُستخدم علامة &lt;<bdi dir="ltr" class="odt-ltr-term">provider</bdi>&gt; لتعريف <span style="color: #000000">فئة تُنفذ واجهة [<bdi dir="ltr" class="odt-ltr-term">javax.persistence.spi.PersistenceProvider</bdi>]، مما يسمح للتطبيق بتهيئة طبقة الاستمرارية. نظرًا لأننا نستخدم تنفيذ <bdi dir="ltr" class="odt-ltr-term">JPA/Hibernate</bdi>، فإن الفئة المستخدمة هنا هي فئة <bdi dir="ltr" class="odt-ltr-term">Hibernate.</bdi></span>
   </li>
@@ -1467,7 +1467,7 @@
   </li>
 </ul>
 
-<p>ينتمي <strong>المقال</strong> <bdi dir="ltr" class="odt-ltr-term">A</bdi>(<bdi dir="ltr" class="odt-ltr-term">id</bdi>, <bdi dir="ltr" class="odt-ltr-term">version</bdi>, <bdi dir="ltr" class="odt-ltr-term">name</bdi>) إلى فئة واحدة فقط <bdi dir="ltr" class="odt-ltr-term">C</bdi>(<bdi dir="ltr" class="odt-ltr-term">id</bdi>, <bdi dir="ltr" class="odt-ltr-term">version</bdi>, <bdi dir="ltr" class="odt-ltr-term">name</bdi>). يمكن أن تحتوي <strong>الفئة</strong> <bdi dir="ltr" class="odt-ltr-term">C</bdi> على 0 أو 1 أو أكثر من المقالات. لدينا علاقة <strong>واحد إلى العديد</strong> (الفئة -&gt; المقالة) والعلاقة العكسية <strong>العديد إلى واحد</strong> (المقالة -&gt; الفئة). يتم تمثيل هذه العلاقة بواسطة المفتاح الخارجي الذي يمتلكه جدول [<bdi dir="ltr" class="odt-ltr-term">article</bdi>] في جدول [<bdi dir="ltr" class="odt-ltr-term">category</bdi>] (الأسطر 24–28 من <bdi dir="ltr" class="odt-ltr-term">DDL</bdi>).</p>
+<p>ينتمي <strong>المقال</strong> <bdi dir="ltr" class="odt-ltr-term">A</bdi>(id, <bdi dir="ltr" class="odt-ltr-term">version</bdi>, <bdi dir="ltr" class="odt-ltr-term">name</bdi>) إلى فئة واحدة فقط <bdi dir="ltr" class="odt-ltr-term">C</bdi>(id, <bdi dir="ltr" class="odt-ltr-term">version</bdi>, <bdi dir="ltr" class="odt-ltr-term">name</bdi>). يمكن أن تحتوي <strong>الفئة</strong> <bdi dir="ltr" class="odt-ltr-term">C</bdi> على 0 أو 1 أو أكثر من المقالات. لدينا علاقة <strong>واحد إلى العديد</strong> (الفئة -&gt; المقالة) والعلاقة العكسية <strong>العديد إلى واحد</strong> (المقالة -&gt; الفئة). يتم تمثيل هذه العلاقة بواسطة المفتاح الخارجي الذي يمتلكه جدول [<bdi dir="ltr" class="odt-ltr-term">article</bdi>] في جدول [<bdi dir="ltr" class="odt-ltr-term">category</bdi>] (الأسطر 24–28 من <bdi dir="ltr" class="odt-ltr-term">DDL</bdi>).</p>
 <p><a id="refheading2817091991350288"></a></p>
 <h4 id="4232-entity">4.2.3.2. <span style="color: #4f81bd">كائنات @<bdi dir="ltr" class="odt-ltr-term">Entity</bdi> التي تمثل قاعدة البيانات</span></h4>
 <p>يتم تمثيل المقالة بواسطة <strong>@<bdi dir="ltr" class="odt-ltr-term">Entity</bdi></strong> [<bdi dir="ltr" class="odt-ltr-term">Article</bdi>] التالية:</p>
@@ -1594,7 +1594,7 @@
       </li>
       <li>السطر 23: يضمن<b> <bdi dir="ltr" class="odt-ltr-term">cascadeType.ALL</bdi> </b>أن العمليات (<bdi dir="ltr" class="odt-ltr-term">persist</bdi>، <bdi dir="ltr" class="odt-ltr-term">merge</bdi>، <bdi dir="ltr" class="odt-ltr-term">remove</bdi>) التي يتم إجراؤها على @<bdi dir="ltr" class="odt-ltr-term">Entity</bdi> <i><bdi dir="ltr" class="odt-ltr-term">Category</bdi> </i>يتم ترحيلها إلى مقالاتها.
       </li>
-      <li>السطر 24: سيتم وضع المقالات الموجودة في فئة ما في كائن من النوع <b>`<bdi dir="ltr" class="odt-ltr-term">Set</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">Article</bdi>&gt;</b>`. ولا يسمح النوع <b>`<bdi dir="ltr" class="odt-ltr-term">Set</bdi>` </b>بوجود تكرارات. وبالتالي، لا يمكن إضافة المقالة نفسها مرتين إلى كائن `<b><bdi dir="ltr" class="odt-ltr-term">Set</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">Article</bdi>&gt;`</b>. ما المقصود بـ&quot;المقالة نفسها&quot;؟ للإشارة إلى أن المقالة <b>`<bdi dir="ltr" class="odt-ltr-term">a</bdi>` </b>هي نفس المقالة <b>`<bdi dir="ltr" class="odt-ltr-term">b</bdi></b>`، تستخدم لغة جافا التعبير <b>`<bdi dir="ltr" class="odt-ltr-term">a.equals</bdi>(<bdi dir="ltr" class="odt-ltr-term">b</bdi>)</b>`. في فئة <b><bdi dir="ltr" class="odt-ltr-term">Object</bdi></b>، وهي الفئة الأم لجميع الفئات، يكون<b> <bdi dir="ltr" class="odt-ltr-term">a.equals</bdi>(<bdi dir="ltr" class="odt-ltr-term">b</bdi>) </b>صحيحًا إذا <b>كان </b><bdi dir="ltr" class="odt-ltr-term">a</bdi>==<bdi dir="ltr" class="odt-ltr-term">b</bdi>، أي إذا كان للكائنين <i><bdi dir="ltr" class="odt-ltr-term">a</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">b</bdi> </i>نفس موقع الذاكرة. قد يرغب المرء في القول إن العنصرين <bdi dir="ltr" class="odt-ltr-term">a</bdi> و <bdi dir="ltr" class="odt-ltr-term">b</bdi> متطابقان إذا كان لهما نفس الاسم. في هذه الحالة، يجب على المطور إعادة تعريف طريقتين في فئة [<bdi dir="ltr" class="odt-ltr-term">Item</bdi>]:
+      <li>السطر 24: سيتم وضع المقالات الموجودة في فئة ما في كائن من النوع <b>`<bdi dir="ltr" class="odt-ltr-term">Set</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">Article</bdi>&gt;</b>`. ولا يسمح النوع <b>`<bdi dir="ltr" class="odt-ltr-term">Set</bdi>` </b>بوجود تكرارات. وبالتالي، لا يمكن إضافة المقالة نفسها مرتين إلى كائن `<b><bdi dir="ltr" class="odt-ltr-term">Set</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">Article</bdi>&gt;`</b>. ما المقصود بـ&quot;المقالة نفسها&quot;؟ للإشارة إلى أن المقالة <b>`a` </b>هي نفس المقالة <b>`b</b>`، تستخدم لغة جافا التعبير <b>`<bdi dir="ltr" class="odt-ltr-term">a.equals</bdi>(b)</b>`. في فئة <b><bdi dir="ltr" class="odt-ltr-term">Object</bdi></b>، وهي الفئة الأم لجميع الفئات، يكون<b> <bdi dir="ltr" class="odt-ltr-term">a.equals</bdi>(b) </b>صحيحًا إذا <b>كان </b>a==b، أي إذا كان للكائنين <i>a </i>و <i>b </i>نفس موقع الذاكرة. قد يرغب المرء في القول إن العنصرين a و b متطابقان إذا كان لهما نفس الاسم. في هذه الحالة، يجب على المطور إعادة تعريف طريقتين في فئة [<bdi dir="ltr" class="odt-ltr-term">Item</bdi>]:
       </li>
     </ul>
   </li>
@@ -1726,7 +1726,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>يمكن أيضًا تكرار القائمة <bdi dir="ltr" class="odt-ltr-term">L</bdi> باستخدام <em>حلقة <bdi dir="ltr" class="odt-ltr-term">for</bdi></em>:</p>
+<p>يمكن أيضًا تكرار القائمة <bdi dir="ltr" class="odt-ltr-term">L</bdi> باستخدام <em>حلقة for</em>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">for</span><span style="color:#000000"> (Object o : L) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            // exploiter objet o</span></span>
@@ -1740,13 +1740,13 @@
   </li>
   <li>4 - تسمح لك طريقة<b> <bdi dir="ltr" class="odt-ltr-term">setParameter</bdi>(<bdi dir="ltr" class="odt-ltr-term">String</bdi>, <bdi dir="ltr" class="odt-ltr-term">Object</bdi>) </b>بتعيين قيمة لمعلمة مسماة في استعلام <bdi dir="ltr" class="odt-ltr-term">JPQL</bdi> معلم
   </li>
-  <li>5 - تحدد طريقة<b> <bdi dir="ltr" class="odt-ltr-term">setParameter</bdi>(<bdi dir="ltr" class="odt-ltr-term">int</bdi>, <bdi dir="ltr" class="odt-ltr-term">Object</bdi>) </b>المعلمة، ولكن لا يتم تحديد المعلمة باسمها بل بموقعها في استعلام <bdi dir="ltr" class="odt-ltr-term">JPQL.</bdi>
+  <li>5 - تحدد طريقة<b> <bdi dir="ltr" class="odt-ltr-term">setParameter</bdi>(int, <bdi dir="ltr" class="odt-ltr-term">Object</bdi>) </b>المعلمة، ولكن لا يتم تحديد المعلمة باسمها بل بموقعها في استعلام <bdi dir="ltr" class="odt-ltr-term">JPQL.</bdi>
   </li>
 </ul>
 
 <p><a id="refheading2817111991350288"></a>
 <a id="jpql"></a></p>
-<h2 id="44-s-jpql">4.4. <span style="color: #4f81bd"><bdi dir="ltr" class="odt-ltr-term">s</bdi> (<bdi dir="ltr" class="odt-ltr-term">JPQL</bdi>)</span></h2>
+<h2 id="44-s-jpql">4.4. <span style="color: #4f81bd">s (<bdi dir="ltr" class="odt-ltr-term">JPQL</bdi>)</span></h2>
 <p><bdi dir="ltr" class="odt-ltr-term">JPQL</bdi> (لغة استعلام الاستمرارية في <bdi dir="ltr" class="odt-ltr-term">Java</bdi>) هي لغة الاستعلام الخاصة بطبقة <bdi dir="ltr" class="odt-ltr-term">JPA.</bdi> تشبه لغة <bdi dir="ltr" class="odt-ltr-term">JPQL</bdi> لغة <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> المستخدمة في قواعد البيانات. بينما تعمل لغة <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> مع الجداول، تعمل لغة <bdi dir="ltr" class="odt-ltr-term">JPQL</bdi> مع الكائنات التي تمثل تلك الجداول. سنقوم بفحص مثال ضمن البنية التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000446000000B3FE0C69AA.png" width="547" height="89" style="display:inline-block; margin:4px;width:14.473cm;height:2.367cm;" class="odt-zoomable" data-zoom-src="images/1000000000000446000000B3FE0C69AA.png" /></td></tr></table>
 
@@ -2227,17 +2227,17 @@
   </li>
   <li>السطر 6: تنفذ الفئة واجهة <b><bdi dir="ltr" class="odt-ltr-term">Serializable</bdi></b>. وهذا ضروري في تطبيقات العميل/الخادم، حيث يتم تسلسل الكيانات بين العميل والخادم.
   </li>
-  <li>السطران 10-11: يتوافق حقل <b><bdi dir="ltr" class="odt-ltr-term">id</bdi> </b>في فئة [<bdi dir="ltr" class="odt-ltr-term">Doctor</bdi>] مع حقل [<bdi dir="ltr" class="odt-ltr-term">ID</bdi>] (السطر 10) في جدول [<bdi dir="ltr" class="odt-ltr-term">doctors</bdi>]،
+  <li>السطران 10-11: يتوافق حقل <b>id </b>في فئة [<bdi dir="ltr" class="odt-ltr-term">Doctor</bdi>] مع حقل [<bdi dir="ltr" class="odt-ltr-term">ID</bdi>] (السطر 10) في جدول [<bdi dir="ltr" class="odt-ltr-term">doctors</bdi>]،
   </li>
   <li>السطران 13-14: يتوافق حقل <b><bdi dir="ltr" class="odt-ltr-term">title</bdi> </b>في فئة [<bdi dir="ltr" class="odt-ltr-term">Doctor</bdi>] مع حقل [<bdi dir="ltr" class="odt-ltr-term">TITLE</bdi>] (السطر 13) في جدول [<bdi dir="ltr" class="odt-ltr-term">doctors</bdi>]،
   </li>
-  <li>السطران 16-17: يتوافق حقل <b>`<bdi dir="ltr" class="odt-ltr-term">nom</bdi>` </b>لفئة [<bdi dir="ltr" class="odt-ltr-term">Medecin</bdi>] مع حقل `[<bdi dir="ltr" class="odt-ltr-term">NOM</bdi>]` (السطر 16) في جدول [<bdi dir="ltr" class="odt-ltr-term">medecins</bdi>]،
+  <li>السطران 16-17: يتوافق حقل <b>`nom` </b>لفئة [<bdi dir="ltr" class="odt-ltr-term">Medecin</bdi>] مع حقل `[<bdi dir="ltr" class="odt-ltr-term">NOM</bdi>]` (السطر 16) في جدول [<bdi dir="ltr" class="odt-ltr-term">medecins</bdi>]،
   </li>
   <li>الصفان 19-20: يتوافق حقل <b><bdi dir="ltr" class="odt-ltr-term">version</bdi> </b>في فئة [<bdi dir="ltr" class="odt-ltr-term">Medecin</bdi>] مع حقل [<bdi dir="ltr" class="odt-ltr-term">VERSION</bdi>] (الصف 19) في جدول [<bdi dir="ltr" class="odt-ltr-term">doctors</bdi>]. هنا، لا يتعرف المعالج على أن هذا العمود هو في الواقع عمود <b>إصدار </b>يجب زيادة قيمته في كل مرة يتم فيها تعديل الصف الذي ينتمي إليه. ولتعيين هذه الوظيفة له، يجب إضافة التعليق التوضيحي <b>@<bdi dir="ltr" class="odt-ltr-term">Version</bdi></b>. سنقوم بذلك في خطوة لاحقة،
   </li>
   <li>السطران 22-23: يتوافق حقل <b><bdi dir="ltr" class="odt-ltr-term">first_name</bdi> </b>في فئة [<bdi dir="ltr" class="odt-ltr-term">Doctor</bdi>] مع حقل [<bdi dir="ltr" class="odt-ltr-term">FIRST_NAME</bdi>] في جدول [<bdi dir="ltr" class="odt-ltr-term">doctors</bdi>]،
   </li>
-  <li>السطران 10-11: يتوافق حقل <b><bdi dir="ltr" class="odt-ltr-term">id</bdi> </b>مع المفتاح الأساسي [<bdi dir="ltr" class="odt-ltr-term">ID</bdi>] للجدول. توضح التعليقات التوضيحية في السطرين 8-9 هذه النقطة،
+  <li>السطران 10-11: يتوافق حقل <b>id </b>مع المفتاح الأساسي [<bdi dir="ltr" class="odt-ltr-term">ID</bdi>] للجدول. توضح التعليقات التوضيحية في السطرين 8-9 هذه النقطة،
   </li>
   <li>السطر 8: تشير تعليمة <b>@<bdi dir="ltr" class="odt-ltr-term">Id</bdi> </b>إلى أن الحقل المُعلَّم مرتبط <b>بالمفتاح الأساسي</b> للجدول،
   </li>
@@ -2404,7 +2404,7 @@
 </code></pre></div>
 
 <ul>
-  <li>تعكس السطران 24 و25 علاقة المفتاح الخارجي بين الجدول [<bdi dir="ltr" class="odt-ltr-term">rv</bdi>] والجدول [<bdi dir="ltr" class="odt-ltr-term">clients</bdi>].
+  <li>تعكس السطران 24 و25 علاقة المفتاح الخارجي بين الجدول [rv] والجدول [<bdi dir="ltr" class="odt-ltr-term">clients</bdi>].
   </li>
 </ul>
 
@@ -2458,11 +2458,11 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 13 يُعرّف الحقل `<bdi dir="ltr" class="odt-ltr-term">jour</bdi>` على أنه من نوع <bdi dir="ltr" class="odt-ltr-term">Java</bdi> <i><bdi dir="ltr" class="odt-ltr-term">Date</bdi></i>. ويحدد أن العمود [<bdi dir="ltr" class="odt-ltr-term">JOUR</bdi>] (السطر 12) في الجدول [<bdi dir="ltr" class="odt-ltr-term">rv</bdi>] هو من نوع التاريخ (بدون الوقت)،
+  <li>السطر 13 يُعرّف الحقل `<bdi dir="ltr" class="odt-ltr-term">jour</bdi>` على أنه من نوع <bdi dir="ltr" class="odt-ltr-term">Java</bdi> <i><bdi dir="ltr" class="odt-ltr-term">Date</bdi></i>. ويحدد أن العمود [<bdi dir="ltr" class="odt-ltr-term">JOUR</bdi>] (السطر 12) في الجدول [rv] هو من نوع التاريخ (بدون الوقت)،
   </li>
-  <li>الأسطر 16–18: تحدد علاقة المفتاح الخارجي من الجدول [<bdi dir="ltr" class="odt-ltr-term">rv</bdi>] إلى الجدول [<bdi dir="ltr" class="odt-ltr-term">slots</bdi>]،
+  <li>الأسطر 16–18: تحدد علاقة المفتاح الخارجي من الجدول [rv] إلى الجدول [<bdi dir="ltr" class="odt-ltr-term">slots</bdi>]،
   </li>
-  <li>الأسطر 20–22: تحدد علاقة المفتاح الخارجي من الجدول [<bdi dir="ltr" class="odt-ltr-term">rv</bdi>] إلى الجدول [<bdi dir="ltr" class="odt-ltr-term">clients</bdi>].
+  <li>الأسطر 20–22: تحدد علاقة المفتاح الخارجي من الجدول [rv] إلى الجدول [<bdi dir="ltr" class="odt-ltr-term">clients</bdi>].
   </li>
 </ul>
 
@@ -2680,7 +2680,7 @@
   </li>
 </ul>
 
-<p>تغلف الكيان [<strong><bdi dir="ltr" class="odt-ltr-term">Rv</bdi></strong>] صفوف جدول [<bdi dir="ltr" class="odt-ltr-term">rv</bdi>]:</p>
+<p>تغلف الكيان [<strong><bdi dir="ltr" class="odt-ltr-term">Rv</bdi></strong>] صفوف جدول [rv]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> rdvmedecins.jpa;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -2736,7 +2736,7 @@
 </code></pre></div>
 
 <ul>
-  <li>تصور الأسطر 27–29 العلاقة &quot;متعددة إلى واحد&quot; بين جدول [<bdi dir="ltr" class="odt-ltr-term">rv</bdi>] وجدول [<bdi dir="ltr" class="odt-ltr-term">clients</bdi>] (يمكن أن يظهر العميل في عدة إدخالات <bdi dir="ltr" class="odt-ltr-term">Rv</bdi>) في قاعدة البيانات، وتصور الأسطر 23–25 العلاقة &quot;متعددة إلى واحد&quot; بين جدول [<bdi dir="ltr" class="odt-ltr-term">rv</bdi>] وجدول [<bdi dir="ltr" class="odt-ltr-term">slots</bdi>] (يمكن أن تظهر الفتحة في عدة إدخالات <bdi dir="ltr" class="odt-ltr-term">Rv</bdi>).
+  <li>تصور الأسطر 27–29 العلاقة &quot;متعددة إلى واحد&quot; بين جدول [rv] وجدول [<bdi dir="ltr" class="odt-ltr-term">clients</bdi>] (يمكن أن يظهر العميل في عدة إدخالات <bdi dir="ltr" class="odt-ltr-term">Rv</bdi>) في قاعدة البيانات، وتصور الأسطر 23–25 العلاقة &quot;متعددة إلى واحد&quot; بين جدول [rv] وجدول [<bdi dir="ltr" class="odt-ltr-term">slots</bdi>] (يمكن أن تظهر الفتحة في عدة إدخالات <bdi dir="ltr" class="odt-ltr-term">Rv</bdi>).
   </li>
 </ul>
 

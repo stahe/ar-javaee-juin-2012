@@ -1693,7 +1693,7 @@
   </li>
   <li>الأسطر 16–21: الروابط الستة المطابقة للإجراءات الستة التي يمكن للمستخدم تنفيذها. يتم التحكم في هذه الروابط (السمة <b><bdi dir="ltr" class="odt-ltr-term">rendered</bdi></b>) بواسطة قيم منطقية في حبة <bdi dir="ltr" class="odt-ltr-term">SessionData</bdi>،
   </li>
-  <li>السطر 17: يؤدي النقر على رابط [<bdi dir="ltr" class="odt-ltr-term">Clear Simulation</bdi>] إلى تشغيل دالة <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> <b><bdi dir="ltr" class="odt-ltr-term">raz</bdi></b>. تم تعريف هذه الدالة في القالب [<bdi dir="ltr" class="odt-ltr-term">layout.xhtml</bdi>]،
+  <li>السطر 17: يؤدي النقر على رابط [<bdi dir="ltr" class="odt-ltr-term">Clear Simulation</bdi>] إلى تشغيل دالة <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> <b>raz</b>. تم تعريف هذه الدالة في القالب [<bdi dir="ltr" class="odt-ltr-term">layout.xhtml</bdi>]،
   </li>
   <li>السطر 18: تضمن السمة <b><bdi dir="ltr" class="odt-ltr-term">immediate</bdi>=<bdi dir="ltr" class="odt-ltr-term">true</bdi> </b>عدم التحقق من صحة البيانات قبل تنفيذ طريقة<i> [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>].<bdi dir="ltr" class="odt-ltr-term">enregistrerSimulation</bdi></i>. وهذا أمر مقصود. قد ترغب في حفظ آخر محاكاة تم إجراؤها قبل دقيقة واحدة حتى لو كانت البيانات التي تم إدخالها منذ ذلك الحين في النموذج (ولكن لم يتم التحقق من صحتها بعد) غير صالحة. وينطبق الأمر نفسه على الإجراءات [<bdi dir="ltr" class="odt-ltr-term">View Simulations</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">Clear Simulation</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">Return to Simulator</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">End Session</bdi>].
   </li>
@@ -1964,7 +1964,7 @@
 <p>ستكون الأخطاء عبارة عن استثناءات يتم تخزين اسم فئتها في حقل <strong>الفئة</strong> ويتم تخزين رسالتها في حقل <strong>الرسالة</strong>.</p>
 <p>تتكون قائمة الأخطاء التي تم إنشاؤها في طريقة [<bdi dir="ltr" class="odt-ltr-term">faireSimulation</bdi>] من:</p>
 <ul>
-  <li>الاستثناء الأولي <b><bdi dir="ltr" class="odt-ltr-term">th</bdi> </b>من النوع <i><bdi dir="ltr" class="odt-ltr-term">Throwable</bdi> </i>الذي حدث،
+  <li>الاستثناء الأولي <b>th </b>من النوع <i><bdi dir="ltr" class="odt-ltr-term">Throwable</bdi> </i>الذي حدث،
   </li>
   <li>سببها <b><bdi dir="ltr" class="odt-ltr-term">th.getCause</bdi>() </b>إن وجد،
   </li>
@@ -2060,7 +2060,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>يؤدي النقر على رابط [<bdi dir="ltr" class="odt-ltr-term">ClearSimulation</bdi>] أولاً إلى تشغيل استدعاء لوظيفة <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> <em><bdi dir="ltr" class="odt-ltr-term">raz</bdi></em>(). يتم تعريف هذه الطريقة في صفحة [<bdi dir="ltr" class="odt-ltr-term">layout.xhtml</bdi>]:</p>
+<p>يؤدي النقر على رابط [<bdi dir="ltr" class="odt-ltr-term">ClearSimulation</bdi>] أولاً إلى تشغيل استدعاء لوظيفة <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> <em>raz</em>(). يتم تعريف هذه الطريقة في صفحة [<bdi dir="ltr" class="odt-ltr-term">layout.xhtml</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h:commandLink</span> <span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;cmdEffacerSimulation&quot;</span>  <span style="color:#7f007f">onclick</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;raz()&quot;</span><span style="color:#000000"> </span><span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;#{msg[&#x27;form.menu.effacerSimulation&#x27;]}&quot;</span> <span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;#{form.effacerSimulation}&quot;</span> <span style="color:#7f007f">rendered</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;#{sessionData.menuEffacerSimulationIsRendered}&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
@@ -2069,7 +2069,7 @@
 <ul>
   <li>القيم المرسلة صالحة، أي أنها ستجتاز  عمليات التحقق من صحة حقول الإدخال <i><bdi dir="ltr" class="odt-ltr-term">hoursWorked</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">daysWorked</bdi></i>.
   </li>
-  <li>لا تقوم الدالة <i>`<bdi dir="ltr" class="odt-ltr-term">raz</bdi>` </i>بإرسال النموذج. بدلاً من ذلك، سيتم إرسال النموذج عبر الرابط<i> `<bdi dir="ltr" class="odt-ltr-term">cmdEffacerSimulation</bdi>`</i>. سيتم هذا <i>الإرسال </i>بعد تنفيذ دالة <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> `<i><bdi dir="ltr" class="odt-ltr-term">raz</bdi>`</i>.
+  <li>لا تقوم الدالة <i>`raz` </i>بإرسال النموذج. بدلاً من ذلك، سيتم إرسال النموذج عبر الرابط<i> `<bdi dir="ltr" class="odt-ltr-term">cmdEffacerSimulation</bdi>`</i>. سيتم هذا <i>الإرسال </i>بعد تنفيذ دالة <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> `<i>raz`</i>.
   </li>
 </ul>
 
@@ -2287,7 +2287,7 @@
 
 <ul>
 <li>
-<p>تحدد السمة <strong><bdi dir="ltr" class="odt-ltr-term">var</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">simulation</bdi>&quot;</strong> اسم المتغير الذي يمثل المحاكاة الحالية داخل علامة &lt;<strong><bdi dir="ltr" class="odt-ltr-term">h:datatable</bdi></strong>&gt;</p>
+<p>تحدد السمة <strong>var=&quot;<bdi dir="ltr" class="odt-ltr-term">simulation</bdi>&quot;</strong> اسم المتغير الذي يمثل المحاكاة الحالية داخل علامة &lt;<strong><bdi dir="ltr" class="odt-ltr-term">h:datatable</bdi></strong>&gt;</p>
 </li>
 <li>
 <p>تحدد السمة <strong><bdi dir="ltr" class="odt-ltr-term">headerClass</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">simulationsHeaders</bdi>&quot;</strong> نمط رؤوس أعمدة الجدول.</p>
@@ -2310,7 +2310,7 @@
   </li>
   <li>السطر 5: يتم كتابة اسم الموظف:
     <ul>
-      <li>تشير<b> <bdi dir="ltr" class="odt-ltr-term">simulation</bdi> </b>إلى سمة <b><bdi dir="ltr" class="odt-ltr-term">var</bdi> </b>لعلامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">h:dataTable</bdi> </b>...&gt;:
+      <li>تشير<b> <bdi dir="ltr" class="odt-ltr-term">simulation</bdi> </b>إلى سمة <b>var </b>لعلامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">h:dataTable</bdi> </b>...&gt;:
       </li>
     </ul>
   </li>
@@ -2418,7 +2418,7 @@
 </code></pre></div>
 
 <ul>
-  <li><span style="color: #000000">السطر 5: يرتبط الرابط [<bdi dir="ltr" class="odt-ltr-term">Remove</bdi>] بالطريقة [<bdi dir="ltr" class="odt-ltr-term">removeSimulation</bdi>] لفئة [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>]. تحتاج هذه الطريقة إلى معرفة رقم المحاكاة المراد إزالتها. ويتم توفير ذلك بواسطة العلامة </span>&lt;<bdi dir="ltr" class="odt-ltr-term">f</bdi><b>:<bdi dir="ltr" class="odt-ltr-term">setPropertyActionListener</bdi></b>&gt; في السطر 8. تحتوي هذه العلامة على سمتين، <b><bdi dir="ltr" class="odt-ltr-term">target</bdi> </b>و <b><bdi dir="ltr" class="odt-ltr-term">value</bdi></b>: <span style="color: #000000">تحدد السمة </span><b><bdi dir="ltr" class="odt-ltr-term">target</bdi> </b><span style="color: #000000">حقلًا في النموذج سيتم تعيين قيمة السمة </span><b><bdi dir="ltr" class="odt-ltr-term">value</bdi></b><span style="color: #000000"> إليه. هنا، سيتم تعيين رقم المحاكاة المراد إزالتها، </span><b>#{<bdi dir="ltr" class="odt-ltr-term">simulation.num</bdi>}، </b><span style="color: #000000">إلى حقل </span><b><bdi dir="ltr" class="odt-ltr-term">numSimulationToDelete</bdi> </b><span style="color: #000000">في فئة [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>]:</span>
+  <li><span style="color: #000000">السطر 5: يرتبط الرابط [<bdi dir="ltr" class="odt-ltr-term">Remove</bdi>] بالطريقة [<bdi dir="ltr" class="odt-ltr-term">removeSimulation</bdi>] لفئة [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>]. تحتاج هذه الطريقة إلى معرفة رقم المحاكاة المراد إزالتها. ويتم توفير ذلك بواسطة العلامة </span>&lt;f<b>:<bdi dir="ltr" class="odt-ltr-term">setPropertyActionListener</bdi></b>&gt; في السطر 8. تحتوي هذه العلامة على سمتين، <b><bdi dir="ltr" class="odt-ltr-term">target</bdi> </b>و <b><bdi dir="ltr" class="odt-ltr-term">value</bdi></b>: <span style="color: #000000">تحدد السمة </span><b><bdi dir="ltr" class="odt-ltr-term">target</bdi> </b><span style="color: #000000">حقلًا في النموذج سيتم تعيين قيمة السمة </span><b><bdi dir="ltr" class="odt-ltr-term">value</bdi></b><span style="color: #000000"> إليه. هنا، سيتم تعيين رقم المحاكاة المراد إزالتها، </span><b>#{<bdi dir="ltr" class="odt-ltr-term">simulation.num</bdi>}، </b><span style="color: #000000">إلى حقل </span><b><bdi dir="ltr" class="odt-ltr-term">numSimulationToDelete</bdi> </b><span style="color: #000000">في فئة [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>]:</span>
   </li>
 </ul>
 

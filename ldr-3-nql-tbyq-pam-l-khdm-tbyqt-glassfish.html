@@ -885,13 +885,13 @@
 <p><strong>التنفيذ الحالي باستخدام <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi> / <bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi></strong></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050D00000105A1899474.png" width="647" height="131" style="display:inline-block; margin:4px;width:17.106cm;height:3.454cm;" class="odt-zoomable" data-zoom-src="images/100000000000050D00000105A1899474.png" /></td></tr></table>
 
-<p>فيما سبق، تستخدم طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] الواجهة البعيدة لطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>].</p>
-<p>اختبرنا سياقين للتنفيذ: <em>محلي وعن بُعد</em>. في الوضع الأخير، عملت طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] كعميل لطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]، التي يتم تنفيذها بواسطة <bdi dir="ltr" class="odt-ltr-term">EJBs.</bdi> للعمل في وضع العميل/الخادم، حيث يعمل العميل والخادم في جهازي <bdi dir="ltr" class="odt-ltr-term">JVM</bdi> منفصلين، سنقوم بنشر طبقات [<bdi dir="ltr" class="odt-ltr-term">business</bdi>، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] على خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish Java EE.</bdi> هذا الخادم مضمن في <bdi dir="ltr" class="odt-ltr-term">NetBeans.</bdi></p>
+<p>فيما سبق، تستخدم طبقة [ui] الواجهة البعيدة لطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>].</p>
+<p>اختبرنا سياقين للتنفيذ: <em>محلي وعن بُعد</em>. في الوضع الأخير، عملت طبقة [ui] كعميل لطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]، التي يتم تنفيذها بواسطة <bdi dir="ltr" class="odt-ltr-term">EJBs.</bdi> للعمل في وضع العميل/الخادم، حيث يعمل العميل والخادم في جهازي <bdi dir="ltr" class="odt-ltr-term">JVM</bdi> منفصلين، سنقوم بنشر طبقات [<bdi dir="ltr" class="odt-ltr-term">business</bdi>، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] على خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish Java EE.</bdi> هذا الخادم مضمن في <bdi dir="ltr" class="odt-ltr-term">NetBeans.</bdi></p>
 <p><strong>التنفيذ الذي سيتم بناؤه باستخدام خادم <bdi dir="ltr" class="odt-ltr-term">Glassfish</bdi></strong></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005070000011F70FB01BD.png" width="644" height="144" style="display:inline-block; margin:4px;width:17.027cm;height:3.798cm;" class="odt-zoomable" data-zoom-src="images/10000000000005070000011F70FB01BD.png" /></td></tr></table>
 
 <ul>
-  <li>ستعمل طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] في بيئة <bdi dir="ltr" class="odt-ltr-term">Java SE</bdi> (الإصدار القياسي)
+  <li>ستعمل طبقة [ui] في بيئة <bdi dir="ltr" class="odt-ltr-term">Java SE</bdi> (الإصدار القياسي)
   </li>
   <li>ستعمل طبقات [منطق الأعمال، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] في بيئة <bdi dir="ltr" class="odt-ltr-term">Java EE</bdi> (<bdi dir="ltr" class="odt-ltr-term">Enterprise Edition</bdi>) على خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish v3</bdi>
   </li>
@@ -1093,14 +1093,14 @@
 <p><a id="refheading87491112820228"></a>
 <a id="deploiement-ejb-sun"></a></p>
 <h4 id="7113-jpa-dao-business">7.1.1.3. <span style="color: #4f81bd">إدراج طبقات [<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">Business</bdi>]</span></h4>
-<p>الآن بعد تعريف ملف [<bdi dir="ltr" class="odt-ltr-term">persistence.xml</bdi>]، يمكننا المضي قدمًا لإدراج طبقات [<bdi dir="ltr" class="odt-ltr-term">business</bdi>، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] لتطبيق المؤسسة [<bdi dir="ltr" class="odt-ltr-term">pam</bdi>] في المشروع:</p>
+<p>الآن بعد تعريف ملف [<bdi dir="ltr" class="odt-ltr-term">persistence.xml</bdi>]، يمكننا المضي قدمًا لإدراج طبقات [<bdi dir="ltr" class="odt-ltr-term">business</bdi>، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] لتطبيق المؤسسة [pam] في المشروع:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F600000110C65D123D.png" width="635" height="136" style="display:inline-block; margin:4px;width:16.801cm;height:3.598cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F600000110C65D123D.png" /></td></tr></table>
 
 <p>هذه الطبقات الثلاث مطابقة لما كانت عليه في <bdi dir="ltr" class="odt-ltr-term">OpenEJB.</bdi> يمكننا ببساطة النسخ واللصق بين المشروعين. وهذا ما نقوم به الآن:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000183000000CCE314B124.png" width="194" height="102" style="display:inline-block; margin:4px;width:5.121cm;height:2.699cm;" class="odt-zoomable" data-zoom-src="images/1000000000000183000000CCE314B124.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، نتيجة نسخ حزم [<bdi dir="ltr" class="odt-ltr-term">jpa</bdi>، <bdi dir="ltr" class="odt-ltr-term">dao</bdi>، <bdi dir="ltr" class="odt-ltr-term">business</bdi>، <bdi dir="ltr" class="odt-ltr-term">exception</bdi>] من مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-openejb-eclipselink</bdi>] إلى وحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ejb-business-dao-jpa-eclipselink</bdi>]
+  <li>في [1]، نتيجة نسخ حزم [jpa، dao، <bdi dir="ltr" class="odt-ltr-term">business</bdi>، <bdi dir="ltr" class="odt-ltr-term">exception</bdi>] من مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-openejb-eclipselink</bdi>] إلى وحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ejb-business-dao-jpa-eclipselink</bdi>]
   </li>
 </ul>
 
@@ -1122,7 +1122,7 @@
   </li>
   <li>في [2]، لاحظ مجلد نطاقات الخادم. سنشير إليه باسم &lt;<bdi dir="ltr" class="odt-ltr-term">domains</bdi>&gt;
   </li>
-  <li>في المجلد &lt;<bdi dir="ltr" class="odt-ltr-term">domains</bdi>&gt;\<bdi dir="ltr" class="odt-ltr-term">domain1</bdi>\<bdi dir="ltr" class="odt-ltr-term">lib</bdi>، ضع المكتبات المفقودة. في المثال، تمت إضافة مكتبات <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> (<bdi dir="ltr" class="odt-ltr-term">lib/hibernate-tools</bdi>) ومحرك <bdi dir="ltr" class="odt-ltr-term">MySQL JDBC</bdi> (<bdi dir="ltr" class="odt-ltr-term">lib/misc</bdi>). بشكل افتراضي، يتضمن خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish</bdi> مكتبات <bdi dir="ltr" class="odt-ltr-term">EclipseLink.</bdi> لذلك سنقوم فقط بإضافة محرك <bdi dir="ltr" class="odt-ltr-term">MySQL JDBC.</bdi>
+  <li>في المجلد &lt;<bdi dir="ltr" class="odt-ltr-term">domains</bdi>&gt;\<bdi dir="ltr" class="odt-ltr-term">domain1</bdi>\lib، ضع المكتبات المفقودة. في المثال، تمت إضافة مكتبات <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> (<bdi dir="ltr" class="odt-ltr-term">lib/hibernate-tools</bdi>) ومحرك <bdi dir="ltr" class="odt-ltr-term">MySQL JDBC</bdi> (<bdi dir="ltr" class="odt-ltr-term">lib/misc</bdi>). بشكل افتراضي، يتضمن خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish</bdi> مكتبات <bdi dir="ltr" class="odt-ltr-term">EclipseLink.</bdi> لذلك سنقوم فقط بإضافة محرك <bdi dir="ltr" class="odt-ltr-term">MySQL JDBC.</bdi>
   </li>
 </ul>
 
@@ -1419,7 +1419,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">org.omg.CORBA.ORBInitialPort=</span><span style="color:#2a00ff">3700</span></span></span>
 </code></pre></div>
 
-<p>هنا نستخدم علامة &lt;<bdi dir="ltr" class="odt-ltr-term">jee</bdi>&gt; (السطر 14) التي تم تقديمها في <bdi dir="ltr" class="odt-ltr-term">Spring 2.0</bdi>. يتطلب استخدام هذه العلامة تعريف المخطط الذي تنتمي إليه، السطور 4 و 10 و 11.</p>
+<p>هنا نستخدم علامة &lt;jee&gt; (السطر 14) التي تم تقديمها في <bdi dir="ltr" class="odt-ltr-term">Spring 2.0</bdi>. يتطلب استخدام هذه العلامة تعريف المخطط الذي تنتمي إليه، السطور 4 و 10 و 11.</p>
 <ul>
   <li>السطر 14: تُستخدم علامة &lt;<bdi dir="ltr" class="odt-ltr-term">jee:jndi-lookup</bdi>&gt; للحصول على مرجع كائن من خدمة <bdi dir="ltr" class="odt-ltr-term">JNDI.</bdi> هنا، نربط الحبة المسماة &quot;<bdi dir="ltr" class="odt-ltr-term">metier</bdi>&quot; بمورد <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> المرتبط بـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>]. اسم <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> المستخدم هنا هو الاسم القابل للنقل (<bdi dir="ltr" class="odt-ltr-term">Java EE</bdi> 6) لـ <bdi dir="ltr" class="odt-ltr-term">EJB.</bdi>
   </li>

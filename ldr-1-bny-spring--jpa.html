@@ -1815,7 +1815,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">hibernate.hbm2ddl.auto</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">value</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">create</span><span style="color:#800080">&quot;/&gt;</span></span></span>
 </code></pre></div>
 
-<p>باستخدام الخيار <strong><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;create&lt;/bdi&gt;</code></strong>، يقوم <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi>، عند إنشاء مثيل لطبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>، بحذف الجداول المطابقة لكيانات <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> ثم إنشاءها. يقوم الخيار <strong><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;create-drop&lt;/bdi&gt;</code></strong> بنفس الشيء، ولكنه يحذف جميع الجداول في نهاية دورة حياة طبقة <bdi dir="ltr" class="odt-ltr-term">JPA.</bdi> هناك خيار آخر:</p>
+<p>باستخدام الخيار <strong><code>create</code></strong>، يقوم <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi>، عند إنشاء مثيل لطبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>، بحذف الجداول المطابقة لكيانات <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> ثم إنشاءها. يقوم الخيار <strong><code>create-drop</code></strong> بنفس الشيء، ولكنه يحذف جميع الجداول في نهاية دورة حياة طبقة <bdi dir="ltr" class="odt-ltr-term">JPA.</bdi> هناك خيار آخر:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">hibernate.hbm2ddl.auto</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">value</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">update</span><span style="color:#800080">&quot;/&gt;</span></span></span>
 </code></pre></div>
@@ -1898,7 +1898,7 @@
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p><strong>ملاحظات</strong>:</p>
 <ul>
-  <li>ستكون الكيانات جزءًا من حزمة باسم [<bdi dir="ltr" class="odt-ltr-term">jpa</bdi>]،
+  <li>ستكون الكيانات جزءًا من حزمة باسم [jpa]،
   </li>
   <li>وسيكون لكل كيان رقم إصدار،
   </li>
@@ -2808,7 +2808,7 @@
 
 <p><a id="refheading87371112820228"></a>
 <a id="pam-interfaces"></a></p>
-<h2 id="57-im-s-business-dao">5.7. <span style="color: #4f81bd">واجهة <bdi dir="ltr" class="odt-ltr-term">im</bdi> <bdi dir="ltr" class="odt-ltr-term">s</bdi> لطبقات [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</span></h2>
+<h2 id="57-im-s-business-dao">5.7. <span style="color: #4f81bd">واجهة im s لطبقات [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</span></h2>
 <p>لنعد إلى بنية التطبيق:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000054100000116E2F18C26.png" width="673" height="139" style="display:inline-block; margin:4px;width:17.794cm;height:3.678cm;" class="odt-zoomable" data-zoom-src="images/100000000000054100000116E2F18C26.png" /></td></tr></table>
 
@@ -2898,7 +2898,7 @@
   </li>
 </ol>
 
-<p>من هذا، يمكننا اتخاذ قرار بشأن التنفيذ الأولي لواجهة [<bdi dir="ltr" class="odt-ltr-term">IMetier</bdi>] التي تقدمها طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]:</p>
+<p>من هذا، يمكننا اتخاذ قرار بشأن التنفيذ الأولي لواجهة [<bdi dir="ltr" class="odt-ltr-term">IMetier</bdi>] التي تقدمها طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] إلى طبقة [ui]:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1">1</a></span>
 <span class="normal"><a href="#__codelineno-41-2">2</a></span>
 <span class="normal"><a href="#__codelineno-41-3">3</a></span>
@@ -2914,7 +2914,7 @@
 <ul>
   <li>السطر 1: يتم وضع عناصر طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] في حزمة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]
   </li>
-  <li>السطر 5: تأخذ طريقة [<bdi dir="ltr" class="odt-ltr-term">calculatePaystub</bdi>] كمعلمات المعلومات الثلاث التي تم الحصول عليها من طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] وتُرجع كائنًا من النوع [<bdi dir="ltr" class="odt-ltr-term">Paystub</bdi>] يحتوي على المعلومات التي ستعرضها طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] على وحدة التحكم. يمكن أن تكون فئة [<a id="pam-feuillesalaire-1"></a> <bdi dir="ltr" class="odt-ltr-term">Paystub</bdi>] كما يلي:
+  <li>السطر 5: تأخذ طريقة [<bdi dir="ltr" class="odt-ltr-term">calculatePaystub</bdi>] كمعلمات المعلومات الثلاث التي تم الحصول عليها من طبقة [ui] وتُرجع كائنًا من النوع [<bdi dir="ltr" class="odt-ltr-term">Paystub</bdi>] يحتوي على المعلومات التي ستعرضها طبقة [ui] على وحدة التحكم. يمكن أن تكون فئة [<a id="pam-feuillesalaire-1"></a> <bdi dir="ltr" class="odt-ltr-term">Paystub</bdi>] كما يلي:
   </li>
 </ul>
 
@@ -2947,20 +2947,20 @@
 <a id="__codelineno-42-14" name="__codelineno-42-14"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطر 9: الموظف المشمول بكشوف الراتب - المعلومات رقم 1 المعروضة بواسطة طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]
+  <li>السطر 9: الموظف المشمول بكشوف الراتب - المعلومات رقم 1 المعروضة بواسطة طبقة [ui]
   </li>
-  <li>السطر 10: معدلات الاشتراكات المختلفة - المعلومات رقم 2 المعروضة بواسطة طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]
+  <li>السطر 10: معدلات الاشتراكات المختلفة - المعلومات رقم 2 المعروضة بواسطة طبقة [ui]
   </li>
-  <li>السطر 11: البدلات المختلفة المرتبطة بمؤشر الموظف - المعلومات رقم 3 المعروضة بواسطة طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]
+  <li>السطر 11: البدلات المختلفة المرتبطة بمؤشر الموظف - المعلومات رقم 3 المعروضة بواسطة طبقة [ui]
   </li>
-  <li>السطر 12: مكونات راتبه - المعلومات رقم 4 المعروضة بواسطة طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]
+  <li>السطر 12: مكونات راتبه - المعلومات رقم 4 المعروضة بواسطة طبقة [ui]
   </li>
 </ul>
 
 <p>تظهر حالة استخدام ثانية لطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] مع الواجهة الرسومية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B5000001082F4002BB.png" width="603" height="132" style="display:inline-block; margin:4px;width:15.942cm;height:3.493cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B5000001082F4002BB.png" /></td></tr></table>
 
-<p>كما هو موضح أعلاه، تعرض القائمة المنسدلة [1, 2] جميع الموظفين. يجب طلب هذه القائمة من طبقة [الأعمال]. ثم تتطور واجهة<a id="pam-interface-metier"></a> <bdi dir="ltr" class="odt-ltr-term">ace</bdi> لهذه الطبقة على النحو التالي:</p>
+<p>كما هو موضح أعلاه، تعرض القائمة المنسدلة [1, 2] جميع الموظفين. يجب طلب هذه القائمة من طبقة [الأعمال]. ثم تتطور واجهة<a id="pam-interface-metier"></a> ace لهذه الطبقة على النحو التالي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-43-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-43-3"> 3</a></span>
@@ -3046,7 +3046,7 @@
 <span class="normal"><a href="#__codelineno-45-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1"></a>      // créer une nouvelle cotisation
 <a id="__codelineno-45-2" name="__codelineno-45-2"></a>Cotisation create(Cotisation cotisation);
 </code></pre></div></td></tr></table></div>
-<p>تحتوي طريقة <em><bdi dir="ltr" class="odt-ltr-term">create</bdi></em> على معلمة <em><bdi dir="ltr" class="odt-ltr-term">cotisation</bdi></em> من نوع <em><bdi dir="ltr" class="odt-ltr-term">Cotisation</bdi></em>. يجب أن يتم حفظ معلمة <bdi dir="ltr" class="odt-ltr-term">cotisation</bdi>، أي تخزينها في جدول [<bdi dir="ltr" class="odt-ltr-term">COTISATIONS</bdi>]. قبل هذا الحفظ، تحتوي معلمة <em><bdi dir="ltr" class="odt-ltr-term">cotisation</bdi></em> على معرف <em><bdi dir="ltr" class="odt-ltr-term">id</bdi></em> بدون قيمة. بعد الحفظ، يحتوي حقل <em><bdi dir="ltr" class="odt-ltr-term">id</bdi></em> على قيمة تمثل المفتاح الأساسي للسجل المضاف إلى جدول [<bdi dir="ltr" class="odt-ltr-term">COTISATIONS</bdi>]. وبالتالي، فإن معلمة <em><bdi dir="ltr" class="odt-ltr-term">cotisation</bdi></em> هي معلمة إدخال/إخراج لطريقة <em><bdi dir="ltr" class="odt-ltr-term">create</bdi></em>. لا يبدو من الضروري أن تقوم طريقة <em><bdi dir="ltr" class="odt-ltr-term">create</bdi></em> بإرجاع معلمة <em><bdi dir="ltr" class="odt-ltr-term">cotisation</bdi></em> كنتيجة إضافية. نظرًا لأن الطريقة المستدعية تحتفظ بمرجع إلى كائن [<bdi dir="ltr" class="odt-ltr-term">Cotisation cotisation</bdi>]، فإنه في حالة تعديله، تتمتع الطريقة المستدعية بإمكانية الوصول إلى الكائن المعدل لأنها تحتفظ بمرجع إليه. وبالتالي، يمكنها معرفة القيمة التي عينتها طريقة <em><bdi dir="ltr" class="odt-ltr-term">create</bdi></em> لحقل <em><bdi dir="ltr" class="odt-ltr-term">id</bdi></em> في كائن [<bdi dir="ltr" class="odt-ltr-term">Cotisation cotisation</bdi>]. وبالتالي، يمكن تبسيط توقيع الطريقة إلى:</p>
+<p>تحتوي طريقة <em><bdi dir="ltr" class="odt-ltr-term">create</bdi></em> على معلمة <em><bdi dir="ltr" class="odt-ltr-term">cotisation</bdi></em> من نوع <em><bdi dir="ltr" class="odt-ltr-term">Cotisation</bdi></em>. يجب أن يتم حفظ معلمة <bdi dir="ltr" class="odt-ltr-term">cotisation</bdi>، أي تخزينها في جدول [<bdi dir="ltr" class="odt-ltr-term">COTISATIONS</bdi>]. قبل هذا الحفظ، تحتوي معلمة <em><bdi dir="ltr" class="odt-ltr-term">cotisation</bdi></em> على معرف <em>id</em> بدون قيمة. بعد الحفظ، يحتوي حقل <em>id</em> على قيمة تمثل المفتاح الأساسي للسجل المضاف إلى جدول [<bdi dir="ltr" class="odt-ltr-term">COTISATIONS</bdi>]. وبالتالي، فإن معلمة <em><bdi dir="ltr" class="odt-ltr-term">cotisation</bdi></em> هي معلمة إدخال/إخراج لطريقة <em><bdi dir="ltr" class="odt-ltr-term">create</bdi></em>. لا يبدو من الضروري أن تقوم طريقة <em><bdi dir="ltr" class="odt-ltr-term">create</bdi></em> بإرجاع معلمة <em><bdi dir="ltr" class="odt-ltr-term">cotisation</bdi></em> كنتيجة إضافية. نظرًا لأن الطريقة المستدعية تحتفظ بمرجع إلى كائن [<bdi dir="ltr" class="odt-ltr-term">Cotisation cotisation</bdi>]، فإنه في حالة تعديله، تتمتع الطريقة المستدعية بإمكانية الوصول إلى الكائن المعدل لأنها تحتفظ بمرجع إليه. وبالتالي، يمكنها معرفة القيمة التي عينتها طريقة <em><bdi dir="ltr" class="odt-ltr-term">create</bdi></em> لحقل <em>id</em> في كائن [<bdi dir="ltr" class="odt-ltr-term">Cotisation cotisation</bdi>]. وبالتالي، يمكن تبسيط توقيع الطريقة إلى:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-46-1">1</a></span>
 <span class="normal"><a href="#__codelineno-46-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1"></a>      // créer une nouvelle cotisation
 <a id="__codelineno-46-2" name="__codelineno-46-2"></a>void create(Cotisation cotisation);
@@ -3067,7 +3067,7 @@
   </li>
   <li>تسترد طبقة الاستقبال [3] هذه القيمة وتستخدمها لإعادة بناء كائن [<bdi dir="ltr" class="odt-ltr-term">Cotisation</bdi> <i><bdi dir="ltr" class="odt-ltr-term">cotisation2</bdi></i>] يعكس المعلمة الأولية المرسلة من طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. لدينا الآن كائنان متطابقان (من حيث المحتوى) في جهازي <bdi dir="ltr" class="odt-ltr-term">JVM</bdi> مختلفين: <i><bdi dir="ltr" class="odt-ltr-term">cotisation1</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">cotisation2</bdi></i>.
   </li>
-  <li>ستقوم طبقة العرض بتمرير كائن <i>`<bdi dir="ltr" class="odt-ltr-term">contribution2</bdi>` </i>إلى طريقة <i>`<bdi dir="ltr" class="odt-ltr-term">create</bdi>` </i>في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]، والتي ستحفظه في قاعدة البيانات. بعد هذه العملية، تم تهيئة حقل <i>`<bdi dir="ltr" class="odt-ltr-term">id</bdi>` </i>في كائن <i>`<bdi dir="ltr" class="odt-ltr-term">contribution2</bdi>` </i>بالمفتاح الأساسي للسجل المضاف إلى جدول [<bdi dir="ltr" class="odt-ltr-term">COTISATIONS</bdi>]. ليس هذا هو الحال بالنسبة للكائن <i>`<bdi dir="ltr" class="odt-ltr-term">contribution1</bdi>`</i>، الذي تشير إليه طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. إذا أردنا أن تشير طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] إلى الكائن <bdi dir="ltr" class="odt-ltr-term">cotisation2</bdi>، فيجب علينا تمريره إلى الطبقة. لذلك، نحتاج إلى تغيير توقيع طريقة <i><bdi dir="ltr" class="odt-ltr-term">create</bdi></i> في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]:
+  <li>ستقوم طبقة العرض بتمرير كائن <i>`<bdi dir="ltr" class="odt-ltr-term">contribution2</bdi>` </i>إلى طريقة <i>`<bdi dir="ltr" class="odt-ltr-term">create</bdi>` </i>في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]، والتي ستحفظه في قاعدة البيانات. بعد هذه العملية، تم تهيئة حقل <i>`id` </i>في كائن <i>`<bdi dir="ltr" class="odt-ltr-term">contribution2</bdi>` </i>بالمفتاح الأساسي للسجل المضاف إلى جدول [<bdi dir="ltr" class="odt-ltr-term">COTISATIONS</bdi>]. ليس هذا هو الحال بالنسبة للكائن <i>`<bdi dir="ltr" class="odt-ltr-term">contribution1</bdi>`</i>، الذي تشير إليه طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. إذا أردنا أن تشير طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] إلى الكائن <bdi dir="ltr" class="odt-ltr-term">cotisation2</bdi>، فيجب علينا تمريره إلى الطبقة. لذلك، نحتاج إلى تغيير توقيع طريقة <i><bdi dir="ltr" class="odt-ltr-term">create</bdi></i> في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]:
   </li>
 </ul>
 
@@ -3080,7 +3080,7 @@
   </li>
   <li>ستسترد الطبقة المرسلة [2] هذه القيمة وتستخدمها لإعادة بناء كائن [<bdi dir="ltr" class="odt-ltr-term">Membership</bdi> <i><bdi dir="ltr" class="odt-ltr-term">membership3</bdi></i>] يعكس النتيجة التي أعادتها طريقة <i><bdi dir="ltr" class="odt-ltr-term">create</bdi></i> في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>].
   </li>
-  <li>يتم إرجاع الكائن [<bdi dir="ltr" class="odt-ltr-term">Contribution</bdi> <i><bdi dir="ltr" class="odt-ltr-term">contribution3</bdi></i>] إلى الطريقة في طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] التي أدى استدعاءها لطريقة <i><bdi dir="ltr" class="odt-ltr-term">create</bdi></i> في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] إلى بدء هذه الآلية بأكملها. وبالتالي، يمكن لطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] تحديد قيمة المفتاح الأساسي المخصصة للكائن [<bdi dir="ltr" class="odt-ltr-term">Contribution</bdi> <i><bdi dir="ltr" class="odt-ltr-term">contribution1</bdi></i>] الذي طلبت استمراريته: هذه هي قيمة حقل <i><bdi dir="ltr" class="odt-ltr-term">id</bdi></i> في <i><bdi dir="ltr" class="odt-ltr-term">contribution3</bdi></i>.
+  <li>يتم إرجاع الكائن [<bdi dir="ltr" class="odt-ltr-term">Contribution</bdi> <i><bdi dir="ltr" class="odt-ltr-term">contribution3</bdi></i>] إلى الطريقة في طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] التي أدى استدعاءها لطريقة <i><bdi dir="ltr" class="odt-ltr-term">create</bdi></i> في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] إلى بدء هذه الآلية بأكملها. وبالتالي، يمكن لطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] تحديد قيمة المفتاح الأساسي المخصصة للكائن [<bdi dir="ltr" class="odt-ltr-term">Contribution</bdi> <i><bdi dir="ltr" class="odt-ltr-term">contribution1</bdi></i>] الذي طلبت استمراريته: هذه هي قيمة حقل <i>id</i> في <i><bdi dir="ltr" class="odt-ltr-term">contribution3</bdi></i>.
   </li>
 </ul>
 
@@ -3144,7 +3144,7 @@
   </li>
   <li>السطر 12: تحذف طريقة <i><bdi dir="ltr" class="odt-ltr-term">destroy</bdi> </i>السجل من جدول [<bdi dir="ltr" class="odt-ltr-term">COTISATIONS</bdi>] الذي له نفس المفتاح الأساسي لكائن <i><bdi dir="ltr" class="odt-ltr-term">contribution</bdi></i> الذي تم تمريره كمعلمة. لا يتم تعديل كائن <bdi dir="ltr" class="odt-ltr-term">contribution.</bdi> لذلك، لا يلزم إرجاعه.
   </li>
-  <li>السطر 14: لا يتم تعديل المعلمة <i><bdi dir="ltr" class="odt-ltr-term">id</bdi> </i>للطريقة <i><bdi dir="ltr" class="odt-ltr-term">find</bdi> </i>بواسطة الطريقة. ولا يلزم تضمينها في النتيجة.
+  <li>السطر 14: لا يتم تعديل المعلمة <i>id </i>للطريقة <i><bdi dir="ltr" class="odt-ltr-term">find</bdi> </i>بواسطة الطريقة. ولا يلزم تضمينها في النتيجة.
   </li>
   <li>السطر 16: لا تحتوي طريقة <i><bdi dir="ltr" class="odt-ltr-term">findAll</bdi> </i>على أي معلمات. لذلك، لا داعي لفحصها.
   </li>
@@ -3400,7 +3400,7 @@
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>السؤال</strong>: باستخدام تكامل <bdi dir="ltr" class="odt-ltr-term">Spring/JPA</bdi>، اكتب الفئات [<bdi dir="ltr" class="odt-ltr-term">CotisationDao</bdi>، <bdi dir="ltr" class="odt-ltr-term">IndemniteDao</bdi>، <bdi dir="ltr" class="odt-ltr-term">EmployeDao</bdi>] لتنفيذ الواجهات [<bdi dir="ltr" class="odt-ltr-term">ICotisationDao</bdi>، <bdi dir="ltr" class="odt-ltr-term">IIndemniteDao</bdi>، <bdi dir="ltr" class="odt-ltr-term">IEmployeDao</bdi>]. ستقوم كل طريقة في الفئة بالتقاط أي استثناء وتغليفه في [<bdi dir="ltr" class="odt-ltr-term">PamException</bdi>] مع رمز خطأ خاص بالاستثناء الذي تم التقاطه.</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-<p>ستكون فئات التنفيذ جزءًا من حزمة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]:</p>
+<p>ستكون فئات التنفيذ جزءًا من حزمة [dao]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000CA000000DFEAEB6D21.png" width="141" height="156" style="display:inline-block; margin:4px;width:3.739cm;height:4.128cm;" class="odt-zoomable" data-zoom-src="images/10000000000000CA000000DFEAEB6D21.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading87379112820228"></a></p>
@@ -3410,7 +3410,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D50000019CA14B608C.png" width="235" height="206" style="display:inline-block; margin:4px;width:6.205cm;height:5.45cm;" class="odt-zoomable" data-zoom-src="images/10000000000001D50000019CA14B608C.png" /></td></tr></table>
 
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p><strong>السؤال</strong>: اكتب محتويات هذين الملفين. سنفترض أن قاعدة البيانات المستخدمة هي قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL5</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_hibernate] التي تم إنشاؤها بواسطة البرنامج النصي <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_hibernate.<bdi dir="ltr" class="odt-ltr-term">sql</bdi>]. سيحدد ملف <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> الفئات الثلاثة التالية: <em><bdi dir="ltr" class="odt-ltr-term">employeDao</bdi></em> من النوع <em><bdi dir="ltr" class="odt-ltr-term">EmployeDao</bdi>، و <bdi dir="ltr" class="odt-ltr-term">indemniteDao</bdi></em> من النوع <em><bdi dir="ltr" class="odt-ltr-term">IndemniteDao</bdi>، و <bdi dir="ltr" class="odt-ltr-term">cotisationDao</bdi></em> من النوع <em><bdi dir="ltr" class="odt-ltr-term">CotisationDao.</bdi></em> علاوة على ذلك، سيكون تنفيذ <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> المستخدم هو <em><bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi></em>.</p>
+<p><strong>السؤال</strong>: اكتب محتويات هذين الملفين. سنفترض أن قاعدة البيانات المستخدمة هي قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL5</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_hibernate] التي تم إنشاؤها بواسطة البرنامج النصي <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_hibernate.sql]. سيحدد ملف <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> الفئات الثلاثة التالية: <em><bdi dir="ltr" class="odt-ltr-term">employeDao</bdi></em> من النوع <em><bdi dir="ltr" class="odt-ltr-term">EmployeDao</bdi>، و <bdi dir="ltr" class="odt-ltr-term">indemniteDao</bdi></em> من النوع <em><bdi dir="ltr" class="odt-ltr-term">IndemniteDao</bdi>، و <bdi dir="ltr" class="odt-ltr-term">cotisationDao</bdi></em> من النوع <em><bdi dir="ltr" class="odt-ltr-term">CotisationDao.</bdi></em> علاوة على ذلك، سيكون تنفيذ <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> المستخدم هو <em><bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi></em>.</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 
 <p><a id="refheading87381112820228"></a></p>
@@ -3421,7 +3421,7 @@
 
 <p><a id="refheading87385112820228"></a></p>
 <h3 id="594-initdb">5.9.4. <span style="color: #4f81bd"><bdi dir="ltr" class="odt-ltr-term">InitDB</bdi></span></h3>
-<p>سنقوم بإنشاء برنامجين اختباريين لطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. سيتم وضعهما في الحزمة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] [2] التابعة لفرع [<bdi dir="ltr" class="odt-ltr-term">Test Packages</bdi>] [1] في مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans.</bdi> لا يتم تضمين هذا الفرع في المشروع الذي يتم إنشاؤه بواسطة خيار [<bdi dir="ltr" class="odt-ltr-term">Build project</bdi>]، مما يضمن عدم تضمين البرامج الاختبارية التي نضعها هناك في ملف .<bdi dir="ltr" class="odt-ltr-term">jar</bdi> النهائي للمشروع.</p>
+<p>سنقوم بإنشاء برنامجين اختباريين لطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. سيتم وضعهما في الحزمة [dao] [2] التابعة لفرع [<bdi dir="ltr" class="odt-ltr-term">Test Packages</bdi>] [1] في مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans.</bdi> لا يتم تضمين هذا الفرع في المشروع الذي يتم إنشاؤه بواسطة خيار [<bdi dir="ltr" class="odt-ltr-term">Build project</bdi>]، مما يضمن عدم تضمين البرامج الاختبارية التي نضعها هناك في ملف .jar النهائي للمشروع.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003B000000160B403C65D.png" width="472" height="176" style="display:inline-block; margin:4px;width:12.488cm;height:4.657cm;" class="odt-zoomable" data-zoom-src="images/10000000000003B000000160B403C65D.png" /></td></tr></table>
 
 <p>تتمتع الفئات الموضوعة في فرع [<bdi dir="ltr" class="odt-ltr-term">Test Packages</bdi>] بإمكانية الوصول إلى الفئات الموجودة في فرع [<bdi dir="ltr" class="odt-ltr-term">Source Packages</bdi>] وكذلك إلى مكتبات فئات المشروع. إذا كانت الاختبارات تتطلب مكتبات بخلاف تلك الموجودة في المشروع، فيجب الإعلان عنها في فرع [<bdi dir="ltr" class="odt-ltr-term">Test Libraries</bdi>] [2].</p>
@@ -3571,7 +3571,7 @@
 <p><a id="refheading87389112820228"></a></p>
 <p><a id="refheading87391112820228"></a>
 <a id="tests-dao-testngdao"></a></p>
-<h3 id="596-junitd-ao">5.9.6. <span style="color: #4f81bd"><bdi dir="ltr" class="odt-ltr-term">JUnitD</bdi> <bdi dir="ltr" class="odt-ltr-term">ao</bdi></span></h3>
+<h3 id="596-junitd-ao">5.9.6. <span style="color: #4f81bd"><bdi dir="ltr" class="odt-ltr-term">JUnitD</bdi> ao</span></h3>
 <p>سنلقي الآن نظرة على فئة اختبار ثانية [<bdi dir="ltr" class="odt-ltr-term">JUnitDao</bdi>]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001340000017A74DC7383.png" width="154" height="189" style="display:inline-block; margin:4px;width:4.075cm;height:5.001cm;" class="odt-zoomable" data-zoom-src="images/10000000000001340000017A74DC7383.png" /></td></tr></table>
 
@@ -4448,7 +4448,7 @@
   </li>
   <li>السطر 5: كشف راتب <i>ماري </i>جوفينال
   </li>
-  <li>السطر 6: الاستثناء الناتج عن عدم وجود موظف برقم الضمان الاجتماعي &quot;<bdi dir="ltr" class="odt-ltr-term">xx</bdi>&quot;.
+  <li>السطر 6: الاستثناء الناتج عن عدم وجود موظف برقم الضمان الاجتماعي &quot;xx&quot;.
   </li>
 </ul>
 
@@ -4513,11 +4513,11 @@
 <p><a id="refheading87405112820228"></a>
 <a id="pam-console-spring-hibernate"></a>
 <a id="console-spring-jpa"></a></p>
-<h2 id="511-ui-pam">5.11. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] لتطبيق [<bdi dir="ltr" class="odt-ltr-term">PAM</bdi>] – إصدار وحدة التحكم</span></h2>
-<p>الآن بعد أن تمت كتابة طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]، لا يزال يتعين علينا كتابة طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] [1]:</p>
+<h2 id="511-ui-pam">5.11. <span style="color: #4f81bd">طبقة [ui] لتطبيق [<bdi dir="ltr" class="odt-ltr-term">PAM</bdi>] – إصدار وحدة التحكم</span></h2>
+<p>الآن بعد أن تمت كتابة طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]، لا يزال يتعين علينا كتابة طبقة [ui] [1]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005390000010C4BC10FC7.png" width="669" height="134" style="display:inline-block; margin:4px;width:17.688cm;height:3.545cm;" class="odt-zoomable" data-zoom-src="images/10000000000005390000010C4BC10FC7.png" /></td></tr></table>
 
-<p>سنقوم بإنشاء نسختين مختلفتين من طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]: نسخة <em>تعمل على وحدة التحكم</em> ونسخة تعمل على واجهة المستخدم الرسومية <em><bdi dir="ltr" class="odt-ltr-term">Swing</bdi></em>:</p>
+<p>سنقوم بإنشاء نسختين مختلفتين من طبقة [ui]: نسخة <em>تعمل على وحدة التحكم</em> ونسخة تعمل على واجهة المستخدم الرسومية <em><bdi dir="ltr" class="odt-ltr-term">Swing</bdi></em>:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013D0000013E5AF4B30E.png" width="159" height="159" style="display:inline-block; margin:4px;width:4.195cm;height:4.209cm;" class="odt-zoomable" data-zoom-src="images/100000000000013D0000013E5AF4B30E.png" /></td></tr></table>
 
 <p><a id="refheading87407112820228"></a>
@@ -4740,8 +4740,8 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000197000000F28B284017.png" width="285" height="169" style="display:inline-block; margin:4px;width:7.541cm;height:4.484cm;" class="odt-zoomable" data-zoom-src="images/1000000000000197000000F28B284017.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010F0000015038370396.png" width="190" height="235" style="display:inline-block; margin:4px;width:5.02cm;height:6.225cm;" class="odt-zoomable" data-zoom-src="images/100000000000010F0000015038370396.png" /></td></tr></table>
 
 <p><a id="refheading87411112820228"></a></p>
-<h2 id="512-ui-pam">5.12. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] لتطبيق [<bdi dir="ltr" class="odt-ltr-term">PAM</bdi>] – النسخة الرسومية</span></h2>
-<p>سنقوم الآن بتنفيذ طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] بواجهة مستخدم رسومية:</p>
+<h2 id="512-ui-pam">5.12. <span style="color: #4f81bd">طبقة [ui] لتطبيق [<bdi dir="ltr" class="odt-ltr-term">PAM</bdi>] – النسخة الرسومية</span></h2>
+<p>سنقوم الآن بتنفيذ طبقة [ui] بواجهة مستخدم رسومية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052B00000115CCA97615.png" width="662" height="139" style="display:inline-block; margin:4px;width:17.503cm;height:3.665cm;" class="odt-zoomable" data-zoom-src="images/100000000000052B00000115CCA97615.png" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D0000002EFE78E35E1.png" width="616" height="375" style="display:inline-block; margin:4px;width:16.298cm;height:9.934cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D0000002EFE78E35E1.png" /></td></tr></table>
@@ -4881,7 +4881,7 @@
 <a id="__codelineno-66-5" name="__codelineno-66-5"></a><span class="w">      </span><span class="p">}</span>
 <a id="__codelineno-66-6" name="__codelineno-66-6"></a><span class="p">});</span>
 </code></pre></div></td></tr></table></div>
-<p>تحدد الأسطر 2-5 أن النقر (<bdi dir="ltr" class="odt-ltr-term">evt</bdi> من النوع <em><bdi dir="ltr" class="odt-ltr-term">ActionPerformed</bdi></em>) على الزر [<bdi dir="ltr" class="odt-ltr-term">jButtonSalaire</bdi>] (السطر 2) يجب أن تتم معالجته بواسطة الطريقة [<bdi dir="ltr" class="odt-ltr-term">jButtonSalaireActionPerformed</bdi>] (السطر 4).</p>
+<p>تحدد الأسطر 2-5 أن النقر (evt من النوع <em><bdi dir="ltr" class="odt-ltr-term">ActionPerformed</bdi></em>) على الزر [<bdi dir="ltr" class="odt-ltr-term">jButtonSalaire</bdi>] (السطر 2) يجب أن تتم معالجته بواسطة الطريقة [<bdi dir="ltr" class="odt-ltr-term">jButtonSalaireActionPerformed</bdi>] (السطر 4).</p>
 <p>سنقوم أيضًا بمعالجة حدث [<bdi dir="ltr" class="odt-ltr-term">caretUpdate</bdi>] (حركة المؤشر) في حقل الإدخال [<bdi dir="ltr" class="odt-ltr-term">jTextFieldHT</bdi>]. لإنشاء معالج لهذا الحدث، نتبع نفس الخطوات السابقة:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000029C0000009316376F9F.png" width="401" height="88" style="display:inline-block; margin:4px;width:10.599cm;height:2.332cm;" class="odt-zoomable" data-zoom-src="images/100000000000029C0000009316376F9F.png" /></td></tr></table>
 
@@ -4908,7 +4908,7 @@
 <p>لنعد إلى بنية تطبيقنا:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053C0000011454680FD3.png" width="670" height="138" style="display:inline-block; margin:4px;width:17.727cm;height:3.651cm;" class="odt-zoomable" data-zoom-src="images/100000000000053C0000011454680FD3.png" /></td></tr></table>
 
-<p>تحتاج طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] إلى مرجع إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. دعونا نتذكر كيف تم الحصول على هذا المرجع في تطبيق <em>وحدة التحكم</em>:</p>
+<p>تحتاج طبقة [ui] إلى مرجع إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. دعونا نتذكر كيف تم الحصول على هذا المرجع في تطبيق <em>وحدة التحكم</em>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-69-1">1</a></span>
 <span class="normal"><a href="#__codelineno-69-2">2</a></span>
 <span class="normal"><a href="#__codelineno-69-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1"></a><span class="w">    </span><span class="c1">// instantiation layer [metier]</span>
@@ -5721,7 +5721,7 @@
 
 <p><a id="refheading87437112820228"></a></p>
 <h3 id="5135">5.13.5. <span style="color: #4f81bd">الاختبارات الأخرى</span></h3>
-<p>بمجرد اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] واعتبارها صحيحة، يمكننا الانتقال إلى اختبار طبقة [الأعمال] والمشروع نفسه في نسخته النصية أو الرسومية. لا يؤثر تغيير تطبيق <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> على طبقات [الأعمال] و[واجهة المستخدم]؛ لذلك، إذا كانت هذه الطبقات تعمل مع <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi>، فستعمل مع <bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi> مع بعض الاستثناءات: يوضح المثال السابق أن الاستثناءات التي تطلقها طبقات [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] قد تختلف. وبالتالي، في حالة الاختبار، يرمي <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> / <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> / <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> استثناء [<bdi dir="ltr" class="odt-ltr-term">PamException</bdi>]، وهو استثناء خاص بتطبيق [<bdi dir="ltr" class="odt-ltr-term">pam</bdi>]، في حين يرمي <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> / <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> / <bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi> استثناء [<bdi dir="ltr" class="odt-ltr-term">TransactionSystemException</bdi>]، وهو استثناء من إطار عمل <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> إذا كانت طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]، في حالة الاختبار، تتوقع استثناء [<bdi dir="ltr" class="odt-ltr-term">PamException</bdi>] لأنها بُنيت باستخدام <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi>، فلن تعمل بعد ذلك عند التبديل إلى <bdi dir="ltr" class="odt-ltr-term">EclipseLink.</bdi></p>
+<p>بمجرد اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] واعتبارها صحيحة، يمكننا الانتقال إلى اختبار طبقة [الأعمال] والمشروع نفسه في نسخته النصية أو الرسومية. لا يؤثر تغيير تطبيق <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> على طبقات [الأعمال] و[واجهة المستخدم]؛ لذلك، إذا كانت هذه الطبقات تعمل مع <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi>، فستعمل مع <bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi> مع بعض الاستثناءات: يوضح المثال السابق أن الاستثناءات التي تطلقها طبقات [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] قد تختلف. وبالتالي، في حالة الاختبار، يرمي <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> / <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> / <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> استثناء [<bdi dir="ltr" class="odt-ltr-term">PamException</bdi>]، وهو استثناء خاص بتطبيق [pam]، في حين يرمي <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> / <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> / <bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi> استثناء [<bdi dir="ltr" class="odt-ltr-term">TransactionSystemException</bdi>]، وهو استثناء من إطار عمل <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> إذا كانت طبقة [ui]، في حالة الاختبار، تتوقع استثناء [<bdi dir="ltr" class="odt-ltr-term">PamException</bdi>] لأنها بُنيت باستخدام <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi>، فلن تعمل بعد ذلك عند التبديل إلى <bdi dir="ltr" class="odt-ltr-term">EclipseLink.</bdi></p>
 <p><a id="refheading2817471991350288"></a></p>
 <h3 id="5136">5.13.6. <span style="color: #4f81bd">العمل المطلوب</span></h3>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />

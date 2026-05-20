@@ -877,11 +877,11 @@
       </li>
       <li>[حزم الاختبار]: فئات الاختبار الخاصة بالمشروع؛
       </li>
-      <li>[التبعيات]: أرشيفات .<bdi dir="ltr" class="odt-ltr-term">jar</bdi> التي يتطلبها المشروع وتديرها <bdi dir="ltr" class="odt-ltr-term">Maven</bdi>؛
+      <li>[التبعيات]: أرشيفات .jar التي يتطلبها المشروع وتديرها <bdi dir="ltr" class="odt-ltr-term">Maven</bdi>؛
       </li>
-      <li>[التبعيات الاختبارية]: ملفات .<bdi dir="ltr" class="odt-ltr-term">jar</bdi> المطلوبة لاختبارات المشروع والتي يديرها <bdi dir="ltr" class="odt-ltr-term">Maven</bdi>؛
+      <li>[التبعيات الاختبارية]: ملفات .jar المطلوبة لاختبارات المشروع والتي يديرها <bdi dir="ltr" class="odt-ltr-term">Maven</bdi>؛
       </li>
-      <li>[تبعيات <bdi dir="ltr" class="odt-ltr-term">Java</bdi>]: ملفات .<bdi dir="ltr" class="odt-ltr-term">jar</bdi> التي يتطلبها المشروع ولا يديرها <bdi dir="ltr" class="odt-ltr-term">Maven</bdi>؛
+      <li>[تبعيات <bdi dir="ltr" class="odt-ltr-term">Java</bdi>]: ملفات .jar التي يتطلبها المشروع ولا يديرها <bdi dir="ltr" class="odt-ltr-term">Maven</bdi>؛
       </li>
       <li>[ملفات المشروع]: ملفات تكوين <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> و <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi>،
       </li>
@@ -958,7 +958,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>هذا اختبار <bdi dir="ltr" class="odt-ltr-term">JUnit 3.8</bdi>. سنستخدم اختبارات <bdi dir="ltr" class="odt-ltr-term">JUnit</bdi> 4.<bdi dir="ltr" class="odt-ltr-term">x</bdi> لاحقًا.</p>
+<p>هذا اختبار <bdi dir="ltr" class="odt-ltr-term">JUnit 3.8</bdi>. سنستخدم اختبارات <bdi dir="ltr" class="odt-ltr-term">JUnit</bdi> 4.x لاحقًا.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BB00000187E9483491.png" width="222" height="196" style="display:inline-block; margin:4px;width:5.861cm;height:5.173cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BB00000187E9483491.png" /></td></tr></table>
 
 <ul>
@@ -1025,12 +1025,12 @@
   </li>
   <li>[<b><bdi dir="ltr" class="odt-ltr-term">version</bdi></b>]: رقم إصدار عنصر <bdi dir="ltr" class="odt-ltr-term">Maven.</bdi> وبالتالي، فإن العنصر <i><bdi dir="ltr" class="odt-ltr-term">org.springframework.spring-core</bdi> </i>له الإصدارات التالية: 2.5.4، 2.5.5، 2.5.6، 2.5.6.<bdi dir="ltr" class="odt-ltr-term">SECO1</bdi>، ...
   </li>
-  <li>[<b><bdi dir="ltr" class="odt-ltr-term">packaging</bdi></b>]: تنسيق الأرتيفاكت، وغالبًا ما يكون <i><bdi dir="ltr" class="odt-ltr-term">war</bdi> </i>أو <i><bdi dir="ltr" class="odt-ltr-term">jar</bdi></i>.
+  <li>[<b><bdi dir="ltr" class="odt-ltr-term">packaging</bdi></b>]: تنسيق الأرتيفاكت، وغالبًا ما يكون <i>war </i>أو <i>jar</i>.
   </li>
 </ul>
 
-<p>سيقوم مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> الخاص بنا بإنشاء ملف [<bdi dir="ltr" class="odt-ltr-term">jar</bdi>] (السطر 8) في المجموعة [<bdi dir="ltr" class="odt-ltr-term">istia.st</bdi>] (السطر 5)، باسم [<bdi dir="ltr" class="odt-ltr-term">mv-example</bdi>] (السطر 6) وبإصدار [1.0-<bdi dir="ltr" class="odt-ltr-term">SNAPSHOT</bdi>] (السطر 7). يجب أن تحدد هذه المعلومات الأربع بشكل فريد عنصر <bdi dir="ltr" class="odt-ltr-term">Maven.</bdi></p>
-<p>تسرد الأسطر 17–24 تبعيات مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi>، أي قائمة المكتبات التي يتطلبها المشروع. يتم تعريف كل مكتبة من خلال المعلومات الأربع (<bdi dir="ltr" class="odt-ltr-term">groupId</bdi>، <bdi dir="ltr" class="odt-ltr-term">artifactId</bdi>، <bdi dir="ltr" class="odt-ltr-term">version</bdi>، <bdi dir="ltr" class="odt-ltr-term">packaging</bdi>). عندما تكون معلومات <em>التعبئة والتغليف</em> مفقودة، كما هو الحال هنا، يتم استخدام <em>تعبئة</em> <strong><bdi dir="ltr" class="odt-ltr-term">jar</bdi></strong>. يتم إضافة معلومة أخرى: <strong><bdi dir="ltr" class="odt-ltr-term">scope</bdi></strong>، والتي تحدد المراحل التي تحتاج فيها المكتبة في دورة حياة المشروع. القيمة الافتراضية هي <strong><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;compile&lt;/bdi&gt;</code></strong>، والتي تشير إلى أن المكتبة مطلوبة للتجميع والتنفيذ. القيمة <strong><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;test&lt;/bdi&gt;</code></strong> تعني أن المكتبة مطلوبة أثناء اختبار المشروع. هذا هو الحال هنا مع مكتبة <bdi dir="ltr" class="odt-ltr-term">JUnit 3.8.1</bdi>. إذا لم تكن هذه المكتبة موجودة في المستودع المحلي على الجهاز، يتم تنزيلها.</p>
+<p>سيقوم مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> الخاص بنا بإنشاء ملف [jar] (السطر 8) في المجموعة [<bdi dir="ltr" class="odt-ltr-term">istia.st</bdi>] (السطر 5)، باسم [<bdi dir="ltr" class="odt-ltr-term">mv-example</bdi>] (السطر 6) وبإصدار [1.0-<bdi dir="ltr" class="odt-ltr-term">SNAPSHOT</bdi>] (السطر 7). يجب أن تحدد هذه المعلومات الأربع بشكل فريد عنصر <bdi dir="ltr" class="odt-ltr-term">Maven.</bdi></p>
+<p>تسرد الأسطر 17–24 تبعيات مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi>، أي قائمة المكتبات التي يتطلبها المشروع. يتم تعريف كل مكتبة من خلال المعلومات الأربع (<bdi dir="ltr" class="odt-ltr-term">groupId</bdi>، <bdi dir="ltr" class="odt-ltr-term">artifactId</bdi>، <bdi dir="ltr" class="odt-ltr-term">version</bdi>، <bdi dir="ltr" class="odt-ltr-term">packaging</bdi>). عندما تكون معلومات <em>التعبئة والتغليف</em> مفقودة، كما هو الحال هنا، يتم استخدام <em>تعبئة</em> <strong>jar</strong>. يتم إضافة معلومة أخرى: <strong><bdi dir="ltr" class="odt-ltr-term">scope</bdi></strong>، والتي تحدد المراحل التي تحتاج فيها المكتبة في دورة حياة المشروع. القيمة الافتراضية هي <strong><code>compile</code></strong>، والتي تشير إلى أن المكتبة مطلوبة للتجميع والتنفيذ. القيمة <strong><code>test</code></strong> تعني أن المكتبة مطلوبة أثناء اختبار المشروع. هذا هو الحال هنا مع مكتبة <bdi dir="ltr" class="odt-ltr-term">JUnit 3.8.1</bdi>. إذا لم تكن هذه المكتبة موجودة في المستودع المحلي على الجهاز، يتم تنزيلها.</p>
 <p><a id="refheading1433261675182081"></a></p>
 <h3 id="312">3.1.2. <span style="color: #4f81bd">تشغيل المشروع</span></h3>
 <p>نقوم بتشغيل المشروع:</p>
@@ -1206,7 +1206,7 @@
   </li>
   <li>في [4]، نضغط على [مسافة] لعرض قائمة العناصر المحتملة. هنا، [<bdi dir="ltr" class="odt-ltr-term">junit</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">jnit-dep</bdi>]. نختار [<bdi dir="ltr" class="odt-ltr-term">junit</bdi>]،
   </li>
-  <li>في [5]، باتباع نفس الإجراء، نختار أحدث إصدار. نوع التعبئة هو <i><bdi dir="ltr" class="odt-ltr-term">jar</bdi>،</i>
+  <li>في [5]، باتباع نفس الإجراء، نختار أحدث إصدار. نوع التعبئة هو <i>jar،</i>
   </li>
   <li>في [6]، نختار نطاق <b>الاختبار </b>للإشارة إلى أن التبعية مطلوبة للاختبار فقط.
   </li>

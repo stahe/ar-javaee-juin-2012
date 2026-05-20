@@ -1522,7 +1522,7 @@
 <h3 id="623-dao">6.2.3. <span style="color: #4f81bd">نقل طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</span></h3>
 <p>سنقوم بنقل طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] عن طريق نسخ الحزم من مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-spring-hibernate</bdi>] إلى مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-openejb-eclipselink</bdi>].</p>
 <ul>
-  <li>انسخ حزم [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>، <bdi dir="ltr" class="odt-ltr-term">exception</bdi>، <bdi dir="ltr" class="odt-ltr-term">jpa</bdi>]
+  <li>انسخ حزم [dao، <bdi dir="ltr" class="odt-ltr-term">exception</bdi>، jpa]
   </li>
 </ul>
 
@@ -1649,7 +1649,7 @@
 
 <p><a id="refheading87469112820228"></a></p>
 <h4 id="6234-dao">6.2.3.4. <span style="color: #4f81bd">اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</span></h4>
-<p>يمكن اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] التي تم تنفيذها بواسطة <bdi dir="ltr" class="odt-ltr-term">EJBs.</bdi> نبدأ بنسخ حزمة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] من [<bdi dir="ltr" class="odt-ltr-term">Test Packages</bdi>] في مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-springhibernate</bdi>] إلى المشروع قيد التطوير حاليًا [1]:</p>
+<p>يمكن اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] التي تم تنفيذها بواسطة <bdi dir="ltr" class="odt-ltr-term">EJBs.</bdi> نبدأ بنسخ حزمة [dao] من [<bdi dir="ltr" class="odt-ltr-term">Test Packages</bdi>] في مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-springhibernate</bdi>] إلى المشروع قيد التطوير حاليًا [1]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DE00000123A32AAFA8.png" width="623" height="146" style="display:inline-block; margin:4px;width:16.484cm;height:3.851cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DE00000123A32AAFA8.png" /></td></tr></table>
 
 <p>نحتفظ فقط باختبار [<bdi dir="ltr" class="odt-ltr-term">JUnitInitDB</bdi>]، الذي يقوم بتهيئة قاعدة البيانات ببعض البيانات [2]. ونقوم بإعادة تسمية فئة [<bdi dir="ltr" class="odt-ltr-term">JUnitInitDbLocal</bdi>] [3]. وستستخدم فئة [<bdi dir="ltr" class="odt-ltr-term">JUnitInitDBLocal</bdi>] الواجهة <strong>المحلية</strong> لـ <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi> في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. </p>

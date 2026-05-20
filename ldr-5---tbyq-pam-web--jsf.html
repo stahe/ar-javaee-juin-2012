@@ -921,7 +921,7 @@
 <p>في بنية التطبيق الجديد:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DD000000AE898F8953.png" width="623" height="87" style="display:inline-block; margin:4px;width:16.471cm;height:2.302cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DD000000AE898F8953.png" /></td></tr></table>
 
-<p>لا يلزم كتابة سوى طبقة [<bdi dir="ltr" class="odt-ltr-term">web</bdi> / <bdi dir="ltr" class="odt-ltr-term">jsf</bdi>]. أما الطبقات الأخرى [<bdi dir="ltr" class="odt-ltr-term">business</bdi>، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] فهي موجودة بالفعل.</p>
+<p>لا يلزم كتابة سوى طبقة [web / jsf]. أما الطبقات الأخرى [<bdi dir="ltr" class="odt-ltr-term">business</bdi>، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] فهي موجودة بالفعل.</p>
 <p>في الوثيقة [<a href="http://tahe.developpez.com/java/primefaces"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">ref3</bdi></span></u></a>]، يظهر أن تطبيق الويب الذي يتم فيه تنفيذ طبقة الويب باستخدام <bdi dir="ltr" class="odt-ltr-term">Java Server Faces</bdi> له بنية مشابهة لما يلي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046300000167CE12FF28.png" width="562" height="179" style="display:inline-block; margin:4px;width:14.857cm;height:4.748cm;" class="odt-zoomable" data-zoom-src="images/100000000000046300000167CE12FF28.png" /></td></tr></table>
 
@@ -964,7 +964,7 @@
   </li>
   <li>يتم تنفيذ نماذج <b><bdi dir="ltr" class="odt-ltr-term">M</bdi> ومعالجات الأحداث </b>بواسطة فئات <bdi dir="ltr" class="odt-ltr-term">Java</bdi> التي غالبًا ما تسمى &quot;<bdi dir="ltr" class="odt-ltr-term">backing beans</bdi>&quot;.
   </li>
-  <li>في إصدارات <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> 1.<bdi dir="ltr" class="odt-ltr-term">x</bdi>، يتم تعريف تعريفات <bdi dir="ltr" class="odt-ltr-term">bean</bdi> <b>وقواعد التنقل </b>من صفحة إلى أخرى في ملف [<bdi dir="ltr" class="odt-ltr-term">faces-config.xml</bdi>]. ويحتوي هذا الملف على قائمة العروض وقواعد الانتقال من واحدة إلى أخرى. بدءًا من الإصدار 2 من <bdi dir="ltr" class="odt-ltr-term">JSF</bdi>، يمكن إنشاء تعريفات <bdi dir="ltr" class="odt-ltr-term">bean</bdi> باستخدام التعليقات التوضيحية، ويمكن ترميز انتقالات الصفحات بشكل ثابت مباشرةً في كود <bdi dir="ltr" class="odt-ltr-term">bean.</bdi>
+  <li>في إصدارات <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> 1.x، يتم تعريف تعريفات <bdi dir="ltr" class="odt-ltr-term">bean</bdi> <b>وقواعد التنقل </b>من صفحة إلى أخرى في ملف [<bdi dir="ltr" class="odt-ltr-term">faces-config.xml</bdi>]. ويحتوي هذا الملف على قائمة العروض وقواعد الانتقال من واحدة إلى أخرى. بدءًا من الإصدار 2 من <bdi dir="ltr" class="odt-ltr-term">JSF</bdi>، يمكن إنشاء تعريفات <bdi dir="ltr" class="odt-ltr-term">bean</bdi> باستخدام التعليقات التوضيحية، ويمكن ترميز انتقالات الصفحات بشكل ثابت مباشرةً في كود <bdi dir="ltr" class="odt-ltr-term">bean.</bdi>
   </li>
 </ul>
 
@@ -1196,7 +1196,7 @@
 </code></pre></div></td></tr></table></div>
 <p>يرجى ملاحظة النقاط التالية:</p>
 <ul>
-  <li>الأسطر 9–14: سيتم استخدام ملف [<bdi dir="ltr" class="odt-ltr-term">messages.properties</bdi>] لتدويل الصفحة. وسيكون متاحًا في صفحات <bdi dir="ltr" class="odt-ltr-term">XHTML</bdi> عبر مفتاح <b><bdi dir="ltr" class="odt-ltr-term">msg</bdi></b>.
+  <li>الأسطر 9–14: سيتم استخدام ملف [<bdi dir="ltr" class="odt-ltr-term">messages.properties</bdi>] لتدويل الصفحة. وسيكون متاحًا في صفحات <bdi dir="ltr" class="odt-ltr-term">XHTML</bdi> عبر مفتاح <b>msg</b>.
   </li>
   <li>السطر 15: يحدد ملف [<bdi dir="ltr" class="odt-ltr-term">messages.properties</bdi>] كمصدر ذي أولوية لرسائل الخطأ التي تعرضها علامتا &lt;<bdi dir="ltr" class="odt-ltr-term">h:messages</bdi>&gt; و&lt;<bdi dir="ltr" class="odt-ltr-term">h:message</bdi>&gt;. وهذا يسمح لك بتجاوز بعض رسائل الخطأ الافتراضية في <bdi dir="ltr" class="odt-ltr-term">JSF.</bdi> لا يتم استخدام هذه الميزة هنا.
   </li>
@@ -1419,7 +1419,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>رقم
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">id</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>نوع <bdi dir="ltr" class="odt-ltr-term">JSF</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>نموذج</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>id</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>نوع <bdi dir="ltr" class="odt-ltr-term">JSF</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>نموذج</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>1
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">comboEmployees</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;<bdi dir="ltr" class="odt-ltr-term">h:selectOneMenu</bdi>&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة <bdi dir="ltr" class="odt-ltr-term">comboEmployeesValue</bdi></div><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">List</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">Employee</bdi>&gt; <bdi dir="ltr" class="odt-ltr-term">getEmployees</bdi>()</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تحتوي على قائمة الموظفين بالصيغة</div><div style="margin:0 0 0.5em 0"> &quot;الاسم الأول الاسم الأخير&quot;.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
@@ -1495,14 +1495,14 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>التي تحتوي على طرق <em><bdi dir="ltr" class="odt-ltr-term">get</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">set</bdi></em>.</p>
+<p>التي تحتوي على طرق <em>get</em> و <em>set</em>.</p>
 <p>لاسترداد المعلومات الموجودة في هذا الكائن، يمكنك كتابة تعبيرات مثل التالية في صفحة <bdi dir="ltr" class="odt-ltr-term">JSF:</bdi></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> FeuilleSalaire feuilleSalaire;</span></span></span>
 </code></pre></div>
 
 <p>سيتم تقييم التعبير الموجود في سمة <strong><bdi dir="ltr" class="odt-ltr-term">value</bdi></strong> على النحو التالي:</p>
-<p><em>[<bdi dir="ltr" class="odt-ltr-term">form</bdi>].<bdi dir="ltr" class="odt-ltr-term">getPayrollSheet</bdi>().<bdi dir="ltr" class="odt-ltr-term">getEmployee</bdi>().<bdi dir="ltr" class="odt-ltr-term">getName</bdi>()</em> حيث يمثل [<bdi dir="ltr" class="odt-ltr-term">form</bdi>] مثيلًا لفئة [<bdi dir="ltr" class="odt-ltr-term">Form.java</bdi>]. يمكن للقارئ التحقق من أن طرق <em><bdi dir="ltr" class="odt-ltr-term">get</bdi></em> المستخدمة هنا موجودة بالفعل في فئات [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">PayrollSheet</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">Employee</bdi>] على التوالي. إذا لم يكن الأمر كذلك، فسيتم إلقاء استثناء عند تقييم التعبير.</p>
+<p><em>[<bdi dir="ltr" class="odt-ltr-term">form</bdi>].<bdi dir="ltr" class="odt-ltr-term">getPayrollSheet</bdi>().<bdi dir="ltr" class="odt-ltr-term">getEmployee</bdi>().<bdi dir="ltr" class="odt-ltr-term">getName</bdi>()</em> حيث يمثل [<bdi dir="ltr" class="odt-ltr-term">form</bdi>] مثيلًا لفئة [<bdi dir="ltr" class="odt-ltr-term">Form.java</bdi>]. يمكن للقارئ التحقق من أن طرق <em>get</em> المستخدمة هنا موجودة بالفعل في فئات [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">PayrollSheet</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">Employee</bdi>] على التوالي. إذا لم يكن الأمر كذلك، فسيتم إلقاء استثناء عند تقييم التعبير.</p>
 <p>اختبر هذه النسخة الجديدة.</p>
 <p><a id="refheading87563112820228"></a></p>
 <h3 id="1043-3">10.4.3. <span style="color: #4f81bd">الخطوة 3</span></h3>
@@ -1511,7 +1511,7 @@
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002D80000020845D4ACF3.png" width="364" height="260" style="display:inline-block; margin:4px;width:9.631cm;height:6.879cm;" class="odt-zoomable" data-zoom-src="images/10000000000002D80000020845D4ACF3.png" /></td></tr></table>
 
-<p>سنتبع نفس النهج الذي اتبعناه من قبل. هناك مشكلة في رمز عملة اليورو الموجود في [1]، على سبيل المثال. في تطبيق دولي، يُفضل استخدام تنسيق العرض ورمز العملة الخاص <em>باللغة المحلية</em> المحددة (<bdi dir="ltr" class="odt-ltr-term">en</bdi>، <bdi dir="ltr" class="odt-ltr-term">de</bdi>، <bdi dir="ltr" class="odt-ltr-term">fr</bdi>، ...). ويمكن تحقيق ذلك على النحو التالي:</p>
+<p>سنتبع نفس النهج الذي اتبعناه من قبل. هناك مشكلة في رمز عملة اليورو الموجود في [1]، على سبيل المثال. في تطبيق دولي، يُفضل استخدام تنسيق العرض ورمز العملة الخاص <em>باللغة المحلية</em> المحددة (en، de، fr، ...). ويمكن تحقيق ذلك على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h:outputText </span><span style="color:#7f007f">value</span><span style="color:#000000">=</span>&quot;#{form.feuilleSalaire.employe.nom}&quot;<span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
@@ -1523,7 +1523,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">h:outputFormat</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>ولكن مع الإعدادات المحلية <em><bdi dir="ltr" class="odt-ltr-term">en</bdi>_GB</em> (الإنجليزية البريطانية)، سيظل المبلغ معروضًا باليورو بينما يجب أن يكون بالجنيه الإسترليني (£). تسمح علامة &lt;<strong><bdi dir="ltr" class="odt-ltr-term">h:outputFormat</bdi></strong>&gt; بعرض المعلومات بناءً على الإعدادات <em>المحلية</em> لصفحة <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> المعروضة:</p>
+<p>ولكن مع الإعدادات المحلية <em>en_GB</em> (الإنجليزية البريطانية)، سيظل المبلغ معروضًا باليورو بينما يجب أن يكون بالجنيه الإسترليني (£). تسمح علامة &lt;<strong><bdi dir="ltr" class="odt-ltr-term">h:outputFormat</bdi></strong>&gt; بعرض المعلومات بناءً على الإعدادات <em>المحلية</em> لصفحة <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> المعروضة:</p>
 <ul>
   <li>السطر 1: يعرض المعلمة {0}، وهي رقم يمثل مبلغًا نقديًا
   </li>
@@ -1553,7 +1553,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">f:subview</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>مع طرق <em><bdi dir="ltr" class="odt-ltr-term">get</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">set</bdi></em> الخاصة بها. ستقوم الطرق التي تتعامل مع النقرات على زري [<bdi dir="ltr" class="odt-ltr-term">Salary</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">Clear</bdi>] بتحديث هذه القيمة المنطقية اعتمادًا على ما إذا كان يجب عرض طريقة العرض <em><bdi dir="ltr" class="odt-ltr-term">viewInfos</bdi></em> أم لا.</p>
+<p>مع طرق <em>get</em> و <em>set</em> الخاصة بها. ستقوم الطرق التي تتعامل مع النقرات على زري [<bdi dir="ltr" class="odt-ltr-term">Salary</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">Clear</bdi>] بتحديث هذه القيمة المنطقية اعتمادًا على ما إذا كان يجب عرض طريقة العرض <em><bdi dir="ltr" class="odt-ltr-term">viewInfos</bdi></em> أم لا.</p>
 
 
 
