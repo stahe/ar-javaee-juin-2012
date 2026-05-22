@@ -1112,7 +1112,7 @@
 <p><a id="refheading2816931991350288"></a></p>
 <h2 id="41-jpa">4.1. <span style="color: #4f81bd">دور <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> في البنية الطبقية</span></h2>
 <p>يُنصح القراء بمراجعة بداية هذا المستند (الفقرة<a href="#architecture-en-couches"><u><span style="color: #0563c1"> 2</span></u></a>)، التي تشرح دور طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> في بنية الطبقات. طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> هي جزء من طبقات الوصول إلى البيانات:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007B5000001268D6ACBF0.png" width="680" height="101" style="display:inline-block; margin:4px;width:17.999cm;height:2.683cm;" class="odt-zoomable" data-zoom-src="images/10000000000007B5000001268D6ACBF0.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007B5000001268D6ACBF0.png" width="680" height="101" style="display:inline-block; margin:4px;width:17.999cm;height:2.683cm;" class="odt-zoomable" data-zoom-src="images/10000000000007B5000001268D6ACBF0.png" /></td></tr></table>
 
 <p>تتفاعل طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] مع مواصفات <bdi dir="ltr" class="odt-ltr-term">JPA.</bdi> وبغض النظر عن المنتج الذي ينفذها، تظل واجهة طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> المعروضة على طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] كما هي. وفيما يلي، نقدم بعض الأمثلة من [<strong><bdi dir="ltr" class="odt-ltr-term">ref1</bdi></strong>] التي ستساعدنا في بناء طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> الخاصة بنا.</p>
 <p><a id="refheading2816951991350288"></a></p>
@@ -1123,35 +1123,35 @@
 <p><a id="refheading2816991991350288"></a></p>
 <h4 id="4211-person">4.2.1.1. <span style="color: #4f81bd">جدول [<bdi dir="ltr" class="odt-ltr-term">person</bdi>]</span></h4>
 <p>لنفترض وجود قاعدة بيانات تحتوي على جدول [<bdi dir="ltr" class="odt-ltr-term">person</bdi>] واحد، وتتمثل وظيفته في تخزين بعض المعلومات عن الأفراد:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000179000000F145E696BB.png" width="264" height="169" style="display:inline-block; margin:4px;width:6.98cm;height:4.463cm;" class="odt-zoomable" data-zoom-src="images/1000000000000179000000F145E696BB.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000179000000F145E696BB.png" width="264" height="169" style="display:inline-block; margin:4px;width:6.98cm;height:4.463cm;" class="odt-zoomable" data-zoom-src="images/1000000000000179000000F145E696BB.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>الرقم التعريفي
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">المفتاح الأساسي للجدول</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">المفتاح الأساسي للجدول</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>VERSION
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">إصدار الصف في الجدول. في كل مرة يتم فيها تعديل الشخص، يتم زيادة رقم الإصدار الخاص به.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">إصدار الصف في الجدول. في كل مرة يتم فيها تعديل الشخص، يتم زيادة رقم الإصدار الخاص به.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>الاسم
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اللقب</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">اللقب</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>FIRST_NAME
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الاسم الأول</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">الاسم الأول</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>تاريخ الميلاد
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تاريخ ميلادهم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">تاريخ ميلادهم</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>متزوج
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عدد صحيح 0 (غير متزوج) أو 1 (متزوج)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">عدد صحيح 0 (غير متزوج) أو 1 (متزوج)</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>NBENFANTS
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عدد الأطفال</div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">عدد الأطفال</div></td></tr></table>
 
 <p><a id="refheading2817011991350288"></a></p>
 <h4 id="4212">4.2.1.2. <span style="color: #4f81bd">كيان [الشخص]</span></h4>
 <p>نحن في بيئة التشغيل التالية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007B300000123619AA66A.png" width="680" height="100" style="display:inline-block; margin:4px;width:17.999cm;height:2.656cm;" class="odt-zoomable" data-zoom-src="images/10000000000007B300000123619AA66A.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007B300000123619AA66A.png" width="680" height="100" style="display:inline-block; margin:4px;width:17.999cm;height:2.656cm;" class="odt-zoomable" data-zoom-src="images/10000000000007B300000123619AA66A.png" /></td></tr></table>
 
 <p>يجب أن تعمل طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> [5] كجسر بين عالم قواعد البيانات العلائقية [7] وعالم الكائنات [4] الذي تتعامل معه برامج <bdi dir="ltr" class="odt-ltr-term">Java</bdi> [3]. يتم إنشاء هذا الجسر من خلال التكوين، وهناك طريقتان للقيام بذلك:</p>
 <ol>
@@ -1243,16 +1243,16 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Firebird
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يستخدم مولد قيم يتم استدعاؤه قبل كل عملية إدراج</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يستخدم مولد قيم يتم استدعاؤه قبل كل عملية إدراج</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>SQL Server
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يتم تعريف حقل المفتاح الأساسي على أنه من النوع <i><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></i>. والنتيجة مشابهة لمولد القيم في <bdi dir="ltr" class="odt-ltr-term">Firebird</bdi>، باستثناء أن قيمة المفتاح لا تُعرف إلا بعد إدراج الصف.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يتم تعريف حقل المفتاح الأساسي على أنه من النوع <i><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></i>. والنتيجة مشابهة لمولد القيم في <bdi dir="ltr" class="odt-ltr-term">Firebird</bdi>، باستثناء أن قيمة المفتاح لا تُعرف إلا بعد إدراج الصف.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Oracle
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يستخدم كائنًا يسمى <bdi dir="ltr" class="odt-ltr-term">SEQUENCE</bdi>، والذي يعمل بدوره كمولد للقيم</div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يستخدم كائنًا يسمى <bdi dir="ltr" class="odt-ltr-term">SEQUENCE</bdi>، والذي يعمل بدوره كمولد للقيم</div></td></tr></table>
 
 <p>يجب أن تولد طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> عبارات <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> مختلفة اعتمادًا على نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) لإنشاء مولد القيم. يتم تكوينها لتحديد نوع نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) الذي يجب أن تتعامل معه. ونتيجة لذلك، يمكنها تحديد الإستراتيجية القياسية لتوليد قيم المفتاح الأساسي لنظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) هذا. توجه الحجة <strong><code>strategy =** ***GenerationType*****.*****AUTO</code></strong>* طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> لاستخدام هذه الإستراتيجية القياسية. وقد نجحت هذه التقنية في جميع الأمثلة الواردة في هذا المستند بالنسبة لنظم إدارة قواعد البيانات السبعة المستخدمة.</p>
 <ul>
@@ -1299,7 +1299,7 @@
 <p><a id="refheading2817031991350288"></a></p>
 <h3 id="422-jpa">4.2.2. <span style="color: #4f81bd">تكوين طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi></span></h3>
 <p>يمكن إجراء اختبارات طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> باستخدام البنية التالية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000078F0000013FA34124A8.png" width="680" height="112" style="display:inline-block; margin:4px;width:17.999cm;height:2.967cm;" class="odt-zoomable" data-zoom-src="images/100000000000078F0000013FA34124A8.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000078F0000013FA34124A8.png" width="680" height="112" style="display:inline-block; margin:4px;width:17.999cm;height:2.967cm;" class="odt-zoomable" data-zoom-src="images/100000000000078F0000013FA34124A8.png" /></td></tr></table>
 
 <ul>
   <li>في [7]: قاعدة البيانات التي سيتم إنشاؤها من تعليقات الكيان [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>] بالإضافة إلى التكوينات الإضافية التي تم إجراؤها في ملف يسمى [<bdi dir="ltr" class="odt-ltr-term">persistence.xml</bdi>]
@@ -1313,7 +1313,7 @@
 </ul>
 
 <p>يتم تكوين طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> عبر ملف [<bdi dir="ltr" class="odt-ltr-term">META-INF/persistence.xml</bdi>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000069F000001D765E35341.png" width="680" height="189" style="display:inline-block; margin:4px;width:17.999cm;height:5.001cm;" class="odt-zoomable" data-zoom-src="images/100000000000069F000001D765E35341.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000069F000001D765E35341.png" width="680" height="189" style="display:inline-block; margin:4px;width:17.999cm;height:5.001cm;" class="odt-zoomable" data-zoom-src="images/100000000000069F000001D765E35341.png" /></td></tr></table>
 
 <p>أثناء وقت التشغيل، يتم البحث عن ملف [<bdi dir="ltr" class="odt-ltr-term">META-INF/persistence.xml</bdi>] في <em>مسار فئات</em> التطبيق.</p>
 <p>دعونا نفحص تكوين طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> في ملف [<bdi dir="ltr" class="odt-ltr-term">persistence.xml</bdi>] الخاص بمشروعنا:</p>
@@ -1352,7 +1352,7 @@
 </code></pre></div>
 
 <p>لفهم هذا التكوين، نحتاج إلى إعادة النظر في بنية الوصول إلى البيانات في تطبيقنا:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007610000011ECE500FB4.png" width="680" height="103" style="display:inline-block; margin:4px;width:17.999cm;height:2.725cm;" class="odt-zoomable" data-zoom-src="images/10000000000007610000011ECE500FB4.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007610000011ECE500FB4.png" width="680" height="103" style="display:inline-block; margin:4px;width:17.999cm;height:2.725cm;" class="odt-zoomable" data-zoom-src="images/10000000000007610000011ECE500FB4.png" /></td></tr></table>
 
 <ul>
   <li>يقوم ملف [<bdi dir="ltr" class="odt-ltr-term">persistence.xml</bdi>] بتكوين الطبقات [4، 5، 6]
@@ -1429,9 +1429,9 @@
 <p><a id="refheading2817071991350288"></a>
 <a id="bd-hb-categorie-article-1"></a></p>
 <h4 id="4231">4.2.3.1. <span style="color: #4f81bd">ملف مخطط قاعدة البيانات [</span></h4>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>1</b></div><img src="images/10000000000000D6000000F5F8985F82.png" width="150" height="171" style="display:inline-block; margin:4px;width:3.96cm;height:4.533cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D6000000F5F8985F82.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>2</b></div><div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>1</b></div><img src="images/10000000000000D6000000F5F8985F82.png" width="150" height="171" style="display:inline-block; margin:4px;width:3.96cm;height:4.533cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D6000000F5F8985F82.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>2</b></div><div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800000">تعديل الجدول </span><span style="color:#000000">jpa06_article</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800000">حذف</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800000">المفتاح الخارجي </span><span style="color:#000000">FKFFBDD9D8ECCE8750؛</span></span></span>
@@ -1467,7 +1467,7 @@
   </li>
 </ul>
 
-<p>ينتمي <strong>المقال</strong> <bdi dir="ltr" class="odt-ltr-term">A</bdi>(id, <bdi dir="ltr" class="odt-ltr-term">version</bdi>, <bdi dir="ltr" class="odt-ltr-term">name</bdi>) إلى فئة واحدة فقط <bdi dir="ltr" class="odt-ltr-term">C</bdi>(id, <bdi dir="ltr" class="odt-ltr-term">version</bdi>, <bdi dir="ltr" class="odt-ltr-term">name</bdi>). يمكن أن تحتوي <strong>الفئة</strong> <bdi dir="ltr" class="odt-ltr-term">C</bdi> على 0 أو 1 أو أكثر من المقالات. لدينا علاقة <strong>واحد إلى العديد</strong> (الفئة -&gt; المقالة) والعلاقة العكسية <strong>العديد إلى واحد</strong> (المقالة -&gt; الفئة). يتم تمثيل هذه العلاقة بواسطة المفتاح الخارجي الذي يمتلكه جدول [<bdi dir="ltr" class="odt-ltr-term">article</bdi>] في جدول [<bdi dir="ltr" class="odt-ltr-term">category</bdi>] (الأسطر 24–28 من <bdi dir="ltr" class="odt-ltr-term">DDL</bdi>).</p>
+<p>ينتمي <strong>المقال</strong> <bdi dir="ltr" class="odt-ltr-term">A</bdi>(<bdi dir="ltr" class="odt-ltr-term">id, version, name</bdi>) إلى فئة واحدة فقط <bdi dir="ltr" class="odt-ltr-term">C</bdi>(<bdi dir="ltr" class="odt-ltr-term">id, version, name</bdi>). يمكن أن تحتوي <strong>الفئة</strong> <bdi dir="ltr" class="odt-ltr-term">C</bdi> على 0 أو 1 أو أكثر من المقالات. لدينا علاقة <strong>واحد إلى العديد</strong> (الفئة -&gt; المقالة) والعلاقة العكسية <strong>العديد إلى واحد</strong> (المقالة -&gt; الفئة). يتم تمثيل هذه العلاقة بواسطة المفتاح الخارجي الذي يمتلكه جدول [<bdi dir="ltr" class="odt-ltr-term">article</bdi>] في جدول [<bdi dir="ltr" class="odt-ltr-term">category</bdi>] (الأسطر 24–28 من <bdi dir="ltr" class="odt-ltr-term">DDL</bdi>).</p>
 <p><a id="refheading2817091991350288"></a></p>
 <h4 id="4232-entity">4.2.3.2. <span style="color: #4f81bd">كائنات @<bdi dir="ltr" class="odt-ltr-term">Entity</bdi> التي تمثل قاعدة البيانات</span></h4>
 <p>يتم تمثيل المقالة بواسطة <strong>@<bdi dir="ltr" class="odt-ltr-term">Entity</bdi></strong> [<bdi dir="ltr" class="odt-ltr-term">Article</bdi>] التالية:</p>
@@ -1613,7 +1613,7 @@
 <p><a id="refheading319131812363491"></a></p>
 <h2 id="43-jpa">4.3. <span style="color: #4f81bd">واجهة برمجة تطبيقات طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi></span></h2>
 <p>دعونا نوضح بيئة وقت التشغيل لعميل <bdi dir="ltr" class="odt-ltr-term">JPA:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000536000001B6C80EA6F7.png" width="667" height="219" style="display:inline-block; margin:4px;width:17.648cm;height:5.794cm;" class="odt-zoomable" data-zoom-src="images/1000000000000536000001B6C80EA6F7.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000536000001B6C80EA6F7.png" width="667" height="219" style="display:inline-block; margin:4px;width:17.648cm;height:5.794cm;" class="odt-zoomable" data-zoom-src="images/1000000000000536000001B6C80EA6F7.png" /></td></tr></table>
 
 <p>نعلم أن طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> [2] تُنشئ جسراً بين المجال الكائني [3] والمجال العلائقي [4]. تُسمى مجموعة الكائنات التي تديرها طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> ضمن هذا الجسر الكائني/العلائقي بـ&quot;سياق الاستمرارية&quot;. للوصول إلى البيانات في سياق الاستمرارية، يجب على عميل <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> [1] المرور عبر طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> [2]:</p>
 <ol>
@@ -1628,29 +1628,29 @@
 </ol>
 
 <p>توفر طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> للعميل واجهة تسمى [<bdi dir="ltr" class="odt-ltr-term">EntityManager</bdi>] والتي، كما يوحي اسمها، تسمح بإدارة كائنات @<bdi dir="ltr" class="odt-ltr-term">Entity</bdi> في سياق الاستمرارية. فيما يلي الطرق الرئيسية لهذه الواجهة:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>void persist(Object entity)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تضيف <i>الكيان </i>إلى سياق الاستمرارية</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">تضيف <i>الكيان </i>إلى سياق الاستمرارية</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>void remove(Object entity)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يزيل <i>الكيان </i>من سياق الاستمرارية</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يزيل <i>الكيان </i>من سياق الاستمرارية</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>&lt;T&gt; T merge(T entity)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يدمج كائن <i>كيان </i>من العميل لا يديره سياق الاستمرارية</div><div style="margin:0 0 0.5em 0">مع كائن <i>الكيان </i>الموجود في سياق الاستمرارية الذي يحمل نفس المفتاح الأساسي.</div><div style="margin:0 0 0.5em 0">والنتيجة التي يتم إرجاعها هي كائن <i>الكيان </i>من سياق الاستمرارية.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يدمج كائن <i>كيان </i>من العميل لا يديره سياق الاستمرارية</div><div style="margin:0 0 0.5em 0">مع كائن <i>الكيان </i>الموجود في سياق الاستمرارية الذي يحمل نفس المفتاح الأساسي.</div><div style="margin:0 0 0.5em 0">والنتيجة التي يتم إرجاعها هي كائن <i>الكيان </i>من سياق الاستمرارية.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&lt;T&gt; T find(Class&lt;T&gt; entityClass,
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Object primaryKey)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يضع كائنًا تم استرداده من قاعدة البيانات في سياق الاستمرارية</div><div style="margin:0 0 0.5em 0">عبر مفتاحه الأساسي. يسمح نوع <bdi dir="ltr" class="odt-ltr-term">T</bdi> للكائن لطبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi></div><div style="margin:0 0 0.5em 0">بمعرفة الجدول الذي يجب الاستعلام عنه. يتم إرجاع الكائن الدائم الذي تم إنشاؤه بهذه الطريقة إلى العميل.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يضع كائنًا تم استرداده من قاعدة البيانات في سياق الاستمرارية</div><div style="margin:0 0 0.5em 0">عبر مفتاحه الأساسي. يسمح نوع <bdi dir="ltr" class="odt-ltr-term">T</bdi> للكائن لطبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi></div><div style="margin:0 0 0.5em 0">بمعرفة الجدول الذي يجب الاستعلام عنه. يتم إرجاع الكائن الدائم الذي تم إنشاؤه بهذه الطريقة إلى العميل.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>الاستعلام createQuery(String queryText)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ينشئ كائن <b>استعلام </b>من <bdi dir="ltr" class="odt-ltr-term">JPQL</bdi> (لغة استعلام استمرارية <bdi dir="ltr" class="odt-ltr-term">Java</bdi></div><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">Query Language</bdi>). استعلام <bdi dir="ltr" class="odt-ltr-term">JPQL</bdi> مشابه لاستعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi>،</div><div style="margin:0 0 0.5em 0">باستثناء أنه يستعلم عن الكائنات بدلاً من الجداول.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">ينشئ كائن <b>استعلام </b>من <bdi dir="ltr" class="odt-ltr-term">JPQL</bdi> (لغة استعلام استمرارية <bdi dir="ltr" class="odt-ltr-term">Java</bdi></div><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">Query Language</bdi>). استعلام <bdi dir="ltr" class="odt-ltr-term">JPQL</bdi> مشابه لاستعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi>،</div><div style="margin:0 0 0.5em 0">باستثناء أنه يستعلم عن الكائنات بدلاً من الجداول.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Query createNativeQuery(String queryText)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طريقة مشابهة للطريقة السابقة، باستثناء أن <i><bdi dir="ltr" class="odt-ltr-term">queryText</bdi> </i>هو</div><div style="margin:0 0 0.5em 0">استعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> بدلاً من استعلام <bdi dir="ltr" class="odt-ltr-term">JPQL.</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">طريقة مشابهة للطريقة السابقة، باستثناء أن <i><bdi dir="ltr" class="odt-ltr-term">queryText</bdi> </i>هو</div><div style="margin:0 0 0.5em 0">استعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> بدلاً من استعلام <bdi dir="ltr" class="odt-ltr-term">JPQL.</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>الاستعلام createNamedQuery(String name)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طريقة مطابقة لـ <i><bdi dir="ltr" class="odt-ltr-term">createQuery</bdi></i>، باستثناء أن استعلام <bdi dir="ltr" class="odt-ltr-term">JPQL</bdi> <i><bdi dir="ltr" class="odt-ltr-term">queryText</bdi> </i>قد</div><div style="margin:0 0 0.5em 0">تم إخراجه إلى ملف تكوين وربطه باسم.</div><div style="margin:0 0 0.5em 0">هذا الاسم هو معلمة الطريقة.</div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">طريقة مطابقة لـ <i><bdi dir="ltr" class="odt-ltr-term">createQuery</bdi></i>، باستثناء أن استعلام <bdi dir="ltr" class="odt-ltr-term">JPQL</bdi> <i><bdi dir="ltr" class="odt-ltr-term">queryText</bdi> </i>قد</div><div style="margin:0 0 0.5em 0">تم إخراجه إلى ملف تكوين وربطه باسم.</div><div style="margin:0 0 0.5em 0">هذا الاسم هو معلمة الطريقة.</div></td></tr></table>
 
 <p>يتمتع كائن <strong><bdi dir="ltr" class="odt-ltr-term">EntityManager</bdi></strong> بدورة حياة لا تتطابق بالضرورة مع دورة حياة التطبيق. له بداية ونهاية. وبالتالي، يمكن لعميل <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> العمل بالتتابع مع كائنات <em><bdi dir="ltr" class="odt-ltr-term">EntityManager</bdi></em> مختلفة. يتمتع سياق الاستمرارية المرتبط بـ <em><bdi dir="ltr" class="odt-ltr-term">EntityManager</bdi></em> بنفس دورة حياة <bdi dir="ltr" class="odt-ltr-term">EntityManager</bdi> نفسه. فهما لا ينفصلان عن بعضهما البعض. عند إغلاق كائن <bdi dir="ltr" class="odt-ltr-term">EntityManager</bdi>، يتم مزامنة سياق الاستمرارية الخاص به، إذا لزم الأمر، مع قاعدة البيانات ثم يتوقف عن الوجود. يجب إنشاء <em><bdi dir="ltr" class="odt-ltr-term">EntityManager</bdi></em> جديد للحصول على سياق استمرارية جديد.</p>
 <p>يمكن لعميل <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> إنشاء <em><bdi dir="ltr" class="odt-ltr-term">EntityManager</bdi></em> وبالتالي سياق استمرارية باستخدام العبارة التالية:</p>
@@ -1671,33 +1671,33 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>        EntityManager em = emf.createEntityManager();
 </code></pre></div>
 <p>تسمح لك الطرق التالية لواجهة [<bdi dir="ltr" class="odt-ltr-term">EntityManager</bdi>] بإدارة دورة حياة سياق الاستمرارية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>void close()
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يتم إغلاق سياق الاستمرارية. يفرض مزامنة سياق الاستمرارية مع قاعدة البيانات:</div><ul>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يتم إغلاق سياق الاستمرارية. يفرض مزامنة سياق الاستمرارية مع قاعدة البيانات:</div><ul>
   <li>إذا لم يكن كائن في السياق موجودًا في قاعدة البيانات، يتم إدراجه عبر عملية <bdi dir="ltr" class="odt-ltr-term">SQL INSERT</bdi>)
   </li>
   <li>إذا كان كائن في السياق موجودًا في قاعدة البيانات وتم تعديله منذ قراءته، يتم تنفيذ عملية <bdi dir="ltr" class="odt-ltr-term">SQL UPDATE</bdi> لإبقاء التعديل
   </li>
   <li>إذا تم وضع علامة &quot;محذوف&quot; على كائن في السياق بعد إجراء عملية <i>إزالة </i>عليه، يتم تنفيذ عملية <bdi dir="ltr" class="odt-ltr-term">SQL DELETE</bdi> لإزالته من قاعدة البيانات.
   </li>
-</ul></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</ul></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>void clear()
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يتم مسح سياق الاستمرارية من جميع كائناته ولكن لا يتم إغلاقه.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يتم مسح سياق الاستمرارية من جميع كائناته ولكن لا يتم إغلاقه.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>void flush()
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يتم مزامنة سياق الاستمرارية مع قاعدة البيانات كما هو موضح في <i><bdi dir="ltr" class="odt-ltr-term">close</bdi>()</i></div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يتم مزامنة سياق الاستمرارية مع قاعدة البيانات كما هو موضح في <i><bdi dir="ltr" class="odt-ltr-term">close</bdi>()</i></div></td></tr></table>
 
 <p>يمكن لعميل <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> فرض مزامنة سياق الاستمرارية مع قاعدة البيانات باستخدام طريقة [<bdi dir="ltr" class="odt-ltr-term">EntityManager</bdi>].<em><bdi dir="ltr" class="odt-ltr-term">flush</bdi></em>. يمكن أن تكون المزامنة صريحة أو ضمنية. في الحالة الأولى، يعود الأمر للعميل لتنفيذ عمليات <em>التصفية</em> عندما يرغب في المزامنة؛ وإلا، تحدث المزامنة في أوقات محددة سنحددها. يتم إدارة وضع المزامنة بواسطة الطرق التالية لواجهة [<bdi dir="ltr" class="odt-ltr-term">EntityManager</bdi>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>void setFlushMode(FlushModeType
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>flushMode)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">هناك قيمتان محتملتان لـ <i><bdi dir="ltr" class="odt-ltr-term">flushMode</bdi></i>:</div><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">FlushModeType.AUTO</bdi> </b>(الافتراضي): تتم المزامنة قبل</div><div style="margin:0 0 0.5em 0">كل استعلام <bdi dir="ltr" class="odt-ltr-term">SELECT</bdi> يتم إجراؤه على قاعدة البيانات.</div><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">FlushModeType.COMMIT</bdi></b>: تتم المزامنة فقط عند</div><div style="margin:0 0 0.5em 0">نهاية المعاملات في قاعدة البيانات.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">هناك قيمتان محتملتان لـ <i><bdi dir="ltr" class="odt-ltr-term">flushMode</bdi></i>:</div><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">FlushModeType.AUTO</bdi> </b>(الافتراضي): تتم المزامنة قبل</div><div style="margin:0 0 0.5em 0">كل استعلام <bdi dir="ltr" class="odt-ltr-term">SELECT</bdi> يتم إجراؤه على قاعدة البيانات.</div><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">FlushModeType.COMMIT</bdi></b>: تتم المزامنة فقط عند</div><div style="margin:0 0 0.5em 0">نهاية المعاملات في قاعدة البيانات.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>FlushModeType getFlushMode()
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يعيد وضع التزامن الحالي</div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يعيد وضع التزامن الحالي</div></td></tr></table>
 
 <p>باختصار: في الوضع <strong><bdi dir="ltr" class="odt-ltr-term">FlushModeType.AUTO</bdi></strong>، وهو الوضع الافتراضي، سيتم مزامنة سياق الاستمرارية مع قاعدة البيانات في الأوقات التالية:</p>
 <ol>
@@ -1711,7 +1711,7 @@
 
 <p>في وضع <strong><bdi dir="ltr" class="odt-ltr-term">FlushModeType.COMMIT</bdi></strong>، ينطبق الأمر نفسه باستثناء العملية 1، التي لا تحدث. الوضع العادي للتفاعل مع طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> هو الوضع المعاملاتي. يقوم العميل بتنفيذ عمليات مختلفة على سياق الاستمرارية ضمن معاملة. في هذه الحالة، تكون نقاط المزامنة بين سياق الاستمرارية وقاعدة البيانات هي الحالتان 1 و 2 أعلاه في وضع <bdi dir="ltr" class="odt-ltr-term">AUTO</bdi>، والحالة 2 فقط في وضع <bdi dir="ltr" class="odt-ltr-term">COMMIT.</bdi></p>
 <p>لنختتم بواجهة برمجة التطبيقات (<bdi dir="ltr" class="odt-ltr-term">API</bdi>) <strong><bdi dir="ltr" class="odt-ltr-term">Query</bdi></strong>، التي تسمح لك بإصدار أوامر <bdi dir="ltr" class="odt-ltr-term">JPQL</bdi> على سياق الاستمرارية أو أوامر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> مباشرة على قاعدة البيانات لاسترداد البيانات. واجهة <strong><bdi dir="ltr" class="odt-ltr-term">Query</bdi></strong> هي كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003C50000035949EAA0AF.png" width="483" height="429" style="display:inline-block; margin:4px;width:12.767cm;height:11.338cm;" class="odt-zoomable" data-zoom-src="images/10000000000003C50000035949EAA0AF.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003C50000035949EAA0AF.png" width="483" height="429" style="display:inline-block; margin:4px;width:12.767cm;height:11.338cm;" class="odt-zoomable" data-zoom-src="images/10000000000003C50000035949EAA0AF.png" /></td></tr></table>
 
 <ul>
   <li>1 - تقوم طريقة <b><bdi dir="ltr" class="odt-ltr-term">getResultList</bdi> </b>بتنفيذ استعلام <bdi dir="ltr" class="odt-ltr-term">SELECT</bdi> الذي يُرجع كائنات متعددة. يتم إرجاع هذه الكائنات في كائن <i><bdi dir="ltr" class="odt-ltr-term">List</bdi></i>. هذا الكائن هو واجهة. يوفر كائن <i><bdi dir="ltr" class="odt-ltr-term">Iterator</bdi> </i>الذي يسمح لك بالتكرار عبر عناصر القائمة <bdi dir="ltr" class="odt-ltr-term">L</bdi> كما يلي:
@@ -1738,9 +1738,9 @@
   </li>
   <li>3 - تقوم طريقة <b><bdi dir="ltr" class="odt-ltr-term">executeUpdate</bdi> </b>بتنفيذ عبارة <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> <b><bdi dir="ltr" class="odt-ltr-term">UPDATE</bdi> </b>أو <b><bdi dir="ltr" class="odt-ltr-term">DELETE</bdi> </b>وتُرجع عدد الصفوف التي تأثرت بالعملية.
   </li>
-  <li>4 - تسمح لك طريقة<b> <bdi dir="ltr" class="odt-ltr-term">setParameter</bdi>(<bdi dir="ltr" class="odt-ltr-term">String</bdi>, <bdi dir="ltr" class="odt-ltr-term">Object</bdi>) </b>بتعيين قيمة لمعلمة مسماة في استعلام <bdi dir="ltr" class="odt-ltr-term">JPQL</bdi> معلم
+  <li>4 - تسمح لك طريقة<b> <bdi dir="ltr" class="odt-ltr-term">setParameter</bdi>(<bdi dir="ltr" class="odt-ltr-term">String, Object</bdi>) </b>بتعيين قيمة لمعلمة مسماة في استعلام <bdi dir="ltr" class="odt-ltr-term">JPQL</bdi> معلم
   </li>
-  <li>5 - تحدد طريقة<b> <bdi dir="ltr" class="odt-ltr-term">setParameter</bdi>(int, <bdi dir="ltr" class="odt-ltr-term">Object</bdi>) </b>المعلمة، ولكن لا يتم تحديد المعلمة باسمها بل بموقعها في استعلام <bdi dir="ltr" class="odt-ltr-term">JPQL.</bdi>
+  <li>5 - تحدد طريقة<b> <bdi dir="ltr" class="odt-ltr-term">setParameter</bdi>(<bdi dir="ltr" class="odt-ltr-term">int, Object</bdi>) </b>المعلمة، ولكن لا يتم تحديد المعلمة باسمها بل بموقعها في استعلام <bdi dir="ltr" class="odt-ltr-term">JPQL.</bdi>
   </li>
 </ul>
 
@@ -1748,16 +1748,16 @@
 <a id="jpql"></a></p>
 <h2 id="44-s-jpql">4.4. <span style="color: #4f81bd">s (<bdi dir="ltr" class="odt-ltr-term">JPQL</bdi>)</span></h2>
 <p><bdi dir="ltr" class="odt-ltr-term">JPQL</bdi> (لغة استعلام الاستمرارية في <bdi dir="ltr" class="odt-ltr-term">Java</bdi>) هي لغة الاستعلام الخاصة بطبقة <bdi dir="ltr" class="odt-ltr-term">JPA.</bdi> تشبه لغة <bdi dir="ltr" class="odt-ltr-term">JPQL</bdi> لغة <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> المستخدمة في قواعد البيانات. بينما تعمل لغة <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> مع الجداول، تعمل لغة <bdi dir="ltr" class="odt-ltr-term">JPQL</bdi> مع الكائنات التي تمثل تلك الجداول. سنقوم بفحص مثال ضمن البنية التالية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000446000000B3FE0C69AA.png" width="547" height="89" style="display:inline-block; margin:4px;width:14.473cm;height:2.367cm;" class="odt-zoomable" data-zoom-src="images/1000000000000446000000B3FE0C69AA.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000446000000B3FE0C69AA.png" width="547" height="89" style="display:inline-block; margin:4px;width:14.473cm;height:2.367cm;" class="odt-zoomable" data-zoom-src="images/1000000000000446000000B3FE0C69AA.png" /></td></tr></table>
 
 <p>قاعدة البيانات، التي سنسميها [<a id="dbrdvmedecins"></a> <bdi dir="ltr" class="odt-ltr-term">dbrdvmedecins2</bdi>]، هي قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL5</bdi> تحتوي على أربعة جداول:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000CE0000006EB8CE00C1.png" width="165" height="88" style="display:inline-block; margin:4px;width:4.36cm;height:2.328cm;" class="odt-zoomable" data-zoom-src="images/10000000000000CE0000006EB8CE00C1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000CE0000006EB8CE00C1.png" width="165" height="88" style="display:inline-block; margin:4px;width:4.36cm;height:2.328cm;" class="odt-zoomable" data-zoom-src="images/10000000000000CE0000006EB8CE00C1.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
 <p>يجمع هذا الجدول المعلومات المستخدمة لإدارة مواعيد مجموعة من الأطباء.</p>
 <p><a id="refheading73508604163464"></a></p>
 <h3 id="441-medecins">4.4.1. <span style="color: #4f81bd">جدول [<bdi dir="ltr" class="odt-ltr-term">MEDECINS</bdi>]</span></h3>
 <p>يحتوي على معلومات عن الأطباء.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013B0000009140E8B0E1.png" width="220" height="101" style="display:inline-block; margin:4px;width:5.83cm;height:2.685cm;" class="odt-zoomable" data-zoom-src="images/100000000000013B0000009140E8B0E1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001830000006A63E8B6FD.png" width="271" height="74" style="display:inline-block; margin:4px;width:7.17cm;height:1.963cm;" class="odt-zoomable" data-zoom-src="images/10000000000001830000006A63E8B6FD.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000013B0000009140E8B0E1.png" width="220" height="101" style="display:inline-block; margin:4px;width:5.83cm;height:2.685cm;" class="odt-zoomable" data-zoom-src="images/100000000000013B0000009140E8B0E1.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001830000006A63E8B6FD.png" width="271" height="74" style="display:inline-block; margin:4px;width:7.17cm;height:1.963cm;" class="odt-zoomable" data-zoom-src="images/10000000000001830000006A63E8B6FD.png" /></td></tr></table>
 
 <ul>
   <li><bdi dir="ltr" class="odt-ltr-term">ID:</bdi> رقم تعريف الطبيب — المفتاح الأساسي للجدول
@@ -1774,7 +1774,7 @@
 <p><a id="refheading73510604163464"></a></p>
 <h3 id="442-clients">4.4.2. <span style="color: #4f81bd">جدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]</span></h3>
 <p>يتم تخزين عملاء الأطباء المختلفين في جدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015C0000009211F9EF53.png" width="244" height="102" style="display:inline-block; margin:4px;width:6.451cm;height:2.706cm;" class="odt-zoomable" data-zoom-src="images/100000000000015C0000009211F9EF53.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001720000006D8D331F7F.png" width="259" height="76" style="display:inline-block; margin:4px;width:6.849cm;height:2.018cm;" class="odt-zoomable" data-zoom-src="images/10000000000001720000006D8D331F7F.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000015C0000009211F9EF53.png" width="244" height="102" style="display:inline-block; margin:4px;width:6.451cm;height:2.706cm;" class="odt-zoomable" data-zoom-src="images/100000000000015C0000009211F9EF53.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001720000006D8D331F7F.png" width="259" height="76" style="display:inline-block; margin:4px;width:6.849cm;height:2.018cm;" class="odt-zoomable" data-zoom-src="images/10000000000001720000006D8D331F7F.png" /></td></tr></table>
 
 <ul>
   <li><bdi dir="ltr" class="odt-ltr-term">ID:</bdi> رقم التعريف الذي يحدد العميل - المفتاح الأساسي للجدول
@@ -1791,9 +1791,9 @@
 <p><a id="refheading73512604163464"></a></p>
 <h3 id="443-slots">4.4.3. <span style="color: #4f81bd">جدول [<bdi dir="ltr" class="odt-ltr-term">SLOTS</bdi>]</span></h3>
 <p>يسرد المواعيد المتاحة: </p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000170000000B33347BA3C.png" width="258" height="125" style="display:inline-block; margin:4px;width:6.819cm;height:3.318cm;" class="odt-zoomable" data-zoom-src="images/1000000000000170000000B33347BA3C.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000170000000B33347BA3C.png" width="258" height="125" style="display:inline-block; margin:4px;width:6.819cm;height:3.318cm;" class="odt-zoomable" data-zoom-src="images/1000000000000170000000B33347BA3C.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005500000014368DD02F7.png" width="680" height="161" style="display:inline-block; margin:4px;width:17.992cm;height:4.272cm;" class="odt-zoomable" data-zoom-src="images/10000000000005500000014368DD02F7.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005500000014368DD02F7.png" width="680" height="161" style="display:inline-block; margin:4px;width:17.992cm;height:4.272cm;" class="odt-zoomable" data-zoom-src="images/10000000000005500000014368DD02F7.png" /></td></tr></table>
 
 <ul>
   <li><bdi dir="ltr" class="odt-ltr-term">ID:</bdi> رقم تعريف الفترة الزمنية - المفتاح الأساسي للجدول (الصف 8)
@@ -1816,7 +1816,7 @@
 <p><a id="refheading73514604163464"></a></p>
 <h3 id="444-rv">4.4.4. <span style="color: #4f81bd">جدول [<bdi dir="ltr" class="odt-ltr-term">RV</bdi>]</span></h3>
 <p>يُدرج المواعيد المحددة لكل طبيب:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F9000000DD94C415D4.png" width="637" height="111" style="display:inline-block; margin:4px;width:16.842cm;height:2.925cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F9000000DD94C415D4.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004F9000000DD94C415D4.png" width="637" height="111" style="display:inline-block; margin:4px;width:16.842cm;height:2.925cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F9000000DD94C415D4.png" /></td></tr></table>
 
 <ul>
   <li><bdi dir="ltr" class="odt-ltr-term">ID:</bdi> معرف فريد للموعد – المفتاح الأساسي
@@ -1838,7 +1838,7 @@
 <a id="refheading73516604163464"></a></p>
 <h3 id="445">4.4.5. <span style="color: #4f81bd">إنشاء قاعدة البيانات</span></h3>
 <p>لإنشاء الجداول وتعبئتها، يمكنك استخدام البرنامج النصي [<bdi dir="ltr" class="odt-ltr-term">dbrdvmedecins2.sql</bdi>]. باستخدام [<bdi dir="ltr" class="odt-ltr-term">WampServer</bdi>]، يمكنك المتابعة على النحو التالي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000398000001CEFFA63581.png" width="460" height="231" style="display:inline-block; margin:4px;width:12.171cm;height:6.112cm;" class="odt-zoomable" data-zoom-src="images/1000000000000398000001CEFFA63581.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000398000001CEFFA63581.png" width="460" height="231" style="display:inline-block; margin:4px;width:12.171cm;height:6.112cm;" class="odt-zoomable" data-zoom-src="images/1000000000000398000001CEFFA63581.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، انقر فوق رمز [<bdi dir="ltr" class="odt-ltr-term">WampServer</bdi>] وحدد خيار [<bdi dir="ltr" class="odt-ltr-term">PhpMyAdmin</bdi>] [2]،
@@ -1847,7 +1847,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000375000000E98BDA40C4.png" width="443" height="117" style="display:inline-block; margin:4px;width:11.709cm;height:3.083cm;" class="odt-zoomable" data-zoom-src="images/1000000000000375000000E98BDA40C4.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000375000000E98BDA40C4.png" width="443" height="117" style="display:inline-block; margin:4px;width:11.709cm;height:3.083cm;" class="odt-zoomable" data-zoom-src="images/1000000000000375000000E98BDA40C4.png" /></td></tr></table>
 
 <ul>
   <li>في [2]، قم بإنشاء قاعدة بيانات باسم [4] وترميز [5]،
@@ -1856,7 +1856,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005330000015A3EFB137B.png" width="666" height="173" style="display:inline-block; margin:4px;width:17.609cm;height:4.577cm;" class="odt-zoomable" data-zoom-src="images/10000000000005330000015A3EFB137B.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005330000015A3EFB137B.png" width="666" height="173" style="display:inline-block; margin:4px;width:17.609cm;height:4.577cm;" class="odt-zoomable" data-zoom-src="images/10000000000005330000015A3EFB137B.png" /></td></tr></table>
 
 <ul>
   <li>في [8]، قم باستيراد ملف <bdi dir="ltr" class="odt-ltr-term">SQL</bdi>،
@@ -1865,7 +1865,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000042A0000011BA676E00F.png" width="533" height="142" style="display:inline-block; margin:4px;width:14.102cm;height:3.745cm;" class="odt-zoomable" data-zoom-src="images/100000000000042A0000011BA676E00F.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000042A0000011BA676E00F.png" width="533" height="142" style="display:inline-block; margin:4px;width:14.102cm;height:3.745cm;" class="odt-zoomable" data-zoom-src="images/100000000000042A0000011BA676E00F.png" /></td></tr></table>
 
 <ul>
   <li>في [11]، حدد البرنامج النصي <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> وفي [12] قم بتنفيذه،
@@ -1874,7 +1874,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000433000000E72F9BAB43.png" width="538" height="116" style="display:inline-block; margin:4px;width:14.222cm;height:3.057cm;" class="odt-zoomable" data-zoom-src="images/1000000000000433000000E72F9BAB43.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000433000000E72F9BAB43.png" width="538" height="116" style="display:inline-block; margin:4px;width:14.222cm;height:3.057cm;" class="odt-zoomable" data-zoom-src="images/1000000000000433000000E72F9BAB43.png" /></td></tr></table>
 
 <ul>
   <li>في [14]، محتويات الجدول.
@@ -1886,14 +1886,14 @@
 <a id="generationautomatique"></a></p>
 <h3 id="446-jpa">4.4.6. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>]</span></h3>
 <p>لنعد إلى بنية المثال:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000043F000000A71F2E4E01.png" width="544" height="83" style="display:inline-block; margin:4px;width:14.381cm;height:2.208cm;" class="odt-zoomable" data-zoom-src="images/100000000000043F000000A71F2E4E01.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000043F000000A71F2E4E01.png" width="544" height="83" style="display:inline-block; margin:4px;width:14.381cm;height:2.208cm;" class="odt-zoomable" data-zoom-src="images/100000000000043F000000A71F2E4E01.png" /></td></tr></table>
 
 <p>نقوم الآن بإنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> لطبقة [<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>].</p>
 <p><a id="refheading74289604163464"></a>
 <a id="maven-ejb-dao"></a></p>
 <h3 id="447-netbeans">4.4.7. <span style="color: #4f81bd">مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi></span></h3>
 <p>وهذا هو شكله:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004AD0000015C64A1FE16.png" width="599" height="174" style="display:inline-block; margin:4px;width:15.836cm;height:4.604cm;" class="odt-zoomable" data-zoom-src="images/10000000000004AD0000015C64A1FE16.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004AD0000015C64A1FE16.png" width="599" height="174" style="display:inline-block; margin:4px;width:15.836cm;height:4.604cm;" class="odt-zoomable" data-zoom-src="images/10000000000004AD0000015C64A1FE16.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، نقوم بإنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> من نوع [تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi>] [2]،
@@ -1902,7 +1902,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002060000012078EE17C3.png" width="259" height="144" style="display:inline-block; margin:4px;width:6.853cm;height:3.81cm;" class="odt-zoomable" data-zoom-src="images/10000000000002060000012078EE17C3.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002060000012078EE17C3.png" width="259" height="144" style="display:inline-block; margin:4px;width:6.853cm;height:3.81cm;" class="odt-zoomable" data-zoom-src="images/10000000000002060000012078EE17C3.png" /></td></tr></table>
 
 <ul>
   <li>في [4]، المشروع الذي تم إنشاؤه.
@@ -1912,7 +1912,7 @@
 <p><a id="refheading74291604163464"></a></p>
 <h3 id="448-jpa">4.4.8. <span style="color: #4f81bd">إنشاء طبقة [<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>]</span></h3>
 <p>لنعد إلى البنية التي نحتاج إلى بنائها:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000044D000000AAAB546FB7.png" width="551" height="85" style="display:inline-block; margin:4px;width:14.566cm;height:2.249cm;" class="odt-zoomable" data-zoom-src="images/100000000000044D000000AAAB546FB7.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000044D000000AAAB546FB7.png" width="551" height="85" style="display:inline-block; margin:4px;width:14.566cm;height:2.249cm;" class="odt-zoomable" data-zoom-src="images/100000000000044D000000AAAB546FB7.png" /></td></tr></table>
 
 <p>باستخدام <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi>، يمكن إنشاء طبقة [<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] تلقائيًا. من المفيد أن تكون على دراية بطرق الإنشاء التلقائي هذه لأن الكود الذي يتم إنشاؤه يوفر معلومات قيّمة حول كيفية كتابة كيانات <bdi dir="ltr" class="odt-ltr-term">JPA.</bdi></p>
 <p><a id="connexionnetbeans"></a>
@@ -1925,7 +1925,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000048000000208AB041AAD.png" width="576" height="260" style="display:inline-block; margin:4px;width:15.24cm;height:6.879cm;" class="odt-zoomable" data-zoom-src="images/100000000000048000000208AB041AAD.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000048000000208AB041AAD.png" width="576" height="260" style="display:inline-block; margin:4px;width:15.24cm;height:6.879cm;" class="odt-zoomable" data-zoom-src="images/100000000000048000000208AB041AAD.png" /></td></tr></table>
 
 <ul>
   <li>في علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Services</bdi>] [1]، ضمن قسم [<bdi dir="ltr" class="odt-ltr-term">Databases</bdi>] [2]، حدد برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">MySQL JDBC</bdi> [3]،
@@ -1940,7 +1940,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001C700000272EF24AB86.png" width="228" height="313" style="display:inline-block; margin:4px;width:6.02cm;height:8.281cm;" class="odt-zoomable" data-zoom-src="images/10000000000001C700000272EF24AB86.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001C700000272EF24AB86.png" width="228" height="313" style="display:inline-block; margin:4px;width:6.02cm;height:8.281cm;" class="odt-zoomable" data-zoom-src="images/10000000000001C700000272EF24AB86.png" /></td></tr></table>
 
 <ul>
   <li>في [10]، يتم إنشاء الاتصال. يمكنك رؤية الجداول الأربعة في قاعدة البيانات المتصلة.
@@ -1950,7 +1950,7 @@
 <p><a id="refheading74295604163464"></a></p>
 <h3 id="4410">4.4.10. <span style="color: #4f81bd">إنشاء وحدة ثبات</span></h3>
 <p>لنعد إلى البنية التي نقوم ببنائها:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000450000000BB425AB4AE.png" width="552" height="94" style="display:inline-block; margin:4px;width:14.605cm;height:2.475cm;" class="odt-zoomable" data-zoom-src="images/1000000000000450000000BB425AB4AE.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000450000000BB425AB4AE.png" width="552" height="94" style="display:inline-block; margin:4px;width:14.605cm;height:2.475cm;" class="odt-zoomable" data-zoom-src="images/1000000000000450000000BB425AB4AE.png" /></td></tr></table>
 
 <p>نحن نقوم حالياً ببناء طبقة [<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>]. يتم تكوينها في ملف [<bdi dir="ltr" class="odt-ltr-term">persistence.xml</bdi>] حيث يتم تعريف وحدات الاستمرارية. تتطلب كل وحدة المعلومات التالية:</p>
 <ul>
@@ -1963,7 +1963,7 @@
 </ul>
 
 <p>يمكن لـ <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> إنشاء ملف الاستمرارية هذا باستخدام معالج.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C9000001DF67B10527.png" width="613" height="240" style="display:inline-block; margin:4px;width:16.207cm;height:6.338cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C9000001DF67B10527.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004C9000001DF67B10527.png" width="613" height="240" style="display:inline-block; margin:4px;width:16.207cm;height:6.338cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C9000001DF67B10527.png" /></td></tr></table>
 
 <ul>
   <li>انقر بزر الماوس الأيمن على المشروع واختر &quot;إنشاء وحدة استمرارية&quot; [1]،
@@ -1972,7 +1972,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C9000001DF67B10527.png" width="613" height="240" style="display:inline-block; margin:4px;width:16.207cm;height:6.338cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C9000001DF67B10527.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004C9000001DF67B10527.png" width="613" height="240" style="display:inline-block; margin:4px;width:16.207cm;height:6.338cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C9000001DF67B10527.png" /></td></tr></table>
 
 <ul>
   <li>في [3]، قم بتسمية وحدة الاستمرارية التي تقوم بإنشائها،
@@ -2017,7 +2017,7 @@
 </ul>
 
 <p>في علامة التبويب [التصميم]، يمكنك الاطلاع على نظرة عامة على ملف [<bdi dir="ltr" class="odt-ltr-term">persistence.xml</bdi>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003560000023079007E3C.png" width="427" height="280" style="display:inline-block; margin:4px;width:11.298cm;height:7.408cm;" class="odt-zoomable" data-zoom-src="images/10000000000003560000023079007E3C.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003560000023079007E3C.png" width="427" height="280" style="display:inline-block; margin:4px;width:11.298cm;height:7.408cm;" class="odt-zoomable" data-zoom-src="images/10000000000003560000023079007E3C.png" /></td></tr></table>
 
 <p>لتفعيل تسجيل <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi>، نكمل ملف [<bdi dir="ltr" class="odt-ltr-term">persistence.xml</bdi>] على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -2131,14 +2131,14 @@
 <p><a id="refheading74297604163464"></a></p>
 <h3 id="4411-jpa">4.4.11. <span style="color: #4f81bd">إنشاء كيانات <bdi dir="ltr" class="odt-ltr-term">JPA</bdi></span></h3>
 <p>يمكن إنشاء كيانات <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> باستخدام معالج <bdi dir="ltr" class="odt-ltr-term">NetBeans:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000327000000D7E44F6763.png" width="404" height="108" style="display:inline-block; margin:4px;width:10.677cm;height:2.845cm;" class="odt-zoomable" data-zoom-src="images/1000000000000327000000D7E44F6763.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000327000000D7E44F6763.png" width="404" height="108" style="display:inline-block; margin:4px;width:10.677cm;height:2.845cm;" class="odt-zoomable" data-zoom-src="images/1000000000000327000000D7E44F6763.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، قم بإنشاء كيانات <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> من قاعدة بيانات،
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025E00000124320F6366.png" width="303" height="146" style="display:inline-block; margin:4px;width:8.017cm;height:3.863cm;" class="odt-zoomable" data-zoom-src="images/100000000000025E00000124320F6366.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000025E00000124320F6366.png" width="303" height="146" style="display:inline-block; margin:4px;width:8.017cm;height:3.863cm;" class="odt-zoomable" data-zoom-src="images/100000000000025E00000124320F6366.png" /></td></tr></table>
 
 <ul>
   <li>في [2]، حدد الاتصال الذي تم إنشاؤه مسبقًا [<bdi dir="ltr" class="odt-ltr-term">dbrdvmedecins2</bdi>]،
@@ -2147,7 +2147,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003C00000020363C74C49.png" width="480" height="257" style="display:inline-block; margin:4px;width:12.7cm;height:6.812cm;" class="odt-zoomable" data-zoom-src="images/10000000000003C00000020363C74C49.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003C00000020363C74C49.png" width="480" height="257" style="display:inline-block; margin:4px;width:12.7cm;height:6.812cm;" class="odt-zoomable" data-zoom-src="images/10000000000003C00000020363C74C49.png" /></td></tr></table>
 
 <ul>
   <li>في [4]، قم بتسمية فئات <bdi dir="ltr" class="odt-ltr-term">Java</bdi> المرتبطة بالجداول الأربعة،
@@ -2158,7 +2158,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001790000015CD5A17B40.png" width="189" height="174" style="display:inline-block; margin:4px;width:4.988cm;height:4.604cm;" class="odt-zoomable" data-zoom-src="images/10000000000001790000015CD5A17B40.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001790000015CD5A17B40.png" width="189" height="174" style="display:inline-block; margin:4px;width:4.988cm;height:4.604cm;" class="odt-zoomable" data-zoom-src="images/10000000000001790000015CD5A17B40.png" /></td></tr></table>
 
 <ul>
   <li>في [7]، فئات <bdi dir="ltr" class="odt-ltr-term">Java</bdi> التي أنشأها المعالج.
@@ -2743,9 +2743,9 @@
 <p><a id="refheading2817131991350288"></a></p>
 <h3 id="4413">4.4.13. <span style="color: #4f81bd">كود الوصول إلى البيانات</span></h3>
 <p>سنقوم الآن بإضافة كود الوصول إلى البيانات عبر طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> إلى المشروع:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046F000000BB36AD4C98.png" width="568" height="94" style="display:inline-block; margin:4px;width:15.016cm;height:2.475cm;" class="odt-zoomable" data-zoom-src="images/100000000000046F000000BB36AD4C98.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000046F000000BB36AD4C98.png" width="568" height="94" style="display:inline-block; margin:4px;width:15.016cm;height:2.475cm;" class="odt-zoomable" data-zoom-src="images/100000000000046F000000BB36AD4C98.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014E00000110A9F2D69F.png" width="167" height="136" style="display:inline-block; margin:4px;width:4.419cm;height:3.598cm;" class="odt-zoomable" data-zoom-src="images/100000000000014E00000110A9F2D69F.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000014E00000110A9F2D69F.png" width="167" height="136" style="display:inline-block; margin:4px;width:4.419cm;height:3.598cm;" class="odt-zoomable" data-zoom-src="images/100000000000014E00000110A9F2D69F.png" /></td></tr></table>
 
 <p>فيما يلي فئة [<bdi dir="ltr" class="odt-ltr-term">MainJpql</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">

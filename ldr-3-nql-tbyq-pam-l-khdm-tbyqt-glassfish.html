@@ -882,13 +882,13 @@
 <p><a id="refheading87481112820228"></a></p>
 <h1 id="7-3-pam-glassfish">7. <span style="color: #365f91">الإصدار 3: نقل تطبيق <bdi dir="ltr" class="odt-ltr-term">PAM</bdi> إلى خادم تطبيقات <bdi dir="ltr" class="odt-ltr-term">GlassFish</bdi></span></h1>
 <p>نقترح وضع مكونات <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> من طبقات [الأعمال] و[<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] في بنية <bdi dir="ltr" class="odt-ltr-term">OpenEJB/EclipseLink</bdi> داخل حاوية خادم تطبيقات <bdi dir="ltr" class="odt-ltr-term">GlassFish.</bdi></p>
-<p><strong>التنفيذ الحالي باستخدام <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi> / <bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi></strong></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050D00000105A1899474.png" width="647" height="131" style="display:inline-block; margin:4px;width:17.106cm;height:3.454cm;" class="odt-zoomable" data-zoom-src="images/100000000000050D00000105A1899474.png" /></td></tr></table>
+<p><strong>التنفيذ الحالي باستخدام <bdi dir="ltr" class="odt-ltr-term">OpenEJB / EclipseLink</bdi></strong></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000050D00000105A1899474.png" width="647" height="131" style="display:inline-block; margin:4px;width:17.106cm;height:3.454cm;" class="odt-zoomable" data-zoom-src="images/100000000000050D00000105A1899474.png" /></td></tr></table>
 
 <p>فيما سبق، تستخدم طبقة [ui] الواجهة البعيدة لطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>].</p>
 <p>اختبرنا سياقين للتنفيذ: <em>محلي وعن بُعد</em>. في الوضع الأخير، عملت طبقة [ui] كعميل لطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]، التي يتم تنفيذها بواسطة <bdi dir="ltr" class="odt-ltr-term">EJBs.</bdi> للعمل في وضع العميل/الخادم، حيث يعمل العميل والخادم في جهازي <bdi dir="ltr" class="odt-ltr-term">JVM</bdi> منفصلين، سنقوم بنشر طبقات [<bdi dir="ltr" class="odt-ltr-term">business</bdi>، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] على خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish Java EE.</bdi> هذا الخادم مضمن في <bdi dir="ltr" class="odt-ltr-term">NetBeans.</bdi></p>
 <p><strong>التنفيذ الذي سيتم بناؤه باستخدام خادم <bdi dir="ltr" class="odt-ltr-term">Glassfish</bdi></strong></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005070000011F70FB01BD.png" width="644" height="144" style="display:inline-block; margin:4px;width:17.027cm;height:3.798cm;" class="odt-zoomable" data-zoom-src="images/10000000000005070000011F70FB01BD.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005070000011F70FB01BD.png" width="644" height="144" style="display:inline-block; margin:4px;width:17.027cm;height:3.798cm;" class="odt-zoomable" data-zoom-src="images/10000000000005070000011F70FB01BD.png" /></td></tr></table>
 
 <ul>
   <li>ستعمل طبقة [ui] في بيئة <bdi dir="ltr" class="odt-ltr-term">Java SE</bdi> (الإصدار القياسي)
@@ -907,13 +907,13 @@
 <p><a id="refheading87485112820228"></a></p>
 <h3 id="711">7.1.1. <span style="color: #4f81bd">بنية التطبيق</span></h3>
 <p>نقوم هنا بفحص المكون الخاص بجانب الخادم الذي سيتم استضافته بواسطة حاوية <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi> الخاصة بخادم <bdi dir="ltr" class="odt-ltr-term">Glassfish:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E0000000D4BD2C2A10.png" width="624" height="106" style="display:inline-block; margin:4px;width:16.51cm;height:2.805cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E0000000D4BD2C2A10.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004E0000000D4BD2C2A10.png" width="624" height="106" style="display:inline-block; margin:4px;width:16.51cm;height:2.805cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E0000000D4BD2C2A10.png" /></td></tr></table>
 
 <p>الهدف هو نقل ما تم تطويره واختباره بالفعل باستخدام حاوية <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi> إلى خادم <bdi dir="ltr" class="odt-ltr-term">Glassfish.</bdi> هذه هي ميزة <bdi dir="ltr" class="odt-ltr-term">OpenEJB</bdi>، وبشكل عام، ميزة حاويات <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> المدمجة: فهي تسمح لنا باختبار التطبيق في بيئة تشغيل مبسطة. بمجرد اختبار التطبيق، كل ما يتبقى هو نقله إلى الخادم المستهدف، وهو في هذه الحالة خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish.</bdi></p>
 <p><a id="refheading87487112820228"></a></p>
 <h4 id="7111-netbeans">7.1.1.1. <span style="color: #4f81bd">مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi></span></h4>
 <p>لنبدأ بإنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> جديد:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000042B00000112DF5EEDFF.png" width="534" height="137" style="display:inline-block; margin:4px;width:14.116cm;height:3.625cm;" class="odt-zoomable" data-zoom-src="images/100000000000042B00000112DF5EEDFF.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000042B00000112DF5EEDFF.png" width="534" height="137" style="display:inline-block; margin:4px;width:14.116cm;height:3.625cm;" class="odt-zoomable" data-zoom-src="images/100000000000042B00000112DF5EEDFF.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، مشروع جديد
@@ -922,20 +922,20 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B1000000BE212BF282.png" width="601" height="95" style="display:inline-block; margin:4px;width:15.889cm;height:2.514cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B1000000BE212BF282.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004B1000000BE212BF282.png" width="601" height="95" style="display:inline-block; margin:4px;width:15.889cm;height:2.514cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B1000000BE212BF282.png" /></td></tr></table>
 
 <ul>
   <li>باستخدام الزر [4a]، حدد المجلد الأصلي لمجلد المشروع أو اكتب اسمه مباشرةً في [4b].
   </li>
   <li>في [5]، قم بتسمية المشروع
   </li>
-  <li>في [6]، حدد خادم التطبيق الذي سيتم تشغيله عليه. الخادم المحدد هنا هو أحد الخوادم الظاهرة في علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Runtime</bdi> / <bdi dir="ltr" class="odt-ltr-term">Servers</bdi>]، وهو في هذه الحالة <bdi dir="ltr" class="odt-ltr-term">GlassFish v3.</bdi>
+  <li>في [6]، حدد خادم التطبيق الذي سيتم تشغيله عليه. الخادم المحدد هنا هو أحد الخوادم الظاهرة في علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Runtime / Servers</bdi>]، وهو في هذه الحالة <bdi dir="ltr" class="odt-ltr-term">GlassFish v3.</bdi>
   </li>
   <li>في [7]، حدد إصدار <bdi dir="ltr" class="odt-ltr-term">Java EE.</bdi>
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000441000000CF1BC9628C.png" width="545" height="104" style="display:inline-block; margin:4px;width:14.407cm;height:2.739cm;" class="odt-zoomable" data-zoom-src="images/1000000000000441000000CF1BC9628C.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000441000000CF1BC9628C.png" width="545" height="104" style="display:inline-block; margin:4px;width:14.407cm;height:2.739cm;" class="odt-zoomable" data-zoom-src="images/1000000000000441000000CF1BC9628C.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، المشروع الجديد. يختلف هذا المشروع عن مشروع <bdi dir="ltr" class="odt-ltr-term">Java</bdi> القياسي في عدة نواحٍ:
@@ -959,13 +959,13 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000515000001159EE7A0EC.png" width="651" height="139" style="display:inline-block; margin:4px;width:17.212cm;height:3.665cm;" class="odt-zoomable" data-zoom-src="images/1000000000000515000001159EE7A0EC.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000515000001159EE7A0EC.png" width="651" height="139" style="display:inline-block; margin:4px;width:17.212cm;height:3.665cm;" class="odt-zoomable" data-zoom-src="images/1000000000000515000001159EE7A0EC.png" /></td></tr></table>
 
-<p>يمكننا المضي قدماً على النحو التالي. أولاً، في علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Runtime</bdi> / <bdi dir="ltr" class="odt-ltr-term">Databases</bdi>]، سنقوم بإنشاء [1] اتصال بقاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL5</bdi> / <bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_eclipselink:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D50000012002E25FA9.png" width="235" height="144" style="display:inline-block; margin:4px;width:6.205cm;height:3.81cm;" class="odt-zoomable" data-zoom-src="images/10000000000001D50000012002E25FA9.png" /></td></tr></table>
+<p>يمكننا المضي قدماً على النحو التالي. أولاً، في علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Runtime / Databases</bdi>]، سنقوم بإنشاء [1] اتصال بقاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL5 / dbpam</bdi>_eclipselink:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001D50000012002E25FA9.png" width="235" height="144" style="display:inline-block; margin:4px;width:6.205cm;height:3.81cm;" class="odt-zoomable" data-zoom-src="images/10000000000001D50000012002E25FA9.png" /></td></tr></table>
 
 <p>بمجرد الانتهاء من ذلك، يمكننا الانتقال إلى إنشاء مورد <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi><a id="ressource-glassfish-jdbc-dbpam-eclipseli"></a> الذي تستخدمه وحدة <bdi dir="ltr" class="odt-ltr-term">EJB:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000034F00000170EF770EC6.png" width="424" height="184" style="display:inline-block; margin:4px;width:11.206cm;height:4.868cm;" class="odt-zoomable" data-zoom-src="images/100000000000034F00000170EF770EC6.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000034F00000170EF770EC6.png" width="424" height="184" style="display:inline-block; margin:4px;width:11.206cm;height:4.868cm;" class="odt-zoomable" data-zoom-src="images/100000000000034F00000170EF770EC6.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، قم بإنشاء ملف جديد — تأكد من تحديد مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> قبل تنفيذ هذه العملية
@@ -978,7 +978,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005090000026169D80A60.png" width="645" height="305" style="display:inline-block; margin:4px;width:17.053cm;height:8.057cm;" class="odt-zoomable" data-zoom-src="images/10000000000005090000026169D80A60.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005090000026169D80A60.png" width="645" height="305" style="display:inline-block; margin:4px;width:17.053cm;height:8.057cm;" class="odt-zoomable" data-zoom-src="images/10000000000005090000026169D80A60.png" /></td></tr></table>
 
 <ul>
   <li>في [5]، حدد أن مورد <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi> سيستخدم تجمع اتصالات جديد. لاحظ أن تجمع الاتصالات هو مجموعة من الاتصالات المفتوحة المستخدمة لتسريع تفاعلات التطبيق مع قاعدة البيانات.
@@ -987,13 +987,13 @@
   </li>
   <li>في [7]، قم بتسمية مجموعة الاتصالات التي سيتم إنشاؤها بأي اسم
   </li>
-  <li>في القائمة المنسدلة [8]، حدد اتصال <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi> الذي تم إنشاؤه مسبقًا لقاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> / <bdi dir="ltr" class="odt-ltr-term">dbpam_eclipselink.</bdi>
+  <li>في القائمة المنسدلة [8]، حدد اتصال <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi> الذي تم إنشاؤه مسبقًا لقاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL / dbpam_eclipselink.</bdi>
   </li>
   <li>في [9]، ملخص لخصائص تجمع الاتصالات — اترك كل شيء كما هو
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000044B000002C11F4E266A.png" width="550" height="353" style="display:inline-block; margin:4px;width:14.54cm;height:9.327cm;" class="odt-zoomable" data-zoom-src="images/100000000000044B000002C11F4E266A.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000044B000002C11F4E266A.png" width="550" height="353" style="display:inline-block; margin:4px;width:14.54cm;height:9.327cm;" class="odt-zoomable" data-zoom-src="images/100000000000044B000002C11F4E266A.png" /></td></tr></table>
 
 <ul>
   <li>في [10]، يمكنك تحديد العديد من خصائص تجمع الاتصالات — اترك القيم الافتراضية
@@ -1034,7 +1034,7 @@
 </code></pre></div></td></tr></table></div>
 <p>ملف [<bdi dir="ltr" class="odt-ltr-term">glassfish-resources.xml</bdi>] هو ملف <bdi dir="ltr" class="odt-ltr-term">XML</bdi> يحتوي على جميع البيانات التي جمعها المعالج. سيستخدمه <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> لطلب إنشاء مورد <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi> المطلوب لهذه الوحدة النمطية عند نشر وحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> على خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish.</bdi></p>
 <p>يمكنك الآن إنشاء ملف [<bdi dir="ltr" class="odt-ltr-term">persistence.xml</bdi>]، الذي سيقوم بتكوين طبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> في وحدة <bdi dir="ltr" class="odt-ltr-term">EJB:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003590000014335F1E419.png" width="429" height="161" style="display:inline-block; margin:4px;width:11.338cm;height:4.272cm;" class="odt-zoomable" data-zoom-src="images/10000000000003590000014335F1E419.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003590000014335F1E419.png" width="429" height="161" style="display:inline-block; margin:4px;width:11.338cm;height:4.272cm;" class="odt-zoomable" data-zoom-src="images/10000000000003590000014335F1E419.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، أنشئ ملفًا جديدًا — تأكد من تحديد مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> قبل تنفيذ هذه العملية
@@ -1047,7 +1047,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000480000000FE2467F337.png" width="576" height="127" style="display:inline-block; margin:4px;width:15.24cm;height:3.36cm;" class="odt-zoomable" data-zoom-src="images/1000000000000480000000FE2467F337.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000480000000FE2467F337.png" width="576" height="127" style="display:inline-block; margin:4px;width:15.24cm;height:3.36cm;" class="odt-zoomable" data-zoom-src="images/1000000000000480000000FE2467F337.png" /></td></tr></table>
 
 <ul>
   <li>في [5]، قم بتسمية وحدة الاستمرارية
@@ -1094,10 +1094,10 @@
 <a id="deploiement-ejb-sun"></a></p>
 <h4 id="7113-jpa-dao-business">7.1.1.3. <span style="color: #4f81bd">إدراج طبقات [<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">Business</bdi>]</span></h4>
 <p>الآن بعد تعريف ملف [<bdi dir="ltr" class="odt-ltr-term">persistence.xml</bdi>]، يمكننا المضي قدمًا لإدراج طبقات [<bdi dir="ltr" class="odt-ltr-term">business</bdi>، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] لتطبيق المؤسسة [pam] في المشروع:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F600000110C65D123D.png" width="635" height="136" style="display:inline-block; margin:4px;width:16.801cm;height:3.598cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F600000110C65D123D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004F600000110C65D123D.png" width="635" height="136" style="display:inline-block; margin:4px;width:16.801cm;height:3.598cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F600000110C65D123D.png" /></td></tr></table>
 
 <p>هذه الطبقات الثلاث مطابقة لما كانت عليه في <bdi dir="ltr" class="odt-ltr-term">OpenEJB.</bdi> يمكننا ببساطة النسخ واللصق بين المشروعين. وهذا ما نقوم به الآن:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000183000000CCE314B124.png" width="194" height="102" style="display:inline-block; margin:4px;width:5.121cm;height:2.699cm;" class="odt-zoomable" data-zoom-src="images/1000000000000183000000CCE314B124.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000183000000CCE314B124.png" width="194" height="102" style="display:inline-block; margin:4px;width:5.121cm;height:2.699cm;" class="odt-zoomable" data-zoom-src="images/1000000000000183000000CCE314B124.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، نتيجة نسخ حزم [jpa، dao، <bdi dir="ltr" class="odt-ltr-term">business</bdi>، <bdi dir="ltr" class="odt-ltr-term">exception</bdi>] من مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-openejb-eclipselink</bdi>] إلى وحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ejb-business-dao-jpa-eclipselink</bdi>]
@@ -1115,7 +1115,7 @@
 </ul>
 
 <p>قد تكتشف أن هذه المكتبات مفقودة عند نشر وحدة <bdi dir="ltr" class="odt-ltr-term">EJB.</bdi> فيما يلي إحدى الطرق العديدة لإضافة المكتبات المفقودة إلى خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F70000026122F484E5.png" width="636" height="305" style="display:inline-block; margin:4px;width:16.815cm;height:8.057cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F70000026122F484E5.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004F70000026122F484E5.png" width="636" height="305" style="display:inline-block; margin:4px;width:16.815cm;height:8.057cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F70000026122F484E5.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، اعرض خصائص خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish</bdi>
@@ -1126,7 +1126,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002AD000000D1538BBF7F.png" width="343" height="105" style="display:inline-block; margin:4px;width:9.063cm;height:2.766cm;" class="odt-zoomable" data-zoom-src="images/10000000000002AD000000D1538BBF7F.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002AD000000D1538BBF7F.png" width="343" height="105" style="display:inline-block; margin:4px;width:9.063cm;height:2.766cm;" class="odt-zoomable" data-zoom-src="images/10000000000002AD000000D1538BBF7F.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، في علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Services</bdi>]، نقوم بتشغيل خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish v3</bdi>
@@ -1138,7 +1138,7 @@
 <p><a id="refheading87495112820228"></a></p>
 <h4 id="7115-ejb">7.1.1.5. <span style="color: #4f81bd">نشر وحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi></span></h4>
 <p>سنقوم الآن بنشر وحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> على خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DF000001981F243F13.png" width="624" height="204" style="display:inline-block; margin:4px;width:16.498cm;height:5.398cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DF000001981F243F13.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004DF000001981F243F13.png" width="624" height="204" style="display:inline-block; margin:4px;width:16.498cm;height:5.398cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DF000001981F243F13.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، تم نشر وحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>
@@ -1147,7 +1147,7 @@
   </li>
   <li>في [3]، بعد النشر، تظهر وحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> في فرع [<bdi dir="ltr" class="odt-ltr-term">Applications</bdi>] لخادم <bdi dir="ltr" class="odt-ltr-term">GlassFish</bdi>
   </li>
-  <li>في [4]، تم إنشاء مورد <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi> [<bdi dir="ltr" class="odt-ltr-term">jdbc</bdi> / <bdi dir="ltr" class="odt-ltr-term">dbpam_eclipselink</bdi>] على خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish.</bdi> تذكر أننا قمنا بتعريفه في القسم<a href="#ressource-glassfish-jdbc-dbpam-eclipselink"><u><span style="color: #0563c1"> 7.1.1.2</span></u></a>.
+  <li>في [4]، تم إنشاء مورد <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi> [<bdi dir="ltr" class="odt-ltr-term">jdbc / dbpam_eclipselink</bdi>] على خادم <bdi dir="ltr" class="odt-ltr-term">GlassFish.</bdi> تذكر أننا قمنا بتعريفه في القسم<a href="#ressource-glassfish-jdbc-dbpam-eclipselink"><u><span style="color: #0563c1"> 7.1.1.2</span></u></a>.
   </li>
 </ul>
 
@@ -1175,12 +1175,12 @@
 <p><a id="refheading87497112820228"></a></p>
 <h2 id="72-1">7.2. <span style="color: #4f81bd"><strong><span style="color: #4f81bd">عميل وحدة التحكم - الإصدار 1</span></strong></span></h2>
 <p>الآن بعد أن قمنا بنشر جانب الخادم من تطبيق العميل/الخادم الخاص بنا، سنقوم بفحص جانب العميل [1]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005000000011C36BF16CA.png" width="640" height="142" style="display:inline-block; margin:4px;width:16.933cm;height:3.757cm;" class="odt-zoomable" data-zoom-src="images/10000000000005000000011C36BF16CA.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005000000011C36BF16CA.png" width="640" height="142" style="display:inline-block; margin:4px;width:16.933cm;height:3.757cm;" class="odt-zoomable" data-zoom-src="images/10000000000005000000011C36BF16CA.png" /></td></tr></table>
 
 <p><a id="refheading87499112820228"></a></p>
 <h3 id="721">7.2.1. <span style="color: #4f81bd">مشروع العميل</span></h3>
 <p>نقوم بإنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> جديد من نوع [تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi>] باسم [<bdi dir="ltr" class="odt-ltr-term">mv-pam-client-ejb-metier-dao-eclipselink</bdi>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001C6000000D896CA4C59.png" width="227" height="108" style="display:inline-block; margin:4px;width:6.006cm;height:2.858cm;" class="odt-zoomable" data-zoom-src="images/10000000000001C6000000D896CA4C59.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001C6000000D896CA4C59.png" width="227" height="108" style="display:inline-block; margin:4px;width:6.006cm;height:2.858cm;" class="odt-zoomable" data-zoom-src="images/10000000000001C6000000D896CA4C59.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، مشروع العميل
@@ -1222,7 +1222,7 @@
 </ul>
 
 <p>من مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-openejb-eclipselink</bdi>]، ننسخ فئة [<bdi dir="ltr" class="odt-ltr-term">MainRemote</bdi>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B30000011473145345.png" width="218" height="138" style="display:inline-block; margin:4px;width:5.756cm;height:3.651cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B30000011473145345.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001B30000011473145345.png" width="218" height="138" style="display:inline-block; margin:4px;width:5.756cm;height:3.651cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B30000011473145345.png" /></td></tr></table>
 
 <p>يجب أن تحصل فئة [<bdi dir="ltr" class="odt-ltr-term">MainRemote</bdi>] على مرجع إلى <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> في طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>].  يتغير كود فئة [<bdi dir="ltr" class="odt-ltr-term">MainRemote</bdi>] على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -1311,7 +1311,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000168000000EEEA939045.png" width="180" height="119" style="display:inline-block; margin:4px;width:4.763cm;height:3.149cm;" class="odt-zoomable" data-zoom-src="images/1000000000000168000000EEEA939045.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000168000000EEEA939045.png" width="180" height="119" style="display:inline-block; margin:4px;width:4.763cm;height:3.149cm;" class="odt-zoomable" data-zoom-src="images/1000000000000168000000EEEA939045.png" /></td></tr></table>
 
 <p>في [1]، نقوم بتكوين المشروع لتشغيل فئة [<bdi dir="ltr" class="odt-ltr-term">MainRemote</bdi>] مع المعلمات. إذا سارت الأمور على ما يرام، فإن تشغيل المشروع سيعطي النتيجة التالية:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
@@ -1398,7 +1398,7 @@
 </code></pre></div></td></tr></table></div>
 <p>تحدد السطران 7 و 8 جهاز خدمة <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> ومنفذ الاستماع الخاص به. لا يسمح لك هذا الملف بالاستعلام عن خادم <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> بخلاف <em><bdi dir="ltr" class="odt-ltr-term">localhost</bdi></em> أو خادم يعمل على منفذ بخلاف المنفذ <em>3700</em>. إذا كنت ترغب في تغيير هذين الإعدادين، يمكنك إنشاء ملف [<bdi dir="ltr" class="odt-ltr-term">jndi.properties</bdi>] خاص بك أو استخدام تكوين <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> سنقوم بشرح التقنية الأخيرة.</p>
 <p>نبدأ بإنشاء مشروع جديد استنادًا إلى المشروع الأولي [<bdi dir="ltr" class="odt-ltr-term">pam-client-metier-dao-jpa-eclipselink</bdi>].</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052B000000F5B9DEAA47.png" width="662" height="122" style="display:inline-block; margin:4px;width:17.503cm;height:3.24cm;" class="odt-zoomable" data-zoom-src="images/100000000000052B000000F5B9DEAA47.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000052B000000F5B9DEAA47.png" width="662" height="122" style="display:inline-block; margin:4px;width:17.503cm;height:3.24cm;" class="odt-zoomable" data-zoom-src="images/100000000000052B000000F5B9DEAA47.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، يظهر المشروع الجديد
@@ -1459,7 +1459,7 @@
 <p><a id="refheading87513112820228"></a></p>
 <h2 id="74-swing">7.4. <span style="color: #4f81bd">عميل <bdi dir="ltr" class="odt-ltr-term">Swing</bdi></span></h2>
 <p>سنقوم الآن بإنشاء عميل <em><bdi dir="ltr" class="odt-ltr-term">Swing</bdi></em> لتطبيق <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> الخاص بنا الذي يعمل بنظام العميل/الخادم.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001C3000000AE156E2FE1.png" width="226" height="87" style="display:inline-block; margin:4px;width:5.967cm;height:2.302cm;" class="odt-zoomable" data-zoom-src="images/10000000000001C3000000AE156E2FE1.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001C3000000AE156E2FE1.png" width="226" height="87" style="display:inline-block; margin:4px;width:5.967cm;height:2.302cm;" class="odt-zoomable" data-zoom-src="images/10000000000001C3000000AE156E2FE1.png" /></td></tr></table>
 
 <p>يجب أن يتضمن ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] التبعيات الضرورية لتطبيقات <bdi dir="ltr" class="odt-ltr-term">Swing:</bdi></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
@@ -1503,10 +1503,10 @@
 <a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">    </span><span class="p">...</span>
 </code></pre></div></td></tr></table></div>
 <p>أعلاه، تمت كتابة فئة [<bdi dir="ltr" class="odt-ltr-term">PamJFrame</bdi>] في الأصل لتعمل في بيئة <bdi dir="ltr" class="odt-ltr-term">Spring/JPA:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005540000010AEE65C792.png" width="680" height="133" style="display:inline-block; margin:4px;width:17.999cm;height:3.51cm;" class="odt-zoomable" data-zoom-src="images/10000000000005540000010AEE65C792.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005540000010AEE65C792.png" width="680" height="133" style="display:inline-block; margin:4px;width:17.999cm;height:3.51cm;" class="odt-zoomable" data-zoom-src="images/10000000000005540000010AEE65C792.png" /></td></tr></table>
 
 <p>والآن يجب أن تصبح هذه الفئة العميل البعيد لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> تم نشره على خادم <bdi dir="ltr" class="odt-ltr-term">Glassfish.</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F80000011639F3F420.png" width="636" height="139" style="display:inline-block; margin:4px;width:16.828cm;height:3.678cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F80000011639F3F420.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004F80000011639F3F420.png" width="636" height="139" style="display:inline-block; margin:4px;width:16.828cm;height:3.678cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F80000011639F3F420.png" /></td></tr></table>
 
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>تمرين عملي</strong>: باتباع مثال عميل وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">ui.console.MainRemote</bdi>] في المشروع، قم بتعديل طريقة استخدام الأسلوب [<bdi dir="ltr" class="odt-ltr-term">doMyInit</bdi>] (انظر القسم<a href="#client-swing-domyinit"><u><span style="color: #0563c1"> 5.12.4</span></u></a>) في فئة [<bdi dir="ltr" class="odt-ltr-term">PamJFrame</bdi>] للحصول على مرجع إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]، التي أصبحت الآن بعيدة.</p>
