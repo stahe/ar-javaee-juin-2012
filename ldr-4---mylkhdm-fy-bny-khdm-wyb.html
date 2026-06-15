@@ -1,0 +1,1744 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/ar-javaee-juin-2012/ldr-4---mylkhdm-fy-bny-khdm-wyb.html">
+      
+      
+        <link rel="prev" href="ldr-3-nql-ltbyq-pam-l-khdm-tbyqt-glassfish.html">
+      
+      
+        <link rel="next" href="mqdm-l-java-server-faces.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>8. الإصدار 4 – عميل/خادم في بنية خدمة ويب - مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#8-4" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish" class="md-header__button md-logo" aria-label="مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              8. الإصدار 4 – عميل/خادم في بنية خدمة ويب
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الداكن"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الداكن" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الفاتح"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الفاتح" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/ar-javaee-juin-2012" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish" class="md-nav__button md-logo" aria-label="مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/ar-javaee-juin-2012" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مرحبًا بكم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mqdm.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. مقدمة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bny-tbyq-java-mtdd-lbqt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. بنية تطبيق Java متعدد الطبقات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dwt-lwthyq.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. أدوات الوثيقة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mlkh-jpa-.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. ملخص JPA 
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-1-bny-spring--jpa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. الإصدار 1: بنية Spring / JPA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-2-bny-openejb--jpa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. الإصدار 2: بنية OpenEJB / JPA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-3-nql-ltbyq-pam-l-khdm-tbyqt-glassfish.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. الإصدار 3: نقل التطبيق PAM إلى خادم تطبيقات Glassfish
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. الإصدار 4 – عميل/خادم في بنية خدمة ويب
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ldr-4---mylkhdm-fy-bny-khdm-wyb.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. الإصدار 4 – عميل/خادم في بنية خدمة ويب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#81-ejb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1. خدمة ويب تم تنفيذها بواسطة EJB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.1. خدمة ويب تم تنفيذها بواسطة EJB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#811" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1.1. جزء الخادم
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.1.1. جزء الخادم">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#8111-netbeans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1.1.1. مشروع Netbeans
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#812" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1.2. الجزء الخاص بالعميل
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.1.2. الجزء الخاص بالعميل">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#8121-netbeans-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1.2.1. مشروع Netbeans الخاص بالعميل console
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8122-metier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1.2.2. عميل وحدة التحكم لخدمة الويب Metier
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#813-swing-metier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1.3. عميل Swing لخدمة الويب Metier
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2. خدمة الويب التي تم تنفيذها بواسطة تطبيق ويب
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.2. خدمة الويب التي تم تنفيذها بواسطة تطبيق ويب">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#821" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2.1. جزء الخادم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#822" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2.2. الجزء الخاص بالعميل
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#83-spring-tomcat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3. خدمة الويب المنفذة باستخدام Spring و Tomcat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.3. خدمة الويب المنفذة باستخدام Spring و Tomcat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#831" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3.1. جزء الخادم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#832" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3.2. الجزء الخاص بالعميل
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mqdm-l-java-server-faces.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. مقدمة إلى Java Server Faces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-5---tbyq-pam-web--jsf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. الإصدار 5 - تطبيق PAM Web / JSF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-6---dmj-bq-lwyb-fy-bny-thlthy-lbqt-jsf--ejb.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. الإصدار 6 - دمج طبقة الويب في بنية ثلاثية الطبقات JSF / EJB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-7---tbyq-lwyb-pam-mtdd-lrw--mtdd-lft.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. الإصدار 7 - تطبيق الويب PAM متعدد العروض / متعدد الصفحات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-8-nql-ltbyq-l-byy-spring--tomcat.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. الإصدار 8: نقل التطبيق إلى بيئة Spring / Tomcat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-9-tnfydh-bq-lwyb-bstkhdm-primefaces.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. الإصدار 9: تنفيذ طبقة الويب باستخدام Primefaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><span id="refheading87517112820228" name="refheading87517112820228" class="odt-bookmark-anchor"></span></p>
+<h1 id="8-4">8. <span style="color: #365f91">الإصدار 4 – عميل/خادم في بنية خدمة ويب</span></h1>
+<p>في هذا الإصدار الجديد، سيتم تشغيل التطبيق [<bdi dir="ltr" class="odt-ltr-term">Pam</bdi>] في وضع العميل/الخادم في بنية خدمة الويب. لنعد إلى بنية التطبيق السابق:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000053C0000011A932F7170.png" width="670" height="141" style="display:inline-block; margin:4px;width:17.727cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/100000000000053C0000011A932F7170.png" /></td></tr></table>
+
+<p><span style="color: #000000">فيما سبق، كانت طبقة الاتصال [<bdi dir="ltr" class="odt-ltr-term">C, RMI, S</bdi>] تسمح بالاتصال الشفاف بين العميل [ui] والطبقة البعيدة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. سنستخدم بنية مماثلة، حيث سيتم استبدال طبقة الاتصال [<bdi dir="ltr" class="odt-ltr-term">C, RMI, S</bdi>] بطبقة [<bdi dir="ltr" class="odt-ltr-term">C, HTTP / SOAP, S</bdi>]:</span></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004F30000011394858AF0.png" width="634" height="138" style="display:inline-block; margin:4px;width:16.762cm;height:3.639cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F30000011394858AF0.png" /></td></tr></table>
+
+<p><span style="color: #000000">يتميز بروتوكول <bdi dir="ltr" class="odt-ltr-term">HTTP / SOAP</bdi> عن البروتوكول السابق <bdi dir="ltr" class="odt-ltr-term">RMI / EJB</bdi> بكونه متعدد المنصات. وبالتالي، يمكن كتابة خدمة الويب بلغة <bdi dir="ltr" class="odt-ltr-term">Java</bdi> ونشرها على خادم <bdi dir="ltr" class="odt-ltr-term">Glassfish</bdi>، في حين يمكن أن يكون العميل عميلاً .<bdi dir="ltr" class="odt-ltr-term">NET</bdi> أو <bdi dir="ltr" class="odt-ltr-term">PHP.</bdi></span></p>
+<p><span style="color: #000000">سنقوم بتطوير هذه البنية وفقًا لثلاثة أوضاع مختلفة:</span></p>
+<ol>
+  <li><span style="color: #000000">سيتم توفير خدمة الويب بواسطة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>]</span>
+  </li>
+  <li><span style="color: #000000">سيتم توفير خدمة الويب بواسطة تطبيق ويب يستخدم <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>]</span>
+  </li>
+  <li><span style="color: #000000">سيتم توفير خدمة الويب بواسطة تطبيق ويب يستخدم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi></span>
+  </li>
+</ol>
+
+<p>يمكن تنفيذ خدمة ويب بعدة طرق داخل خادم <bdi dir="ltr" class="odt-ltr-term">Java EE:</bdi></p>
+<ul>
+  <li>من خلال فئة مزودة بعلامة <b>@<bdi dir="ltr" class="odt-ltr-term">WebService</bdi> </b>يتم تنفيذها في حاوية ويب
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004CC000000B3A8B20B4F.png" width="614" height="90" style="display:inline-block; margin:4px;width:16.245cm;height:2.369cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CC000000B3A8B20B4F.png" /></td></tr></table>
+
+<ul>
+  <li>عن طريق <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> المُعلَّم بـ <b>@<bdi dir="ltr" class="odt-ltr-term">WebService</bdi> </b>والذي يتم تنفيذه في حاوية <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004D2000000AF7BB87BD5.png" width="617" height="88" style="display:inline-block; margin:4px;width:16.325cm;height:2.316cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D2000000AF7BB87BD5.png" /></td></tr></table>
+
+<p><span style="color: #000000">نبدأ بهذه البنية الأخيرة.</span></p>
+<p><span id="refheading87519112820228" name="refheading87519112820228" class="odt-bookmark-anchor"></span>
+<span id="serviceweb-ejb" name="serviceweb-ejb" class="odt-bookmark-anchor"></span></p>
+<h2 id="81-ejb">8.1. <span style="color: #4f81bd">خدمة ويب تم تنفيذها بواسطة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi></span></h2>
+<p><span id="refheading87521112820228" name="refheading87521112820228" class="odt-bookmark-anchor"></span></p>
+<h3 id="811">8.1.1. <span style="color: #4f81bd">جزء الخادم</span></h3>
+<p><span id="refheading87523112820228" name="refheading87523112820228" class="odt-bookmark-anchor"></span></p>
+<h4 id="8111-netbeans">8.1.1.1. <span style="color: #4f81bd">مشروع <bdi dir="ltr" class="odt-ltr-term">Netbeans</bdi></span></h4>
+<p>لنبدأ بإنشاء مشروع مافن جديد نسخة من مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ejb-metier-dao-jpa-eclipselink</bdi>]:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000FA0000009790D04311.png" width="175" height="106" style="display:inline-block; margin:4px;width:4.63cm;height:2.799cm;" class="odt-zoomable" data-zoom-src="images/10000000000000FA0000009790D04311.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>في البنية التالية:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004FE00000113EDA3AEBA.png" width="639" height="138" style="display:inline-block; margin:4px;width:16.907cm;height:3.639cm;" class="odt-zoomable" data-zoom-src="images/10000000000004FE00000113EDA3AEBA.png" /></td></tr></table>
+
+<p>ستكون الطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] هي خدمة الويب التي تتصل بها الطبقة [ui]. لا تحتاج هذه الفئة إلى تنفيذ واجهة. فهذه هي التعليقات التوضيحية التي تحول <bdi dir="ltr" class="odt-ltr-term">POJO</bdi> (كائن جافا عادي) إلى خدمة ويب. يتم تحويل الفئة [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] التي تنفذ الطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] أعلاه، على النحو التالي:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> metier;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">@WebService</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#646464">@</span><span style="color:#000000">Stateless()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#646464">@</span><span style="color:#000000">TransactionAttribute(TransactionAttributeType.REQUIRED)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Metier </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> IMetierLocal,IMetierRemote {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// références sur les couches [DAO]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">EJB</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> ICotisationDaoLocal cotisationDao = </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">EJB</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> IEmployeDaoLocal employeDao=</span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">EJB</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> IIndemniteDaoLocal indemniteDao=</span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// obtenir la feuille de salaire</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">@WebMethod</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> FeuilleSalaire calculerFeuilleSalaire(String SS,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// liste des employés</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">@WebMethod</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> List&lt;Employe&gt; findAllEmployes() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// important - pas de getters et setters pour les EJB</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> }</span></span>
+</code></pre></div>
+
+<ul>
+  <li>السطر 4، تعمل التعليقة التوضيحية <b>@<bdi dir="ltr" class="odt-ltr-term">WebService</bdi> </b>على تحويل الفئة [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] إلى خدمة ويب. تعرض خدمة الويب طرقًا لعملائها. يجب أن تكون هذه الطرق مزودة بالتعليقة التوضيحية <b>@<bdi dir="ltr" class="odt-ltr-term">WebMethod</bdi></b>.
+  </li>
+  <li>السطران 19 و25: تصبح الطريقتان في الفئة [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] طرقًا لخدمة الويب.
+  </li>
+  <li>السطر 29: من المهم حذف طرق الحصول (<bdi dir="ltr" class="odt-ltr-term">getters</bdi>) والتعيين (<bdi dir="ltr" class="odt-ltr-term">setters</bdi>) وإلا فسيتم عرضها في خدمة الويب مما يتسبب في أخطاء أمنية.
+  </li>
+</ul>
+
+<p>يكتشف <bdi dir="ltr" class="odt-ltr-term">Netbeans</bdi> إضافة هذه التعليقات التوضيحية، مما يؤدي إلى تغيير طبيعة المشروع:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000051C0000015A7A298DB9.png" width="654" height="173" style="display:inline-block; margin:4px;width:17.304cm;height:4.577cm;" class="odt-zoomable" data-zoom-src="images/100000000000051C0000015A7A298DB9.png" /></td></tr></table>
+
+<p>في [1]، ظهرت شجرة [<bdi dir="ltr" class="odt-ltr-term">Web Services</bdi>] في المشروع. نجد فيها خدمة الويب <strong><bdi dir="ltr" class="odt-ltr-term">Metier</bdi></strong> وطريقتيها. يمكن نشر تطبيق الخادم [2]. يجب تشغيل الخادم <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> ويجب أن تكون قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_eclipselink] موجودة ومملوءة. قد يكون من الضروري قبل ذلك حذف [3] و <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> من مشروع العميل/الخادم <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> الذي تمت دراسته سابقًا لتجنب تعارض الأسماء. في الواقع، يجلب مشروعنا الجديد معه نفس <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> الموجودة في المشروع السابق.</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002780000008C275F58B9.png" width="316" height="70" style="display:inline-block; margin:4px;width:8.361cm;height:1.852cm;" class="odt-zoomable" data-zoom-src="images/10000000000002780000008C275F58B9.png" /></td></tr></table>
+
+<p>في [1]، نرى تطبيقنا <em><bdi dir="ltr" class="odt-ltr-term">serveur</bdi></em> منشورًا على خادم <bdi dir="ltr" class="odt-ltr-term">Glassfish.</bdi> بمجرد نشر خدمة الويب، يمكن اختبارها:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000052000000245F53A84B7.png" width="656" height="291" style="display:inline-block; margin:4px;width:17.357cm;height:7.687cm;" class="odt-zoomable" data-zoom-src="images/100000000000052000000245F53A84B7.png" /></td></tr></table>
+
+<ul>
+  <li>في [1]، في المشروع الحالي، نختبر خدمة الويب [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>]
+  </li>
+  <li>يمكن الوصول إلى خدمة الويب عبر مختلف <bdi dir="ltr" class="odt-ltr-term">URL.</bdi> يتيح <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [2] اختبار خدمة الويب
+  </li>
+  <li>في [3]، وهو رابط إلى الملف <bdi dir="ltr" class="odt-ltr-term">XML</bdi> الذي يحدد خدمة الويب. يحتاج عملاء خدمة الويب إلى معرفة عنوان هذا الملف. يتم إنشاء طبقة العميل (<bdi dir="ltr" class="odt-ltr-term">stubs</bdi>) لخدمة الويب بناءً عليه.
+  </li>
+  <li>في [4,5]، نموذج يسمح باختبار الطرق التي تعرضها خدمة الويب. يتم عرض هذه الطرق مع معلماتها التي يمكن للمستخدم تعريفها.
+  </li>
+</ul>
+
+<p>على سبيل المثال، لنختبر الطريقة [<bdi dir="ltr" class="odt-ltr-term">findAllEmployes</bdi>] التي لا تحتاج إلى أي معلمات:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000017500000050E1C8E03D.png" width="261" height="56" style="display:inline-block; margin:4px;width:6.909cm;height:1.48cm;" class="odt-zoomable" data-zoom-src="images/100000000000017500000050E1C8E03D.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>فيما سبق، قمنا باختبار الطريقة. ثم تلقينا الرد أدناه (عرض جزئي). نجد فيه بالفعل الموظفين الاثنين مع تعويضاتهما. ندعو القارئ إلى اختبار الطريقة [4] بنفس الطريقة من خلال تزويدها بالمعلمات الثلاثة التي تتوقعها.</p>
+<p><img src="images/100000000000023D000003196E08CA67.png" width="401" height="555" style="width:10.61cm;height:14.69cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000023D000003196E08CA67.png" /></p>
+<p><span id="refheading87525112820228" name="refheading87525112820228" class="odt-bookmark-anchor"></span></p>
+<h3 id="812">8.1.2. <span style="color: #4f81bd">الجزء الخاص بالعميل</span></h3>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004F7000001055B20EA52.png" width="636" height="131" style="display:inline-block; margin:4px;width:16.815cm;height:3.454cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F7000001055B20EA52.png" /></td></tr></table>
+
+<p><span id="refheading87527112820228" name="refheading87527112820228" class="odt-bookmark-anchor"></span>
+<span id="client-console-wsejb" name="client-console-wsejb" class="odt-bookmark-anchor"></span></p>
+<h4 id="8121-netbeans-console">8.1.2.1. <span style="color: #4f81bd"><em>مشروع <bdi dir="ltr" class="odt-ltr-term">Netbeans</bdi> الخاص بالعميل</em> <em><bdi dir="ltr" class="odt-ltr-term">console</bdi></em></span></h4>
+<p>نقوم الآن بإنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">Java</bdi> من النوع [<bdi dir="ltr" class="odt-ltr-term">Java Application</bdi>] لجزء <em><bdi dir="ltr" class="odt-ltr-term">client</bdi></em> من التطبيق. <strong>لم يكن من الممكن (يونيو 2012) إنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> لهذا العميل</strong>. تظهر خطأ، يبدو أنه معروف على الإنترنت ولكنه لا يزال دون حل.</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000015700000054C31B9CEB.png" width="240" height="59" style="display:inline-block; margin:4px;width:6.35cm;height:1.559cm;" class="odt-zoomable" data-zoom-src="images/100000000000015700000054C31B9CEB.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000B600000053B4DBCF2D.png" width="127" height="58" style="display:inline-block; margin:4px;width:3.371cm;height:1.54cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B600000053B4DBCF2D.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>بمجرد إنشاء المشروع، نشير إلى أنه سيكون عميلاً لخدمة الويب التي قمنا بنشرها للتو على خادم <bdi dir="ltr" class="odt-ltr-term">Glassfish:</bdi></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000050C0000016DB8F8994A.png" width="646" height="183" style="display:inline-block; margin:4px;width:17.092cm;height:4.83cm;" class="odt-zoomable" data-zoom-src="images/100000000000050C0000016DB8F8994A.png" /></td></tr></table>
+
+<ul>
+  <li>في [2]، نختار المشروع الجديد ونضغط على الزر [<bdi dir="ltr" class="odt-ltr-term">New File</bdi>]
+  </li>
+  <li>في [3]، نحدد أننا نريد إنشاء عميل لخدمة الويب
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004BE000000E7345262D9.png" width="607" height="116" style="display:inline-block; margin:4px;width:16.06cm;height:3.057cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BE000000E7345262D9.png" /></td></tr></table>
+
+<ul>
+  <li>باستخدام [4]، سنحدد مشروع <bdi dir="ltr" class="odt-ltr-term">Netbeans</bdi> لخدمة الويب
+  </li>
+  <li>في النافذة [5]، يتم سرد جميع المشاريع التي تحتوي على فرع [<bdi dir="ltr" class="odt-ltr-term">Web Services</bdi>]، وهنا فقط مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ws-metier-dao-eclipselink</bdi>].
+  </li>
+  <li>يمكن لمشروع واحد نشر عدة خدمات ويب. في [6]، نحدد خدمة الويب التي نريد الاتصال بها.
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000048A00000226EFB439F8.png" width="581" height="275" style="display:inline-block; margin:4px;width:15.372cm;height:7.276cm;" class="odt-zoomable" data-zoom-src="images/100000000000048A00000226EFB439F8.png" /></td></tr></table>
+
+<ul>
+  <li>في [7]، يتم عرض <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لتعريف الخدمة الويب. يتم استخدام <bdi dir="ltr" class="odt-ltr-term">URL</bdi> بواسطة أدوات البرامج التي تولد طبقة العميل التي ستتفاعل مع الخدمة الويب.
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004FF0000011C93164D93.png" width="640" height="142" style="display:inline-block; margin:4px;width:16.921cm;height:3.757cm;" class="odt-zoomable" data-zoom-src="images/10000000000004FF0000011C93164D93.png" /></td></tr></table>
+
+<ul>
+  <li>تتكون طبقة العميل [<bdi dir="ltr" class="odt-ltr-term">C</bdi>] [1] التي سيتم إنشاؤها من مجموعة من فئات <bdi dir="ltr" class="odt-ltr-term">Java</bdi> التي سيتم وضعها في حزمة واحدة. يتم تحديد اسم هذه الحزمة في [8].
+  </li>
+  <li>بمجرد انتهاء مساعد إنشاء عميل خدمة الويب بالضغط على الزر [<bdi dir="ltr" class="odt-ltr-term">Finish</bdi>]، يتم إنشاء الطبقة [<bdi dir="ltr" class="odt-ltr-term">C</bdi>] المذكورة أعلاه.
+  </li>
+</ul>
+
+<p>وينعكس ذلك في عدد من التغييرات في المشروع:</p>
+<ul>
+  <li>في [10] أعلاه، تظهر شجرة [<bdi dir="ltr" class="odt-ltr-term">Generated Sources</bdi>] التي تحتوي على فئات الطبقة [<bdi dir="ltr" class="odt-ltr-term">C</bdi>] التي تسمح للعميل [3] بالتواصل مع خدمة الويب. تسمح هذه الطبقة للعميل [3] بالتواصل مع الطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] [4] كما لو كانت محلية وليست بعيدة.
+  </li>
+  <li>في [11]، تظهر شجرة [<bdi dir="ltr" class="odt-ltr-term">Web Service References</bdi>] تسرد خدمات الويب التي تم إنشاء طبقة عميل لها.
+  </li>
+</ul>
+
+<p>تجدر الإشارة إلى أنه في الطبقة [<bdi dir="ltr" class="odt-ltr-term">C</bdi>] [10] التي تم إنشاؤها، نجد فئات تم نشرها على جانب الخادم: <bdi dir="ltr" class="odt-ltr-term">Indemnite</bdi>، <strong><bdi dir="ltr" class="odt-ltr-term">Cotisation</bdi></strong>، <strong><bdi dir="ltr" class="odt-ltr-term">Employe</bdi></strong>، <strong><bdi dir="ltr" class="odt-ltr-term">FeuilleSalaire</bdi></strong>، <strong><bdi dir="ltr" class="odt-ltr-term">ElementsSalaire</bdi></strong>، <strong><bdi dir="ltr" class="odt-ltr-term">Metier</bdi></strong>. <strong><bdi dir="ltr" class="odt-ltr-term">Metier</bdi></strong> هي خدمة الويب، أما الفئات الأخرى فهي فئات ضرورية لهذه الخدمة. قد نشعر بالفضول للاطلاع على كودها. سنرى أن تعريف الفئات التي، عند إنشائها، تمثل كائنات يتم التعامل معها بواسطة الخدمة، يتكون من تعريف حقول الفئة ووحدات الوصول الخاصة بها، بالإضافة إلى إضافة تعليقات تسمح بتسلسل الفئة في تدفق <bdi dir="ltr" class="odt-ltr-term">XML.</bdi> أصبحت فئة <strong><bdi dir="ltr" class="odt-ltr-term">Metier</bdi> واجهة</strong> تحتوي على الطريقتين اللتين تمت تعليقهما بـ <em>@<bdi dir="ltr" class="odt-ltr-term">WebMethod</bdi></em>. تنشأ عن كل منهما فئتان، على سبيل المثال [<bdi dir="ltr" class="odt-ltr-term">CalculerFeuilleSalaire.java</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">CalculerFeuilleSalaireResponse.java</bdi>]، حيث تغلف إحداهما استدعاء الطريقة والأخرى نتيجتها. وأخيرًا، فإن الفئة <strong><bdi dir="ltr" class="odt-ltr-term">MetierService</bdi></strong> هي الفئة التي تتيح للعميل الحصول على مرجع لخدمة الويب <strong>المتخصصة</strong> البعيدة:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w">    </span><span class="nd">@WebEndpoint</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MetierPort&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Metier</span><span class="w"> </span><span class="nf">getMetierPort</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kd">super</span><span class="p">.</span><span class="na">getPort</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">QName</span><span class="p">(</span><span class="s">&quot;http://metier/&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MetierPort&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">Metier</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>تسمح الطريقة <strong><bdi dir="ltr" class="odt-ltr-term">getMetierPort</bdi></strong> في السطر 2 بالحصول على مرجع لخدمة الويب <strong>المتخصصة</strong> البعيدة.</p>
+<p><span id="refheading87529112820228" name="refheading87529112820228" class="odt-bookmark-anchor"></span></p>
+<h4 id="8122-metier">8.1.2.2. <span style="color: #4f81bd">عميل وحدة التحكم لخدمة الويب <bdi dir="ltr" class="odt-ltr-term">Metier</bdi></span></h4>
+<p>لم يتبق لنا سوى كتابة عميل خدمة الويب <strong><bdi dir="ltr" class="odt-ltr-term">Metier</bdi></strong>. ننسخ الفئة [<bdi dir="ltr" class="odt-ltr-term">MainRemote</bdi>] من المشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-client-metier-dao-jpa-eclipselink</bdi>] الذي كان عميلاً لخادم <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>، إلى المشروع الجديد.</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000049C000002145C989357.png" width="590" height="266" style="display:inline-block; margin:4px;width:15.61cm;height:7.038cm;" class="odt-zoomable" data-zoom-src="images/100000000000049C000002145C989357.png" /></td></tr></table>
+
+<ul>
+  <li>إلى [1]، وهي فئة عميل خدمة الويب. تحتوي الفئة [<bdi dir="ltr" class="odt-ltr-term">MainRemote</bdi>] على أخطاء. لتصحيحها، سنبدأ بحذف جميع التعليمات [<bdi dir="ltr" class="odt-ltr-term">import</bdi>] الموجودة في الفئة وسنعيد إنشاؤها باستخدام الخيار [<bdi dir="ltr" class="odt-ltr-term">Fix Imports</bdi>]. في الواقع، أصبحت بعض الفئات المستخدمة من قبل الفئة [<bdi dir="ltr" class="odt-ltr-term">MainRemote</bdi>] جزءًا من الحزمة [<bdi dir="ltr" class="odt-ltr-term">client</bdi>] التي تم إنشاؤها.
+  </li>
+  <li>في [3]، جزء الكود الذي يتم فيه إنشاء مثيل الطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] هو [3]. ويتم ذلك باستخدام كود <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> للحصول على مرجع إلى <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> بعيد.
+  </li>
+</ul>
+
+<p>نقوم بتطوير الكود بالطريقة التالية:</p>
+<ul>
+  <li>يتم حذف الكود <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi>
+  </li>
+  <li>نظرًا لعدم وجود الفئة [<bdi dir="ltr" class="odt-ltr-term">PamException</bdi>] على جانب العميل، نقوم بحذف <i><bdi dir="ltr" class="odt-ltr-term">catch</bdi> </i>المرتبط بها للاحتفاظ فقط بـ <i><bdi dir="ltr" class="odt-ltr-term">catch</bdi> </i>في الفئة الأم [<bdi dir="ltr" class="odt-ltr-term">Exception</bdi>].
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004CE00000153F55481E4.png" width="615" height="170" style="display:inline-block; margin:4px;width:16.272cm;height:4.486cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CE00000153F55481E4.png" /></td></tr></table>
+
+<ul>
+  <li>في [4]، يتبقى لنا الحصول على مرجع لخدمة الويب البعيدة [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] حتى نتمكن من استدعاء طريقتها [<bdi dir="ltr" class="odt-ltr-term">calculerFeuilleSalaire</bdi>].
+  </li>
+  <li>في [5]، نستخدم الماوس لسحب (<bdi dir="ltr" class="odt-ltr-term">drag</bdi>) الطريقة [<bdi dir="ltr" class="odt-ltr-term">calculerFeuilleSalaire</bdi>] من خدمة الويب [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] لإفلاتها (<bdi dir="ltr" class="odt-ltr-term">drop</bdi>) في [4]. يتم إنشاء كود [6]. يمكن للمطور بعد ذلك تكييف هذا الكود العام.
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004F8000000B1907F3DB4.png" width="636" height="89" style="display:inline-block; margin:4px;width:16.828cm;height:2.342cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F8000000B1907F3DB4.png" /></td></tr></table>
+
+<ul>
+  <li>السطر 112، نرى أن [<bdi dir="ltr" class="odt-ltr-term">calculerFeuilleSalaire</bdi>] هي طريقة من فئة [<bdi dir="ltr" class="odt-ltr-term">client.Metier</bdi>] (السطر 111). الآن بعد أن عرفنا كيفية الحصول على الطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]، يمكن إعادة كتابة الكود السابق على النحو التالي:
+  </li>
+</ul>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">...</span><span class="w">    </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">// c&#39;est bon - on peut demander la feuille de salaire</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="n">FeuilleSalaire</span><span class="w"> </span><span class="n">feuilleSalaire</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="n">Metier</span><span class="w"> </span><span class="n">metier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">       </span><span class="c1">// instanciation couche [metier]</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">      </span><span class="n">metier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MetierService</span><span class="p">().</span><span class="na">getMetierPort</span><span class="p">();</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">       </span><span class="c1">// calcul de la feuille de salaire</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">      </span><span class="n">feuilleSalaire</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metier</span><span class="p">.</span><span class="na">calculerFeuilleSalaire</span><span class="p">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">nbHeuresTravaillées</span><span class="p">,</span><span class="w"> </span><span class="n">nbJoursTravaillés</span><span class="p">);</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Throwable</span><span class="w"> </span><span class="n">th</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">       </span><span class="c1">// chaîne des exceptions</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Chaîne des exceptions --------------------------------------&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">th</span><span class="p">.</span><span class="na">getClass</span><span class="p">().</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">th</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">th</span><span class="p">.</span><span class="na">getCause</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">        </span><span class="n">th</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">th</span><span class="p">.</span><span class="na">getCause</span><span class="p">();</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">th</span><span class="p">.</span><span class="na">getClass</span><span class="p">().</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">th</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">     </span><span class="c1">// affichage rapide</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="p">...</span>
+</code></pre></div></td></tr></table></div>
+<p>يسترد السطر 7 مرجعًا إلى خدمة الويب <strong><bdi dir="ltr" class="odt-ltr-term">Metier</bdi></strong>. بعد ذلك، لا يتغير كود الفئة، باستثناء أنه في السطر 10، لا تتم معالجة الاستثناء من النوع [<bdi dir="ltr" class="odt-ltr-term">Exception</bdi>] بل النوع الأعم <em><bdi dir="ltr" class="odt-ltr-term">Throwable</bdi></em>، الفئة الأم للفئة <em><bdi dir="ltr" class="odt-ltr-term">Exception</bdi></em>. في حالة وجود استثناء، نعرض جميع الأسباب المتداخلة له حتى السبب الأصلي.</p>
+<p>نحن جاهزون للاختبارات:</p>
+<ul>
+  <li>التأكد من تشغيل <bdi dir="ltr" class="odt-ltr-term">SGBD MySQL5</bdi>، وإنشاء قاعدة البيانات <i><bdi dir="ltr" class="odt-ltr-term">dbpam_eclipselink</bdi> </i>وتهيئتها
+  </li>
+  <li>التأكد من نشر خدمة الويب على خادم <bdi dir="ltr" class="odt-ltr-term">Glassfish</bdi>
+  </li>
+  <li>بناء العميل (<bdi dir="ltr" class="odt-ltr-term">Clean and Build</bdi>)
+  </li>
+  <li>تكوين تشغيل العميل
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000F3000000787F2C9D7A.png" width="170" height="84" style="display:inline-block; margin:4px;width:4.5cm;height:2.221cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F3000000787F2C9D7A.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>تشغيل العميل
+  </li>
+</ul>
+
+<p>النتائج في وحدة التحكم هي كما يلي:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>...
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>Valeurs saisies :
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>N° de sécurité sociale de l&#39;employé : 254104940426058
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>Nombre d&#39;heures travaillées : 150
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>Nombre de jours travaillés : 20
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>Informations Employé : 
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>Nom : Jouveinal
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>Prénom : Marie
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>Adresse : 5 rue des oiseaux
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>...
+</code></pre></div></td></tr></table></div>
+<p>مع التكوين التالي:</p>
+<p><img src="images/10000000000000DF00000077930F229C.png" width="156" height="83" style="width:4.129cm;height:2.2cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000DF00000077930F229C.png" /></p>
+<p>نحصل على النتائج التالية:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>Chaîne des exceptions --------------------------------------
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>javax.xml.ws.soap.SOAPFaultException:L&#39;employé de n°[xx] est introuvable
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>com.sun.xml.internal.ws.developer.ServerSideException:L&#39;employé de n°[xx] est introuvable
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>Java Result: 1
+</code></pre></div></td></tr></table></div>
+<p>تجدر الإشارة إلى أنه في حين أن خدمة الويب [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] ترسل استثناءً من النوع [<bdi dir="ltr" class="odt-ltr-term">PamException</bdi>]، فإن الاستثناء الذي يتلقاه العميل هو من النوع [<bdi dir="ltr" class="odt-ltr-term">SOAPFaultException</bdi>]. وحتى في سلسلة الاستثناءات، لا يظهر النوع [<bdi dir="ltr" class="odt-ltr-term">PamException</bdi>].</p>
+<p><span id="refheading87531112820228" name="refheading87531112820228" class="odt-bookmark-anchor"></span></p>
+<h3 id="813-swing-metier">8.1.3. <span style="color: #4f81bd">عميل <bdi dir="ltr" class="odt-ltr-term">Swing</bdi> لخدمة الويب <bdi dir="ltr" class="odt-ltr-term">Metier</bdi></span></h3>
+<hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
+<p><strong>المهمة المطلوبة</strong>: نقل عميل <bdi dir="ltr" class="odt-ltr-term">Swing</bdi> الخاص بالمشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-client-ejb-metier-dao-jpa-eclipselink</bdi>] إلى المشروع الجديد بحيث يصبح هو أيضًا عميلًا لخدمة الويب المنشورة على خادم <bdi dir="ltr" class="odt-ltr-term">Glassfish.</bdi></p>
+<hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
+<p><span id="refheading87533112820228" name="refheading87533112820228" class="odt-bookmark-anchor"></span>
+<span id="serviceweb-web-ejb" name="serviceweb-web-ejb" class="odt-bookmark-anchor"></span></p>
+<h2 id="82">8.2. <span style="color: #4f81bd">خدمة الويب التي تم تنفيذها بواسطة تطبيق ويب</span></h2>
+<p>نحن الآن في إطار البنية التالية:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004C9000000BC79878111.png" width="613" height="94" style="display:inline-block; margin:4px;width:16.207cm;height:2.487cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C9000000BC79878111.png" /></td></tr></table>
+
+<p>يتم توفير خدمة الويب بواسطة تطبيق ويب يتم تنفيذه داخل حاوية الويب الخاصة بخادم <bdi dir="ltr" class="odt-ltr-term">Glassfish.</bdi> ستعتمد خدمة الويب هذه على <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] الذي تم نشره بدوره في الحاوية <bdi dir="ltr" class="odt-ltr-term">EJB3.</bdi></p>
+<p><span id="refheading87535112820228" name="refheading87535112820228" class="odt-bookmark-anchor"></span></p>
+<h3 id="821">8.2.1. <span style="color: #4f81bd">جزء الخادم</span></h3>
+<p>نقوم بإنشاء تطبيق ويب:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005270000011066BA55EB.png" width="660" height="136" style="display:inline-block; margin:4px;width:17.45cm;height:3.598cm;" class="odt-zoomable" data-zoom-src="images/10000000000005270000011066BA55EB.png" /></td></tr></table>
+
+<ul>
+  <li>في [1]، وننشئ مشروعًا جديدًا
+  </li>
+  <li>في [2]، هذا المشروع من النوع [<bdi dir="ltr" class="odt-ltr-term">Web Application</bdi>]
+  </li>
+  <li>في [3]، نسميه [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ws-ejb-metier-dao-eclipselink</bdi>]
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004B2000000DACA25A4CE.png" width="601" height="109" style="display:inline-block; margin:4px;width:15.901cm;height:2.884cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B2000000DACA25A4CE.png" /></td></tr></table>
+
+<ul>
+  <li>في [4]، نختار إصدار <bdi dir="ltr" class="odt-ltr-term">Java EE</bdi> 6
+  </li>
+  <li>في [6]، المشروع الذي تم إنشاؤه
+  </li>
+</ul>
+
+<p>في المخطط أدناه، سيتم تشغيل تطبيق الويب الذي تم إنشاؤه في حاوية الويب. سيستخدم <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] الذي سيتم نشره بدوره في حاوية <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> الخاصة بالخادم.</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004DB000000B28C048F11.png" width="622" height="89" style="display:inline-block; margin:4px;width:16.445cm;height:2.355cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DB000000B28C048F11.png" /></td></tr></table>
+
+<p>لكي تتمكن تطبيق الويب الذي تم إنشاؤه من الوصول إلى الفئات المرتبطة بـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>]، نضيف إلى مكتبات تطبيق الويب [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ws-ejb-metier-dao-eclipselink</bdi>]، الاعتماد على الخادم <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ejb-metier-dao-eclipselink</bdi>] الذي تمت دراسته سابقًا.</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004B700000174D78DC043.png" width="604" height="186" style="display:inline-block; margin:4px;width:15.968cm;height:4.921cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B700000174D78DC043.png" /></td></tr></table>
+
+<ul>
+  <li>في [1]، نضيف مشروعًا إلى تبعيات مشروع الويب،
+  </li>
+  <li>في [2]، يتم تحديد المشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ejb-metier-dao-eclipselink</bdi>]،
+  </li>
+  <li>في [3]، نوع التبعية هو <i>ejb</i>،
+  </li>
+  <li>في [4]، نطاق التبعية هو <bdi dir="ltr" class="odt-ltr-term">provided</bdi>، أي أنها ستُوفَّر بواسطة بيئة التشغيل،
+  </li>
+  <li>في [5]، تمت إضافة التبعية.
+  </li>
+</ul>
+
+<p>لإنشاء نفس خدمة الويب السابقة، نحتاج إلى:</p>
+<ul>
+  <li>إنشاء فئة تحمل العلامة <i>@<bdi dir="ltr" class="odt-ltr-term">Webservice</bdi></i>
+  </li>
+  <li>مع طريقتين <i><bdi dir="ltr" class="odt-ltr-term">calculerFeuilleSalaire</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">findAllEmployes</bdi> </i>الموسومتين بـ <i>@<bdi dir="ltr" class="odt-ltr-term">WebMethod</bdi></i>
+  </li>
+</ul>
+
+<p>نقوم بإنشاء فئة [<bdi dir="ltr" class="odt-ltr-term">PamWsEjbMetier</bdi>] في حزمة [<bdi dir="ltr" class="odt-ltr-term">pam.ws</bdi>]:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000018D000000CBB80D1730.png" width="199" height="102" style="display:inline-block; margin:4px;width:5.253cm;height:2.686cm;" class="odt-zoomable" data-zoom-src="images/100000000000018D000000CBB80D1730.png" /></td></tr></table>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000010E000000838DA66CAD.png" width="189" height="92" style="display:inline-block; margin:4px;width:5.001cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/100000000000010E000000838DA66CAD.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>الفئة [<bdi dir="ltr" class="odt-ltr-term">PamWsEjbMetier</bdi>] هي كما يلي:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span>
+<span class="normal"><a href="#__codelineno-4-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">pam.ws</span><span class="p">;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.ejb.EJB</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.jws.WebMethod</span><span class="p">;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.jws.WebService</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">jpa.Employe</span><span class="p">;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">metier.FeuilleSalaire</span><span class="p">;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">metier.IMetier</span><span class="p">;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">metier.IMetierLocal</span><span class="p">;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="nd">@WebService</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PamWsEjbMetier</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">IMetier</span><span class="p">{</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">  </span><span class="nd">@EJB</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">IMetierLocal</span><span class="w"> </span><span class="n">metier</span><span class="p">;</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">  </span><span class="nd">@WebMethod</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">FeuilleSalaire</span><span class="w"> </span><span class="nf">calculerFeuilleSalaire</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">SS</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">nbHeuresTravaillées</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nbJoursTravaillés</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">metier</span><span class="p">.</span><span class="na">calculerFeuilleSalaire</span><span class="p">(</span><span class="n">SS</span><span class="p">,</span><span class="w"> </span><span class="n">nbHeuresTravaillées</span><span class="p">,</span><span class="w"> </span><span class="n">nbJoursTravaillés</span><span class="p">);</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">  </span><span class="nd">@WebMethod</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Employe</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">findAllEmployes</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">metier</span><span class="p">.</span><span class="na">findAllEmployes</span><span class="p">();</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a>
+<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+  <li>الأسطر 7-10: تستورد الفئة فئات من الوحدة النمطية <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">pam-serveurws-metier-dao-jpa-eclipselink</bdi>] التي تمت إضافة مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> الخاص بها إلى تبعيات المشروع.
+  </li>
+  <li>السطر 12: الفئة هي خدمة ويب
+  </li>
+  <li>السطر 13: تنفذ واجهة <i><bdi dir="ltr" class="odt-ltr-term">IMetier</bdi> </i>المحددة في الوحدة النمطية <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>
+  </li>
+  <li>السطران 18-19: يتم عرض الطريقة <i><bdi dir="ltr" class="odt-ltr-term">calculerFeuilleSalaire</bdi> </i>كطريقة لخدمة الويب
+  </li>
+  <li>السطران 23-24: يتم عرض الطريقة <i><bdi dir="ltr" class="odt-ltr-term">findAllEmployes</bdi> </i>كطريقة لخدمة الويب
+  </li>
+  <li>السطران 15-16: يتم إدراج الواجهة المحلية لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] في حقل السطر 16. نستخدم الواجهة المحلية لأن تطبيق الويب والوحدة النمطية <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> يتم تشغيلهما في نفس <bdi dir="ltr" class="odt-ltr-term">JVM.</bdi>
+  </li>
+  <li>السطران 20 و25: تقوم الطريقتان <i><bdi dir="ltr" class="odt-ltr-term">calculerFeuilleSalaire</bdi> و<bdi dir="ltr" class="odt-ltr-term">findAllEmployes</bdi> </i>بتفويض معالجتهما إلى الطرق التي تحمل نفس الاسم في <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>]. وبالتالي، فإن الفئة لا تخدم سوى عرض طرق <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> و [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] للعملاء البعيدين كطرق لخدمة ويب.
+  </li>
+</ul>
+
+<p>في <bdi dir="ltr" class="odt-ltr-term">Netbeans</bdi>، يتم التعرف على تطبيق الويب على أنه يعرض خدمة ويب:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000528000000CFD9D948D5.png" width="660" height="104" style="display:inline-block; margin:4px;width:17.463cm;height:2.739cm;" class="odt-zoomable" data-zoom-src="images/1000000000000528000000CFD9D948D5.png" /></td></tr></table>
+
+<p>لنشر خدمة الويب على خادم <bdi dir="ltr" class="odt-ltr-term">Glassfish</bdi>، يتعين علينا نشر كل من:</p>
+<ul>
+  <li>الوحدة النمطية للويب في حاوية الويب الخاصة بالخادم
+  </li>
+  <li>وحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> في حاوية <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> الخاصة بالخادم
+  </li>
+</ul>
+
+<p>للقيام بذلك، نحتاج إلى إنشاء تطبيق من النوع [<bdi dir="ltr" class="odt-ltr-term">Enterprise Application</bdi>] الذي سيقوم بنشر الوحدتين في نفس الوقت. وللقيام بذلك، يجب تحميل المشروعين في <bdi dir="ltr" class="odt-ltr-term">Netbeans</bdi> [2].</p>
+<p>وبعد ذلك، نقوم بإنشاء مشروع جديد [3].</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000492000000D5B56F9F84.png" width="585" height="107" style="display:inline-block; margin:4px;width:15.478cm;height:2.819cm;" class="odt-zoomable" data-zoom-src="images/1000000000000492000000D5B56F9F84.png" /></td></tr></table>
+
+<ul>
+  <li>في [4]، نختار مشروعًا من النوع [<bdi dir="ltr" class="odt-ltr-term">Enterprise Application</bdi>].
+  </li>
+  <li>في [5]، نسمي المشروع
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004E0000000FB447DF287.png" width="624" height="126" style="display:inline-block; margin:4px;width:16.51cm;height:3.321cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E0000000FB447DF287.png" /></td></tr></table>
+
+<ul>
+  <li>في [6]، نقوم بتكوين المشروع. ستكون إصدارة <bdi dir="ltr" class="odt-ltr-term">Java EE</bdi> هي <bdi dir="ltr" class="odt-ltr-term">Java EE</bdi> 6. يمكن إنشاء مشروع مؤسسي باستخدام وحدتين: وحدة <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> ووحدة ويب. هنا، سيقوم مشروع المؤسسة بتغليف الوحدة النمطية للويب والوحدة النمطية <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> التي تم إنشاؤها وتحميلها بالفعل في <bdi dir="ltr" class="odt-ltr-term">Netbeans.</bdi> لذلك لا نطلب إنشاء وحدات نمطية جديدة.
+  </li>
+  <li>في [7]، تم إنشاء مشروع المؤسسة [<bdi dir="ltr" class="odt-ltr-term">mv-pam-webapp-ear</bdi>] بهذه الطريقة. تم إنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> آخر في نفس الوقت [<bdi dir="ltr" class="odt-ltr-term">mv-pam-webapp</bdi>]. لن نتطرق إليه.
+  </li>
+  <li>في [8]، نضيف تبعيات إلى مشروع المؤسسة
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004070000017EC5C22964.png" width="516" height="191" style="display:inline-block; margin:4px;width:13.64cm;height:5.054cm;" class="odt-zoomable" data-zoom-src="images/10000000000004070000017EC5C22964.png" /></td></tr></table>
+
+<ul>
+  <li>في [9]، نضيف مشروع الويب من نوع war،
+  </li>
+  <li>في [10]، نضيف المشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> من نوع ejb،
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000028B000000B061EBEB8F.png" width="326" height="88" style="display:inline-block; margin:4px;width:8.613cm;height:2.328cm;" class="odt-zoomable" data-zoom-src="images/100000000000028B000000B061EBEB8F.png" /></td></tr></table>
+
+<ul>
+  <li>في [11]، مشروع المؤسسة مع تبعياته.
+  </li>
+</ul>
+
+<p>نقوم بإنشاء مشروع المؤسسة من خلال عملية <em>&quot;<bdi dir="ltr" class="odt-ltr-term">Clean and Build</bdi></em>&quot;. نحن على وشك الانتهاء من نشره على خادم <bdi dir="ltr" class="odt-ltr-term">Glassfish.</bdi> قبل ذلك، قد يكون من الضروري إزالة التطبيقات التي تم تحميلها بالفعل على الخادم لتجنب أي تعارض محتمل في أسماء <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [11]:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000051800000156BF35BFB2.png" width="652" height="171" style="display:inline-block; margin:4px;width:17.251cm;height:4.524cm;" class="odt-zoomable" data-zoom-src="images/100000000000051800000156BF35BFB2.png" /></td></tr></table>
+
+<p>يجب تشغيل الخادم <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> وتكون قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_eclipselink] متاحة ومملوءة. بعد ذلك، يمكن نشر تطبيق المؤسسة [12]. في [13]، يمكننا أن نرى أنه تم نشرها بالفعل على خادم <bdi dir="ltr" class="odt-ltr-term">Glassfish.</bdi></p>
+<p>يمكننا اختبار خدمة الويب التي تم نشرها للتو:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000050D000001F4986C6214.png" width="647" height="250" style="display:inline-block; margin:4px;width:17.106cm;height:6.615cm;" class="odt-zoomable" data-zoom-src="images/100000000000050D000001F4986C6214.png" /></td></tr></table>
+
+<ul>
+  <li>في [1]، نطلب اختبار خدمة الويب [<bdi dir="ltr" class="odt-ltr-term">PamWsEjbMetier</bdi>]
+  </li>
+  <li>في [2]، صفحة الاختبار. نترك للقارئ مهمة إجراء الاختبارات.
+  </li>
+</ul>
+
+<p><span id="refheading87537112820228" name="refheading87537112820228" class="odt-bookmark-anchor"></span></p>
+<h3 id="822">8.2.2. <span style="color: #4f81bd">الجزء الخاص بالعميل</span></h3>
+<hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
+<p><strong>المهمة المطلوبة</strong>: باتباع الخطوات الموضحة في الفقرة<a href="#client-console-wsejb"><u><span style="color: #0563c1"> 8.1.2.1</span></u></a>، قم بإنشاء عميل وحدة تحكم لخدمة الويب السابقة.</p>
+<hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
+<p><span id="refheading87539112820228" name="refheading87539112820228" class="odt-bookmark-anchor"></span></p>
+<h2 id="83-spring-tomcat">8.3. <span style="color: #4f81bd">خدمة الويب المنفذة باستخدام <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> و <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi></span></h2>
+<p>نضع أنفسنا الآن في إطار البنية التالية:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000414000000BE6BCDD591.png" width="522" height="95" style="display:inline-block; margin:4px;width:13.811cm;height:2.514cm;" class="odt-zoomable" data-zoom-src="images/1000000000000414000000BE6BCDD591.png" /></td></tr></table>
+
+<p>يتم توفير الخدمة الويب بواسطة تطبيق ويب يتم تنفيذه داخل حاوية الويب لخادم <bdi dir="ltr" class="odt-ltr-term">Tomcat.</bdi> ستكون بنية التطبيق كما يلي:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000047D00000109F0CE9BF7.png" width="575" height="133" style="display:inline-block; margin:4px;width:15.201cm;height:3.507cm;" class="odt-zoomable" data-zoom-src="images/100000000000047D00000109F0CE9BF7.png" /></td></tr></table>
+
+<p>سنعتمد على المشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-spring-hibernate</bdi>] الذي تم إنشاؤه في الفقرة<a href="ldr-1-bny-spring--jpa.html#pam-console-spring-hibernate"><u><span style="color: #0563c1"> 5.11</span></u></a>:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000AA000000FF7275C3CC.png" width="119" height="178" style="display:inline-block; margin:4px;width:3.15cm;height:4.72cm;" class="odt-zoomable" data-zoom-src="images/10000000000000AA000000FF7275C3CC.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p><span id="refheading875351128202281" name="refheading875351128202281" class="odt-bookmark-anchor"></span></p>
+<h3 id="831">8.3.1. <span style="color: #4f81bd">جزء الخادم</span></h3>
+<p>نقوم بإنشاء تطبيق <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> من نوع الويب باسم [<bdi dir="ltr" class="odt-ltr-term">mv-pam-ws-spring-tomcat</bdi>] [1]:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002FA0000015F33EBFA27.png" width="381" height="176" style="display:inline-block; margin:4px;width:10.081cm;height:4.644cm;" class="odt-zoomable" data-zoom-src="images/10000000000002FA0000015F33EBFA27.png" /></td></tr></table>
+
+<p>نقوم بتعديل الملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] لتضمين التبعيات التالية [2]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependencies</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">${project.groupId}</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span><span style="color:#000000">mv-pam-spring-hibernate</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span><span style="color:#000000">${project.version}</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- Apache CXF dependencies --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">org.apache.cxf</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span><span style="color:#000000">cxf-rt-frontend-jaxws</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span><span style="color:#000000">2.2.12</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">org.apache.cxf</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span><span style="color:#000000">cxf-rt-transports-http</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span><span style="color:#000000">2.2.12</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">dependencies</span><span style="color:#008080">&gt;</span></span></span>
+</code></pre></div>
+
+<ul>
+  <li>الأسطر 3-7: التبعية لمشروع [<bdi dir="ltr" class="odt-ltr-term">spring-pam-jpa-hibernate</bdi>]،
+  </li>
+  <li>الأسطر 8-17: التبعيات على إطار عمل <bdi dir="ltr" class="odt-ltr-term">Apache CXF</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://cxf.apache.org/</bdi>]. يسهل هذا الإطار إنشاء خدمات الويب.
+  </li>
+</ul>
+
+<p>يحتوي ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] هذا على العديد من التبعيات [2].</p>
+<p>لنعد إلى بنية التطبيق:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004B000000108B7CFCD39.png" width="600" height="132" style="display:inline-block; margin:4px;width:15.875cm;height:3.493cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B000000108B7CFCD39.png" /></td></tr></table>
+
+<p>يتم إدارة استدعاءات خدمة الويب التي سنقوم بإنشائها بواسطة سيرفلت من إطار العمل <bdi dir="ltr" class="odt-ltr-term">CXF.</bdi> وينعكس ذلك في الملف [<bdi dir="ltr" class="odt-ltr-term">WEB-INF / web.xml</bdi>] على النحو التالي:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#008080">?&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">web-app</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;2.5&quot;</span> <span style="color:#7f007f">xmlns</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://java.sun.com/xml/ns/javaee&quot;</span> <span style="color:#7f007f">xmlns:xsi</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span style="color:#7f007f">xsi:schemaLocation</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">display-name</span><span style="color:#008080">&gt;</span><span style="color:#000000">mv-pam-ws-spring-tomcat</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">display-name</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">listener</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">listener-class</span><span style="color:#008080">&gt;</span><span style="color:#000000">org.springframework.web.context.ContextLoaderListener</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">listener-class</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">listener</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!--   Configuration de CXF --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">servlet</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">servlet-name</span><span style="color:#008080">&gt;</span><span style="color:#000000">CXFServlet</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">servlet-name</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">servlet-class</span><span style="color:#008080">&gt;</span><span style="color:#000000">org.apache.cxf.transport.servlet.CXFServlet</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">servlet-class</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">load-on-startup</span><span style="color:#008080">&gt;</span><span style="color:#000000">1</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">load-on-startup</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">servlet</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">servlet-mapping</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">servlet-name</span><span style="color:#008080">&gt;</span><span style="color:#000000">CXFServlet</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">servlet-name</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &lt;url-pattern&gt;/ws/*&lt;/url-pattern&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">servlet-mapping</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">session-config</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">session-timeout</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      30</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">session-timeout</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">session-config</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">welcome-file-list</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">welcome-file</span><span style="color:#008080">&gt;</span><span style="color:#000000">index.jsp</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">welcome-file</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">welcome-file-list</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">web-app</span><span style="color:#008080">&gt;</span></span></span>
+</code></pre></div>
+
+<ul>
+  <li>يعتمد إطار العمل <bdi dir="ltr" class="odt-ltr-term">CXF</bdi> على <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> الأسطر 4-6: يتم إعلان مستمع. سيتم تحميل الفئة المقابلة في نفس الوقت الذي يتم فيه تحميل تطبيق الويب. وستستخدم ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> [<bdi dir="ltr" class="odt-ltr-term">WEB-INF / applicationContext.xml</bdi>]:
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000146000000DE42FA5EF3.png" width="163" height="111" style="display:inline-block; margin:4px;width:4.313cm;height:2.937cm;" class="odt-zoomable" data-zoom-src="images/1000000000000146000000DE42FA5EF3.png" /></td></tr></table>
+
+<ul>
+  <li>الأسطر 8-12: السيرفلت <bdi dir="ltr" class="odt-ltr-term">CXF</bdi> الذي سيدير المكالمات إلى خدمة الويب التي سنقوم بإنشائها،
+  </li>
+  <li>الأسطر 13-16: ستكون <bdi dir="ltr" class="odt-ltr-term">URL</bdi> التي تعالجها الخدمة الصغيرة <bdi dir="ltr" class="odt-ltr-term">CXF</bdi> من النوع /<bdi dir="ltr" class="odt-ltr-term">ws/</bdi>*. لن تعالج <bdi dir="ltr" class="odt-ltr-term">CXF</bdi> الباقي.
+  </li>
+</ul>
+
+<p>لتعريف خدمة الويب، نقوم بتعريف واجهة وتطبيقها:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000134000000DE737F936F.png" width="154" height="111" style="display:inline-block; margin:4px;width:4.075cm;height:2.937cm;" class="odt-zoomable" data-zoom-src="images/1000000000000134000000DE737F936F.png" /></td></tr></table>
+
+<p>ستكون واجهة [<bdi dir="ltr" class="odt-ltr-term">IWsMetier</bdi>] كما يلي:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> pam.ws;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> javax.jws.WebService;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> metier.IMetier;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#646464">@</span><span style="color:#000000">WebService</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">interface</span><span style="color:#000000"> IWsMetier </span><span style="font-weight:bold;color:#7f0055">extends</span><span style="color:#000000"> IMetier{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<ul>
+  <li>السطر 7: واجهة [<bdi dir="ltr" class="odt-ltr-term">IWsMetier</bdi>] مشتقة من واجهة [<bdi dir="ltr" class="odt-ltr-term">IMetier</bdi>] من الطبقة [<bdi dir="ltr" class="odt-ltr-term">métier</bdi>] للمشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-spring-hibernate</bdi>]،
+  </li>
+  <li>السطر 6: واجهة [<bdi dir="ltr" class="odt-ltr-term">IWsMetier</bdi>] هي واجهة خدمة ويب.
+  </li>
+</ul>
+
+<p>فئة تنفيذ هذه الواجهة هي التالية:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> pam.ws;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.List;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> javax.jws.WebMethod;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> javax.jws.WebService;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> jpa.Employe;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> metier.FeuilleSalaire;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> metier.IMetier;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#646464">@</span><span style="color:#000000">WebService</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> PamWsMetier </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> IWsMetier {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// couche métier</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> IMetier metier;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// constructeur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> PamWsMetier(){</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">WebMethod</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> FeuilleSalaire calculerFeuilleSalaire(String SS, </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> nbHeuresTravaillees, </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> nbJoursTravailles) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> metier.calculerFeuilleSalaire(SS, nbHeuresTravaillees, nbJoursTravailles);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">WebMethod</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> List&lt;Employe&gt; findAllEmployes() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> metier.findAllEmployes();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// getters et setters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> setMetier(IMetier metier) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.metier = metier;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<ul>
+  <li>السطر 11: فئة [<bdi dir="ltr" class="odt-ltr-term">PamWsMetier</bdi>] تنفذ الواجهة المحددة سابقًا،
+  </li>
+  <li>السطر 10: يُعرّف الفئة كخدمة ويب،
+  </li>
+  <li>السطر 14: سيتم حقن الطبقة [<bdi dir="ltr" class="odt-ltr-term">métier</bdi>] بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>،
+  </li>
+  <li>السطران 21 و26: التعليق التوضيحي @<bdi dir="ltr" class="odt-ltr-term">WebMethod</bdi> يجعل من الأسلوب أسلوبًا معروضًا بواسطة خدمة الويب،
+  </li>
+  <li>السطران 23 و28: يتم تنفيذ الطرق باستخدام الطبقة [<bdi dir="ltr" class="odt-ltr-term">métier</bdi>].
+  </li>
+</ul>
+
+<p>يبقى لنا تحديد محتوى ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> [<bdi dir="ltr" class="odt-ltr-term">applicationContext.xml</bdi>]:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000148000000DC6030EEF4.png" width="164" height="110" style="display:inline-block; margin:4px;width:4.339cm;height:2.91cm;" class="odt-zoomable" data-zoom-src="images/1000000000000148000000DC6030EEF4.png" /></td></tr></table>
+
+<p>محتواه هو التالي:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;beans</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xmlns</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.springframework.org/schema/beans</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xmlns:xsi</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.w3.org/2001/XMLSchema-instance</span><span style="color:#800080">&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#008080">       </span><span style="color:#808000">xmlns:tx</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.springframework.org/schema/tx</span><span style="color:#800080">&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#008080">       </span><span style="color:#808000">xmlns:jaxws</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://cxf.apache.org/jaxws</span><span style="color:#800080">&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#008080">       </span><span style="color:#808000">xsi:schemaLocation</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">http://www.springframework.org/schema/beans </span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">       http://www.springframework.org/schema/beans/spring-beans-2.0.xsd </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">       http://www.springframework.org/schema/tx </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">       http://www.springframework.org/schema/tx/spring-tx-2.0.xsd</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">       http://cxf.apache.org/jaxws</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">       http://cxf.apache.org/schemas/jaxws.xsd&quot;&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- Apache CXF --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;import</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">resource</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">classpath:META-INF/cxf/cxf.xml</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;import</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">resource</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">classpath:META-INF/cxf/cxf-extension-soap.xml</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;import</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">resource</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">classpath:META-INF/cxf/cxf-servlet.xml</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span><span style="color:#000000">  </span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- couches basses --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;import</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">resource</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">classpath:spring-config-metier-dao.xml</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span><span style="color:#000000">  </span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- service web --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">wsMetier</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">pam.ws.PamWsMetier</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">metier</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">ref</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">metier</span><span style="color:#800080">&quot;/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/bean&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;jaxws:endpoint</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">wsmetier</span><span style="color:#800080">&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#008080">                  </span><span style="color:#808000">implementor</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">#wsMetier</span><span style="color:#800080">&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#008080">                  </span><span style="color:#808000">address</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">/metier</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/jaxws:endpoint&gt;</span><span style="color:#000000">  </span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;/beans&gt;</span></span>
+</code></pre></div>
+
+<ul>
+  <li>الأسطر 13-15: يتم استيراد ملفات تكوين <bdi dir="ltr" class="odt-ltr-term">Apache CXF.</bdi> يتم البحث عن هذه الملفات في <i><bdi dir="ltr" class="odt-ltr-term">Classpath</bdi> </i>الخاص بالمشروع (السمة <bdi dir="ltr" class="odt-ltr-term">classpath:</bdi>)،
+  </li>
+  <li>الأسطر 4 و9 و10: يتم إعلان مساحات أسماء خاصة بـ <bdi dir="ltr" class="odt-ltr-term">Apache CXF</bdi>،
+  </li>
+  <li>السطر 18: يتم استيراد ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> من مشروع [<bdi dir="ltr" class="odt-ltr-term">mv-pam-spring-hibernate</bdi>]،
+  </li>
+  <li>الأسطر 21-23: تحدد <bdi dir="ltr" class="odt-ltr-term">bean</bdi> خدمة الويب مع اعتماده على الطبقة [<bdi dir="ltr" class="odt-ltr-term">métier</bdi>] (السطر 22)،
+  </li>
+  <li>الأسطر 24-27: تحدد خدمة الويب نفسها،
+    <ul>
+      <li>السطر 25: <bdi dir="ltr" class="odt-ltr-term">bean Spring</bdi> الذي ينفذ خدمة الويب هو الذي تم تعريفه في السطر 21؛
+      </li>
+      <li>السطر 26: يحدد <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الذي ستتوفر عليه خدمة الويب، هنا /<bdi dir="ltr" class="odt-ltr-term">metier.</bdi> بالاقتران مع الشكل الذي يجب أن تتخذه عناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> التي يعالجها <bdi dir="ltr" class="odt-ltr-term">Apache</bdi> (انظر الملف <bdi dir="ltr" class="odt-ltr-term">CXF</bdi>)، تصبح هذه العنوان /<bdi dir="ltr" class="odt-ltr-term">ws/metier.</bdi>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>مشروعنا جاهز للتنفيذ. نقوم بتنفيذه (<bdi dir="ltr" class="odt-ltr-term">Run</bdi>) ونطلب <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/mv-pam-ws-spring-tomcat/ws</bdi>] في متصفح:</p>
+<p><img src="images/100000000000032F000000F061A608F9.png" width="570" height="168" style="width:15.09cm;height:4.45cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000032F000000F061A608F9.png" /></p>
+<p>تسرد الصفحة جميع خدمات الويب التي تم نشرها. هنا، لا يوجد سوى خدمة واحدة. نتبع الرابط <bdi dir="ltr" class="odt-ltr-term">WSDL:</bdi></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000046900000328392B7390.png" width="565" height="404" style="display:inline-block; margin:4px;width:14.937cm;height:10.689cm;" class="odt-zoomable" data-zoom-src="images/100000000000046900000328392B7390.png" /></td></tr></table>
+
+<p>النص المعروض [1] هو نص ملف <bdi dir="ltr" class="odt-ltr-term">XML</bdi> الذي يحدد وظائف خدمة الويب وكيفية استدعائها والردود التي ترسلها. يجب ملاحظة <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [2] لهذا الملف <bdi dir="ltr" class="odt-ltr-term">WSDL.</bdi> يحتاج جميع عملاء خدمة الويب إلى معرفته.</p>
+<p><span id="refheading875371128202281" name="refheading875371128202281" class="odt-bookmark-anchor"></span></p>
+<h3 id="832">8.3.2. <span style="color: #4f81bd">الجزء الخاص بالعميل</span></h3>
+<hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
+<p><strong>المهمة المطلوبة</strong>: باتباع الخطوات الموضحة في الفقرة<a href="#client-console-wsejb"><u><span style="color: #0563c1"> 8.1.2.1</span></u></a>، قم بإنشاء عميل وحدة تحكم لخدمة الويب السابقة.</p>
+<hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
+<p><strong>ملاحظة</strong>: للإشارة إلى <bdi dir="ltr" class="odt-ltr-term">URL</bdi> من ملف <bdi dir="ltr" class="odt-ltr-term">WSDL</bdi> الخاص بخدمة الويب، سيتم اتباع الخطوات التالية:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003E00000014409F91F1E.png" width="496" height="162" style="display:inline-block; margin:4px;width:13.123cm;height:4.286cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E00000014409F91F1E.png" /></td></tr></table>
+
+<p>سنضع في [3]، <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الذي تم تدوينه سابقًا في [2].</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        هذا البرنامج التعليمي الذي كتبه <strong>Serge Tahé</strong> متاح للجمهور وفقًا لشروط
+<em>Creative Commons Attribution – Non-Commercial –
+ShareAlike 3.0 Unported</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>

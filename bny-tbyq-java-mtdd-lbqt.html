@@ -1,0 +1,848 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/ar-javaee-juin-2012/bny-tbyq-java-mtdd-lbqt.html">
+      
+      
+        <link rel="prev" href="mqdm.html">
+      
+      
+        <link rel="next" href="dwt-lwthyq.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>2. بنية تطبيق Java متعدد الطبقات - مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-java" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish" class="md-header__button md-logo" aria-label="مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. بنية تطبيق Java متعدد الطبقات
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الداكن"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الداكن" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الفاتح"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الفاتح" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/ar-javaee-juin-2012" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish" class="md-nav__button md-logo" aria-label="مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مقدمة إلى Java EE باستخدام بيئة تطوير NetBeans وخادم التطبيقات GlassFish
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/ar-javaee-juin-2012" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مرحبًا بكم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mqdm.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. مقدمة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="bny-tbyq-java-mtdd-lbqt.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. بنية تطبيق Java متعدد الطبقات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dwt-lwthyq.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. أدوات الوثيقة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mlkh-jpa-.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. ملخص JPA 
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-1-bny-spring--jpa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. الإصدار 1: بنية Spring / JPA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-2-bny-openejb--jpa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. الإصدار 2: بنية OpenEJB / JPA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-3-nql-ltbyq-pam-l-khdm-tbyqt-glassfish.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. الإصدار 3: نقل التطبيق PAM إلى خادم تطبيقات Glassfish
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-4---mylkhdm-fy-bny-khdm-wyb.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. الإصدار 4 – عميل/خادم في بنية خدمة ويب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mqdm-l-java-server-faces.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. مقدمة إلى Java Server Faces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-5---tbyq-pam-web--jsf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. الإصدار 5 - تطبيق PAM Web / JSF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-6---dmj-bq-lwyb-fy-bny-thlthy-lbqt-jsf--ejb.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. الإصدار 6 - دمج طبقة الويب في بنية ثلاثية الطبقات JSF / EJB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-7---tbyq-lwyb-pam-mtdd-lrw--mtdd-lft.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. الإصدار 7 - تطبيق الويب PAM متعدد العروض / متعدد الصفحات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-8-nql-ltbyq-l-byy-spring--tomcat.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. الإصدار 8: نقل التطبيق إلى بيئة Spring / Tomcat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldr-9-tnfydh-bq-lwyb-bstkhdm-primefaces.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. الإصدار 9: تنفيذ طبقة الويب باستخدام Primefaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><span id="refheading87347112820228" name="refheading87347112820228" class="odt-bookmark-anchor"></span>
+<span id="architecture-en-couches" name="architecture-en-couches" class="odt-bookmark-anchor"></span></p>
+<h1 id="2-java">2. <span style="color: #365f91">بنية تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi> متعدد الطبقات</span></h1>
+<p>غالبًا ما يتم تقسيم تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi> إلى طبقات، لكل منها دور محدد بوضوح. لنأخذ بنية شائعة، وهي البنية ثلاثية الطبقات:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006E80000011C9BFD876E.png" width="680" height="109" style="display:inline-block; margin:4px;width:17.999cm;height:2.891cm;" class="odt-zoomable" data-zoom-src="images/10000000000006E80000011C9BFD876E.png" /></td></tr></table>
+
+<ul>
+  <li>الطبقة [1]، المسماة هنا [ui] (واجهة المستخدم)، هي الطبقة التي تتفاعل مع المستخدم، عبر واجهة رسومية <bdi dir="ltr" class="odt-ltr-term">Swing</bdi> أو واجهة وحدة التحكم أو واجهة الويب. وتتمثل مهمتها في توفير البيانات الواردة من المستخدم إلى الطبقة [2] أو عرض البيانات المقدمة من الطبقة [2] على المستخدم.
+  </li>
+  <li>الطبقة [2]، والمشار إليها هنا باسم [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]، هي الطبقة التي تطبق القواعد المعروفة باسم قواعد العمل، <bdi dir="ltr" class="odt-ltr-term">c.a.d.</bdi> المنطق الخاص بالتطبيق، دون الاهتمام بمصدر البيانات التي يتم تزويده بها، أو وجهة النتائج التي ينتجها.
+  </li>
+  <li>الطبقة [3]، المسماة هنا [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] (كائن الوصول إلى البيانات) هي الطبقة التي تزود الطبقة [2] ببيانات مسجلة مسبقًا (ملفات، قواعد بيانات، ...) وتسجل بعض النتائج التي توفرها الطبقة [2].
+  </li>
+</ul>
+
+<p>هناك إمكانيات مختلفة لتنفيذ الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. دعونا نستعرض بعضها:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000074E000001438203730E.png" width="680" height="117" style="display:inline-block; margin:4px;width:17.999cm;height:3.108cm;" class="odt-zoomable" data-zoom-src="images/100000000000074E000001438203730E.png" /></td></tr></table>
+
+<p>الطبقة [<bdi dir="ltr" class="odt-ltr-term">JDBC</bdi>] المذكورة أعلاه هي الطبقة القياسية المستخدمة في <bdi dir="ltr" class="odt-ltr-term">Java</bdi> للوصول إلى قواعد البيانات. وهي تعزل الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] عن الطبقة <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> التي تدير قاعدة البيانات. من الناحية النظرية، يمكن تغيير <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> دون تغيير كود الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. على الرغم من هذه الميزة، فإن <bdi dir="ltr" class="odt-ltr-term">API</bdi> و <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi> تنطوي على بعض العيوب:</p>
+<ul>
+  <li>جميع العمليات على <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> من المحتمل أن تطلق الاستثناء المراقب (<bdi dir="ltr" class="odt-ltr-term">checked</bdi>) <bdi dir="ltr" class="odt-ltr-term">SQLException.</bdi> وهذا يجبر الكود المستدعي (الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] هنا) على إحاطة هذه العمليات بـ <bdi dir="ltr" class="odt-ltr-term">try / catch</bdi> مما يجعل الكود ثقيلًا إلى حد ما.
+  </li>
+  <li>الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] ليست غير حساسة تمامًا تجاه <bdi dir="ltr" class="odt-ltr-term">SGBD.</bdi> فهذه الطبقات لديها، على سبيل المثال، طرق خاصة بها فيما يتعلق بالتوليد التلقائي لقيم المفاتيح الأولية التي لا يمكن للطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] تجاهلها. لذلك، عند إدراج سجل:
+    <ul>
+      <li>مع <bdi dir="ltr" class="odt-ltr-term">Oracle</bdi>، يجب أن تحصل الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] أولاً على قيمة للمفتاح الأساسي للسجل ثم تقوم بإدراجه.
+      </li>
+      <li>مع <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi>، تقوم الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] بإدراج السجل الذي يُعطى تلقائيًا قيمة للمفتاح الأساسي بواسطة <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi>، وهي قيمة يتم تمريرها إلى الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>].
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>يمكن إزالة هذه الاختلافات باستخدام الإجراءات المخزنة. في المثال السابق، ستستدعي الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] إجراءً مخزّنًا في <bdi dir="ltr" class="odt-ltr-term">Oracle</bdi> أو <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> يأخذ في الاعتبار خصائص <bdi dir="ltr" class="odt-ltr-term">SGBD.</bdi> وستكون هذه الخصائص مخفية في الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. ومع ذلك، إذا كان تغيير <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> لا يتطلب إعادة كتابة الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]، فإنه يتطلب مع ذلك إعادة كتابة الإجراءات المخزنة. وقد لا يُعتبر هذا عائقًا.</p>
+<p>وقد بُذلت جهود متعددة لعزل الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] عن الجوانب الخاصة بـ <bdi dir="ltr" class="odt-ltr-term">SGBD.</bdi> ومن الحلول التي حققت نجاحًا حقيقيًا في هذا المجال خلال السنوات الأخيرة، حل <strong><bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi></strong>:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000074F0000011BD92904A5.png" width="680" height="103" style="display:inline-block; margin:4px;width:17.999cm;height:2.722cm;" class="odt-zoomable" data-zoom-src="images/100000000000074F0000011BD92904A5.png" /></td></tr></table>
+
+<p>تقع الطبقة [<bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi>] بين الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] التي كتبها المطور والطبقة [<bdi dir="ltr" class="odt-ltr-term">JDBC</bdi>]. <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> هو <bdi dir="ltr" class="odt-ltr-term">ORM</bdi> (<bdi dir="ltr" class="odt-ltr-term">Object Relational Mapper</bdi>)، وهو أداة تربط بين عالم قواعد البيانات العلائقية وعالم الكائنات التي تعالجها <bdi dir="ltr" class="odt-ltr-term">Java.</bdi> لم يعد مطور الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] يرى الطبقة [<bdi dir="ltr" class="odt-ltr-term">JDBC</bdi>] ولا جداول قاعدة البيانات التي يريد استغلال محتواها. إنه لا يرى سوى الصورة الكائنية لقاعدة البيانات، وهي صورة كائنية توفرها الطبقة [<bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi>]. يتم الربط بين جداول قاعدة البيانات والكائنات التي تعالجها الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] بشكل أساسي بطريقتين:</p>
+<ul>
+  <li>من خلال ملفات التكوين من النوع <bdi dir="ltr" class="odt-ltr-term">XML</bdi>
+  </li>
+  <li>عن طريق تعليقات <bdi dir="ltr" class="odt-ltr-term">Java</bdi> في الكود، وهي تقنية متاحة فقط منذ الإصدار <bdi dir="ltr" class="odt-ltr-term">JDK 1.5</bdi>
+  </li>
+</ul>
+
+<p>الطبقة [<bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi>] هي طبقة تجريدية تهدف إلى أن تكون شفافة قدر الإمكان. والهدف المثالي هو أن يتمكن مطور طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] من تجاهل تمامًا أنه يعمل مع قاعدة بيانات. وهذا أمر ممكن إذا لم يكن هو من يكتب التكوين الذي يشكل الجسر بين عالم العلاقات وعالم الكائنات. وتكوين هذا الجسر أمر دقيق إلى حد ما ويتطلب قدرًا معينًا من الخبرة.</p>
+<p>يُطلق على طبقة الكائنات [4]، وهي صورة لطبقة <bdi dir="ltr" class="odt-ltr-term">BD</bdi>، اسم &quot;سياق الاستمرارية&quot;. تقوم طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] التي تعتمد على <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> بإجراء إجراءات الاستمرارية (<bdi dir="ltr" class="odt-ltr-term">CRUD</bdi>، إنشاء - قراءة - تحديث - حذف) على كائنات سياق الاستمرارية، وهي إجراءات يترجمها <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> إلى أوامر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> تنفذها الطبقة <bdi dir="ltr" class="odt-ltr-term">JDBC.</bdi> بالنسبة لإجراءات الاستعلام عن قاعدة البيانات (<bdi dir="ltr" class="odt-ltr-term">SQL Select</bdi>)، يوفر <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> للمطور لغة <bdi dir="ltr" class="odt-ltr-term">HQL</bdi> (لغة استعلام <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi>) لاستعلام سياق الاستمرارية [4] وليس <bdi dir="ltr" class="odt-ltr-term">BD</bdi> نفسها.</p>
+<p>يُعد <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> أداة شائعة الاستخدام، لكن إتقانها أمر معقد. فمنحنى التعلم الذي غالبًا ما يُصوَّر على أنه سهل هو في الواقع شاق إلى حد ما. فما أن تتوفر قاعدة بيانات تحتوي على جداول ذات علاقات «واحد إلى عدة» أو «عدة إلى عدة»، حتى يصبح تكوين الجسر بين العلاقات والكائنات أمرًا يتجاوز قدرات المبتدئين العاديين. وقد تؤدي أخطاء التكوين إلى انخفاض أداء التطبيقات.</p>
+<p>نظراً لنجاح منتجات <bdi dir="ltr" class="odt-ltr-term">ORM</bdi>، قررت شركة <bdi dir="ltr" class="odt-ltr-term">Sun</bdi>، مطورة لغة <bdi dir="ltr" class="odt-ltr-term">Java</bdi>، توحيد طبقة <bdi dir="ltr" class="odt-ltr-term">ORM</bdi> من خلال مواصفة تسمى <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> (<bdi dir="ltr" class="odt-ltr-term">Java Persistence API</bdi>) ظهرت في نفس وقت ظهور <bdi dir="ltr" class="odt-ltr-term">Java</bdi> 5. تم تنفيذ المواصفة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> من خلال منتجات متنوعة: <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi>، <strong><bdi dir="ltr" class="odt-ltr-term">Toplink</bdi>، <bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi>، <bdi dir="ltr" class="odt-ltr-term">OpenJpa</bdi>، ....</strong> مع <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>، تصبح البنية السابقة كما يلي:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007BC0000012E769EA268.png" width="680" height="104" style="display:inline-block; margin:4px;width:17.999cm;height:2.745cm;" class="odt-zoomable" data-zoom-src="images/10000000000007BC0000012E769EA268.png" /></td></tr></table>
+
+<p>تتفاعل الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] الآن مع المواصفات <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>، وهي مجموعة من الواجهات. وقد استفاد المطور من حيث التوحيد القياسي. ففي السابق، إذا قام بتغيير طبقته <bdi dir="ltr" class="odt-ltr-term">ORM</bdi>، كان عليه أيضًا تغيير طبقته [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] التي تمت كتابتها للتفاعل مع <bdi dir="ltr" class="odt-ltr-term">ORM</bdi> محددة. أما الآن، فسيكتب طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] التي ستتواصل مع طبقة <bdi dir="ltr" class="odt-ltr-term">JPA.</bdi> بغض النظر عن المنتج الذي ينفذ هذه الطبقة، تظل واجهة الطبقة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> المعروضة على الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] كما هي.</p>
+<p>في هذا المستند، سنستخدم طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] تعتمد على طبقة <bdi dir="ltr" class="odt-ltr-term">JPA/Hibernate</bdi> أو <bdi dir="ltr" class="odt-ltr-term">JPA/EclipseLink.</bdi> بالإضافة إلى ذلك، سنستخدم إطار عمل <bdi dir="ltr" class="odt-ltr-term">Spring 2.8</bdi> لربط هذه الطبقات ببعضها البعض.</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000008410000017C07262FF8.png" width="680" height="122" style="display:inline-block; margin:4px;width:17.999cm;height:3.237cm;" class="odt-zoomable" data-zoom-src="images/10000000000008410000017C07262FF8.png" /></td></tr></table>
+
+<p>تكمن الميزة الكبرى لـ <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> في أنه يسمح بربط الطبقات عن طريق التكوين وليس في الكود. وبالتالي، إذا كان يجب استبدال التنفيذ <bdi dir="ltr" class="odt-ltr-term">JPA / Hibernate</bdi> يجب استبدالها بتنفيذ <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> بدون <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>، لأن التطبيق، على سبيل المثال، يعمل في بيئة <bdi dir="ltr" class="odt-ltr-term">JDK 1.4</bdi> التي لا تدعم <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>، هذا التغيير في تنفيذ طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] لا يؤثر على كود طبقة [<bdi dir="ltr" class="odt-ltr-term">métier</bdi>]. يجب تعديل ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> الذي يربط الطبقات ببعضها البعض فقط.</p>
+<p>مع <bdi dir="ltr" class="odt-ltr-term">Java EE</bdi> 5، هناك حل آخر: تنفيذ الطبقات [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] باستخدام <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi> (<bdi dir="ltr" class="odt-ltr-term">Enterprise Java Bean</bdi> الإصدار 3):</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000008360000018F24F4901E.png" width="680" height="129" style="display:inline-block; margin:4px;width:17.999cm;height:3.417cm;" class="odt-zoomable" data-zoom-src="images/10000000000008360000018F24F4901E.png" /></td></tr></table>
+
+<p>سنرى أن هذا الحل لا يختلف كثيرًا عن الحل الذي يستخدم <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> تتوفر بيئة <bdi dir="ltr" class="odt-ltr-term">Java EE5</bdi> ضمن خوادم تُعرف بخوادم التطبيقات مثل <em><bdi dir="ltr" class="odt-ltr-term">Sun Application Server</bdi> 9.x (<bdi dir="ltr" class="odt-ltr-term">Glassfish</bdi>)، <bdi dir="ltr" class="odt-ltr-term">Jboss Application Server</bdi>، <bdi dir="ltr" class="odt-ltr-term">Oracle Container for Java</bdi> (<bdi dir="ltr" class="odt-ltr-term">OC4J</bdi>)،</em> ... خادم التطبيقات هو في الأساس خادم تطبيقات الويب. توجد أيضًا بيئات <bdi dir="ltr" class="odt-ltr-term">EE</bdi> 5 تسمى &quot;المستقلة&quot;، <bdi dir="ltr" class="odt-ltr-term">c.a.d.</bdi> يمكن استخدامها خارج خادم التطبيقات. وهذا هو الحال بالنسبة لـ <bdi dir="ltr" class="odt-ltr-term">JBoss</bdi> و <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi> أو <bdi dir="ltr" class="odt-ltr-term">OpenEJB.</bdi></p>
+<p>في بيئة <bdi dir="ltr" class="odt-ltr-term">EE5</bdi>، يتم تنفيذ الطبقات بواسطة كائنات تسمى <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> (<bdi dir="ltr" class="odt-ltr-term">Enterprise Java Bean</bdi>). في الإصدارات السابقة من <bdi dir="ltr" class="odt-ltr-term">EE</bdi>، كان يُعرف عن <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> (<bdi dir="ltr" class="odt-ltr-term">EJB</bdi> 2.x) صعوبة تنفيذها واختبارها، وأحيانًا ضعف أدائها. يتم التمييز بين &quot;<bdi dir="ltr" class="odt-ltr-term">entity</bdi>&quot; <bdi dir="ltr" class="odt-ltr-term">EJB2.x</bdi> و&quot;<bdi dir="ltr" class="odt-ltr-term">session</bdi>&quot; <bdi dir="ltr" class="odt-ltr-term">EJB2.x.</bdi> باختصار، &quot;<bdi dir="ltr" class="odt-ltr-term">entity</bdi>&quot; <bdi dir="ltr" class="odt-ltr-term">EJB2.x</bdi> هو صورة لصف في جدول قاعدة بيانات و&quot;<bdi dir="ltr" class="odt-ltr-term">session</bdi>&quot; <bdi dir="ltr" class="odt-ltr-term">EJB2.x</bdi> هو كائن يُستخدم لتنفيذ طبقات [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]، [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] في بنية متعددة الطبقات. أحد الانتقادات الرئيسية الموجهة إلى الطبقات التي تم تنفيذها باستخدام <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> هي أنها لا يمكن استخدامها إلا داخل حاويات <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>، وهي خدمة تقدمها بيئة <bdi dir="ltr" class="odt-ltr-term">EE.</bdi> هذه البيئة، التي يعد تنفيذها أكثر تعقيدًا من بيئة <bdi dir="ltr" class="odt-ltr-term">SE</bdi> (الإصدار القياسي)، قد  تثني المطور عن إجراء الاختبارات بشكل متكرر. ومع ذلك، توجد بيئات تطوير <bdi dir="ltr" class="odt-ltr-term">Java</bdi> تسهل استخدام خادم التطبيقات من خلال أتمتة نشر <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> على الخادم: <em><bdi dir="ltr" class="odt-ltr-term">Eclipse</bdi>، <bdi dir="ltr" class="odt-ltr-term">Netbeans</bdi>، <bdi dir="ltr" class="odt-ltr-term">JDeveloper</bdi>، <bdi dir="ltr" class="odt-ltr-term">IntelliJ</bdi>، <bdi dir="ltr" class="odt-ltr-term">IDEA</bdi></em>. سنستخدم هنا <em><bdi dir="ltr" class="odt-ltr-term">Netbeans 6.8</bdi></em> وخادم التطبيقات <em><bdi dir="ltr" class="odt-ltr-term">Glassfish v3</bdi></em>.</p>
+<p>نشأ إطار عمل <strong><bdi dir="ltr" class="odt-ltr-term">Spring</bdi></strong> كرد فعل على تعقيد <bdi dir="ltr" class="odt-ltr-term">EJB2.</bdi> يوفر <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> في بيئة <bdi dir="ltr" class="odt-ltr-term">SE</bdi> عددًا كبيرًا من الخدمات التي توفرها عادةً بيئات <bdi dir="ltr" class="odt-ltr-term">EE.</bdi> وهكذا، في قسم &quot;استمرارية البيانات&quot;، يوفر <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> مجموعات الاتصال ومديري المعاملات التي تحتاجها التطبيقات. وقد ساهم ظهور <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> في تعزيز ثقافة الاختبارات الفردية، التي أصبحت أسهل في التنفيذ في سياق <bdi dir="ltr" class="odt-ltr-term">SE</bdi> مقارنة بسياق <bdi dir="ltr" class="odt-ltr-term">EE.</bdi> يسمح <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> بتنفيذ طبقات التطبيق باستخدام كائنات <bdi dir="ltr" class="odt-ltr-term">Java</bdi> التقليدية (<bdi dir="ltr" class="odt-ltr-term">POJO</bdi>، <bdi dir="ltr" class="odt-ltr-term">Plain Old/Ordinary Java Object</bdi>)، مما يتيح إعادة استخدامها في سياق آخر.  وأخيرًا، يدمج العديد من أدوات الجهات الخارجية بطريقة شفافة إلى حد ما، ولا سيما أدوات الاستمرارية مثل <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> و<bdi dir="ltr" class="odt-ltr-term">EclipseLink</bdi> و<bdi dir="ltr" class="odt-ltr-term">Ibatis</bdi>، ...  </p>
+<p>تم تصميم <bdi dir="ltr" class="odt-ltr-term">Java EE5</bdi> لتصحيح أوجه القصور في مواصفات <bdi dir="ltr" class="odt-ltr-term">EJB2.</bdi> أصبحت <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> و 2.x هي <bdi dir="ltr" class="odt-ltr-term">EJB3.</bdi> وهذه هي <bdi dir="ltr" class="odt-ltr-term">POJOs</bdi> الموسومة بتعليقات توضيحية تجعلها كائنات خاصة عندما تكون داخل حاوية <bdi dir="ltr" class="odt-ltr-term">EJB3.</bdi> في هذا الحاوية، سيتمكن <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi> من الاستفادة من خدمات الحاوية (مجموعة الاتصالات، مدير المعاملات، ...). خارج الحاوية <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi>، يصبح <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi> كائن <bdi dir="ltr" class="odt-ltr-term">Java</bdi> عادي. يتم تجاهل تعليقاته التوضيحية <bdi dir="ltr" class="odt-ltr-term">EJB.</bdi></p>
+<p>فيما سبق، قمنا بتمثيل <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> وحاوية <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi> كبنية تحتية (إطار عمل) محتملة لهندستنا متعددة الطبقات. هذه البنية التحتية هي التي ستوفر الخدمات التي نحتاجها: تجمع اتصالات ومدير معاملات.</p>
+<ul>
+  <li>مع <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>، سيتم تنفيذ الطبقات باستخدام <bdi dir="ltr" class="odt-ltr-term">POJOs.</bdi> وستتمكن هذه من الوصول إلى خدمات <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> (مجموعة الاتصالات، مدير المعاملات) عن طريق حقن التبعيات في هذه <bdi dir="ltr" class="odt-ltr-term">POJOs:</bdi> عند إنشاء هذه، يقوم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> بحقنها بمراجع للخدمات التي ستحتاجها.
+  </li>
+  <li>مع الحاوية <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi>، سيتم تنفيذ الطبقات باستخدام <bdi dir="ltr" class="odt-ltr-term">EJB.</bdi> تختلف البنية الطبقية التي يتم تنفيذها باستخدام <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi> قليلاً عن تلك التي يتم تنفيذها باستخدام <bdi dir="ltr" class="odt-ltr-term">POJO</bdi> التي يتم إنشاء مثيلاتها بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> سنجد الكثير من أوجه التشابه.
+  </li>
+</ul>
+
+<ul>
+  <li>وأخيرًا، سنقدم مثالاً لتطبيق ويب متعدد الطبقات:
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000082A000001A616D6D841.png" width="680" height="137" style="display:inline-block; margin:4px;width:17.999cm;height:3.634cm;" class="odt-zoomable" data-zoom-src="images/100000000000082A000001A616D6D841.png" /></td></tr></table>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        هذا البرنامج التعليمي الذي كتبه <strong>Serge Tahé</strong> متاح للجمهور وفقًا لشروط
+<em>Creative Commons Attribution – Non-Commercial –
+ShareAlike 3.0 Unported</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
